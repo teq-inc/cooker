@@ -1,0 +1,88 @@
+---
+layout: one-column
+title: cooker
+---
+<article id="home">
+
+  <div id="page-header" class="jumbotron">
+    <h1>cooker</h1>
+    <p class="lead">scaffolding (jekyll)</p>
+    <p><a class="btn btn-lg btn-primary" href="https://github.com/blivesta/cooker-scaffolding" target="_blank" role="button">GitHub Project</a></p>
+  </div>
+
+  <div id="page-body">
+    
+    <ul class="posts">
+      {% for post in site.posts %}
+        <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+      {% endfor %}
+    </ul>  
+  
+    <h2>install</h2>    
+    <p>ローカル環境に'git','node','npm','ruby','gem'をインストールされているか確認。</p>
+{% highlight text %}
+$ git -v
+$ node -v
+$ npm -v
+$ ruby -v
+$ gem -v
+{% endhighlight %}
+    
+    <p>確認できたら'jekyll','grunt','bower'をインストール</p>
+{% highlight text %}
+$ gem install jekyll
+$ npm install -g grunt-cli
+$ npm install -g bower
+{% endhighlight %}
+
+    <h3>Step 1</h3>
+    <p>作業用ディレクトリでgit cloneかダウンロードしてファイルの準備。</p>
+{% highlight text %}
+$ cd my-site
+$ git clone https://github.com/blivesta/cooker-scaffolding.git
+{% endhighlight %}
+    
+    <h3>Step 2</h3>
+    <p>npmでgruntのモジュールを作業用ディレクトリにインストール。</p>
+{% highlight text %}
+$ cd cooker-scaffolding/
+$ npm install
+{% endhighlight %}
+    <p>node_modulesフォルダが作られる。</p>
+  
+    <h3>Step 3</h3>
+    <p>gruntとbowerで関連ファイルのインストール→ビルドを行う。</p>
+{% highlight text %}
+$ grunt go
+{% endhighlight %}
+    <p>インストールが成功するとブラウザが起動する。</p>
+  
+    <h2>grunt commnad</h2>        
+    <h3>default</h3>
+    <p>サーバー起動（+livereload）　→　ファイル監視（jekyll,less）</p>
+{% highlight text %}
+$ grunt　
+{% endhighlight %}
+    <h3>go</h3>
+    <p>vendorファイルをbowerでインストール → grunt build → grunt default</p>
+{% highlight text %}
+$ grunt go
+{% endhighlight %}
+    <h3>build</h3>
+    <p>エラーチェックやファイルの最適化しファイル</p>
+{% highlight text %}
+$ grunt build
+{% endhighlight %}
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
