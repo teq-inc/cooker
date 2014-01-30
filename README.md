@@ -1,6 +1,25 @@
 cooker
 ==================
 
+##grunt.jsのタスク
+- 'livereloadx' ブラウザのライブリロード（chromreのアドオン必要）
+- 'connect' ローカルサーバー
+- 'esteWatch' ファイル監視
+- 'bower' ベンダーライブラリのインストール（インストールするライブラリはbower.jsonで管理）　
+- 'jshint' jsエラーチェック
+- 'concat' jsファイル結合
+- 'uglify' jsファイルにクレジットバナー追加
+- 'validation' hmtlエラーチェック
+- 'htmlmin' html圧縮
+- 'csslint' cssエラーチェック
+- 'usebanner' cssファイルにクレジットバナー追加
+- 'less' lessのコンパイル
+- 'csscomb' cssの最適化
+- 'shell' jekyllコマンド実行
+- 'copy' ファイルコピー
+- 'notify' growl通知
+
+
 ##install 
 ローカル環境に'git','node','npm','ruby','gem'をインストールされているか確認。
 ```
@@ -55,7 +74,7 @@ $ grunt go
 ```
 
 ###build
-エラーチェックやファイルの最適化しファイル
+エラーチェック → ファイルの最適化 → ビルド
 ```
 $ grunt build
 ```
