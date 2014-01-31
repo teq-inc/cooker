@@ -108,11 +108,11 @@
       },
       dist: {
         src: [ 
-          '<%= pkg.libs %>/accordion.js',
-          '<%= pkg.libs %>/drilldown.js',
-          '<%= pkg.libs %>/inputcounter.js',
-          '<%= pkg.libs %>/scrollmethod.js',
-          '<%= pkg.libs %>/slidebar.js'
+          '<%= pkg.js %>/accordion.js',
+          '<%= pkg.js %>/drilldown.js',
+          '<%= pkg.js %>/inputcounter.js',
+          '<%= pkg.js %>/scrollmethod.js',
+          '<%= pkg.js %>/slidebar.js'
         ],
         dest: '<%= pkg.js %>/<%= pkg.name %>.js'
       }
@@ -134,7 +134,7 @@
     jshint: {
       files: [
         'Gruntfile.js',
-        '<%= pkg.libs %>',
+        '<%= pkg.js %>',
       ],
       options: {
         browser: true,
@@ -356,7 +356,7 @@
       //'csslint',
       'shell:jekyll_build',
       'copy',
-      'htmlmin',
+      //'htmlmin',
       'validation',
     ]);
   });

@@ -2,7 +2,7 @@
  * cooker v0.0.0
  * Copyright 2014 TEQ inc.
  * Licensed under MIT (https://github.com/teq-inc/cooker)
- * 2014-01-29
+ * 2014-02-01
  */
 (function($) {
   var namespace = 'accordion';
