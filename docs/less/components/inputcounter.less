@@ -1,8 +1,11 @@
 .inputcounter{
 	&.warning{
-		.form_focus(@warningText);
+	//	.form-focus(@state-warning-text);
+    .form-control-focus(@state-warning-text);
 	}	
 	&.error{
-		.form_focus(@errorText);
+    .form-control-focus(@state-danger-text);
+
+//		.form-focus(@state-danger-text);
 	}
 }

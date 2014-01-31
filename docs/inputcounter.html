@@ -1,0 +1,57 @@
+---
+layout: one-column
+title: inputcounter
+---
+<article id="content">
+
+  <div id="content-header" class="">
+    <h2>{{ page.title }}</h2>
+    <p class="lead">入力テキストの文字数を監視し、指定の文字数で警告・エラーのそれぞれでクラスを追加・削除するjqueryプラグイン</p>
+  </div>
+
+  <div id="content-body">
+    <h3>Example</h3>
+    <input type="text" id="input" class="inputcounter" value="" />  
+  
+    <h3>set up</h3>   
+    <h4>js</h4> 
+{% highlight js %}
+$('#input').inputcounter({
+  warningClass: 'warning',
+  errorClass:'error',
+  warningCounter:'60',
+  errorCounter:'65'
+});
+{% endhighlight %}
+<h4>html</h4> 
+{% highlight html %}
+<input type="text" id="input" class="inputcounter" value="" />
+{% endhighlight %}
+<h4>css</h4> 
+{% highlight css %}
+.inputcounter.warning:focus {
+  border-color: #8a6d3b;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(138, 109, 59, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(138, 109, 59, 0.6);
+}
+.inputcounter.error:focus {
+  border-color: #a94442;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(169, 68, 66, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(169, 68, 66, 0.6);
+}
+{% endhighlight %}
+
+      
+</article>
+
+
+
+
+
+
+
+
+
+
