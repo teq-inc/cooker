@@ -1,10 +1,7 @@
-.accordions{
-  margin-bottom: @margin;
-}
 .accordion{
   border: 1px solid #ddd;
   margin-bottom:5px; 
-  .border-radius(@baseBorderRadius);
+  border-radius:@border-radius-base;
 }
 .accordion-header{
   padding:10px 20px;
@@ -32,28 +29,19 @@
     thead:first-child tr:first-child > th:first-child,
     tbody:first-child tr:first-child > td:first-child,
     tbody:first-child tr:first-child > th:first-child {
-      .border-top-left-radius(0);
+      border-top-left-radius:0;
     }
     thead:first-child tr:first-child > th:last-child,
     tbody:first-child tr:first-child > td:last-child,
     tbody:first-child tr:first-child > th:last-child {
-      .border-top-right-radius(0);
+      border-top-right-radius:0;
     }    
-  }
-  .jsc_merchandise{
-    margin-top:10px;
-    border-bottom: 1px solid @border_color;
-    border-top: 1px solid @border_color;
-  }
-  .jsc_cs_table{
-    margin-top:10px;
-    border-top:1px solid @border_color;
   }
 }
 .accordion-open{
   border: 1px solid #ddd;
   .accordion-header{
-    background-color: @tbl_active_bg_color;
+    background-color: @table-bg-active;
     border-bottom: 1px solid #ddd;
   }
 }
