@@ -2,7 +2,7 @@
 layout: one-column
 title: cooker
 ---
-<article id="content" id="home">
+<article id="content">
 
   <div id="content-header" class="jumbotron">
     <h1>{{ page.title }}</h1>
@@ -24,7 +24,8 @@ title: cooker
         <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
       {% endfor %}
     </ul>  
-      
+    
+  </div>
 </article>
 
 
