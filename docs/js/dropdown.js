@@ -23,7 +23,7 @@
           });
         }
                 
-        if(options.accordion == true){
+        if(options.accordion === true){
           $this
             .find('.'+options.toggleClass)
             .off('click.'+namespace)

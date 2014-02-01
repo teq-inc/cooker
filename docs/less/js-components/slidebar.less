@@ -9,21 +9,21 @@
 	.slidebar_toggle{
 		position: absolute; 
 		background: rgba(255, 255, 255, .90);
-		color:@linkColor;
-		border:@border;
+		color:@link-color;
+		border:@border-base;
   	font-size: 12px;
 	  z-index: 101;
 		&:hover{
 			cursor: pointer;
-			color: @textColor;
+			color: @text-color;
 		}
 	}
 	.slidebar_body{
 		background: rgba(255, 255, 255, .90);
 		overflow-y: auto;
-		color: @textColor;
+		color: @text-color;
     position: relative;
-		.mixin_scrollbar();
+		.scrollbar();
 		-webkit-overflow-scrolling: touch;
 		.q_block{
   		max-width: 3000px;
@@ -36,7 +36,7 @@
         &:hover,
         &:active,
         &:focus{
-            background-color: darken(@v_background_color,5%);
+      //      background-color: darken(@v_background_color,5%);
         }
     }
 		table{
@@ -44,7 +44,7 @@
 			margin-bottom: 10px;
 			tr{
 				td{
-					border-top:@border;
+					border-top:@border-base;
 					background-color: transparent;
 				}
 			}
@@ -61,30 +61,30 @@
 	&.slidebar_open{
 		.slidebar_toggle{
 			.slidebar_icon{
-				.icon(@fa-var-caret-square-o-down);
+	//			.icon(@fa-var-caret-square-o-down);
 			}
 		}
 	}
 	.slidebar_toggle{
-		.border-top-radius(@baseBorderRadius);
+		.border-top-radius(@border-radius-base);
 		right:30px;
 		top:-46px;
 		padding-bottom: 0;
 		border-bottom: none;
     padding:12px 20px;
-    border-top:3px solid @primaryColor;
+    border-top:3px solid @brand-primary;
 		.slidebar_icon{
-			.icon(@fa-var-caret-square-o-up);
+		//	.icon(@fa-var-caret-square-o-up);
 			&:before{
 				margin-right: 5px;
 			}
 		}
 		&:hover{
-      border-top:3px solid @border_color;
+      border-top:3px solid @border-base-color;
 		}
 	}
 	.slidebar_body{
-		border-top:@border;
+		border-top:@border-base;
 		width:100%;
 		
 		z-index: 100;
@@ -110,33 +110,33 @@
 	&.slidebar_open{
 		.slidebar_toggle{
 			.slidebar_icon{
-				.icon(@fa-var-caret-square-o-right);
+			//	.icon(@fa-var-caret-square-o-right);
 			}
 		}
 	}
 	.slidebar_toggle{
     margin-top: 180px;
     left:-73px;
-    .border-left-radius(@baseBorderRadius);
+    .border-left-radius(@border-radius-base);
     padding:20px 12px;
-    border-left:3px solid @primaryColor;
+    border-left:3px solid @brand-primary;
     border-right: none;
     -webkit-writing-mode: vertical-rl;
     writing-mode: tb-rl;
     direction:ltr;	
 		.slidebar_icon{
-			.icon(@fa-var-caret-square-o-left);
+			//.icon(@fa-var-caret-square-o-left);
 			&:before{
 				margin-bottom: 5px;
 			}
 		}
 		&:hover{
-      border-left:3px solid @border_color;
+      border-left:3px solid @border-base-color;
 		}
 	}
 	.slidebar_body{	
     height: 100%;
-    border-left:@border;
+    border-left:@border-base;
   	padding-top:50px;
   	padding-bottom:10px;
   	//min-width: 200px;

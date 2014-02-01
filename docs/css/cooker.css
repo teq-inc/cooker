@@ -2,7 +2,6 @@
  * cooker v0.0.0
  * Copyright 2014 TEQ inc.
  * Licensed under MIT (https://github.com/teq-inc/cooker)
- * 2014-02-01
  */
 
 /*!
@@ -13,8 +12,8 @@
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url('../fonts/fontawesome-webfont.eot?v=4.0.3');
-  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.0.3') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff?v=4.0.3') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.0.3') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular') format('svg');
+  src: url('//netdna.bootstrapcdn.com/font-awesome/4.0.3/fonts/fontawesome-webfont.eot?v=4.0.3');
+  src: url('//netdna.bootstrapcdn.com/font-awesome/4.0.3/fonts/fontawesome-webfont.eot?#iefix&v=4.0.3') format('embedded-opentype'), url('//netdna.bootstrapcdn.com/font-awesome/4.0.3/fonts/fontawesome-webfont.woff?v=4.0.3') format('woff'), url('//netdna.bootstrapcdn.com/font-awesome/4.0.3/fonts/fontawesome-webfont.ttf?v=4.0.3') format('truetype'), url('//netdna.bootstrapcdn.com/font-awesome/4.0.3/fonts/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -4642,6 +4641,149 @@ input[type="button"].btn-block {
   outline: 0;
   -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(169, 68, 66, 0.6);
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(169, 68, 66, 0.6);
+}
+.slidebar_bottom_prev.slidebar_open {
+  margin-bottom: 300px;
+}
+.slidebar {
+  position: fixed;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  z-index: 100;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.slidebar .slidebar_toggle {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.9);
+  color: #428bca;
+  border: 1px #dddddd solid;
+  font-size: 12px;
+  z-index: 101;
+}
+.slidebar .slidebar_toggle:hover {
+  cursor: pointer;
+  color: #333333;
+}
+.slidebar .slidebar_body {
+  background: rgba(255, 255, 255, 0.9);
+  overflow-y: auto;
+  color: #333333;
+  position: relative;
+  -webkit-overflow-scrolling: touch;
+}
+.slidebar .slidebar_body::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.slidebar .slidebar_body::-webkit-scrollbar:hover {
+  background: rgba(0, 0, 0, 0.02);
+  -webkit-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+}
+.slidebar .slidebar_body::-webkit-scrollbar-thumb {
+  background-color: #000000;
+  -webkit-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+}
+.slidebar .slidebar_body::-webkit-scrollbar-thumb:hover {
+  background-color: #cccccc;
+}
+.slidebar .slidebar_body .q_block {
+  max-width: 3000px;
+}
+.slidebar .slidebar_body .q_block .q_tbl td {
+  background-color: #fff;
+}
+.slidebar .slidebar_body .slidebar_resize {
+  position: absolute;
+}
+.slidebar .slidebar_body table {
+  background-color: transparent;
+  margin-bottom: 10px;
+}
+.slidebar .slidebar_body table tr td {
+  border-top: 1px #dddddd solid;
+  background-color: transparent;
+}
+.slidebar.slidebar_bottom {
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+}
+.slidebar.slidebar_bottom .slidebar_toggle {
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+  right: 30px;
+  top: -46px;
+  padding-bottom: 0;
+  border-bottom: none;
+  padding: 12px 20px;
+  border-top: 3px solid #428bca;
+}
+.slidebar.slidebar_bottom .slidebar_toggle .slidebar_icon:before {
+  margin-right: 5px;
+}
+.slidebar.slidebar_bottom .slidebar_toggle:hover {
+  border-top: 3px solid #dddddd;
+}
+.slidebar.slidebar_bottom .slidebar_body {
+  border-top: 1px #dddddd solid;
+  width: 100%;
+  z-index: 100;
+}
+.slidebar.slidebar_bottom .slidebar_body .slidebar_resize {
+  width: 100%;
+  height: 10px;
+  top: 4px;
+}
+.slidebar.slidebar_bottom .slidebar_body .slidebar_resize:hover,
+.slidebar.slidebar_bottom .slidebar_body .slidebar_resize:active,
+.slidebar.slidebar_bottom .slidebar_body .slidebar_resize:focus {
+  cursor: row-resize;
+}
+.slidebar.slidebar_right {
+  top: 0px;
+  right: -1px;
+  height: 100%;
+}
+.slidebar.slidebar_right .slidebar_toggle {
+  margin-top: 180px;
+  left: -73px;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+  padding: 20px 12px;
+  border-left: 3px solid #428bca;
+  border-right: none;
+  -webkit-writing-mode: vertical-rl;
+  writing-mode: tb-rl;
+  direction: ltr;
+}
+.slidebar.slidebar_right .slidebar_toggle .slidebar_icon:before {
+  margin-bottom: 5px;
+}
+.slidebar.slidebar_right .slidebar_toggle:hover {
+  border-left: 3px solid #dddddd;
+}
+.slidebar.slidebar_right .slidebar_body {
+  height: 100%;
+  border-left: 1px #dddddd solid;
+  padding-top: 50px;
+  padding-bottom: 10px;
+}
+.slidebar.slidebar_right .slidebar_body .slidebar_resize {
+  width: 10px;
+  height: 100%;
+  position: fixed;
+  margin-left: 4px;
+  top: 0;
+}
+.slidebar.slidebar_right .slidebar_body .slidebar_resize:hover,
+.slidebar.slidebar_right .slidebar_body .slidebar_resize:active,
+.slidebar.slidebar_right .slidebar_body .slidebar_resize:focus {
+  cursor: col-resize;
 }
 body {
   padding-top: 20px;

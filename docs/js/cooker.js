@@ -2,11 +2,9 @@
  * cooker v0.0.0
  * Copyright 2014 TEQ inc.
  * Licensed under MIT (https://github.com/teq-inc/cooker)
- * 2014-02-01
  */
 (function($) {
   var namespace = 'accordion';
-  
   var methods = {
     init: function(options){
       options = $.extend({
@@ -44,9 +42,9 @@
             var $itemSiblings = $item.siblings(); // $item以外の'.accordion'要素
             var $itemSiblingsBody = $itemSiblings.find('.'+options.bodyClass);
 
-        		if($item.hasClass(options.openClass)){
-          		$itemSiblings
-            		.removeClass(options.openClass);           		
+            if($item.hasClass(options.openClass)){
+              $itemSiblings
+                .removeClass(options.openClass);
               $item
                 .removeClass(options.openClass)
                 .addClass(options.closeClass);
@@ -54,9 +52,9 @@
                 .stop()
                 .fadeOut(options.closeSpeed);                
             }else{
-          		$itemSiblings
-            		.removeClass(options.openClass)
-            		.addClass(options.closeClass);
+              $itemSiblings
+                .removeClass(options.openClass)
+                .addClass(options.closeClass);
               $item
                 .removeClass(options.closeClass)
                 .addClass(options.openClass);
@@ -219,6 +217,116 @@
 })(jQuery);
 
 (function($) {
+  var namespace = 'dropdown';
+  var methods = {
+    init: function(options){
+      options = $.extend({
+        toggleClass:   'dropdown-toggle',
+        bodyClass:     'dropdown-body',
+        closeClass:    'close',
+        openClass:     'open',
+        openSpeed:     'fast',
+        closeSpeed:    'fast',
+        accordion:     false,
+      }, options);
+      return this.each(function(){
+        var _this = this;
+        var $this = $(this);
+        var data = $this.data(namespace);
+        if (!data) {
+          options = $.extend({
+          }, options);
+          $this.data(namespace, {
+              options: options
+          });
+        }
+                
+        if(options.accordion === true){
+          $this
+            .find('.'+options.toggleClass)
+            .off('click.'+namespace)
+            .on('click.'+namespace, function(){
+                methods.accordion.apply(_this);
+          });
+
+        } else {
+        
+        
+          $this
+            .find('.'+options.toggleClass)
+            .off('click.'+namespace)
+            .on('click.'+namespace, function(){
+                methods.toggle.apply(_this);
+          });
+        
+        
+        }
+                
+        
+      }); // end each
+    },
+    destroy: function(){
+      return this.each(function(){
+        var $this = $(this);
+        $(window).unbind('.'+namespace);
+        $this.removeData(namespace);
+      });
+    },
+    open: function(){
+      var $this = $(this);
+      options = $this.data(namespace).options;
+      $this
+        .removeClass(options.closeClass)
+        .addClass(options.openClass);
+      $this
+        .find('.'+options.bodyClass)
+        .stop()
+        .fadeIn(options.openSpeed);
+    },
+    close: function(){
+      var $this = $(this);
+      options = $this.data(namespace).options;
+      $this
+        .removeClass(options.openClass)
+        .addClass(options.closeClass);
+      $this
+        .find('.'+options.bodyClass)
+        .stop()
+        .fadeOut(options.closeSpeed);
+    },
+    toggle: function(){
+      var $this = $(this);
+      options = $this.data(namespace).options;
+      if ($this.hasClass(options.closeClass))  {
+        methods.open.call(this);
+      } else {
+        methods.close.call(this);
+      }
+    },
+    accordion: function(){
+      var $this = $(this);
+      options = $this.data(namespace).options; 
+      return this.each(function(){
+        if ($this.hasClass(options.openClass))  {
+          methods.close.call(this);
+        } else {
+          methods.open.call(this);
+        }
+      });
+    }
+  };
+  $.fn.dropdown = function(method){
+    if ( methods[method] ) {
+      return methods[method].apply( this, Array.prototype.slice.call( arguments, 1 ));
+    } else if ( typeof method === 'object' || ! method ) {
+      return methods.init.apply( this, arguments );
+    } else {
+      $.error( 'Method ' +  method + ' does not exist on jQuery.'+namespace);
+    }    
+  };
+})(jQuery);
+
+(function($) {
   var namespace = 'inputcounter';
   var methods = {
     init: function(options){
@@ -271,6 +379,46 @@
     }
   };
   $.fn.inputcounter = function(method){
+    if ( methods[method] ) {
+      return methods[method].apply( this, Array.prototype.slice.call( arguments, 1 ));
+    } else if ( typeof method === 'object' || ! method ) {
+      return methods.init.apply( this, arguments );
+    } else {
+      $.error( 'Method ' +  method + ' does not exist on jQuery.'+namespace);
+    }    
+  };
+})(jQuery);
+
+(function($) {
+  var namespace = 'scrollmethod';
+  var methods = {
+    init: function(options){
+      options = $.extend({
+        speed:   800,
+        easing:  'easeOutExpo',
+      }, options);
+      return this.each(function(){
+        var _this = this;
+        var $this = $(this);
+        var data = $this.data(namespace);
+        if (!data) {        
+          options = $.extend({
+          }, options);
+          $this.data(namespace, {
+            options: options
+          });          
+          $this.off().on('click',function() {
+            var href= $(this).attr('href');
+            var $target = $(href === '#' || href === '' ? 'html' : href);
+            var position = $target.offset().top;
+            $('body,html').animate({scrollTop:position}, options.speed, options.easing);
+            return false;
+          });
+        }
+      }); // end each
+    },
+  };
+  $.fn.scrollmethod = function(method){
     if ( methods[method] ) {
       return methods[method].apply( this, Array.prototype.slice.call( arguments, 1 ));
     } else if ( typeof method === 'object' || ! method ) {
@@ -385,8 +533,8 @@
         //開いた時にスライドバー下の内容が見えなくなるので、テンプレートに設定したslidebar_wrapにステータスクラス付け、
         //slidebarの高さ分、CSSで外側の要素にマージンを付けるようにしている。
         $this.parents(options.parentClass).find('.slidebar_bottom_prev')
-  	      .removeClass('slidebar_close')
-  	      .addClass('slidebar_open');
+          .removeClass('slidebar_close')
+          .addClass('slidebar_open');
         params.height = options.height;
         break;
       case 'right':
@@ -412,8 +560,8 @@
         //開いた時にスライドバー下の内容が見えなくなるので、テンプレートに設定したslidebar_wrapにステータスクラス付け、
         //slidebarの高さ分、CSSで外側の要素にマージンを付けるようにしている。
         $this.parents(options.parentClass).find('.slidebar_bottom_prev')
-  	      .removeClass('slidebar_open')
-  	      .addClass('slidebar_close');
+          .removeClass('slidebar_open')
+          .addClass('slidebar_close');
         params.height = 0;
         break;
       case 'right':

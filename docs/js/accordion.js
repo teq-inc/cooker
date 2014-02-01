@@ -1,6 +1,5 @@
 (function($) {
   var namespace = 'accordion';
-  
   var methods = {
     init: function(options){
       options = $.extend({
@@ -38,9 +37,9 @@
             var $itemSiblings = $item.siblings(); // $item以外の'.accordion'要素
             var $itemSiblingsBody = $itemSiblings.find('.'+options.bodyClass);
 
-        		if($item.hasClass(options.openClass)){
-          		$itemSiblings
-            		.removeClass(options.openClass);           		
+            if($item.hasClass(options.openClass)){
+              $itemSiblings
+                .removeClass(options.openClass);
               $item
                 .removeClass(options.openClass)
                 .addClass(options.closeClass);
@@ -48,9 +47,9 @@
                 .stop()
                 .fadeOut(options.closeSpeed);                
             }else{
-          		$itemSiblings
-            		.removeClass(options.openClass)
-            		.addClass(options.closeClass);
+              $itemSiblings
+                .removeClass(options.openClass)
+                .addClass(options.closeClass);
               $item
                 .removeClass(options.closeClass)
                 .addClass(options.openClass);

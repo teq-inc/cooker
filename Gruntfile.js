@@ -12,7 +12,6 @@
       ' * <%= pkg.name %> v<%= pkg.version %>\n' +
       ' * Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
       ' * Licensed under <%= _.pluck(pkg.licenses, "type") %> (<%= _.pluck(pkg.licenses, "url") %>)\n' +
-      ' * <%= grunt.template.today("yyyy-mm-dd") %>\n' +
       ' */\n',
       
     // lessをpureとminifyでcssにコンパイル
@@ -72,7 +71,7 @@
         files: {
           src: [
             '<%= pkg.css %>/<%= pkg.name %>.css',
-            '<%= pkg.css %>/<%= pkg.name %>.min.css',
+            //'<%= pkg.css %>/<%= pkg.name %>.min.css',
           ]
         }
       }
@@ -110,6 +109,7 @@
         src: [ 
           '<%= pkg.js %>/accordion.js',
           '<%= pkg.js %>/drilldown.js',
+          '<%= pkg.js %>/dropdown.js',
           '<%= pkg.js %>/inputcounter.js',
           '<%= pkg.js %>/scrollmethod.js',
           '<%= pkg.js %>/slidebar.js'
@@ -288,6 +288,7 @@
           '<%= pkg.css %>',
           '<%= pkg.less %>',
           '<%= pkg.less %>/components',
+          '<%= pkg.less %>/js-components',
           '<%= pkg.less %>/core',
           '<%= pkg.less %>/layout',
           '<%= pkg.less %>/utilities',
@@ -307,6 +308,7 @@
       'js': function(filepath) { 
         return [ 
           'shell:jekyll_build',
+          'jshint',
           'notify:jekyll'
         ] 
       },

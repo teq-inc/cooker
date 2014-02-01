@@ -102,8 +102,8 @@
         //開いた時にスライドバー下の内容が見えなくなるので、テンプレートに設定したslidebar_wrapにステータスクラス付け、
         //slidebarの高さ分、CSSで外側の要素にマージンを付けるようにしている。
         $this.parents(options.parentClass).find('.slidebar_bottom_prev')
-  	      .removeClass('slidebar_close')
-  	      .addClass('slidebar_open');
+          .removeClass('slidebar_close')
+          .addClass('slidebar_open');
         params.height = options.height;
         break;
       case 'right':
@@ -129,8 +129,8 @@
         //開いた時にスライドバー下の内容が見えなくなるので、テンプレートに設定したslidebar_wrapにステータスクラス付け、
         //slidebarの高さ分、CSSで外側の要素にマージンを付けるようにしている。
         $this.parents(options.parentClass).find('.slidebar_bottom_prev')
-  	      .removeClass('slidebar_open')
-  	      .addClass('slidebar_close');
+          .removeClass('slidebar_open')
+          .addClass('slidebar_close');
         params.height = 0;
         break;
       case 'right':
