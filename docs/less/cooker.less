@@ -1,37 +1,33 @@
+@import "../vendor/font-awesome/less/font-awesome.less";
+
 // Core variables and mixins
 @import "variables/variables.less";
-@import "variables/color.less";
-@import "mixins/mixins.less";
+
+@import "mixins/utilities.less";
+@import "mixins/conponents.less";
 @import "mixins/scrollbar.less";
 @import "mixins/icon.less";
 
 // Core CSS
-@import "../vendor/bootstrap/less/scaffolding.less";
-@import "../vendor/bootstrap/less/type.less";
-@import "../vendor/bootstrap/less/code.less";
-@import "../vendor/bootstrap/less/grid.less";
-@import "../vendor/bootstrap/less/tables.less";
-@import "../vendor/bootstrap/less/forms.less";
-@import "../vendor/bootstrap/less/buttons.less";
-// Components
-//@import "../vendor/bootstrap/less/dropdowns.less";
-@import "../vendor/bootstrap/less/jumbotron.less";
-// Utility classes
-@import "../vendor/bootstrap/less/utilities.less";
-//@import "../vendor/bootstrap/less/responsive-utilities.less";
-
-@import "../vendor/font-awesome/less/font-awesome.less";
-
-
-// cooker components
-@import "components/accordion.less";
-@import "components/inputcounter.less";
-// cooker components
+@import "core/normalize.less";
+@import "core/scaffolding.less";
+@import "core/type.less";
+@import "core/code.less";
+@import "core/grid.less";
+@import "core/tables.less";
+@import "core/forms.less";
+@import "core/buttons.less";
 @import "core/syntax.less";
-@import "components/accordion.less";
-@import "components/inputcounter.less";
-// cooker utilities
-//@import "utilities/utilities.less";
+@import "core/navs.less";
+@import "core/syntax.less";
+
+// Components
+@import "../vendor/bootstrap/less/jumbotron.less";
+@import "components/labels.less";
+@import "components/utilities.less";
+@import "js-components/accordion.less";
+@import "js-components/dropdown.less";
+@import "js-components/inputcounter.less";
 
 // Layout
 @import "layout/main.less";

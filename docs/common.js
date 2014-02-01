@@ -5,6 +5,9 @@ $(function (){
       errorCounter:4
   });
 
+	$('.dropdown').dropdown({
+	});
+	
 	$('.accordion').accordion({
 	});
 
