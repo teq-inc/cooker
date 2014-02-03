@@ -8,6 +8,8 @@
   display: block;
   border-bottom: 0;
   .user-select(none);
+  background-color: #fff;
+  border-radius:@border-radius-base;
   &:hover{
     cursor: pointer;
     background-color: #eee;
@@ -43,5 +45,7 @@
   .accordion-header{
     background-color: @table-bg-active;
     border-bottom: 1px solid #ddd;
+    border-top-left-radius:0;
+    border-top-right-radius:0;
   }
 }
