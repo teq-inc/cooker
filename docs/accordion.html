@@ -17,39 +17,54 @@ title: accordion
       <div class="accordion-head">
         accordion-head
       </div>
+      
       <div class="accordion">
-      	<div class="accordion-header">
+      	<div class="accordion-header dtbl">
+        	<div class="dtbl-col">
           	<input type="checkbox" />
-          	<div class="accordion-toggle">&nbsp;accordion-header accordion-toggle</div>
+        	</div>
+        	<div class="dtbl-col">
+          	<input type="text" class="form-no-border form-ph-text" placeholder="名前" />
+        	</div>
+        	<div class="dtbl-col accordion-toggle">
+          	<img src="http://lorempixel.com/400/200/" alt="" width="60" />
+        	</div>
+        	<div class="dtbl-col accordion-toggle">
+            	&nbsp;accordion-header accordion-toggle
+          </div>
+        	<div class="dtbl-col">
+            	<a href="#">link</a>
+          </div>
       	</div>
       	<div class="accordion-body">
           <div style="height:300px;">accordion-body</div>
       	</div>
       </div>
+      
       <div class="accordion">
-      	<div class="accordion-header accordion-toggle">
-          	header
+      	<div class="accordion-header dtbl">
+        	<div class="dtbl-col">
+          	<input type="checkbox" />
+        	</div>
+        	<div class="dtbl-col">
+          	<input type="text" class="form-no-border form-ph-text" placeholder="名前" />
+        	</div>
+        	<div class="dtbl-col accordion-toggle">
+          	<img src="http://lorempixel.com/400/200/" alt="" width="60" />
+        	</div>
+        	<div class="dtbl-col accordion-toggle">
+            	&nbsp;accordion-header accordion-toggle
+          </div>
+        	<div class="dtbl-col">
+            	<a href="#">link</a>
+          </div>
       	</div>
       	<div class="accordion-body">
-          <div style="height:300px;">body</div>
+          <div style="height:300px;">accordion-body</div>
       	</div>
       </div>
-      <div class="accordion">
-      	<div class="accordion-header accordion-toggle">
-          	header
-      	</div>
-      	<div class="accordion-body">
-          <div style="height:300px;">body</div>
-      	</div>
-      </div>
-      <div class="accordion">
-      	<div class="accordion-header accordion-toggle">
-          	header
-      	</div>
-      	<div class="accordion-body">
-          <div style="height:300px;">body</div>
-      	</div>
-      </div>
+      
+
     </div>
  
  <hr />   
@@ -59,32 +74,46 @@ title: accordion
   
     <div class="accordions">  
       <div class="accordion">
-      	<div class="accordion-header accordion-toggle">
-          	header
+      	<div class="accordion-header dtbl">
+        	<div class="accordion-toggle dtbl-col">
+            	accordion-header
+        	</div>
       	</div>
       	<div class="accordion-body">
           <div style="height:300px;">body</div>
       	</div>
       </div>
       <div class="accordion">
-      	<div class="accordion-header accordion-toggle">
-          	header
+      	<div class="accordion-header dtbl">
+        	<div class="accordion-toggle dtbl-col">
+            	header
+        	</div>
       	</div>
       	<div class="accordion-body">
           <div style="height:300px;">body</div>
       	</div>
       </div>
       <div class="accordion">
-      	<div class="accordion-header accordion-toggle">
-          	header
+      	<div class="accordion-header dtbl">
+        	<div class="accordion-toggle dtbl-col">
+            	header
+        	</div>
       	</div>
       	<div class="accordion-body">
           <div style="height:300px;">body</div>
       	</div>
       </div>
       <div class="accordion">
-      	<div class="accordion-header accordion-toggle">
-          	header
+      	<div class="accordion-header dtbl">
+        	<div class="accordion-toggle dtbl-col">
+            	header
+        	</div>
+        	<div class="accordion-toggle dtbl-col">
+            	header
+        	</div>
+        	<div class="accordion-toggle dtbl-col">
+            	header
+        	</div>
       	</div>
       	<div class="accordion-body">
           <div style="height:300px;">body</div>
@@ -110,14 +139,19 @@ $('.accordion').accordion({
 {% endhighlight %}
 <h4>html</h4> 
 {% highlight html %}
-<div class="accordions">
-  <div class="accordion accordion-close">
-    <div class="accordion-header accordion-toggle">
-      header
-    </div>
-    <div class="accordion-body">
+<div class="accordions">  
+  <div class="accordion">
+  	<div class="accordion-header dtbl">
+    	<div class="accordion-toggle dtbl-col">
+        	accordion-toggle dtbl-col
+    	</div>
+    	<div class="dtbl-col">
+        	dtbl-col
+    	</div>
+  	</div>
+  	<div class="accordion-body">
       <div style="height:300px;">body</div>
-    </div>
+  	</div>
   </div>
 </div>
 {% endhighlight %}

@@ -42,11 +42,17 @@
 // Brand colors
 // -------------------------
 
-@brand-primary:         #428bca;
-@brand-success:         #5cb85c;
-@brand-warning:         #f0ad4e;
-@brand-danger:          #d9534f;
-@brand-info:            #5bc0de;
+@primary-color:         #428bca;
+@brand-primary:         @primary-color;
+@secondary-color:;
+@success-color:         #5cb85c;
+@brand-success:         @success-color;
+@warning-color:         #f0ad4e;
+@brand-warning:         @warning-color;
+@danger-color:          #d9534f;
+@brand-danger:          @danger-color;
+@info-color:            #5bc0de;
+@brand-info:            @info-color;
 
 // Scaffolding
 // -------------------------
@@ -57,7 +63,7 @@
 // Links
 // -------------------------
 
-@link-color:            @brand-primary;
+@link-color:            @primary-color;
 @link-hover-color:      darken(@link-color, 15%);
 
 // Typography
@@ -68,7 +74,7 @@
 @font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
 @font-family-base:        @font-family-sans-serif;
 
-@font-size-base:          14px;
+@font-size-base:          13px;
 @font-size-large:         ceil(@font-size-base * 1.25); // ~18px
 @font-size-small:         ceil(@font-size-base * 0.85); // ~12px
 
@@ -79,8 +85,10 @@
 @font-size-h5:            @font-size-base;
 @font-size-h6:            ceil(@font-size-base * 0.85); // ~12px
 
-@line-height-base:        1.428571429; // 20/14
+@line-height-base:        1.8;
 @line-height-computed:    floor(@font-size-base * @line-height-base); // ~20px
+@line-height-large:       1.33;
+@line-height-small:       1.5;
 
 @headings-font-family:    @font-family-base;
 @headings-font-weight:    500;
@@ -99,8 +107,9 @@
 // -------------------------
 // Based on 14px font-size and 1.428 line-height (~20px to start)
 
-@padding-base-vertical:          6px;
-@padding-base-horizontal:        12px;
+@padding-base: @padding-base-vertical @padding-base-horizontal;
+@padding-base-vertical:          12px;
+@padding-base-horizontal:        20px;
 
 @padding-large-vertical:         10px;
 @padding-large-horizontal:       16px;
@@ -110,9 +119,6 @@
 
 @padding-xs-vertical:            1px;
 @padding-xs-horizontal:          5px;
-
-@line-height-large:              1.33;
-@line-height-small:              1.5;
 
 @border-radius-base:             4px;
 @border-radius-large:            6px;

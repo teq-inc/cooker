@@ -1,5 +1,6 @@
 .accordions{
   .accordion{
+    position: relative;
     border: 1px solid #ddd;
     border-bottom: none;
     &:first-child{
@@ -19,9 +20,13 @@
     border-top-right-radius:@border-radius-base;
     font-weight: bold;
   }
+  .accordion-toggle{
+    color:@primary-color;
+    &:hover{
+      cursor: pointer;
+    }
+  }
   .accordion-header{
-    padding:10px 20px;
-    display: block;
     border-bottom: 0;
     .user-select(none);
     &:last-child{
@@ -29,9 +34,19 @@
       border-bottom-right-radius:@border-radius-base;
     }
     &:hover{
-      cursor: pointer;
       background-color: #eee;
     }
+    .dtbl-col{
+      padding: 10px;
+      &:first-child{
+        padding-left: 20px;
+      }
+      &:last-child{
+        padding-right: 20px;
+      }
+    }
+
+/*
     input[type="checkbox"] {
       float:left;
       padding:10px;
@@ -49,6 +64,7 @@
         vertical-align: middle
       }
     }
+*/
   }
   .accordion-body{
     .q_tbl_bordered{
@@ -71,12 +87,16 @@
     }
   }
   .accordion-open{
+    .box-shadow(0 1px 6px lighten(@primary-color, 30%));
+    z-index: 1;
     border: 1px solid #ddd;
     border-bottom: none;
     .accordion-header{
       background-color: @table-bg-active;
       border-bottom: 1px solid #ddd;
       border-radius:0;
+     // .box-shadow(0 1px 3px lighten(@primary-color, 30%));
+
     }
   }
 }
