@@ -32,7 +32,7 @@
           .off('click.'+namespace)
           .on('click.'+namespace, function(){
             
-            var $item = $(this).parent('.'+options.itemClass);
+            var $item = $(this).parents('.'+options.itemClass);
             var $itemBody = $item.find('.'+options.bodyClass);
             var $itemSiblings = $item.siblings(); // $item以外の'.accordion'要素
             var $itemSiblingsBody = $itemSiblings.find('.'+options.bodyClass);
