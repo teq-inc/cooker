@@ -10,10 +10,13 @@ $(function (){
 	
 	$('.accordion').accordion({
 	});
+	
 	$('.slidebar_right').slidebar({
       position: 'right',
 	});
+	
 	$('.slidebar_bottom').slidebar({
     position: 'bottom',
 	});
+	
 });

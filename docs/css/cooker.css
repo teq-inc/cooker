@@ -4548,6 +4548,8 @@ input[type="button"].btn-block {
   -ms-user-select: none;
   -o-user-select: none;
   user-select: none;
+  background-color: #fff;
+  border-radius: 4px;
 }
 .accordion-header:hover {
   cursor: pointer;
@@ -4580,6 +4582,8 @@ input[type="button"].btn-block {
 .accordion-open .accordion-header {
   background-color: #f5f5f5;
   border-bottom: 1px solid #ddd;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 .dropdown-header {
   padding: 10px 20px;
