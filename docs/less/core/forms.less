@@ -1,39 +1,3 @@
-//
-// Forms
-// --------------------------------------------------
-
-
-// Normalize non-controls
-//
-// Restyle and baseline non-control form elements.
-
-fieldset {
-  padding: 0;
-  margin: 0;
-  border: 0;
-}
-
-legend {
-  display: block;
-  width: 100%;
-  padding: 0;
-  margin-bottom: @line-height-computed;
-  font-size: (@font-size-base * 1.5);
-  line-height: inherit;
-  color: @legend-color;
-  border: 0;
-  border-bottom: 1px solid @legend-border-color;
-}
-
-label {
-  display: inline-block;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-
-// Normalize form controls
-
 // Override content-box in Normalize (* isn't specific enough)
 input[type="search"] {
   .box-sizing(border-box);
@@ -133,7 +97,7 @@ input[type="number"],
 
   // Customize the `:focus` state to imitate native WebKit styles.
   .form-control-focus();
-
+  .icon-font-awesome();
   // Placeholder
   //
   // Placeholder text gets special styles because when browsers invalidate entire
@@ -375,22 +339,75 @@ input[type="checkbox"],
 }
 
 
-
-input[type="text"].form-minimal,
-input[type="number"].form-minimal{
+// form-minimal
+// =====================================================
+input.form-minimal{
   border: none;
-  //border-radius:0;
   background: rgba(255,255,255,.7);
-  .box-shadow(none);  
+  .box-shadow(none); 
   &:focus{
-    .form-control-focus();
+    //.form-control-focus();
   }
 }
 
-//placeholder
-.icon-placeholder{
-  .icon-placeholder();
+// form-underline
+// =====================================================
+input.form-underline{
+  border: none;
+  border-bottom:1px solid @input-border; 
+  background: rgba(255,255,255,.7);
+  .box-shadow(none);
+  border-radius: 0;
+  &:focus{
+   // .form-control-focus();
+  }
 }
-.form-ph-icon{
-.icon-font-awesome()
+
+// form-leftline
+// =====================================================
+input.form-leftline{
+  border: none;
+  border-left:3px solid @input-border; 
+  background: rgba(255,255,255,.7);
+  .box-shadow(none);
+  border-radius: 0;
+  &:focus{
+   // .form-control-focus();
+  }
+}
+
+
+
+// form-insets
+// =====================================================
+.form-insets{
+  position: relative;
+  .form-inset-prepend,
+  .form-inset-append{
+    position: absolute;
+    padding: 14px 14px;
+    height: @input-height-base;
+    font-size: 20px;
+    line-height: 1;
+    color: @primary-color;
+    z-index: 1000;
+  }
+  .form-inset-prepend{
+    top:0;
+    left:0;
+  }
+  .form-inset-append{
+    top:0;
+    right:0;
+  }
+  &.form-inset-prepend-add{
+    .form-inset{
+      padding-left: 50px;
+    }
+  }
+  &.form-inset-append-add{
+    .form-inset{
+    padding-right: 50px;
+    }
+  }
 }

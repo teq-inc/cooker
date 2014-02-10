@@ -1,0 +1,161 @@
+---
+layout: one-column
+title: Buttons
+---
+<article id="content">
+  <div id="content-header" class="">
+    <h2>{{ page.title }}</h2>
+    <p class="lead"></p>
+  </div>
+  <div id="content-body">
+    <h3>Example</h3>
+    <div class="blocks">
+    
+      <div class="block">
+        <div class="block-header">
+        	<h4>Mark up</h4>
+        </div>
+        <div class="block-body">
+          <p>
+            <a class="btn btn-default" href="#" role="button">Link</a>
+            <button class="btn btn-default" type="submit">Button</button>
+            <input class="btn btn-default" type="button" value="Input">
+            <input class="btn btn-default" type="submit" value="Submit">
+          </p>      
+          <h5>Code</h5>
+{% highlight html %}
+<a class="btn btn-default" href="#" role="button">Link</a>
+<button class="btn btn-default" type="submit">Button</button>
+<input class="btn btn-default" type="button" value="Input">
+<input class="btn btn-default" type="submit" value="Submit">
+{% endhighlight %}
+        </div>
+      </div><!-- /.block -->
+
+      <div class="block">
+        <div class="block-header">
+        	<h4>color</h4>
+        </div>
+        <div class="block-body">
+          <p>
+            <button type="button" class="btn btn-sm"><i class="fa fa-spinner fa-spin"></i> Normal</button>
+            <button type="button" class="btn btn-secondary btn-sm"><i class="fa fa-undo"></i> Secondary</button>
+            <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-check-circle-o"></i> Primary</button>
+            <button type="button" class="btn btn-success btn-sm"><i class="fa fa-plus-circle"></i> Success</button>
+            <button type="button" class="btn btn-info btn-sm"><i class="fa fa-exclamation-circle"></i> Info</button>
+            <button type="button" class="btn btn-warning btn-sm"><i class="fa fa-exclamation-triangle"></i> Warning</button>
+            <button type="button" class="btn btn-danger btn-sm"><i class="fa fa-ban"></i> Danger</button>
+            <button type="button" class="btn btn-link btn-sm"><i class="fa fa-undo"></i> Link</button>
+          </p>      
+          <h5>Code</h5>
+{% highlight html %}
+<button type="button" class="btn btn-sm"><i class="fa fa-spinner fa-spin"></i> Normal</button>
+<button type="button" class="btn btn-dark btn-sm"><i class="fa fa-undo"></i> Dark</button>
+<button type="button" class="btn btn-primary btn-sm"><i class="fa fa-check-circle-o"></i> Primary</button>
+<button type="button" class="btn btn-success btn-sm"><i class="fa fa-plus-circle"></i> Success</button>
+<button type="button" class="btn btn-info btn-sm"><i class="fa fa-exclamation-circle"></i> Info</button>
+<button type="button" class="btn btn-warning btn-sm"><i class="fa fa-exclamation-triangle"></i> Warning</button>
+<button type="button" class="btn btn-danger btn-sm"><i class="fa fa-ban"></i> Danger</button>
+<button type="button" class="btn btn-link btn-sm"><i class="fa fa-undo"></i> Link</button>
+{% endhighlight %}
+        </div>
+      </div><!-- /.block -->
+
+      <div class="block">
+        <div class="block-header">
+        	<h4>Size</h4>
+        </div>
+        <div class="block-body">
+          <p>
+            <h5>xs</h5>
+            <button type="button" class="btn btn-xs"><i class="fa fa-spinner fa-spin"></i> xs</button>
+            <h5>sm</h5>
+            <button type="button" class="btn btn-sm"><i class="fa fa-undo"></i> sm</button>
+            <h5>normal</h5>
+            <button type="button" class="btn"><i class="fa fa-check-circle-o"></i> normal</button>
+            <h5>lg</h5>
+            <button type="button" class="btn btn-lg"><i class="fa fa-plus-circle"></i> lg</button>
+            <h5>block</h5>
+            <button type="button" class="btn btn-block"><i class="fa fa-exclamation-circle"></i> block</button>
+          </p>
+          <h5>Code</h5>
+{% highlight html %}
+<button type="button" class="btn btn-xs"><i class="fa fa-spinner fa-spin"></i> xs</button>
+<button type="button" class="btn btn-sm"><i class="fa fa-undo"></i> sm</button>
+<button type="button" class="btn "><i class="fa fa-check-circle-o"></i> normal</button>
+<button type="button" class="btn btn-lg"><i class="fa fa-plus-circle"></i> lg</button>
+<button type="button" class="btn btn-block"><i class="fa fa-exclamation-circle"></i> block</button>
+{% endhighlight %}
+        </div>
+      </div><!-- /.block -->
+      
+      <div class="block">
+        <div class="block-header">
+        	<h4>State</h4>
+        </div>
+        <div class="block-body">
+      <h3>Active</h3>
+      <p>
+        <button type="button" class="btn btn-primary btn-lg active">Primary button</button>
+        <button type="button" class="btn btn-default btn-lg active">Button</button>
+        <a href="#" class="btn btn-primary btn-lg active" role="button">Primary link</a>
+        <a href="#" class="btn btn-default btn-lg active" role="button">Link</a>
+      </p>
+      <h3>Disabled</h3>
+      <p>
+        <button type="button" class="btn btn-lg btn-primary" disabled="disabled">Primary button</button>
+        <button type="button" class="btn btn-default btn-lg" disabled="disabled">Button</button>
+        <a href="#" class="btn btn-primary btn-lg disabled" role="button">Primary link</a>
+        <a href="#" class="btn btn-default btn-lg disabled" role="button">Link</a>  
+      </p>
+          <h5>Code</h5>
+{% highlight html %}
+<button type="button" class="btn btn-lg btn-primary" disabled="disabled">...</button>
+{% endhighlight %}
+        </div>
+      </div><!-- /.block -->
+
+      <div class="block">
+        <div class="block-header">
+        	<h4>Button groups</h4>
+        </div>
+        <div class="block-body">
+      <p>
+        <div class="btn-group">
+          <button type="button" class="btn btn-default">Left</button>
+          <button type="button" class="btn btn-default">Middle</button>
+          <button type="button" class="btn btn-default">Right</button>
+        </div>
+    </p>
+    
+    <p>
+      <div class="btn-group">
+        <button type="button" class="btn btn-default">1</button>
+        <button type="button" class="btn btn-default">2</button>
+      
+        <div class="btn-group">
+          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+            Dropdown
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a href="#">Dropdown link</a></li>
+            <li><a href="#">Dropdown link</a></li>
+          </ul>
+        </div>
+      </div>      
+    </p>
+          <h5>Code</h5>
+{% highlight html %}
+<a class="btn btn-default" href="#" role="button">Link</a>
+<button class="btn btn-default" type="submit">Button</button>
+<input class="btn btn-default" type="button" value="Input">
+<input class="btn btn-default" type="submit" value="Submit">
+{% endhighlight %}
+        </div>
+      </div><!-- /.block -->
+
+
+    </div><!-- /.blocks -->
+  </div>
+</article>
