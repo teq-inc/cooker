@@ -8,7 +8,7 @@ $(function (){
 	$('.dropdown').dropdown({
 	});
 	
-	$('.accordion').accordion({
+	$('.switchers').switchers({
 	});
 	
 	$('.slidebar_right').slidebar({

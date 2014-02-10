@@ -11,55 +11,21 @@
   -webkit-font-smoothing: antialiased;
 }
 
-//placeholderアイコン
-.icon-ph-text(@color:#eee,@icon:@fa-var-pencil){
-  color: @color;
-  &::-webkit-input-placeholder::before {
-    font-family: FontAwesome;
-    font-weight: normal;
-    font-style: normal;
-    text-decoration: inherit;
-    -webkit-font-smoothing: antialiased;
-    content:@icon'   '; 
-  }
-  // firefox 19+
-  &::-moz-placeholder::before  {
-    font-family: fontAwesome; 
-    content:@icon'   '; 
-  }
-  // ie
-  &:-ms-input-placeholder::before  { 
-    font-family: fontAwesome; 
-    content:@icon'   '; 
-  }
-  &input:-moz-placeholder::before  { 
-    font-family: fontAwesome; 
-    content:@icon'   '; 
-  } 
-}
-
 .icon-placeholder(@color:#eee,@icon:@fa-var-pencil){
   color: @color;
+  .icon-font-awesome();
   &::-webkit-input-placeholder::before {
-    font-family: FontAwesome;
-    font-weight: normal;
-    font-style: normal;
-    text-decoration: inherit;
-    -webkit-font-smoothing: antialiased;
     content:@icon'   '; 
   }
   // firefox 19+
-  &::-moz-placeholder::before  {
-    font-family: fontAwesome; 
+  &:before input::-moz-placeholder::before  {
     content:@icon'   '; 
   }
   // ie
   &:-ms-input-placeholder::before  { 
-    font-family: fontAwesome; 
     content:@icon'   '; 
   }
-  &input:-moz-placeholder::before  { 
-    font-family: fontAwesome; 
+  &input::-moz-placeholder::before  { 
     content:@icon'   '; 
   } 
 }
