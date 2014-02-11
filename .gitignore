@@ -2,7 +2,11 @@
 validation-report.json
 validation-status.json
 node_modules/
-vendor/
+src/vendor/
+src/!temp/
+src/js/!temp/
+src/js/cooker.beautify.js
+src/js/cooker.beautify.min.js
 bower_components/
 _gh_pages/
 dist/

@@ -2,6 +2,6 @@ markdown:    redcarpet
 pygments:    true
 permalink:   pretty
 exclude:     ['less']
-source:      ./docs
+source:      ./src
 destination: ./_gh_pages
 encoding:    UTF-8

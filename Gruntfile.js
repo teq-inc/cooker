@@ -16,51 +16,29 @@
       
     // lessをpureとminifyでcssにコンパイル
     less:{
-      pure: {
+      develop: {
         options: {
-          paths: [
-            '<%= pkg.less %>/<%= pkg.name %>.less',
-            '<%= pkg.less %>/**/*.less',
-          ],
-          report: 'min',
+          //strictMath: true,
           sourceMap: true,
           outputSourceFiles: true,
           sourceMapURL: '<%= pkg.name %>.css.map',
-          sourceMapFilename: '<%= pkg.css %>/<%= pkg.name %>.css.map'
+          sourceMapFilename: '<%= pkg.src %>/css/<%= pkg.name %>.css.map'
         },
         files: {
-          '<%= pkg.css %>/<%= pkg.name %>.css': '<%= pkg.less %>/<%= pkg.name %>.less'        
+          '<%= pkg.src %>/css/<%= pkg.name %>.css': '<%= pkg.src %>/less/<%= pkg.name %>.less'        
         } 
       },
       minify: {
         options: {
-          paths: '<%= less.pure.options.paths %>',
           cleancss: true,
           report: 'min',
         },
         files: {
-          '<%= pkg.css %>/<%= pkg.name %>.min.css': '<%= pkg.less %>/<%= pkg.name %>.less'        
+          '<%= pkg.src %>/css/<%= pkg.name %>.min.css': '<%= pkg.src %>/less/<%= pkg.name %>.less'        
         }
       },
     },
-    
-/*
-    cssmin: {
-      compress: {
-        options: {
-          keepSpecialComments: '*',
-          noAdvanced: true, // turn advanced optimizations off until the issue is fixed in clean-css
-          report: 'min',
-          selectorsMergeMode: 'ie8'
-        },
-        src: [
-          '',
-        ],
-        dest: ''
-      }
-    },
-*/
-    
+        
     // コンパイルしたcssにバナー追加
     usebanner: {
       dist: {
@@ -70,8 +48,7 @@
         },
         files: {
           src: [
-            '<%= pkg.css %>/<%= pkg.name %>.css',
-            //'<%= pkg.css %>/<%= pkg.name %>.min.css',
+            '<%= pkg.src %>/css/<%= pkg.name %>.css',
           ]
         }
       }
@@ -83,58 +60,68 @@
         csslintrc: '.csslintrc'
       },
       src: [
-        '<%= pkg.css %>/<%= pkg.name %>.css',
+        '<%= pkg.src %>/css/<%= pkg.name %>.css',
       ]
     },
 
-    //
-    csscomb: {
-      sort: {
-        options: {
-          config: '.csscomb.json'
-        },
-        files: {
-          '<%= pkg.docs %>/<%= pkg.name %>.css': ['<%= pkg.docs %>/<%= pkg.name %>.css'],
-        }
-      }
-    },
-
-    // jsファイル結合しそのファイルにバナー追加
-    concat: {
-      options: {
-        banner: '<%= banner %>',
-        stripBanners: false
-      },
-      dist: {
-        src: [ 
-          '<%= pkg.js %>/accordion.js',
-          '<%= pkg.js %>/drilldown.js',
-          '<%= pkg.js %>/dropdown.js',
-          '<%= pkg.js %>/inputcounter.js',
-          '<%= pkg.js %>/scrollmethod.js',
-          '<%= pkg.js %>/slidebar.js'
-        ],
-        dest: '<%= pkg.js %>/<%= pkg.name %>.js'
-      }
-    },    
-    
-    // jsファイル圧縮とバナー追加
+    // jsを結合、成形、圧縮
     uglify: {
-      options: {
-        banner: '<%= banner %>',
-        report: 'min'
+      develop:{
+        options: {
+          banner: '<%= banner %>',
+          report: 'min',
+          mangle: false,
+          compress:false,
+          indentLevel: 2,
+          beautify: true
+        },
+        files :  { 
+          '<%= pkg.src %>/js/<%= pkg.name %>.js' : [
+            '<%= pkg.src %>/js/switcher.js',
+            '<%= pkg.src %>/js/slidebar.js',
+            '<%= pkg.src %>/js/inputcounter.js'
+           ]
+        } 
       },
-      build: {
-        src: '<%= pkg.js %>/<%= pkg.name %>.js',
-        dest: '<%= pkg.js %>/<%= pkg.name %>.min.js'
-      }
+      minify:{
+        options: {
+          banner: '<%= banner %>',
+          report: 'min',
+          mangle: false,
+          compress:false,
+        },
+        files :  { 
+          '<%= pkg.src %>/js/<%= pkg.name %>.min.js' : ['<%= pkg.src %>/js/<%= pkg.name %>.js' ]
+        } 
+      },
+      comp:{
+        options: {
+          banner: '<%= banner %>',
+          report: 'min',
+          mangle: false,
+          indentLevel: 2,
+          beautify: true
+        },
+        files :  { 
+          '<%= pkg.src %>/js/<%= pkg.name %>.beautify.js' : ['<%= pkg.src %>/js/<%= pkg.name %>.js' ]
+        } 
+      },
+      compMinify:{
+        options: {
+          banner: '<%= banner %>',
+          report: 'min',
+        },
+        files :  { 
+          '<%= pkg.src %>/js/<%= pkg.name %>.beautify.min.js' : ['<%= pkg.src %>/js/<%= pkg.name %>.beautify.js' ]
+        } 
+      },
     },
     
     //js debug
     jshint: {
       files: [
         'Gruntfile.js',
-        '<%= pkg.js %>',
+        '<%= pkg.src %>/js',
       ],
       options: {
         browser: true,
@@ -190,8 +177,8 @@
       css: {
         expand: true,
         src: [
-          '<%= pkg.css %>/<%= pkg.name %>.css',
-          '<%= pkg.css %>/<%= pkg.name %>.min.css'
+          '<%= pkg.src %>/css/<%= pkg.name %>.css',
+          '<%= pkg.src %>/css/<%= pkg.name %>.min.css'
         ],
         dest: '<%= pkg.dist %>/css/',
         flatten: true,
@@ -200,8 +187,8 @@
       js: {
         expand: true,
         src: [
-          '<%= pkg.js %>/<%= pkg.name %>.js',
-          '<%= pkg.js %>/<%= pkg.name %>.min.js'
+          '<%= pkg.src %>/js/<%= pkg.name %>.js',
+          '<%= pkg.src %>/js/<%= pkg.name %>.min.js'
         ],
         dest: '<%= pkg.dist %>/js/',
         flatten: true,
@@ -251,7 +238,7 @@
     bower: {
       install: {
         options: {
-          targetDir: '<%= pkg.docs %>/vendor',
+          targetDir: '<%= pkg.src %>/vendor',
           //layoutのパラメータ　'byType' or 'byComponent'
           //https://github.com/yatskevich/grunt-bower-task
           layout: 'byComponent',
@@ -280,20 +267,19 @@
     esteWatch: {
       options: {
         dirs: [
-          '<%= pkg.docs %>',
-          '<%= pkg.docs %>/_layouts',
-          '<%= pkg.docs %>/_page',
-          '<%= pkg.docs %>/_posts',
-          '<%= pkg.js %>',
-          '<%= pkg.css %>',
-          '<%= pkg.less %>',
-          '<%= pkg.less %>/components',
-          '<%= pkg.less %>/js-components',
-          '<%= pkg.less %>/core',
-          '<%= pkg.less %>/layout',
-          '<%= pkg.less %>/utilities',
-          '<%= pkg.less %>/mixins',
-          '<%= pkg.less %>/variables',
+          '<%= pkg.src %>',
+          '<%= pkg.src %>/_layouts',
+          '<%= pkg.src %>/_page',
+          '<%= pkg.src %>/_posts',
+          '<%= pkg.src %>/js',
+          '<%= pkg.src %>/less',
+          '<%= pkg.src %>/less/components',
+          '<%= pkg.src %>/less/js-components',
+          '<%= pkg.src %>/less/core',
+          '<%= pkg.src %>/less/layout',
+          '<%= pkg.src %>/less/utilities',
+          '<%= pkg.src %>/less/mixins',
+          '<%= pkg.src %>/less/variables',
         ],
         livereload: {
           enabled: false
@@ -314,8 +300,9 @@
       },
       'less': function(filepath) { 
         return [
-          'less:pure',
+          'less:develop',
           'notify:less',
+          'usebanner',
           'shell:jekyll_build',
           'notify:jekyll'
         ] 
@@ -349,17 +336,15 @@
   grunt.registerTask('build', function () {
     grunt.log.warn('`grunt build` to start.');
     grunt.task.run([
-      'concat', 
-      //'jshint',
       'uglify',
       'less',
       'usebanner',
-      'csscomb',
+      'jshint',
       //'csslint',
       'shell:jekyll_build',
       'copy',
       //'htmlmin',
-      'validation',
+      //'validation',
     ]);
   });
   

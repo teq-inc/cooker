@@ -5,11 +5,9 @@ $(function (){
       errorCounter:4
   });
 
-	$('.dropdown').dropdown({
-	});
+	$('.scrollmethod').scrollmethod();
 	
-	$('.switchers').switchers({
-	});
+	$('.switchers').switchers();
 	
 	$('.slidebar_right').slidebar({
       position: 'right',
