@@ -1,11 +1,11 @@
 .blocks{
   .block{
     border: @border-base;
-    margin-bottom: @padding-base-vertical*1.5;
+    margin-bottom: @line-height-computed;
     border-radius:@border-radius-base;
   }
   .block-header{
-    padding:@padding-base;
+    padding:@padding-inner-base;
     border-bottom: 2px solid @border-base-color;
     &:last-child{
       .border-bottom-radius(@border-radius-base);
@@ -16,7 +16,7 @@
     font-size: 16px;
   }
   .block-body{
-    padding:@padding-base;
-    padding-bottom: 0;
+    padding:@padding-inner-base;
+    padding-top:@padding-inner-base-vertical*2;
   }
 }

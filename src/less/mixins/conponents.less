@@ -50,9 +50,9 @@
 // Tables
 // -------------------------
 .table-row-variant(@state; @background) {
-  // Exact selectors below required to override `.table-striped` and prevent
+  // Exact selectors below required to override `.tbl-striped` and prevent
   // inheritance to nested tables.
-  .table {
+  .tbl {
     > thead,
     > tbody,
     > tfoot {
@@ -64,9 +64,9 @@
     }
   }
 
-  // Hover states for `.table-hover`
+  // Hover states for `.tbl-hover`
   // Note: this is not available for cells or rows within `thead` or `tfoot`.
-  .table-hover > tbody {
+  .tbl-hover > tbody {
     > tr > .@{state}:hover,
     > .@{state}:hover > td,
     > .@{state}:hover > th {

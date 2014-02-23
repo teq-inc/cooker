@@ -1,11 +1,11 @@
 (function($) {
-  var namespace = 'dropdowns'
+  var namespace = 'tooltips'
   var methods = {
     init: function(options){
       options = $.extend({
-        dropdownClass: 'dropdown',
-        toggleClass: 'dropdown-toggle',
-        activeClass: 'dropdown-active'
+        tooltipClass: 'tooltips',
+        activeClass: 'tooltip-active',
+        template: '<div class="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>'
       }, options)
       return this.each(function(){
         var _this = this
@@ -18,35 +18,67 @@
               options: options
           })
         }
-        var $toggle = $this.find('.'+options.toggleClass)
+
         var action = $this.data('action')
-        var clickToggle = function(){
-          $toggle.off('click').on('click', function(e){
+        var mouseOver = function(){
+          $this.off('mouseenter').on('mouseenter', function(e){
+            var template = options.template
+            $('body').append(template)
+
             var $this = $(this);
-            var $o = $this.parents('.'+options.dropdownClass).siblings();
-            $o.removeClass(options.activeClass)
-            e.stopPropagation()
-            methods.toggle.apply(_this)
+            var title = $this.attr('title');
+            var tipPos = $this.data('position');
+            var iPos = $this.position()
+            var $tip = $('.tooltip')
+            
+            $tip.html(title)
+            $tip.css({
+              'position':'fixed',
+              'top':iPos.top,
+              'left':iPos.left,
+              'background-color':'blabk',
+              'padding':'20px',
+              'height':'30px',
+              'z-index':9000,
+              'border':'1px solid #000',
+              'opacity':1
+            })
+            //$tip.show()
+            
+/*
+            if(tipPos === 'left'){
+              
+            }ifelse(tipPos === 'right')){
+            
+            }ifelse(tipPos === 'top')){
+
+            }ifelse(tipPos === 'bottom')){
+              
+            }
+*/
+            //e.stopPropagation()
+            //e.preventDefault()
+            //return false
+            
           })
-          $('body').on('click', function(){
-            methods.close.apply(_this)
-          })          
         }
-        var mouseHover = function(){
-          $toggle.off('mouseover').on('mouseover', function(e){
-            var $this = $(this);
-            var $o = $this.parents('.'+options.dropdownClass).siblings();
-            $o.removeClass(options.activeClass)
-            methods.open.apply(_this)
+
+        var mouseOut = function(){
+          $this.off('mouseleave').on('mouseleave', function(e){
+            var $this = $(this)
+            var $tip = $('.tooltip')
+            $tip.remove()
+            return false
           })
         }
+
         if(action === 'hover'){
-          mouseHover()
-          clickToggle()
+          mouseOver()
+          mouseOut()
         }else if(action === 'click'){
-          clickToggle()
+
         } else {
-          clickToggle()
+
         }
       }); // end each
     },
@@ -78,7 +110,7 @@
       })
     },
   }
-  $.fn.dropdowns = function(method){
+  $.fn.tooltips = function(method){
     if ( methods[method] ) {
       return methods[method].apply( this, Array.prototype.slice.call( arguments, 1 ))
     } else if ( typeof method === 'object' || ! method ) {

@@ -6,6 +6,10 @@ $(function (){
   });
 
 	$('.scrollmethod').scrollmethod();
+
+	$('.dropdown').dropdowns();
+
+	$('.tooltips').tooltips();
 	
 	$('.switchers').switchers();
 	

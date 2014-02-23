@@ -22,68 +22,42 @@
         
         var $aToggle = $this.find('.'+options.allToggleClass);
         var $iToggle = $this.find('.'+options.toggleClass);
-        var $action = $this.data('action');
+        var switcher = options.switcherClass;         
         var active = options.activeClass;         
+          
+        // all toggle button
+        $aToggle.off('click').on('click', function(){
+          var $this = $(this);
+          var $a = $this.parents('.'+namespace).find('.'+switcher);
+          if($a.hasClass(active)){
+            $a.removeClass(active);
+          }else{
+            $a.addClass(active);
+          }
+        });
 
-        if($action === 'hover'){
-          //課題
-          //ディレイさせる。
-          $iToggle.off('mouseover.'+namespace).on('mouseover.'+namespace, function(){
-            var $this = $(this);
-            var $i = $this.parents('.'+options.switcherClass);
+        // toggle button
+        $iToggle.off('click').on('click', function(){
+          var $this = $(this);
+          var mode = $this.parents('.'+namespace).data('mode');
+          var $i = $this.parents('.'+switcher);
+          var $o = $i.siblings();          
+          if(mode === 'accordion'){
+            if($i.hasClass(active)){
+              $o,$i.removeClass(active);
+            }else{
+              $o.removeClass(active);
+              $i.addClass(active);
+            }
+          }else{//デフォルト動作
             if($i.hasClass(active)){
               $i.removeClass(active);
             }else{
               $i.addClass(active);
             }
-          });
+          }
+        });
           
-          $iToggle.off('mouseout.'+namespace).on('mouseout.'+namespace, function(){
-            var $this = $(this);
-            var $i = $this.parents('.'+options.switcherClass);
-            if($i.hasClass(active)){
-              $i.removeClass(active);
-            }else{
-              $i.addClass(active);
-            }
-          });
-        
-        } else {
-          
-          // all toggle button
-          $aToggle.off('click.'+namespace).on('click.'+namespace, function(){
-            var $this = $(this);
-            var $a = $this.parents('.'+namespace).find('.'+options.switcherClass);
-            if($a.hasClass(active)){
-              $a.removeClass(active);
-            }else{
-              $a.addClass(active);
-            }
-          });
-  
-          // toggle button
-          $iToggle.off('click.'+namespace).on('click.'+namespace, function(){
-            var $this = $(this);
-            var mode = $this.parents('.'+namespace).data('mode');
-            var $i = $this.parents('.'+options.switcherClass);
-            var $o = $i.siblings();          
-            if(mode === 'accordion'){
-              if($i.hasClass(active)){
-                $o,$i.removeClass(active);
-              }else{
-                $o.removeClass(active);
-                $i.addClass(active);
-              }
-            }else{//デフォルト動作
-              if($i.hasClass(active)){
-                $i.removeClass(active);
-              }else{
-                $i.addClass(active);
-              }
-            }
-          });
-          
-        }
                 
       }); // end each
     },

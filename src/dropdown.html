@@ -1,0 +1,173 @@
+---
+layout: one-column
+title: dropdowns
+---
+<article id="content">
+  <div id="content-header" class="">
+    <h2>{{ page.title }}</h2>
+    <p class="lead"></p>
+  </div>
+  <div id="content-body">
+    <h3>Example</h3>
+    <div class="blocks">
+    
+      <div class="block">
+        <div class="block-header">
+        	<h4>Normal(click)</h4>
+        </div>
+        <div class="block-body">
+                
+          <div class="dropdown" data-action="click">
+            <p><a class="dropdown-toggle" href="#">Dropdown trigger</a></p>
+            <ul class="dropdown-menu fade" role="menu" aria-labelledby="dLabel">
+              <li><a href="#">list</a></li>
+              <li><a href="#">list</a></li>
+              <li><a href="#">list</a></li>
+            </ul>
+          </div>
+          
+          <div class="btn-group dropdown" data-action="click">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+              Action <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </div>
+                    
+          <div class="btn-group dropdown" data-action="click">
+            <button type="button" class="btn btn-danger">Action</button>
+            <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+              <span class="caret"></span>
+              <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </div>
+          
+          <div class="btn-group dropup dropdown" data-action="click">
+            <button type="button" class="btn btn-default">Dropup</button>
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+              <span class="caret"></span>
+              <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </div>
+
+          <h5>Code</h5>
+{% highlight js %}
+<div class="dropdown" data-action="click">
+  <a class="dropdown-toggle" href="#">Dropdown trigger</a>
+  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+    <li><a href="#">list</a></li>
+    <li><a href="#">list</a></li>
+    <li><a href="#">list</a></li>
+  </ul>
+</div>
+{% endhighlight %}
+        </div>
+      </div><!-- /.blocks -->
+      
+      <div class="block">
+        <div class="block-header">
+        	<h4>hover</h4>
+        </div>
+        <div class="block-body">
+
+          <div class="dropdown" data-action="hover">
+            <p><a class="dropdown-toggle" href="#">Dropdown trigger</a></p>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+              <li><a href="#">list</a></li>
+              <li><a href="#">list</a></li>
+              <li><a href="#">list</a></li>
+            </ul>
+          </div>
+          
+          <div class="btn-group dropdown" data-action="hover">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+              Action <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </div>
+                    
+          <div class="btn-group dropdown" data-action="hover">
+            <button type="button" class="btn btn-danger">Action</button>
+            <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+              <span class="caret"></span>
+              <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </div>
+          
+          <div class="btn-group dropup dropdown" data-action="hover">
+            <button type="button" class="btn btn-default">Dropup</button>
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+              <span class="caret"></span>
+              <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </div>          
+          
+          <h5>Code</h5>
+{% highlight js %}
+<div class="dropdown" data-action="hover">
+  <a class="dropdown-toggle" href="#">Dropdown trigger</a>
+  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+    <li><a href="#">list</a></li>
+    <li><a href="#">list</a></li>
+    <li><a href="#">list</a></li>
+  </ul>
+</div>
+{% endhighlight %}
+        </div>
+
+      
+    </div><!-- /.blocks -->
+    
+
+  </div>
+      
+</article>
+
+
+
+
+
+
+
+
+
+

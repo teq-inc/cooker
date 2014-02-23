@@ -345,9 +345,6 @@ input.form-minimal{
   border: none;
   background: rgba(255,255,255,.7);
   .box-shadow(none); 
-  &:focus{
-    //.form-control-focus();
-  }
 }
 
 // form-underline
@@ -358,9 +355,6 @@ input.form-underline{
   background: rgba(255,255,255,.7);
   .box-shadow(none);
   border-radius: 0;
-  &:focus{
-   // .form-control-focus();
-  }
 }
 
 // form-leftline
@@ -371,9 +365,6 @@ input.form-leftline{
   background: rgba(255,255,255,.7);
   .box-shadow(none);
   border-radius: 0;
-  &:focus{
-   // .form-control-focus();
-  }
 }
 
 
@@ -385,12 +376,11 @@ input.form-leftline{
   .form-inset-prepend,
   .form-inset-append{
     position: absolute;
-    padding: 14px 14px;
+    padding: 10px 18px;
     height: @input-height-base;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1;
-    color: @primary-color;
-    z-index: 1000;
+    color: @input-color-placeholder;
   }
   .form-inset-prepend{
     top:0;
@@ -402,12 +392,12 @@ input.form-leftline{
   }
   &.form-inset-prepend-add{
     .form-inset{
-      padding-left: 50px;
+      padding-left: 60px;
     }
   }
   &.form-inset-append-add{
     .form-inset{
-    padding-right: 50px;
+    padding-right: 60px;
     }
   }
 }
