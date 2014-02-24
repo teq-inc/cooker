@@ -41,13 +41,13 @@ $ npm install -g bower
 作業用ディレクトリでgit cloneかダウンロードしてファイルの準備。
 ```
 $ cd my-site
-$ git clone https://github.com/blivesta/cooker-scaffolding.git
+$ git clone https://github.com/teq-inc/cooker.git
 ```
 
 ###Step 2
 npmでgruntのモジュールを作業用ディレクトリにインストール。
 ```
-$ cd cooker-scaffolding/
+$ cd cooker/
 $ npm install
 ```
 node_modulesフォルダが作られる。
