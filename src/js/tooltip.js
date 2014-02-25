@@ -4,8 +4,8 @@
     init: function(options){
       options = $.extend({
         tooltipClass: 'tooltips',
-        activeClass: 'tooltip-active',
-        template: '<div class="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>'
+        activeClass: 'tooltips-active',
+        template: '<div class="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>',
       }, options)
       return this.each(function(){
         var _this = this
@@ -22,40 +22,21 @@
         var action = $this.data('action')
         var mouseOver = function(){
           $this.off('mouseenter').on('mouseenter', function(e){
-            var template = options.template
-            $('body').append(template)
 
-            var $this = $(this);
-            var title = $this.attr('title');
-            var tipPos = $this.data('position');
-            var iPos = $this.position()
+            methods.template.apply(_this)
+            
+            var $this = $(this)
+            var title = $this.attr('title')
+            var pos = $this.data('position')
             var $tip = $('.tooltip')
+            var $tipInner = $tip.find('.tooltip-inner')
             
-            $tip.html(title)
-            $tip.css({
-              'position':'fixed',
-              'top':iPos.top,
-              'left':iPos.left,
-              'background-color':'blabk',
-              'padding':'20px',
-              'height':'30px',
-              'z-index':9000,
-              'border':'1px solid #000',
-              'opacity':1
-            })
-            //$tip.show()
-            
-/*
-            if(tipPos === 'left'){
-              
-            }ifelse(tipPos === 'right')){
-            
-            }ifelse(tipPos === 'top')){
+            $tipInner.html(title)
+                        
+            methods.position.apply(_this)
 
-            }ifelse(tipPos === 'bottom')){
-              
-            }
-*/
+            $tip.addClass('fade in ' + pos)            
+
             //e.stopPropagation()
             //e.preventDefault()
             //return false
@@ -82,25 +63,51 @@
         }
       }); // end each
     },
-    toggle: function(){
+    position: function(){
       var $this = $(this)
       options = $this.data(namespace).options
-      var active = $this.hasClass(options.activeClass)
-      if(active){
-        methods.close.call(this, options)
+      var pos = $this.data('position')
+      var iWidth = $this.outerWidth();
+      var iHeight = $this.outerHeight();
+      var iPos = $this.position();
+      var $tip = $('.tooltip');
+      var $tipArrow = $tip.find('.tooltip-arrow');
+      var tipArrowHeight = $tipArrow.outerHeight();
+      var tipArrowWidth = $tipArrow.outerWidth();
+      var tipPos = $tip.position();
+      var tipWidth = $tip.outerWidth();
+      var tipHeight = $tip.outerHeight();
+      var margin = 3;
+      
+      if(pos === 'left'){
+        var leftCssTop = iPos.top + (iHeight / 2);
+        var leftCssLeft = iPos.left - tipWidth - tipArrowWidth - margin;
+        $tip.css({
+          'top':leftCssTop,
+          'left':leftCssLeft,
+        });      
+      }else if(pos === 'right'){
+      
+      }else if(pos === 'top'){
+        //var topCssTop = iPos.top - tipHeight;
+        var topCssTop = iPos.top - tipHeight - tipArrowHeight - margin;
+
+        var topCssLeft = iPos.left - (tipWidth / 2) + (iWidth / 2);
+        $tip.css({
+          'top':topCssTop,
+          'left':topCssLeft,
+        });      
       }else{
-        methods.open.call(this, options)
+        
       }
+      
+      
     },
-    open: function(){
-      var $this = $(this)
-      options = $this.data(namespace).options;
-      $this.addClass(options.activeClass)
-    },
-    close: function(){
+    template: function(){
       var $this = $(this)
       options = $this.data(namespace).options
-      $this.removeClass(options.activeClass)
+      var template = options.template      
+      $('body').append(template)
     },
     destroy: function(){
       return this.each(function(){
