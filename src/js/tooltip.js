@@ -27,15 +27,14 @@
             
             var $this = $(this)
             var title = $this.attr('title')
-            var pos = $this.data('position')
             var $tip = $('.tooltip')
             var $tipInner = $tip.find('.tooltip-inner')
             
             $tipInner.html(title)
                         
             methods.position.apply(_this)
-
-            $tip.addClass('fade in ' + pos)            
+            
+            methods.show.apply(_this)
 
             //e.stopPropagation()
             //e.preventDefault()
@@ -80,7 +79,7 @@
       var margin = 3;
       
       if(pos === 'left'){
-        var leftCssTop = iPos.top + (iHeight / 2);
+        var leftCssTop = iPos.top - (tipHeight / 2)  + (iHeight / 2);
         var leftCssLeft = iPos.left - tipWidth - tipArrowWidth - margin;
         $tip.css({
           'top':leftCssTop,
@@ -89,9 +88,7 @@
       }else if(pos === 'right'){
       
       }else if(pos === 'top'){
-        //var topCssTop = iPos.top - tipHeight;
         var topCssTop = iPos.top - tipHeight - tipArrowHeight - margin;
-
         var topCssLeft = iPos.left - (tipWidth / 2) + (iWidth / 2);
         $tip.css({
           'top':topCssTop,
@@ -101,7 +98,13 @@
         
       }
       
-      
+    },
+    show: function(){
+      var $this = $(this)
+      options = $this.data(namespace).options
+      var pos = $this.data('position')
+      var $tip = $('.tooltip');
+      $tip.addClass('fade in ' + pos);
     },
     template: function(){
       var $this = $(this)
