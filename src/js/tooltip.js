@@ -20,7 +20,34 @@
         }
 
         var action = $this.data('action')
-        var mouseOver = function(){
+        
+        if(action === 'click'){
+          $this.off('click').on('click', function(e){
+          
+            $('.tooltip').remove()
+            methods.template.apply(_this)
+            
+            var $this = $(this)
+            var title = $this.attr('title')
+            var $tip = $('.tooltip')
+            var $tipInner = $tip.find('.tooltip-inner')
+            
+            $tipInner.html(title)                        
+            methods.position.apply(_this)
+            methods.show.apply(_this)
+
+            return false
+          
+          })
+          $('body').off('click').on('click', function(e){
+            var $tip = $('.tooltip')
+            $tip.remove()
+            return false
+          })
+          
+          
+        } else { //hover
+        
           $this.off('mouseenter').on('mouseenter', function(e){
 
             methods.template.apply(_this)
@@ -30,34 +57,18 @@
             var $tip = $('.tooltip')
             var $tipInner = $tip.find('.tooltip-inner')
             
-            $tipInner.html(title)
-                        
+            $tipInner.html(title)                        
             methods.position.apply(_this)
-            
             methods.show.apply(_this)
 
-            //e.stopPropagation()
-            //e.preventDefault()
-            //return false
-            
           })
-        }
 
-        var mouseOut = function(){
           $this.off('mouseleave').on('mouseleave', function(e){
             var $this = $(this)
             var $tip = $('.tooltip')
             $tip.remove()
             return false
           })
-        }
-
-        if(action === 'hover'){
-          mouseOver()
-          mouseOut()
-        }else if(action === 'click'){
-
-        } else {
 
         }
       }); // end each
@@ -77,25 +88,33 @@
       var tipWidth = $tip.outerWidth();
       var tipHeight = $tip.outerHeight();
       var margin = 3;
-      
+      var lrTop = iPos.top - (tipHeight / 2)  + (iHeight / 2);
+      var tbLeft = iPos.left - (tipWidth / 2) + (iWidth / 2);
+
       if(pos === 'left'){
-        var leftCssTop = iPos.top - (tipHeight / 2)  + (iHeight / 2);
         var leftCssLeft = iPos.left - tipWidth - tipArrowWidth - margin;
         $tip.css({
-          'top':leftCssTop,
+          'top':lrTop,
           'left':leftCssLeft,
         });      
       }else if(pos === 'right'){
-      
+        var rightCssLeft = iPos.left + iWidth;
+        $tip.css({
+          'top':lrTop,
+          'left':rightCssLeft,
+        });      
       }else if(pos === 'top'){
         var topCssTop = iPos.top - tipHeight - tipArrowHeight - margin;
-        var topCssLeft = iPos.left - (tipWidth / 2) + (iWidth / 2);
         $tip.css({
           'top':topCssTop,
-          'left':topCssLeft,
+          'left':tbLeft,
         });      
       }else{
-        
+        var bottomCssTop = iPos.top + iHeight;
+        $tip.css({
+          'top':bottomCssTop,
+          'left':tbLeft,
+        });      
       }
       
     },

@@ -8,21 +8,53 @@ title: tooltip
     <p class="lead"></p>
   </div>
   <div id="content-body">
-    <h3>Example(調整中)</h3>
+    <h3>Example</h3>
     <div class="blocks">
     
       <div class="block">
         <div class="block-header">
-        	<h4>Normal(click)</h4>
+        	<h4>Normal(hover)</h4>
         </div>
         <div class="block-body">
                 
-          <p><a class="btn btn-default tooltips" data-action="hover" data-position="top" title="Tooltip on top" href="#">tooltip</a></p>
-          <p><a class="btn btn-default tooltips" data-action="hover" data-position="left" title="Tooltip on left" href="#">tooltip</a></p>
+          <p>
+            <a class="btn btn-default tooltips" data-action="hover" data-position="top" title="Tooltip on top" href="#">top</a>
+            <a class="btn btn-default tooltips" data-action="hover" data-position="bottom" title="Tooltip on bottom" href="#">bottom</a>
+            <a class="btn btn-default tooltips" data-action="hover" data-position="left" title="Tooltip on left" href="#">left</a>
+            <a class="btn btn-default tooltips" data-action="hover" data-position="right" title="Tooltip on right" href="#">right</a>
+          </p>
           
 
           <h5>Code</h5>
 {% highlight html %}
+<a class="btn btn-default tooltips" data-action="hover" data-position="top" title="Tooltip on top" href="#">top</a>
+<a class="btn btn-default tooltips" data-action="hover" data-position="bottom" title="Tooltip on bottom" href="#">bottom</a>
+<a class="btn btn-default tooltips" data-action="hover" data-position="left" title="Tooltip on left" href="#">left</a>
+<a class="btn btn-default tooltips" data-action="hover" data-position="right" title="Tooltip on right" href="#">right</a>
+{% endhighlight %}
+        </div>
+      </div><!-- /.blocks -->
+      
+      <div class="block">
+        <div class="block-header">
+        	<h4>click</h4>
+        </div>
+        <div class="block-body">
+                
+          <p>
+            <a class="btn btn-default tooltips" data-action="click" data-position="top" title="Tooltip on top" href="#">top</a>
+            <a class="btn btn-default tooltips" data-action="click" data-position="bottom" title="Tooltip on bottom" href="#">bottom</a>
+            <a class="btn btn-default tooltips" data-action="click" data-position="left" title="Tooltip on left" href="#">left</a>
+            <a class="btn btn-default tooltips" data-action="click" data-position="right" title="Tooltip on right" href="#">right</a>
+          </p>
+          
+
+          <h5>Code</h5>
+{% highlight html %}
+<a class="btn btn-default tooltips" data-action="click" data-position="top" title="Tooltip on top" href="#">top</a>
+<a class="btn btn-default tooltips" data-action="click" data-position="bottom" title="Tooltip on bottom" href="#">bottom</a>
+<a class="btn btn-default tooltips" data-action="click" data-position="left" title="Tooltip on left" href="#">left</a>
+<a class="btn btn-default tooltips" data-action="click" data-position="right" title="Tooltip on right" href="#">right</a>
 {% endhighlight %}
         </div>
       </div><!-- /.blocks -->
