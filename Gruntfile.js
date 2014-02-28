@@ -77,6 +77,7 @@
         },
         files :  { 
           '<%= pkg.src %>/js/<%= pkg.name %>.js' : [
+            '<%= pkg.src %>/js/tooltips.js',
             '<%= pkg.src %>/js/switcher.js',
             '<%= pkg.src %>/js/slidebar.js',
             '<%= pkg.src %>/js/inputcounter.js',

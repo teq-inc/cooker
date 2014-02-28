@@ -1,0 +1,114 @@
+---
+layout: one-column
+title: tooltips
+---
+<article id="content">
+  <div id="content-header" class="">
+    <h2>{{ page.title }}</h2>
+    <p class="lead">hoverかclickで表示するtooltip。表示内容は'data-title'または'title'属性に記述。htmlも可能</p>
+{% highlight js %}
+$('.tooltips').tooltips({
+  activeClass: 'tooltips-active'      
+});
+
+<a 
+  class="tooltips" 
+  data-action="hover or click"
+  data-position="top or bottom or left or right"
+  //<!-- data-titleまたはtitle。記述はtextでもhtmlでも可 -->
+  data-title="Tooltip on top" 
+  title="Tooltip on top" 
+>tooltips</a>
+{% endhighlight %}
+    
+  </div>
+  <div id="content-body">
+    <h3>Example</h3>
+    <div class="blocks">
+    
+      <div class="block">
+        <div class="block-header">
+        	<h4>Normal(hover)</h4>
+        </div>
+        <div class="block-body">
+          <p>
+            <a class="btn btn-default tooltips" data-action="hover" data-position="top" data-title="Tooltip on top" href="#">top</a>
+            <a class="btn btn-default tooltips" data-action="hover" data-position="bottom"  data-title="Tooltip on bottom" href="#">bottom</a>
+            <a class="btn btn-default tooltips" data-action="hover" data-position="left"  data-title="Tooltip on left" href="#">left</a>
+            <a class="btn btn-default tooltips" data-action="hover" data-position="right"  data-title="Tooltip on right" href="#">right</a>
+          </p>          
+
+          <h5>Code</h5>
+{% highlight html %}
+<a class="tooltips" data-action="hover" data-position="top" data-title="Tooltip on top" href="#">top</a>
+<a class="tooltips" data-action="hover" data-position="bottom" data-title="Tooltip on bottom" href="#">bottom</a>
+<a class="tooltips" data-action="hover" data-position="left" title="Tooltip on left" href="#">left</a>
+<a class="tooltips" data-action="hover" data-position="right" title="Tooltip on right" href="#">right</a>
+{% endhighlight %}
+        </div>
+      </div><!-- /.blocks -->
+      
+      <div class="block">
+        <div class="block-header">
+        	<h4>click</h4>
+        </div>
+        <div class="block-body">
+                
+          <p>
+            <a class="btn btn-default tooltips" data-action="click" data-position="top" title="Tooltip on top" href="#">top</a>
+            <a class="btn btn-default tooltips" data-action="click" data-position="bottom" title="Tooltip on bottom" href="#">bottom</a>
+            <a class="btn btn-default tooltips" data-action="click" data-position="left" title="Tooltip on left" href="#">left</a>
+            <a class="btn btn-default tooltips" data-action="click" data-position="right" title="Tooltip on right" href="#">right</a>
+          </p>
+          
+
+          <h5>Code</h5>
+{% highlight html %}
+<a class="tooltips" data-action="click" data-position="top" title="Tooltip on top" href="#">top</a>
+<a class="tooltips" data-action="click" data-position="bottom" title="Tooltip on bottom" href="#">bottom</a>
+<a class="tooltips" data-action="click" data-position="left" title="Tooltip on left" href="#">left</a>
+<a class="tooltips" data-action="click" data-position="right" title="Tooltip on right" href="#">right</a>
+{% endhighlight %}
+        </div>
+      </div><!-- /.blocks -->
+      
+      <div class="block">
+        <div class="block-header">
+        	<h4>Insert HTML</h4>
+        </div>
+        <div class="block-body">
+                
+          <p>
+            <a class="btn btn-primary tooltips" data-action="hover" data-position="top" title="<h4>tooltips</h4><p>cooker ooltips on top</p>" href="#">top</a>
+            <a class="btn btn-primary tooltips" data-action="hover" data-position="bottom" title="<h4>tooltips</h4><p>cooker ooltips on bottom</p>" href="#">bottom</a>
+            <a class="btn btn-primary tooltips" data-action="hover" data-position="left" title="<h4>tooltips</h4><p>cooker ooltips on left" href="#">left</a>
+            <a class="btn btn-primary tooltips" data-action="hover" data-position="right" title="<h4>tooltips</h4><p>cooker ooltips on right" href="#">right</a>
+          </p>
+          
+
+          <h5>Code</h5>
+{% highlight html %}
+<a class="tooltips" data-action="hover" data-position="top" title="<h4>tooltips</h4><p>cooker ooltips on top</p>" href="#">top</a>
+<a class="tooltips" data-action="hover" data-position="bottom" title="<h4>tooltips</h4><p>cooker ooltips on bottom</p>" href="#">bottom</a>
+<a class="tooltips" data-action="hover" data-position="left" title="<h4>tooltips</h4><p>cooker ooltips on left" href="#">left</a>
+<a class="tooltips" data-action="hover" data-position="right" title="<h4>tooltips</h4><p>cooker ooltips on right" href="#">right</a>
+{% endhighlight %}
+        </div>
+      </div><!-- /.block -->
+      
+    </div><!-- /.blocks -->
+    
+
+  </div>
+      
+</article>
+
+
+
+
+
+
+
+
+
+
