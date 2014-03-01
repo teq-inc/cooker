@@ -1,32 +1,35 @@
-// Core variables and mixins
+// core variables
+@import "../vendor/bootstrap/less/variables.less";
 @import "variables/variables.less";
 
-@import "mixins/utilities.less";
-@import "mixins/conponents.less";
+// core mixins
+@import "../vendor/bootstrap/less/mixins.less";
 @import "mixins/scrollbar.less";
 @import "mixins/icon.less";
-/* /@import "mixins/animations.less"; */
+@import "mixins/animations.less";
 
-// Core CSS
-@import "core/normalize.less";
-@import "core/scaffolding.less";
-@import "core/type.less";
-@import "core/code.less";
-//@import "core/grid.less";
+// core
+@import "../vendor/bootstrap/less/normalize.less";
+@import "../vendor/bootstrap/less/scaffolding.less";
+@import "../vendor/bootstrap/less/type.less";
+@import "../vendor/bootstrap/less/code.less";
+@import "../vendor/bootstrap/less/grid.less";
 @import "core/tables.less";
 @import "core/forms.less";
 @import "core/buttons.less";
 @import "core/button-groups.less";
-//@import "core/navs.less";
+@import "../vendor/bootstrap/less/navs.less";
 @import "core/syntax.less";
 
-// Components
-@import "components/animations.less";
+// components
+@import "../vendor/bootstrap/less/component-animations.less";
+@import "../vendor/bootstrap/less/jumbotron.less";
 @import "components/blocks.less";
-@import "components/panels.less";
-@import "components/labels.less";
+@import "../vendor/bootstrap/less/panels.less";
+@import "../vendor/bootstrap/less/labels.less";
 @import "components/utilities.less";
 
+// js components
 @import "js-components/switcher.less";
 @import "js-components/tooltip.less";
 @import "js-components/popovers.less";
@@ -36,9 +39,6 @@
 
 //font-awesome
 @import "font-awesome/font-awesome.less";
-
-// vendor
-@import "../vendor/bootstrap/less/jumbotron.less";
 
 // Layout
 @import "layout/main.less";
