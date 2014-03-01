@@ -1,7 +1,7 @@
 markdown:    redcarpet
 pygments:    true
 permalink:   pretty
-exclude:     ['less']
-source:      ./src
+exclude:     ['less','bower_components','bower.json','.gitignore','Gruntfile.js','package.json','node_modules','README.md','validation-report.json','validation-status.json','future','js/future']
+source:      ./
 destination: ./_gh_pages
 encoding:    UTF-8

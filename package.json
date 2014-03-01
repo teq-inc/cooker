@@ -10,7 +10,6 @@
     "type": "git",
     "url": "https://github.com/teq-inc/cooker"
   },
-  "src": "src",
   "dist": "dist",
   "public": "_gh_pages",
   "dependencies": {},

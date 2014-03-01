@@ -22,10 +22,10 @@
           sourceMap: true,
           outputSourceFiles: true,
           sourceMapURL: '<%= pkg.name %>.css.map',
-          sourceMapFilename: '<%= pkg.src %>/css/<%= pkg.name %>.css.map'
+          sourceMapFilename: './css/<%= pkg.name %>.css.map'
         },
         files: {
-          '<%= pkg.src %>/css/<%= pkg.name %>.css': '<%= pkg.src %>/less/<%= pkg.name %>.less'        
+          './css/<%= pkg.name %>.css': './less/<%= pkg.name %>.less'        
         } 
       },
       minify: {
@@ -34,7 +34,7 @@
           report: 'min',
         },
         files: {
-          '<%= pkg.src %>/css/<%= pkg.name %>.min.css': '<%= pkg.src %>/less/<%= pkg.name %>.less'        
+          './css/<%= pkg.name %>.min.css': './less/<%= pkg.name %>.less'        
         }
       },
     },
@@ -48,7 +48,7 @@
         },
         files: {
           src: [
-            '<%= pkg.src %>/css/<%= pkg.name %>.css',
+            './css/<%= pkg.name %>.css',
           ]
         }
       }
@@ -60,7 +60,7 @@
         csslintrc: '.csslintrc'
       },
       src: [
-        '<%= pkg.src %>/css/<%= pkg.name %>.css',
+        './css/<%= pkg.name %>.css',
       ]
     },
 
@@ -76,12 +76,12 @@
           beautify: true
         },
         files :  { 
-          '<%= pkg.src %>/js/<%= pkg.name %>.js' : [
-            '<%= pkg.src %>/js/tooltips.js',
-            '<%= pkg.src %>/js/switcher.js',
-            '<%= pkg.src %>/js/slidebar.js',
-            '<%= pkg.src %>/js/inputcounter.js',
-            '<%= pkg.src %>/js/scrollmethod.js'
+          './js/<%= pkg.name %>.js' : [
+            './js/tooltips.js',
+            './js/switcher.js',
+            './js/slidebar.js',
+            './js/inputcounter.js',
+            './js/scrollmethod.js'
            ]
         } 
       },
@@ -93,7 +93,7 @@
           compress:false,
         },
         files :  { 
-          '<%= pkg.src %>/js/<%= pkg.name %>.min.js' : ['<%= pkg.src %>/js/<%= pkg.name %>.js' ]
+          './js/<%= pkg.name %>.min.js' : ['./js/<%= pkg.name %>.js' ]
         } 
       },
       comp:{
@@ -105,7 +105,7 @@
           beautify: true
         },
         files :  { 
-          '<%= pkg.src %>/js/<%= pkg.name %>.beautify.js' : ['<%= pkg.src %>/js/<%= pkg.name %>.js' ]
+          './js/<%= pkg.name %>.beautify.js' : ['./js/<%= pkg.name %>.js' ]
         } 
       },
       compMinify:{
@@ -114,7 +114,7 @@
           report: 'min',
         },
         files :  { 
-          '<%= pkg.src %>/js/<%= pkg.name %>.beautify.min.js' : ['<%= pkg.src %>/js/<%= pkg.name %>.beautify.js' ]
+          './js/<%= pkg.name %>.beautify.min.js' : ['./js/<%= pkg.name %>.beautify.js' ]
         } 
       },
     },
@@ -123,7 +123,7 @@
     jshint: {
       files: [
         'Gruntfile.js',
-        '<%= pkg.src %>/js',
+        './js',
       ],
       options: {
         browser: true,
@@ -179,8 +179,8 @@
       css: {
         expand: true,
         src: [
-          '<%= pkg.src %>/css/<%= pkg.name %>.css',
-          '<%= pkg.src %>/css/<%= pkg.name %>.min.css'
+          './css/<%= pkg.name %>.css',
+          './css/<%= pkg.name %>.min.css'
         ],
         dest: '<%= pkg.dist %>/css/',
         flatten: true,
@@ -189,8 +189,8 @@
       js: {
         expand: true,
         src: [
-          '<%= pkg.src %>/js/<%= pkg.name %>.js',
-          '<%= pkg.src %>/js/<%= pkg.name %>.min.js'
+          './js/<%= pkg.name %>.js',
+          './js/<%= pkg.name %>.min.js'
         ],
         dest: '<%= pkg.dist %>/js/',
         flatten: true,
@@ -240,7 +240,7 @@
     bower: {
       install: {
         options: {
-          targetDir: '<%= pkg.src %>/vendor',
+          targetDir: './vendor',
           //layoutのパラメータ　'byType' or 'byComponent'
           //https://github.com/yatskevich/grunt-bower-task
           layout: 'byComponent',
@@ -269,19 +269,19 @@
     esteWatch: {
       options: {
         dirs: [
-          '<%= pkg.src %>',
-          '<%= pkg.src %>/_layouts',
-          '<%= pkg.src %>/_page',
-          '<%= pkg.src %>/_posts',
-          '<%= pkg.src %>/js',
-          '<%= pkg.src %>/less',
-          '<%= pkg.src %>/less/components',
-          '<%= pkg.src %>/less/js-components',
-          '<%= pkg.src %>/less/core',
-          '<%= pkg.src %>/less/layout',
-          '<%= pkg.src %>/less/utilities',
-          '<%= pkg.src %>/less/mixins',
-          '<%= pkg.src %>/less/variables',
+          './',
+          './_layouts',
+          './_page',
+          './_posts',
+          './js',
+          './less',
+          './less/components',
+          './less/js-components',
+          './less/core',
+          './less/layout',
+          './less/utilities',
+          './less/mixins',
+          './less/variables',
         ],
         livereload: {
           enabled: false
