@@ -1,4 +1,6 @@
  module.exports = function(grunt) {
+ 
+  "use strict";
 
   require('load-grunt-tasks')(grunt);
   require('time-grunt')(grunt);
@@ -18,14 +20,14 @@
     less:{
       develop: {
         options: {
-          //strictMath: true,
+          strictMath: true,
           sourceMap: true,
           outputSourceFiles: true,
           sourceMapURL: '<%= pkg.name %>.css.map',
-          sourceMapFilename: './css/<%= pkg.name %>.css.map'
+          sourceMapFilename: 'css/<%= pkg.name %>.css.map'
         },
         files: {
-          './css/<%= pkg.name %>.css': './less/<%= pkg.name %>.less'        
+          'css/<%= pkg.name %>.css': 'less/<%= pkg.name %>.less'        
         } 
       },
       minify: {
@@ -34,11 +36,23 @@
           report: 'min',
         },
         files: {
-          './css/<%= pkg.name %>.min.css': './less/<%= pkg.name %>.less'        
+          'css/<%= pkg.name %>-min.css': 'less/<%= pkg.name %>.less'        
         }
       },
     },
-        
+    
+    // css成形
+    csscomb: {
+      options: {
+        config: '.csscomb.json'
+      },
+      dist: {
+        files: {
+          'css/<%= pkg.name %>.css': 'css/<%= pkg.name %>.css',
+        }
+      }
+    },    
+      
     // コンパイルしたcssにバナー追加
     usebanner: {
       dist: {
@@ -48,7 +62,7 @@
         },
         files: {
           src: [
-            './css/<%= pkg.name %>.css',
+            'css/<%= pkg.name %>.css',
           ]
         }
       }
@@ -60,11 +74,12 @@
         csslintrc: '.csslintrc'
       },
       src: [
-        './css/<%= pkg.name %>.css',
+        'css/<%= pkg.name %>.css',
+        'css/<%= pkg.name %>-min.css'
       ]
     },
 
-    // jsを結合、成形、圧縮
+    // js結合、成形、圧縮
     uglify: {
       develop:{
         options: {
@@ -76,12 +91,12 @@
           beautify: true
         },
         files :  { 
-          './js/<%= pkg.name %>.js' : [
-            './js/tooltips.js',
-            './js/switcher.js',
-            './js/slidebar.js',
-            './js/inputcounter.js',
-            './js/scrollmethod.js'
+          'js/<%= pkg.name %>.js' : [
+            'js/tooltips.js',
+            'js/switcher.js',
+            'js/slidebar.js',
+            'js/inputcounter.js',
+            'js/scrollmethod.js'
            ]
         } 
       },
@@ -93,7 +108,7 @@
           compress:false,
         },
         files :  { 
-          './js/<%= pkg.name %>.min.js' : ['./js/<%= pkg.name %>.js' ]
+          'js/<%= pkg.name %>-min.js' : ['js/<%= pkg.name %>.js' ]
         } 
       },
       comp:{
@@ -105,7 +120,7 @@
           beautify: true
         },
         files :  { 
-          './js/<%= pkg.name %>.beautify.js' : ['./js/<%= pkg.name %>.js' ]
+          'js/<%= pkg.name %>-beautify.js' : ['js/<%= pkg.name %>.js' ]
         } 
       },
       compMinify:{
@@ -114,7 +129,7 @@
           report: 'min',
         },
         files :  { 
-          './js/<%= pkg.name %>.beautify.min.js' : ['./js/<%= pkg.name %>.beautify.js' ]
+          'js/<%= pkg.name %>-beautify-min.js' : ['js/<%= pkg.name %>-beautify.js' ]
         } 
       },
     },
@@ -123,7 +138,7 @@
     jshint: {
       files: [
         'Gruntfile.js',
-        './js',
+        'js',
       ],
       options: {
         browser: true,
@@ -179,8 +194,8 @@
       css: {
         expand: true,
         src: [
-          './css/<%= pkg.name %>.css',
-          './css/<%= pkg.name %>.min.css'
+          'css/<%= pkg.name %>.css',
+          'css/<%= pkg.name %>-min.css'
         ],
         dest: '<%= pkg.dist %>/css/',
         flatten: true,
@@ -189,8 +204,8 @@
       js: {
         expand: true,
         src: [
-          './js/<%= pkg.name %>.js',
-          './js/<%= pkg.name %>.min.js'
+          'js/<%= pkg.name %>.js',
+          'js/<%= pkg.name %>-min.js'
         ],
         dest: '<%= pkg.dist %>/js/',
         flatten: true,
@@ -240,14 +255,14 @@
     bower: {
       install: {
         options: {
-          targetDir: './vendor',
+          targetDir: 'vendor',
           //layoutのパラメータ　'byType' or 'byComponent'
           //https://github.com/yatskevich/grunt-bower-task
           layout: 'byComponent',
           install: true,
           verbose: false,
           cleanTargetDir: true,
-          cleanBowerDir: false
+          cleanBowerDir: true
         }
       }
     },
@@ -262,27 +277,27 @@
     },
     
     livereloadx: {
-     // static: true,
+      static: true,
       dir: '<%= pkg.public %>'
     },
     
     esteWatch: {
       options: {
         dirs: [
-          './',
-          './_layouts',
-          './_include',
-          './_include/js-components',
-          './_include/styles',
-          './js',
-          './less',
-          './less/components',
-          './less/js-components',
-          './less/core',
-          './less/layout',
-          './less/utilities',
-          './less/mixins',
-          './less/variables',
+          './*.html',
+          '_layouts',
+          '_includes',
+          '_includes/js-components',
+          '_includes/styles',
+          'js',
+          'less',
+          'less/components',
+          'less/js-components',
+          'less/core',
+          'less/layout',
+          'less/utilities',
+          'less/mixins',
+          'less/variables',
         ],
         livereload: {
           enabled: false
@@ -327,11 +342,21 @@
 
   //
   grunt.registerTask('go', function () {
-    grunt.log.warn('`grunt Bower` to start a install.');
+    grunt.log.warn('`grunt go` to start.');
     grunt.task.run([
       'bower:install',
-      'build',
+      'test',
       'default'
+    ]);
+  });
+  
+  grunt.registerTask('test', function () {
+    grunt.log.warn('`grunt test` to start.');
+    grunt.task.run([
+      'build',
+      'jshint',
+      'csslint',
+      'validation'
     ]);
   });
   
@@ -341,13 +366,11 @@
     grunt.task.run([
       'uglify',
       'less',
+      'csscomb',
       'usebanner',
-      'jshint',
-      //'csslint',
-      'shell:jekyll_build',
       'copy',
-      //'htmlmin',
-      //'validation',
+      'shell:jekyll_build',
+      'htmlmin'
     ]);
   });
   
