@@ -10,3 +10,7 @@ js/cooker-beautify-min.js
 bower_components
 _gh_pages
 dist
+
+css.html
+javascript.html
+components.html
