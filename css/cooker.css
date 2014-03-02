@@ -3251,7 +3251,7 @@ input[type="button"].btn-block {
   border-radius: 4px;
 }
 .blocks .block-header {
-  padding: 10px 20px;
+  padding: 20px/2 20px;
   border-bottom: 2px solid #ddd;
 }
 .blocks .block-header:last-child {
@@ -3263,7 +3263,7 @@ input[type="button"].btn-block {
   font-size: 16px;
 }
 .blocks .block-body {
-  padding: 10px 20px;
+  padding: 20px/2 20px;
   padding-top: 20px;
 }
 .dtbl {
