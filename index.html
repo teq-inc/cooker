@@ -3,15 +3,15 @@ layout: one-column
 title: cooker
 base_url: "./"
 ---
-<article id="content">
+<article class="ck-content">
 
-  <div id="content-header" class="jumbotron">
+  <div class="ck-content-header jumbotron">
     <h1>{{ page.title }}</h1>
     <p class="lead"></p>
     <p><a class="btn btn-lg btn-primary" href="https://github.com/teq-inc/cooker" target="_blank" role="button">GitHub Project</a></p>
   </div>
 
-  <div id="content-body">
+  <div class="ck-content-body">
     <h3>include</h3>
 {% highlight html %}
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -20,22 +20,22 @@ base_url: "./"
 
     <ul>
       <li>
-        <h4><a href="/js-components/">javascript components</a></h4>
+        <h4><a href="{{ page.base_url }}js-components/">javascript components</a></h4>
         <ol>
-          <li><a href="/js-components/#contents-dropdowns">dropdowns</a></li>
-          <li><a href="/js-components/#contents-inputcounters">inputcounters</a></li>
-          <li><a href="/js-components/#contents-scrollmethods">scrollmethods</a></li>
-          <li><a href="/js-components/#contents-slidebars">slidebars</a></li>
-          <li><a href="/js-components/#contents-switchers">switchers(toggle box)</a></li>
-          <li><a href="/js-components/#contents-tooltips">tooltips</a></li>
+          <li><a href="{{ page.base_url }}js-components/#contents-dropdowns">dropdowns</a></li>
+          <li><a href="{{ page.base_url }}js-components/#contents-inputcounters">inputcounters</a></li>
+          <li><a href="{{ page.base_url }}js-components/#contents-scrollmethods">scrollmethods</a></li>
+          <li><a href="{{ page.base_url }}js-components/#contents-slidebars">slidebars</a></li>
+          <li><a href="{{ page.base_url }}js-components/#contents-switchers">switchers(toggle box)</a></li>
+          <li><a href="{{ page.base_url }}js-components/#contents-tooltips">tooltips</a></li>
         </ol>      
       </li>
       <li>
-        <h4><a href="/styles/">styles</a></h4>
+        <h4><a href="{{ page.base_url }}styles/">styles</a></h4>
         <ol>
-          <li><a href="/styles/#contents-buttons">buttons</a></li>
-          <li><a href="/styles/#contents-forms">forms</a></li>
-          <li><a href="/styles/#contents-tables">tables</a></li>
+          <li><a href="{{ page.base_url }}styles/#contents-buttons">buttons</a></li>
+          <li><a href="{{ page.base_url }}styles/#contents-forms">forms</a></li>
+          <li><a href="{{ page.base_url }}styles/#contents-tables">tables</a></li>
         </ol>        
       </li>
     </ul>
