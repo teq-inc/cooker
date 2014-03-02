@@ -284,7 +284,7 @@
     esteWatch: {
       options: {
         dirs: [
-          './*.html',
+          './',
           '_layouts',
           '_includes',
           '_includes/js-components',
