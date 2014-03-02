@@ -18,7 +18,7 @@
     less:{
       develop: {
         options: {
-          //strictMath: true,
+          strictMath: true,
           sourceMap: true,
           outputSourceFiles: true,
           sourceMapURL: '<%= pkg.name %>.css.map',
@@ -73,6 +73,7 @@
       },
       src: [
         'css/<%= pkg.name %>.css',
+        'css/<%= pkg.name %>-min.css'
       ]
     },
 
@@ -105,7 +106,7 @@
           compress:false,
         },
         files :  { 
-          'js/<%= pkg.name %>.min.js' : ['js/<%= pkg.name %>.js' ]
+          'js/<%= pkg.name %>-min.js' : ['js/<%= pkg.name %>.js' ]
         } 
       },
       comp:{
@@ -117,7 +118,7 @@
           beautify: true
         },
         files :  { 
-          'js/<%= pkg.name %>.beautify.js' : ['js/<%= pkg.name %>.js' ]
+          'js/<%= pkg.name %>-beautify.js' : ['js/<%= pkg.name %>.js' ]
         } 
       },
       compMinify:{
@@ -126,7 +127,7 @@
           report: 'min',
         },
         files :  { 
-          'js/<%= pkg.name %>.beautify.min.js' : ['js/<%= pkg.name %>.beautify.js' ]
+          'js/<%= pkg.name %>-beautify-min.js' : ['js/<%= pkg.name %>-beautify.js' ]
         } 
       },
     },
@@ -192,7 +193,7 @@
         expand: true,
         src: [
           'css/<%= pkg.name %>.css',
-          'css/<%= pkg.name %>.min.css'
+          'css/<%= pkg.name %>-min.css'
         ],
         dest: '<%= pkg.dist %>/css/',
         flatten: true,
@@ -202,7 +203,7 @@
         expand: true,
         src: [
           'js/<%= pkg.name %>.js',
-          'js/<%= pkg.name %>.min.js'
+          'js/<%= pkg.name %>-min.js'
         ],
         dest: '<%= pkg.dist %>/js/',
         flatten: true,
@@ -259,7 +260,7 @@
           install: true,
           verbose: false,
           cleanTargetDir: true,
-          cleanBowerDir: false
+          cleanBowerDir: true
         }
       }
     },
@@ -281,11 +282,11 @@
     esteWatch: {
       options: {
         dirs: [
-          '/',
+          './*.html',
           '_layouts',
-          '_include',
-          '_include/js-components',
-          '_include/styles',
+          '_includes',
+          '_includes/js-components',
+          '_includes/styles',
           'js',
           'less',
           'less/components',
@@ -342,7 +343,7 @@
     grunt.log.warn('`grunt go` to start.');
     grunt.task.run([
       'bower:install',
-      'build',
+      'test',
       'default'
     ]);
   });
