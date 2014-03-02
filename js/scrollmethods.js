@@ -1,5 +1,5 @@
 (function($) {
-  var namespace = 'scrollmethod';
+  var namespace = 'scrollmethods';
   var methods = {
     init: function(options){
       options = $.extend({
@@ -27,7 +27,7 @@
       }); // end each
     },
   };
-  $.fn.scrollmethod = function(method){
+  $.fn.scrollmethods = function(method){
     if ( methods[method] ) {
       return methods[method].apply( this, Array.prototype.slice.call( arguments, 1 ));
     } else if ( typeof method === 'object' || ! method ) {

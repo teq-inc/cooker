@@ -271,8 +271,9 @@
         dirs: [
           './',
           './_layouts',
-          './_page',
-          './_posts',
+          './_include',
+          './_include/js-components',
+          './_include/styles',
           './js',
           './less',
           './less/components',

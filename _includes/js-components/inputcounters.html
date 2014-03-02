@@ -1,21 +1,9 @@
----
-layout: one-column
-title: inputcounter
-base_url: "../"
----
-<article id="content">
-
-  <div id="content-header" class="">
-    <h2>{{ page.title }}</h2>
-    <p class="lead">入力テキストの文字数を監視し、指定の文字数で警告・エラーのそれぞれでクラスを追加・削除するjqueryプラグイン</p>
-  </div>
-
-  <div id="content-body">
-    <h3>Example</h3>
-    <input type="text" id="input" class="inputcounter" value="" />  
+<div id="contents-inputcounters">
   
-    <h3>set up</h3>   
-    <h4>js</h4> 
+  <h2>inputcounters</h2>
+
+  <h3>set up</h3>   
+  <h4>js</h4> 
 {% highlight js %}
 $('#input').inputcounter({
   warningClass: 'warning',
@@ -44,10 +32,7 @@ $('#input').inputcounter({
 }
 {% endhighlight %}
 
-  </div>
-      
-</article>
-
+</div><!-- /#contents-inputcounter -->
 
 
 

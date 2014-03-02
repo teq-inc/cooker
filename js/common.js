@@ -5,7 +5,7 @@ $(function (){
       errorCounter:4
   });
 
-	$('.scrollmethod').scrollmethod();
+	$('a[href^=#]').scrollmethods();
 
 	$('.dropdown').dropdowns();
 
