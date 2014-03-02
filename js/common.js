@@ -1,6 +1,6 @@
 $(function (){
 
-  $('#input').inputcounter({
+  $('#input').inputcounters({
       warningCounter:2,
       errorCounter:4
   });
@@ -13,11 +13,11 @@ $(function (){
 	
 	$('.switchers').switchers();
 	
-	$('.slidebar_right').slidebar({
+	$('.slidebar_right').slidebars({
       position: 'right',
 	});
 	
-	$('.slidebar_bottom').slidebar({
+	$('.slidebar_bottom').slidebars({
     position: 'bottom',
 	});
 	

@@ -1,5 +1,5 @@
 (function($) {
-  var namespace = 'inputcounter';
+  var namespace = 'inputcounters';
   var methods = {
     init: function(options){
       options = $.extend({
@@ -50,7 +50,7 @@
       });
     }
   };
-  $.fn.inputcounter = function(method){
+  $.fn.inputcounters = function(method){
     if ( methods[method] ) {
       return methods[method].apply( this, Array.prototype.slice.call( arguments, 1 ));
     } else if ( typeof method === 'object' || ! method ) {

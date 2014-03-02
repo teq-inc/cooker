@@ -3,13 +3,15 @@
 		width: @size;
 		height: @size;
 		&:hover {
-  		background: rgba(0,0,0,0.02);
+  		background-image: rgba(0,0,0,0.02);
   		-webkit-box-shadow: inset 1px 1px 0 rgba(0,0,0,0.1), inset 0 -1px 0 rgba(0,0,0,0.1);
+	            box-shadow: inset 1px 1px 0 rgba(0,0,0,0.1), inset 0 -1px 0 rgba(0,0,0,0.1);
   	}
 	}
 	&::-webkit-scrollbar-thumb {
 		background-color: @bg;
 		-webkit-box-shadow: inset 1px 1px 0 rgba(0,0,0,0.1), inset 0 -1px 0 rgba(0,0,0,0.1);
+            box-shadow: inset 1px 1px 0 rgba(0,0,0,0.1), inset 0 -1px 0 rgba(0,0,0,0.1);
   	&:hover{
   		background-color: @bg-hover;
   	}
