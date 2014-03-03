@@ -304,7 +304,8 @@
           'less/mixins',
           'less/variables',
           'assets/less',
-          'assets/less/layout'
+          'assets/less/layout',
+          'assets/js',
         ],
         livereload: {
           enabled: false
