@@ -23,11 +23,12 @@
           strictMath: true,
           sourceMap: true,
           outputSourceFiles: true,
-          sourceMapURL: '<%= pkg.name %>.css.map',
+          sourceMapURL: ['<%= pkg.name %>.css.map'],
           sourceMapFilename: 'css/<%= pkg.name %>.css.map'
         },
         files: {
-          'css/<%= pkg.name %>.css': 'less/<%= pkg.name %>.less'        
+          'css/<%= pkg.name %>.css': 'less/<%= pkg.name %>.less',     
+          'assets/css/docs.css': 'assets/less/docs.less'        
         } 
       },
       minify: {
@@ -36,7 +37,8 @@
           report: 'min',
         },
         files: {
-          'css/<%= pkg.name %>-min.css': 'less/<%= pkg.name %>.less'        
+          'css/<%= pkg.name %>-min.css': 'less/<%= pkg.name %>.less',      
+          'assets/css/docs-min.css': 'assets/less/docs.less'        
         }
       },
     },
@@ -49,6 +51,7 @@
       dist: {
         files: {
           'css/<%= pkg.name %>.css': 'css/<%= pkg.name %>.css',
+          'assets/css/docs.css': 'assets/less/docs.css'
         }
       }
     },    
@@ -63,6 +66,7 @@
         files: {
           src: [
             'css/<%= pkg.name %>.css',
+            'assets/css/docs.css'
           ]
         }
       }
@@ -75,7 +79,7 @@
       },
       src: [
         'css/<%= pkg.name %>.css',
-        'css/<%= pkg.name %>-min.css'
+        //'css/<%= pkg.name %>-min.css'
       ]
     },
 
@@ -92,6 +96,7 @@
         },
         files :  { 
           'js/<%= pkg.name %>.js' : [
+            'js/dropdowns.js',
             'js/tooltips.js',
             'js/switcher.js',
             'js/slidebar.js',
@@ -298,6 +303,9 @@
           'less/utilities',
           'less/mixins',
           'less/variables',
+          'assets/less',
+          'assets/less/layout',
+          'assets/js',
         ],
         livereload: {
           enabled: false

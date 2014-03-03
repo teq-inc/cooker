@@ -1,5 +1,8 @@
 $(function (){
 
+// cooker
+// ==================================================
+
   $('#input').inputcounters({
       warningCounter:2,
       errorCounter:4
@@ -21,4 +24,17 @@ $(function (){
     position: 'bottom',
 	});
 	
+// bootstrap.affix
+// ==================================================
+
+  $('.bs-docs-sidebar').affix({
+    offset: {
+      top: function () {
+          return this.bottom = $('.bs-docs-nav').outerHeight()+$('.bs-docs-header').outerHeight();
+      }, 
+    }
+  });
+	
+	
 });
+
