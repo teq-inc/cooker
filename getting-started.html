@@ -2,7 +2,7 @@
 layout: default
 title: Getting started
 slug: getting-started
-lead: "An overview of Cooker, how to download and use, and more."
+lead: ""
 base_url: "../"
 
 ---
@@ -12,10 +12,10 @@ base_url: "../"
 <div class="bs-docs-section">
   <h1 id="download" class="page-header">Download</h1>
 
-  <p class="lead"></p>
+  <p class="lead">プリコンパイルされたファイルを<code>Zip</code>形式でダウンロードと、<code>grunt</code>を使って自身でカスタマイズしてコンパイルすることができます。</p>
 
   <div class="bs-downloads">
-    <a href="{{ site.download.source }}" class="btn btn-lg btn-outline" role="button">Download cooker</a> 
+    <a href="{{ site.download.source }}" class="btn btn-lg btn-outline" role="button">Zip File Download cooker</a> 
     <span class="muted">Currently v{{ site.current_version }}.</span>
   </div>
 
@@ -26,6 +26,110 @@ base_url: "../"
 <div class="bs-docs-section">
   <h1 id="install" class="page-header">Install</h1>
 
-  <p class="lead"></p>
+  <p class="lead">Cookerを自身でコンパイルする場合は、ローカルに<code>git</code>,<code>node</code>,<code>npm</code>,<code>ruby</code>,<code>gem</code>,<code>jekyll</code>,<code>grunt</code>,<code>bower</code>がインストールされている必要があります。</p>
+  
+  <div>
+{% highlight text %}
+$ git version
+$ node -v
+$ npm -v
+$ ruby -v
+$ gem -v
+$ jekyll -v
+$ grunt -version
+$ bower -v
+{% endhighlight %}
+
+    <h3>Step 1</h3>
+    <p>作業用ディレクトリで<code>$ git clone</code>。</p>
+{% highlight text %}
+$ cd working-dir
+$ git clone https://github.com/teq-inc/cooker.git
+{% endhighlight %}
+    
+    <h3>Step 2</h3>
+    <p>npmでgruntのモジュール（node_modulesフォルダ）をワーキングディレクトリにインストール。</p>
+{% highlight text %}
+$ cd cooker
+$ npm install
+{% endhighlight %}
+    
+    <h3>Step 3</h3>
+    <p><code>go</code>コマンドで<code>grunt</code>と<code>bower</code>で関連ファイルの<code>インストール</code>→<code>ビルド</code>→<code>サーバー起動</code>。</p>
+{% highlight text %}
+$ grunt go
+{% endhighlight %}
+  </div>
+  
 
 </div>
+
+<!-- Grunt
+================================================== -->
+<div class="bs-docs-section">
+  <h1 id="grunt-file" class="page-header">Gruntfile.js</h1>
+
+  <p class="lead">grunt command</p>
+
+  <div>
+    <h3>Default</h3>
+    <p><code>サーバー起動（+livereload）</code>　→　<code>ファイル監視（jekyll,less）</code></p>
+{% highlight text %}
+$ grunt
+{% endhighlight %}
+
+    <h3>Build</h3>
+    <p><code>ファイルの最適化</code> → <code>ビルド</code></p>
+{% highlight text %}
+$ grunt build
+{% endhighlight %}    
+    
+    <h3>Test</h3>
+    <p><code>grunt build</code> → <code>エラーチェック</code></p>
+{% highlight text %}
+$ grunt test
+{% endhighlight %}
+
+    <h3>Go</h3>
+    <p><code>vendorファイルをインストール</code> → <code>grunt test</code> → <code>grunt build</code> → <code>grunt default</code></p>
+{% highlight text %}
+$ grunt go
+{% endhighlight %}
+
+  </div>
+
+</div>
+
+
+<!-- Grunt Task
+================================================== -->
+<div class="bs-docs-section">
+  <h1 id="grunt-task" class="page-header">Grunt Task</h1>
+
+  <p class="lead">gruntの主なタスク</p>
+
+  <div>
+    <ul>
+      <li><code>livereloadx</code> ブラウザのライブリロード（chromreのアドオン必要）</li>
+      <li><code>connect</code> ローカルサーバー</li>
+      <li><code>esteWatch</code> ファイル監視</li>
+      <li><code>bower</code> ベンダーライブラリのインストール（インストールするライブラリはbower.jsonで管理）　</li>
+      <li><code>jshint</code> jsエラーチェック</li>
+      <li><code>concat</code> jsファイル結合</li>
+      <li><code>uglify</code> jsファイルにクレジットバナー追加</li>
+      <li><code>validation</code> hmtlエラーチェック</li>
+      <li><code>htmlmin</code> html圧縮</li>
+      <li><code>csslint</code> cssエラーチェック</li>
+      <li><code>usebanner</code> cssファイルにクレジットバナー追加</li>
+      <li><code>less</code> lessのコンパイル</li>
+      <li><code>csscomb</code> cssの最適化</li>
+      <li><code>shell</code> jekyllコマンド実行</li>
+      <li><code>copy</code> ファイルコピー</li>
+      <li><code>notify</code> growl通知</li>
+    </ul>
+  </div>
+
+</div>
+
+
+
