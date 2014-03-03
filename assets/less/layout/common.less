@@ -1,3 +1,9 @@
+@color-main:        #060434;
+@color-main-light:  lighten(@color-main, 40);
+@color-sub:         #098eab;
+@color-sub-light:   lighten(@color-sub,40);
+
+
 /*
  * Scaffolding
  *
@@ -14,43 +20,50 @@ body {
   font-weight: normal;
 }
 
+.lead{
+  font-size: 18px;
+  line-height: 1.6;
+}
+
 /* Outline button for use within the docs */
 .btn-outline {
-  color: #563d7c;
+  color: @color-main;
   background-color: transparent;
-  border-color: #563d7c;
-}
-.btn-outline:hover,
-.btn-outline:focus,
-.btn-outline:active {
-  color: #fff;
-  background-color: #563d7c;
-  border-color: #563d7c;
+  border-color: @color-main;
+  &:hover,
+  &:focus,
+  &:active {
+    color: #fff;
+    background-color: @color-main;
+    border-color: @color-main;
+  }
 }
 
 /* Inverted outline button (white on dark) */
 .btn-outline-inverse {
   color: #fff;
   background-color: transparent;
-  border-color: #cdbfe3;
-}
-.btn-outline-inverse:hover,
-.btn-outline-inverse:focus,
-.btn-outline-inverse:active {
-  color: #563d7c;
-  text-shadow: none;
-  background-color: #fff;
-  border-color: #fff;
+  //border-color: #cdbfe3;
+  border-color: @color-sub-light;
+  &:hover,
+  &:focus,
+  &:active {
+    color: @color-main;
+    text-shadow: none;
+    background-color: #fff;
+    border-color: #fff;
+  }
+
 }
 
-/* Bootstrap "B" icon */
+/* cooker "C" icon */
 .bs-docs-booticon {
   display: block;
   font-weight: 500;
   color: #fff;
   text-align: center;
   cursor: default;
-  background-color: #563d7c;
+  background-color: @color-main;
   border-radius: 15%;
 }
 .bs-docs-booticon-sm {
@@ -66,12 +79,12 @@ body {
   line-height: 140px;
 }
 .bs-docs-booticon-inverse {
-  color: #563d7c;
+  color: @color-main;
   background-color: #fff;
 }
 .bs-docs-booticon-outline {
   background-color: transparent;
-  border: 1px solid #cdbfe3;
+  border: 1px solid @color-sub-light;
 }
 
 
@@ -83,7 +96,6 @@ body {
 
 .bs-docs-nav {
   margin-bottom: 0;
-  //background-color: #fff;
   background-color: transparent;
   border-bottom: 0;
 }
@@ -93,7 +105,7 @@ body {
 .bs-docs-nav .navbar-brand,
 .bs-docs-nav .navbar-nav > li > a {
   font-weight: 500;
-  color: #563d7c;
+  color: @color-main;
 }
 .bs-docs-nav .navbar-nav > li > a:hover,
 .bs-docs-nav .navbar-nav > .active > a,
@@ -181,6 +193,15 @@ body {
  *
  * Tweaks to the custom homepage and the masthead (main jumbotron).
  */
+body.bs-docs-home{
+  .bs-docs-footer {
+    margin-top: 0px;
+    border-top:0;
+  }  
+}
+
+
+
 
 /* Share masthead with page headers */
 .bs-docs-masthead,
@@ -191,16 +212,8 @@ body {
   text-align: center;
   text-shadow: 0 1px 0 rgba(0,0,0,.1);
   background-color: #6f5499;
-/*
-  background-image: -webkit-linear-gradient(top, #563d7c 0%, #6f5499 100%);
-  background-image:         linear-gradient(to bottom, #563d7c 0%, #6f5499 100%);
-*/
-  
-  //background-image: linear-gradient(45deg, #0a1855 0%, #da0024 100%);
-  background-image: linear-gradient(45deg, #0a1855 0%, #da0024 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#563d7c', endColorstr='#6F5499', GradientType=0);
-  
-  //filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#563d7c', endColorstr='#6F5499', GradientType=0);
+  background-image: linear-gradient(45deg, @color-main 0%, @color-sub 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=@color-main, endColorstr=@color-sub, GradientType=0);
   background-repeat: repeat-x;
 }
 
@@ -221,7 +234,9 @@ body {
 .bs-docs-masthead .version {
   margin-top: -15px;
   margin-bottom: 30px;
-  color: #9783b9;
+  //color: #9784ba;
+  color: @color-sub-light;
+  opacity: .8
 }
 .bs-docs-masthead .btn {
   width: 100%;
@@ -478,7 +493,7 @@ body {
 /*
  * Side navigation
  *
- * Scrollspy and affixed enhanced navigation to highlight sections and secondary
+ * Scrollspy and affixed enhanced navigation to highlight sections and sub
  * sections of docs content.
  */
 
