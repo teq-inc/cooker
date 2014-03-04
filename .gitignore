@@ -12,5 +12,5 @@ _gh_pages
 dist
 
 css.html
-javascript.html
 components.html
+_include/javascript/future

@@ -12,7 +12,7 @@ base_url: "../"
 <div class="bs-docs-section">
   <h1 id="download" class="page-header">Download</h1>
 
-  <p class="lead">プリコンパイルされたファイルを<code>Zip</code>形式でダウンロードと、<code>grunt</code>を使って自身でカスタマイズしてコンパイルすることができます。</p>
+  <p class="lead">Cookerはプリコンパイルされたファイルを<code>Zip</code>ファイルのダウンロードと、<code>grunt</code>を使い自身でカスタマイズし、コンパイルすることができます。</p>
 
   <div class="bs-downloads">
     <a href="{{ site.download.source }}" class="btn btn-lg btn-outline" role="button">Zip File Download cooker</a> 
@@ -26,7 +26,7 @@ base_url: "../"
 <div class="bs-docs-section">
   <h1 id="install" class="page-header">Install</h1>
 
-  <p class="lead">Cookerを自身でコンパイルする場合は、ローカルに<code>git</code>,<code>node</code>,<code>npm</code>,<code>ruby</code>,<code>gem</code>,<code>jekyll</code>,<code>grunt</code>,<code>bower</code>がインストールされている必要があります。</p>
+  <p class="lead">Cookerを自身でコンパイルする場合は、ローカルに<code>git</code>,<code>node</code>,<code>npm</code>,<code>ruby</code>,<code>gem</code>,<code>jekyll</code>,<code>grunt</code>,<code>bower</code>がインストールされているが必須になります。</p>
   
   <div>
 {% highlight text %}
@@ -69,12 +69,12 @@ $ grunt go
 <div class="bs-docs-section">
   <h1 id="grunt-file" class="page-header">Gruntfile.js</h1>
 
-  <p class="lead">grunt command</p>
+  <p class="lead">gruntタスクの実行コマンド。</p>
 
   <div>
     <h3>Default</h3>
     <p><code>サーバー起動（+livereload）</code>　→　<code>ファイル監視（jekyll,less）</code></p>
-{% highlight text %}
+{% highlight js %}
 $ grunt
 {% endhighlight %}
 
@@ -103,14 +103,15 @@ $ grunt go
 
 <!-- Grunt Task
 ================================================== -->
+<!--
 <div class="bs-docs-section">
   <h1 id="grunt-task" class="page-header">Grunt Task</h1>
 
   <p class="lead">gruntの主なタスク</p>
 
-  <div>
+  <div>    
     <ul>
-      <li><code>livereloadx</code> ブラウザのライブリロード（chromreのアドオン必要）</li>
+      <li><code>livereloadx</code> 指定済みのファイルを保存時にブラウザをライブリロードするタスク。chromeのアドオン"livereload"が必要。</li>
       <li><code>connect</code> ローカルサーバー</li>
       <li><code>esteWatch</code> ファイル監視</li>
       <li><code>bower</code> ベンダーライブラリのインストール（インストールするライブラリはbower.jsonで管理）　</li>
@@ -131,5 +132,6 @@ $ grunt go
 
 </div>
 
+-->
 
 

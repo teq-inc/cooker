@@ -1,0 +1,129 @@
+<!-- Dropdowns
+================================================== -->
+<div class="bs-docs-section">
+  <h1 id="dropdowns" class="page-header">Dropdowns <small>dropdowns.js</small></h1>
+
+  <h2 id="dropdowns-examples">Examples</h2>
+<!--   <p>Add dropdown menus to nearly anything with this simple plugin, including the navbar, tabs, and pills.</p> -->
+
+  <h3>Within button</h3>
+  <div class="bs-example">
+  
+      <div class="btn-group dropdown" data-action="click">
+        <button type="button" class="btn btn-default dropdown-toggle">
+          Action <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </div>
+                  
+      <div class="btn-group dropdown" data-action="click">
+        <button type="button" class="btn btn-info">Action</button>
+        <button type="button" class="btn btn-info dropdown-toggle">
+          <span class="caret"></span>
+          <span class="sr-only">Toggle Dropdown</span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </div>
+      
+      <div class="btn-group dropup dropdown" data-action="click">
+        <button type="button" class="btn btn-success">Dropup</button>
+        <button type="button" class="btn btn-success dropdown-toggle">
+          <span class="caret"></span>
+          <span class="sr-only">Toggle Dropdown</span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </div>
+    
+  </div> <!-- /example -->
+
+  <h3>Within pills</h3>
+  <div class="bs-example">
+    <ul class="nav nav-pills">
+      <li class="dropdown" data-action="hover">
+        <a role="button"href="#" class="dropdown-toggle">Hover Dropdown<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+          <li role="presentation" class="divider"></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+        </ul>
+      </li>
+      <li class="dropdown dropup" data-action="click">
+        <a role="button"href="#"  class="dropdown-toggle">Dropup<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu">
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+          <li role="presentation" class="divider"></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+        </ul>
+      </li>
+    </ul> <!-- /pills -->
+  </div> <!-- /example -->
+
+
+  <h2 id="dropdowns-usage">Usage</h2>
+
+  <h3>html</h3>
+{% highlight html %}
+<div class="dropdown" data-action="click">
+  <a class="dropdown-toggle" href="#">Dropdown trigger</a>
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="#">...</a></li>
+  </ul>
+</div>
+{% endhighlight %}
+
+  <h3>JavaScript</h3>
+{% highlight js %}
+$('.dropdown').dropdowns({
+  dropdownClass: 'dropdown',
+  toggleClass: 'dropdown-toggle',
+  activeClass: 'dropdown-active'
+})
+{% endhighlight %}
+
+
+
+  <h2 id="dropdowns-method">Methods</h2>
+
+  <h4>$().dropdowns(options)</h4>
+  <p>Attaches a dropdowns handler to an element collection.</p>
+
+  <h4>.dropdowns('show')</h4>
+  <p>Reveals an element's dropdowns.</p>
+  {% highlight js %}$('#element').dropdowns('show'){% endhighlight %}
+
+  <h4>.tooltip('hide')</h4>
+  <p>Hides an element's dropdowns.</p>
+  {% highlight js %}$('#element').dropdowns('hide'){% endhighlight %}
+
+  <h4>.tooltip('toggle')</h4>
+  <p>Toggles an element's dropdowns.</p>
+  {% highlight js %}$('#element').dropdowns('toggle'){% endhighlight %}
+
+  <h4>.tooltip('destroy')</h4>
+  <p>Hides and destroys an element's dropdowns.</p>
+  {% highlight js %}$('#element').dropdowns('destroy'){% endhighlight %}
+
+</div>
+

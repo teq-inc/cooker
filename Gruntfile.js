@@ -292,7 +292,7 @@
           './',
           '_layouts',
           '_includes',
-          '_includes/js-components',
+          '_includes/javascript',
           '_includes/styles',
           'js',
           'less',

@@ -8,7 +8,7 @@ $(function (){
       errorCounter:4
   });
 
-	$('a[href^=#]').scrollmethods();
+//	$('a[href^=#]').scrollmethods();
 
 	$('.dropdown').dropdowns();
 
@@ -27,13 +27,16 @@ $(function (){
 // bootstrap.affix
 // ==================================================
 
+  $('body').scrollspy({ target: '.bs-docs-sidenav' })
+
   $('.bs-docs-sidebar').affix({
     offset: {
       top: function () {
-          return this.bottom = $('.bs-docs-nav').outerHeight()+$('.bs-docs-header').outerHeight();
+          return this.bottom = $('.bs-docs-nav').outerHeight() + $('.bs-docs-header').outerHeight();
       }, 
     }
   });
+
 	
 	
 });
