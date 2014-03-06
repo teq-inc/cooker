@@ -18,7 +18,7 @@
       
     // lessをpureとminifyでcssにコンパイル
     less:{
-      develop: {
+      cooker: {
         options: {
           strictMath: true,
           sourceMap: true,
@@ -27,9 +27,31 @@
           sourceMapFilename: 'css/<%= pkg.name %>.css.map'
         },
         files: {
-          'css/<%= pkg.name %>.css': 'less/<%= pkg.name %>.less',     
-          'css/vendor.css': 'less/vendor.less',     
-          'assets/css/docs.css': 'assets/less/docs.less',        
+          'css/<%= pkg.name %>.css': 'less/<%= pkg.name %>.less'
+        } 
+      },
+      docs: {
+        options: {
+          strictMath: true,
+          sourceMap: true,
+          outputSourceFiles: true,
+          sourceMapURL: ['docs.css.map'],
+          sourceMapFilename: 'assets/css/docs.css.map'
+        },
+        files: {
+          'assets/css/docs.css': 'assets/less/docs.less'
+        } 
+      },
+      vendor: {
+        options: {
+          strictMath: true,
+          sourceMap: true,
+          outputSourceFiles: true,
+          sourceMapURL: ['vendor.map'],
+          sourceMapFilename: 'css/vendor.css.map'
+        },
+        files: {
+          'css/vendor.css': 'less/vendor.less'
         } 
       },
       minify: {
@@ -99,12 +121,7 @@
         },
         files :  { 
           'js/<%= pkg.name %>.js' : [
-            //'js/dropdowns.js',
-            //'js/tooltips.js',
-            'js/switcher.js',
-            //'js/slidebar.js',
-            //'js/inputcounter.js',
-            //'js/scrollmethod.js'
+            'js/switchers.js'
            ]
         } 
       },

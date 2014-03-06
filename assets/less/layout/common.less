@@ -154,17 +154,26 @@ body {
   display: inline-block;
   padding: 5px 8px;
   line-height: 1;
-    &:first-child{
-    text-align: right !important;
-  }
 
 }
-/* Style the GitHub buttons via CSS instead of inline attributes */
 .github-btn {
   overflow: hidden;
   border: 0;
-}
+    &:first-child{
+          float: right;
 
+    text-align: right !important;
+    iframe{
+      float: right;
+    }
+  }
+
+}
+.github-watchers{
+      text-align: right !important;
+      float: right;
+
+}
 
 // page Home
 // ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
