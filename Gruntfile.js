@@ -38,9 +38,9 @@
           report: 'min',
         },
         files: {
-          'css/<%= pkg.name %>-min.css': 'less/<%= pkg.name %>.less',
-          'css/vendor-min.css': 'less/vendor.less',     
-          'assets/css/docs-min.css': 'assets/less/docs.less'        
+          'css/<%= pkg.name %>.min.css': 'less/<%= pkg.name %>.less',
+          'css/vendor.min.css': 'less/vendor.less',     
+          'assets/css/docs.min.css': 'assets/less/docs.less'        
         }
       },
     },
@@ -82,7 +82,7 @@
       },
       src: [
         'css/<%= pkg.name %>.css',
-        'css/<%= pkg.name %>-min.css'
+        'css/<%= pkg.name %>.min.css'
       ]
     },
 
@@ -116,7 +116,7 @@
           compress:false,
         },
         files :  { 
-          'js/<%= pkg.name %>-min.js' : ['js/<%= pkg.name %>.js' ]
+          'js/<%= pkg.name %>.min.js' : ['js/<%= pkg.name %>.js' ]
         } 
       },
       comp:{
@@ -128,7 +128,7 @@
           beautify: true
         },
         files :  { 
-          'js/<%= pkg.name %>-beautify.js' : ['js/<%= pkg.name %>.js' ]
+          'js/<%= pkg.name %>.beautify.js' : ['js/<%= pkg.name %>.js' ]
         } 
       },
       compMinify:{
@@ -137,7 +137,7 @@
           report: 'min',
         },
         files :  { 
-          'js/<%= pkg.name %>-beautify-min.js' : ['js/<%= pkg.name %>-beautify.js' ]
+          'js/<%= pkg.name %>.beautify.min.js' : ['js/<%= pkg.name %>.beautify.js' ]
         } 
       },
     },
@@ -203,7 +203,7 @@
         expand: true,
         src: [
           'css/<%= pkg.name %>.css',
-          'css/<%= pkg.name %>-min.css'
+          'css/<%= pkg.name %>.min.css'
         ],
         dest: '<%= pkg.dist %>/css/',
         flatten: true,
@@ -213,7 +213,7 @@
         expand: true,
         src: [
           'js/<%= pkg.name %>.js',
-          'js/<%= pkg.name %>-min.js'
+          'js/<%= pkg.name %>.min.js'
         ],
         dest: '<%= pkg.dist %>/js/',
         flatten: true,

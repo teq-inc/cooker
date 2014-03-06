@@ -3,21 +3,10 @@
 @color-sub:         #098eab;
 @color-sub-light:   lighten(@color-sub,40);
 
-
-/*
- * Scaffolding
- *
- * Update the basics of our documents to prep for docs content.
- */
-
+// Scaffolding
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 body {
   position: relative; /* For scrollspy */
-}
-
-/* Keep code small in tables on account of limited space */
-.table code {
-  font-size: 13px;
-  font-weight: normal;
 }
 
 .lead{
@@ -57,7 +46,7 @@ body {
 }
 
 /* cooker "C" icon */
-.bs-docs-booticon {
+.ck-docs-booticon {
   display: block;
   font-weight: 500;
   color: #fff;
@@ -66,73 +55,63 @@ body {
   background-color: @color-main;
   border-radius: 15%;
 }
-.bs-docs-booticon-sm {
+.ck-docs-booticon-sm {
   width: 30px;
   height: 30px;
   font-size: 20px;
   line-height: 28px;
 }
-.bs-docs-booticon-lg {
+.ck-docs-booticon-lg {
   width: 144px;
   height: 144px;
   font-size: 108px;
   line-height: 140px;
 }
-.bs-docs-booticon-inverse {
+.ck-docs-booticon-inverse {
   color: @color-main;
   background-color: #fff;
 }
-.bs-docs-booticon-outline {
+.ck-docs-booticon-outline {
   background-color: transparent;
   border: 1px solid @color-sub-light;
 }
 
-
-/*
- * Main navigation
- *
- * Turn the `.navbar` at the top of the docs purple.
- */
-
-.bs-docs-nav {
+// Main navigation
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+.ck-docs-nav {
   margin-bottom: 0;
   background-color: transparent;
   border-bottom: 0;
 }
-.bs-home-nav .bs-nav-b {
+.ck-home-nav .ck-nav-b {
   display: none;
 }
-.bs-docs-nav .navbar-brand,
-.bs-docs-nav .navbar-nav > li > a {
+.ck-docs-nav .navbar-brand,
+.ck-docs-nav .navbar-nav > li > a {
   font-weight: 500;
   color: @color-main;
 }
-.bs-docs-nav .navbar-nav > li > a:hover,
-.bs-docs-nav .navbar-nav > .active > a,
-.bs-docs-nav .navbar-nav > .active > a:hover {
+.ck-docs-nav .navbar-nav > li > a:hover,
+.ck-docs-nav .navbar-nav > .active > a,
+.ck-docs-nav .navbar-nav > .active > a:hover {
   color: #463265;
   background-color: #f9f9f9;
 }
-.bs-docs-nav .navbar-toggle .icon-bar {
+.ck-docs-nav .navbar-toggle .icon-bar {
   background-color: #563d7c;
 }
-.bs-docs-nav .navbar-header .navbar-toggle {
+.ck-docs-nav .navbar-header .navbar-toggle {
   border-color: #fff;
 }
-.bs-docs-nav .navbar-header .navbar-toggle:hover,
-.bs-docs-nav .navbar-header .navbar-toggle:focus {
+.ck-docs-nav .navbar-header .navbar-toggle:hover,
+.ck-docs-nav .navbar-header .navbar-toggle:focus {
   background-color: #f9f9f9;
   border-color: #f9f9f9;
 }
 
-
-/*
- * Footer
- *
- * Separated section of content at the bottom of all pages, save the homepage.
- */
-
-.bs-docs-footer {
+// Footer
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+.ck-docs-footer {
   padding-top: 40px;
   padding-bottom: 40px;
   margin-top: 100px;
@@ -140,46 +119,45 @@ body {
   text-align: center;
   border-top: 1px solid #e5e5e5;
 }
-.bs-docs-footer-links {
+.ck-docs-footer-links {
   padding-left: 0;
   margin-top: 20px;
   color: #999;
 }
-.bs-docs-footer-links li {
+.ck-docs-footer-links li {
   display: inline;
   padding: 0 2px;
 }
-.bs-docs-footer-links li:first-child {
+.ck-docs-footer-links li:first-child {
   padding-left: 0;
 }
 
 @media (min-width: 768px) {
-  .bs-docs-footer p {
+  .ck-docs-footer p {
     margin-bottom: 0;
   }
 }
 
-
-/*
- * Social buttons
- *
- * Twitter and GitHub social action buttons (for homepage and footer).
- */
-
-.bs-docs-social {
+// Social buttons
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+.ck-docs-social {
   margin-bottom: 20px;
   text-align: center;
 }
-.bs-docs-social-buttons {
+.ck-docs-social-buttons {
   display: inline-block;
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
 }
-.bs-docs-social-buttons li {
+.ck-docs-social-buttons li {
   display: inline-block;
   padding: 5px 8px;
   line-height: 1;
+    &:first-child{
+    text-align: right !important;
+  }
+
 }
 /* Style the GitHub buttons via CSS instead of inline attributes */
 .github-btn {
@@ -188,21 +166,20 @@ body {
 }
 
 
-/*
- * Homepage
- *
- * Tweaks to the custom homepage and the masthead (main jumbotron).
- */
-body.bs-docs-home{
-  .bs-docs-footer {
+// page Home
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+body.ck-docs-home{
+  .ck-docs-footer {
     margin-top: 0;
     border-top:0;
   }  
 }
 
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
 /* Share masthead with page headers */
-.bs-docs-masthead,
-.bs-docs-header {
+.ck-docs-masthead,
+.ck-docs-header {
   position: relative;
   padding: 30px 15px;
   color: #cdbfe3;
@@ -215,238 +192,133 @@ body.bs-docs-home{
 }
 
  /* Masthead (headings and download button) */
-.bs-docs-masthead .bs-docs-booticon {
+.ck-docs-masthead .ck-docs-booticon {
   margin: 0 auto 30px;
 }
-.bs-docs-masthead h1 {
+.ck-docs-masthead h1 {
   font-weight: 300;
   line-height: 1;
   color: #fff;
 }
-.bs-docs-masthead .lead {
+.ck-docs-masthead .lead {
   margin: 0 auto 30px;
   font-size: 20px;
   color: #fff;
 }
-.bs-docs-masthead .version {
+.ck-docs-masthead .version {
   margin-top: -15px;
   margin-bottom: 30px;
   //color: #9784ba;
   color: @color-sub-light;
   opacity: .8
 }
-.bs-docs-masthead .btn {
+.ck-docs-masthead .btn {
   width: 100%;
   padding: 15px 30px;
   font-size: 20px;
 }
 
 @media (min-width: 480px) {
-  .bs-docs-masthead .btn {
+  .ck-docs-masthead .btn {
     width: auto;
   }
 }
 
 @media (min-width: 768px) {
-  .bs-docs-masthead {
+  .ck-docs-masthead {
     padding-top: 80px;
     padding-bottom: 80px;
   }
-  .bs-docs-masthead h1 {
+  .ck-docs-masthead h1 {
     font-size: 60px;
   }
-  .bs-docs-masthead .lead {
+  .ck-docs-masthead .lead {
     font-size: 24px;
   }
 }
 
 @media (min-width: 992px) {
-  .bs-docs-masthead .lead {
+  .ck-docs-masthead .lead {
     width: 80%;
     font-size: 30px;
   }
 }
 
-
-/*
- * Page headers
- *
- * Jumbotron-esque headers at the top of every page that's not the homepage.
- */
-
-/* Page headers */
-.bs-docs-header {
+// Page headers
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+.ck-docs-header {
   margin-bottom: 40px;
   font-size: 20px;
 }
-.bs-docs-header h1 {
+.ck-docs-header h1 {
   margin-top: 0;
   color: #fff;
 }
-.bs-docs-header p {
+.ck-docs-header p {
   margin-bottom: 0;
   font-weight: 300;
   line-height: 1.4;
 }
-.bs-docs-header .container {
+.ck-docs-header .container {
   position: relative;
 }
 
 @media (min-width: 768px) {
-  .bs-docs-header {
+  .ck-docs-header {
     padding-top: 60px;
     padding-bottom: 60px;
     font-size: 24px;
     text-align: left;
   }
-  .bs-docs-header h1 {
+  .ck-docs-header h1 {
     font-size: 60px;
     line-height: 1;
   }
 }
 
 @media (min-width: 992px) {
-  .bs-docs-header h1,
-  .bs-docs-header p {
+  .ck-docs-header h1,
+  .ck-docs-header p {
     margin-right: 380px;
   }
 }
 
-/*
- * Homepage featurettes
- *
- * Reasons to use Bootstrap, entries from the Expo, and more.
- */
-
-.bs-docs-featurette {
-  padding-top:    40px;
-  padding-bottom: 40px;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #555;
-  text-align: center;
-  background-color: #fff;
-  border-bottom: 1px solid #e5e5e5;
-}
-.bs-docs-featurette + .bs-docs-footer {
-  margin-top: 0;
-  border-top: 0;
-}
-
-.bs-docs-featurette-title {
-  margin-bottom: 5px;
-  font-size: 30px;
-  font-weight: normal;
-  color: #333;
-}
-.half-rule {
-  width: 100px;
-  margin: 40px auto;
-}
-.bs-docs-featurette h3 {
-  margin-bottom: 5px;
-  font-weight: normal;
-  color: #333;
-}
-.bs-docs-featurette-img {
-  display: block;
-  margin-bottom: 20px;
-  color: #333;
-}
-.bs-docs-featurette-img:hover {
-  color: #428bca;
-  text-decoration: none;
-}
-.bs-docs-featurette-img img {
-  display: block;
-  margin-bottom: 15px;
-}
-
-/* Featured sites */
-.bs-docs-featured-sites {
-  margin-right: -1px;
-  margin-left: -1px;
-}
-.bs-docs-featured-sites .col-sm-3 {
-  padding-right: 1px;
-  padding-left: 1px;
-}
-
-@media (min-width: 480px) {
-  .bs-docs-featurette .img-responsive {
-    margin-top: 30px;
-  }
-}
-@media (min-width: 768px) {
-  .bs-docs-featurette {
-    padding-top:    100px;
-    padding-bottom: 100px;
-  }
-  .bs-docs-featurette-title {
-    font-size: 40px;
-  }
-  .bs-docs-featurette .lead {
-    max-width: 80%;
-    margin-right: auto;
-    margin-left:  auto;
-  }
-  .bs-docs-featured-sites .col-sm-3:first-child img {
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
-  }
-  .bs-docs-featured-sites .col-sm-3:last-child img {
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
-  }
-
-  .bs-docs-featurette .img-responsive {
-    margin-top: 0;
-  }
-}
-
-
-/*
- * Side navigation
- *
- * Scrollspy and affixed enhanced navigation to highlight sections and sub
- * sections of docs content.
- */
-
-/* By default it's not affixed in mobile views, so undo that */
-.bs-docs-sidebar.affix {
+// Side navigation
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+.ck-docs-sidebar.affix {
   position: static;
 }
 @media (min-width: 768px) {
-  .bs-docs-sidebar {
+  .ck-docs-sidebar {
     padding-left: 20px;
   }
 }
 
 /* First level of nav */
-.bs-docs-sidenav {
+.ck-docs-sidenav {
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
 /* All levels of nav */
-.bs-docs-sidebar .nav > li > a {
+.ck-docs-sidebar .nav > li > a {
   display: block;
   padding: 4px 20px;
   font-size: 13px;
   font-weight: 500;
   color: #999;
 }
-.bs-docs-sidebar .nav > li > a:hover,
-.bs-docs-sidebar .nav > li > a:focus {
+.ck-docs-sidebar .nav > li > a:hover,
+.ck-docs-sidebar .nav > li > a:focus {
   padding-left: 19px;
   color: #563d7c;
   text-decoration: none;
   background-color: transparent;
   border-left: 1px solid #563d7c;
 }
-.bs-docs-sidebar .nav > .active > a,
-.bs-docs-sidebar .nav > .active:hover > a,
-.bs-docs-sidebar .nav > .active:focus > a {
+.ck-docs-sidebar .nav > .active > a,
+.ck-docs-sidebar .nav > .active:hover > a,
+.ck-docs-sidebar .nav > .active:focus > a {
   padding-left: 18px;
   font-weight: bold;
   color: #563d7c;
@@ -455,24 +327,24 @@ body.bs-docs-home{
 }
 
 /* Nav: second level (shown on .active) */
-.bs-docs-sidebar .nav .nav {
+.ck-docs-sidebar .nav .nav {
   display: none; /* Hide by default, but at >768px, show it */
   padding-bottom: 10px;
 }
-.bs-docs-sidebar .nav .nav > li > a {
+.ck-docs-sidebar .nav .nav > li > a {
   padding-top:    1px;
   padding-bottom: 1px;
   padding-left: 30px;
   font-size: 12px;
   font-weight: normal;
 }
-.bs-docs-sidebar .nav .nav > li > a:hover,
-.bs-docs-sidebar .nav .nav > li > a:focus {
+.ck-docs-sidebar .nav .nav > li > a:hover,
+.ck-docs-sidebar .nav .nav > li > a:focus {
   padding-left: 29px;
 }
-.bs-docs-sidebar .nav .nav > .active > a,
-.bs-docs-sidebar .nav .nav > .active:hover > a,
-.bs-docs-sidebar .nav .nav > .active:focus > a {
+.ck-docs-sidebar .nav .nav > .active > a,
+.ck-docs-sidebar .nav .nav > .active:hover > a,
+.ck-docs-sidebar .nav .nav > .active:focus > a {
   padding-left: 28px;
   font-weight: 500;
 }
@@ -500,47 +372,41 @@ body.bs-docs-home{
 
 /* Show and affix the side nav when space allows it */
 @media (min-width: 992px) {
-  .bs-docs-sidebar .nav > .active > ul {
+  .ck-docs-sidebar .nav > .active > ul {
     display: block;
   }
   /* Widen the fixed sidebar */
-  .bs-docs-sidebar.affix,
-  .bs-docs-sidebar.affix-bottom {
+  .ck-docs-sidebar.affix,
+  .ck-docs-sidebar.affix-bottom {
     width: 213px;
   }
-  .bs-docs-sidebar.affix {
+  .ck-docs-sidebar.affix {
     position: fixed; /* Undo the static from mobile first approach */
     top: 20px;
   }
-  .bs-docs-sidebar.affix-bottom {
+  .ck-docs-sidebar.affix-bottom {
     position: absolute; /* Undo the static from mobile first approach */
   }
-  .bs-docs-sidebar.affix-bottom .bs-docs-sidenav,
-  .bs-docs-sidebar.affix .bs-docs-sidenav {
+  .ck-docs-sidebar.affix-bottom .ck-docs-sidenav,
+  .ck-docs-sidebar.affix .ck-docs-sidenav {
     margin-top: 0;
     margin-bottom: 0;
   }
 }
 @media (min-width: 1200px) {
-  /* Widen the fixed sidebar again */
-  .bs-docs-sidebar.affix-bottom,
-  .bs-docs-sidebar.affix {
+  .ck-docs-sidebar.affix-bottom,
+  .ck-docs-sidebar.affix {
     width: 263px;
   }
 }
 
 
-/*
- * Docs sections
- *
- * Content blocks for each component or feature.
- */
-
-/* Space things out */
-.bs-docs-section {
+// Docs sections
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+.ck-docs-section {
   margin-bottom: 60px;
 }
-.bs-docs-section:last-child {
+.ck-docs-section:last-child {
   margin-bottom: 0;
 }
 
@@ -550,154 +416,9 @@ h1[id] {
 }
 
 
-/*
- * Callouts
- *
- * Not quite alerts, but custom and helpful notes for folks reading the docs.
- * Requires a base and modifier class.
- */
-
-/* Common styles for all types */
-.bs-callout {
-  padding: 20px;
-  margin: 20px 0;
-  border-left: 3px solid #eee;
-}
-.bs-callout h4 {
-  margin-top: 0;
-  margin-bottom: 5px;
-}
-.bs-callout p:last-child {
-  margin-bottom: 0;
-}
-.bs-callout code {
-  background-color: #fff;
-  border-radius: 3px;
-}
-
-/* Variations */
-.bs-callout-danger {
-  background-color: #fdf7f7;
-  border-color: #d9534f;
-}
-.bs-callout-danger h4 {
-  color: #d9534f;
-}
-.bs-callout-warning {
-  background-color: #fcf8f2;
-  border-color: #f0ad4e;
-}
-.bs-callout-warning h4 {
-  color: #f0ad4e;
-}
-.bs-callout-info {
-  background-color: #f4f8fa;
-  border-color: #5bc0de;
-}
-.bs-callout-info h4 {
-  color: #5bc0de;
-}
-
-
-/*
- * Color swatches
- *
- * Color swatches and associated values for our grayscale and brand colors.
- */
-
-.color-swatches {
-  margin: 0 -5px;
-  overflow: hidden; /* clearfix */
-}
-.color-swatch {
-  float: left;
-  width:  60px;
-  height: 60px;
-  margin: 0 5px;
-  border-radius: 3px;
-}
-
-@media (min-width: 768px) {
-  .color-swatch {
-    width:  100px;
-    height: 100px;
-  }
-}
-
-/* Framework colors */
-.color-swatches .gray-darker   {
-  background-color: #222;
-}
-.color-swatches .gray-dark     {
-  background-color: #333;
-}
-.color-swatches .gray          {
-  background-color: #555;
-}
-.color-swatches .gray-light    {
-  background-color: #999;
-}
-.color-swatches .gray-lighter  {
-  background-color: #eee;
-}
-.color-swatches .brand-primary {
-  background-color: #428bca;
-}
-.color-swatches .brand-success {
-  background-color: #5cb85c;
-}
-.color-swatches .brand-warning {
-  background-color: #f0ad4e;
-}
-.color-swatches .brand-danger  {
-  background-color: #d9534f;
-}
-.color-swatches .brand-info    {
-  background-color: #5bc0de;
-}
-
-/* Docs colors */
-.color-swatches .bs-purple          {
-  background-color: #563d7c;
-}
-.color-swatches .bs-purple-light    {
-  background-color: #c7bfd3;
-}
-.color-swatches .bs-purple-lighter  {
-  background-color: #e5e1ea;
-}
-.color-swatches .bs-gray            {
-  background-color: #f9f9f9;
-}
-
-/*
- * Grid examples
- *
- * Highlight the grid columns within the docs so folks can see their padding,
- * alignment, sizing, etc.
- */
-
-.show-grid {
-  margin-bottom: 15px;
-}
-.show-grid [class^="col-"] {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  background-color: #eee;
-  background-color: rgba(86,61,124,.15);
-  border: 1px solid #ddd;
-  border: 1px solid rgba(86,61,124,.2);
-}
-
-
-/*
- * Examples
- *
- * Isolated sections of example content for each component or feature. Usually
- * followed by a code snippet.
- */
-
-.bs-example {
+// Examples
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+.ck-example {
   position: relative;
   padding: 45px 15px 15px;
   margin: 0 -15px 15px;
@@ -706,30 +427,27 @@ h1[id] {
   border-style: solid;
   border-width: 1px 0;
   box-shadow: inset 0 3px 6px rgba(0,0,0,.05);
-}
-/* Echo out a label for the example */
-.bs-example:after {
-  position: absolute;
-  top:  15px;
-  left: 15px;
-  font-size: 12px;
-  font-weight: bold;
-  color: #bbb;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  content: "Example";
+  &:after {
+    position: absolute;
+    top:  15px;
+    left: 15px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #bbb;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    content: "Example";
+  }
+  & + .highlight {
+    margin: -15px -15px 15px;
+    border-width: 0 0 1px;
+    border-radius: 0;
+  }
+
 }
 
-/* Tweak display of the code snippets when following an example */
-.bs-example + .highlight {
-  margin: -15px -15px 15px;
-  border-width: 0 0 1px;
-  border-radius: 0;
-}
-
-/* Make the examples and snippets not full-width */
 @media (min-width: 768px) {
-  .bs-example {
+  .ck-example {
     margin-right: 0;
     margin-left: 0;
     background-color: #fff;
@@ -737,482 +455,13 @@ h1[id] {
     border-width: 1px;
     border-radius: 4px 4px 0 0;
     box-shadow: none;
+    & + .highlight {
+      margin-top: -16px;
+      margin-right: 0;
+      margin-left: 0;
+      border-width: 1px;
+      border-bottom-right-radius: 4px;
+      border-bottom-left-radius: 4px;
+    }
   }
-  .bs-example + .highlight {
-    margin-top: -16px;
-    margin-right: 0;
-    margin-left: 0;
-    border-width: 1px;
-    border-bottom-right-radius: 4px;
-    border-bottom-left-radius: 4px;
-  }
-}
-
-/* Undo width of container */
-.bs-example .container {
-  width: auto;
-}
-
-/* Tweak content of examples for optimum awesome */
-.bs-example > p:last-child,
-.bs-example > ul:last-child,
-.bs-example > ol:last-child,
-.bs-example > blockquote:last-child,
-.bs-example > .form-control:last-child,
-.bs-example > .table:last-child,
-.bs-example > .navbar:last-child,
-.bs-example > .jumbotron:last-child,
-.bs-example > .alert:last-child,
-.bs-example > .panel:last-child,
-.bs-example > .list-group:last-child,
-.bs-example > .well:last-child,
-.bs-example > .progress:last-child,
-.bs-example > .table-responsive:last-child > .table {
-  margin-bottom: 0;
-}
-.bs-example > p > .close {
-  float: none;
-}
-
-/* Typography */
-.bs-example-type .table .type-info {
-  color: #999;
-  vertical-align: middle;
-}
-.bs-example-type .table td {
-  padding: 15px 0;
-  border-color: #eee;
-}
-.bs-example-type .table tr:first-child td {
-  border-top: 0;
-}
-.bs-example-type h1,
-.bs-example-type h2,
-.bs-example-type h3,
-.bs-example-type h4,
-.bs-example-type h5,
-.bs-example-type h6 {
-  margin: 0;
-}
-
-/* Contextual background colors */
-.bs-example-bg-classes p {
-  padding: 15px;
-}
-
-/* Images */
-.bs-example > .img-circle,
-.bs-example > .img-rounded,
-.bs-example > .img-thumbnail {
-  margin: 5px;
-}
-
-/* Tables */
-.bs-example > .table-responsive > .table {
-  background-color: #fff;
-}
-
-/* Buttons */
-.bs-example > .btn,
-.bs-example > .btn-group {
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-.bs-example > .btn-toolbar + .btn-toolbar {
-  margin-top: 10px;
-}
-
-/* Forms */
-.bs-example-control-sizing select,
-.bs-example-control-sizing input[type="text"] + input[type="text"] {
-  margin-top: 10px;
-}
-.bs-example-form .input-group {
-  margin-bottom: 10px;
-}
-.bs-example > textarea.form-control {
-  resize: vertical;
-}
-
-/* List groups */
-.bs-example > .list-group {
-  max-width: 400px;
-}
-
-/* Navbars */
-.bs-example .navbar:last-child {
-  margin-bottom: 0;
-}
-.bs-navbar-top-example,
-.bs-navbar-bottom-example {
-  z-index: 1;
-  padding: 0;
-  overflow: hidden; /* cut the drop shadows off */
-}
-.bs-navbar-top-example .navbar-header,
-.bs-navbar-bottom-example .navbar-header {
-  margin-left: 0;
-}
-.bs-navbar-top-example .navbar-fixed-top,
-.bs-navbar-bottom-example .navbar-fixed-bottom {
-  position: relative;
-  margin-right: 0;
-  margin-left: 0;
-}
-.bs-navbar-top-example {
-  padding-bottom: 45px;
-}
-.bs-navbar-top-example:after {
-  top: auto;
-  bottom: 15px;
-}
-.bs-navbar-top-example .navbar-fixed-top {
-  top: -1px;
-}
-.bs-navbar-bottom-example {
-  padding-top: 45px;
-}
-.bs-navbar-bottom-example .navbar-fixed-bottom {
-  bottom: -1px;
-}
-.bs-navbar-bottom-example .navbar {
-  margin-bottom: 0;
-}
-@media (min-width: 768px) {
-  .bs-navbar-top-example .navbar-fixed-top,
-  .bs-navbar-bottom-example .navbar-fixed-bottom {
-    position: absolute;
-  }
-  .bs-navbar-top-example {
-    border-radius: 0 0 4px 4px;
-  }
-  .bs-navbar-bottom-example {
-    border-radius: 4px 4px 0 0;
-  }
-}
-
-/* Pagination */
-.bs-example .pagination {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-/* Pager */
-.bs-example > .pager {
-  margin-top: 0;
-}
-
-/* Example modals */
-.bs-example-modal {
-  background-color: #f5f5f5;
-}
-.bs-example-modal .modal {
-  position: relative;
-  top: auto;
-  right: auto;
-  bottom: auto;
-  left: auto;
-  z-index: 1;
-  display: block;
-}
-.bs-example-modal .modal-dialog {
-  left: auto;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-/* Example dropdowns */
-/*
-.bs-example > .dropdown > .dropdown-menu {
-  position: static;
-  display: block;
-  margin-bottom: 5px;
-}
-*/
-
-/* Example tabbable tabs */
-.bs-example-tabs .nav-tabs {
-  margin-bottom: 15px;
-}
-
-/* Tooltips */
-.bs-example-tooltips {
-  text-align: center;
-}
-.bs-example-tooltips > .btn {
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-
-/* Popovers */
-.bs-example-popover {
-  padding-bottom: 24px;
-  background-color: #f9f9f9;
-}
-.bs-example-popover .popover {
-  position: relative;
-  display: block;
-  float: left;
-  width: 260px;
-  margin: 20px;
-}
-
-/* Scrollspy demo on fixed height div */
-.scrollspy-example {
-  position: relative;
-  height: 200px;
-  margin-top: 10px;
-  overflow: auto;
-}
-
-
-
-
-
-/*
- * Code snippets
- *
- * Generated via Pygments and Jekyll, these are snippets of HTML, CSS, and JS.
- */
-
-.highlight {
-  padding: 9px 14px;
-  margin-bottom: 14px;
-  background-color: #f7f7f9;
-  border: 1px solid #e1e1e8;
-  border-radius: 4px;
-}
-.highlight pre {
-  padding: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-  white-space: nowrap;
-  background-color: transparent;
-  border: 0;
-}
-.highlight pre code {
-  font-size: inherit;
-  color: #333; /* Effectively the base text color */
-}
-.highlight pre .lineno {
-  display: inline-block;
-  width: 22px;
-  padding-right: 5px;
-  margin-right: 10px;
-  color: #bebec5;
-  text-align: right;
-}
-
-
-/*
- * Responsive tests
- *
- * Generate a set of tests to show the responsive utilities in action.
- */
-
-/* Responsive (scrollable) doc tables */
-.table-responsive .highlight pre {
-  white-space: normal;
-}
-
-/* Utility classes table  */
-.bs-table th small,
-.responsive-utilities th small {
-  display: block;
-  font-weight: normal;
-  color: #999;
-}
-.responsive-utilities tbody th {
-  font-weight: normal;
-}
-.responsive-utilities td {
-  text-align: center;
-}
-.responsive-utilities td.is-visible {
-  color: #468847;
-  background-color: #dff0d8 !important;
-}
-.responsive-utilities td.is-hidden {
-  color: #ccc;
-  background-color: #f9f9f9 !important;
-}
-
-/* Responsive tests */
-.responsive-utilities-test {
-  margin-top: 5px;
-}
-.responsive-utilities-test .col-xs-6 {
-  margin-bottom: 10px;
-}
-.responsive-utilities-test span {
-  display: block;
-  padding: 15px 10px;
-  font-size: 14px;
-  font-weight: bold;
-  line-height: 1.1;
-  text-align: center;
-  border-radius: 4px;
-}
-.visible-on .col-xs-6 .hidden-xs,
-.visible-on .col-xs-6 .hidden-sm,
-.visible-on .col-xs-6 .hidden-md,
-.visible-on .col-xs-6 .hidden-lg,
-.hidden-on .col-xs-6 .hidden-xs,
-.hidden-on .col-xs-6 .hidden-sm,
-.hidden-on .col-xs-6 .hidden-md,
-.hidden-on .col-xs-6 .hidden-lg {
-  color: #999;
-  border: 1px solid #ddd;
-}
-.visible-on .col-xs-6 .visible-xs,
-.visible-on .col-xs-6 .visible-sm,
-.visible-on .col-xs-6 .visible-md,
-.visible-on .col-xs-6 .visible-lg,
-.hidden-on .col-xs-6 .visible-xs,
-.hidden-on .col-xs-6 .visible-sm,
-.hidden-on .col-xs-6 .visible-md,
-.hidden-on .col-xs-6 .visible-lg {
-  color: #468847;
-  background-color: #dff0d8;
-  border: 1px solid #d6e9c6;
-}
-
-
-/*
- * Glyphicons
- *
- * Special styles for displaying the icons and their classes in the docs.
- */
-
-.bs-glyphicons {
-  margin: 0 -19px 20px -16px;
-  overflow: hidden;
-}
-.bs-glyphicons-list {
-  padding-left: 0;
-  list-style: none;
-}
-.bs-glyphicons li {
-  float: left;
-  width: 25%;
-  height: 115px;
-  padding: 10px;
-  font-size: 10px;
-  line-height: 1.4;
-  text-align: center;
-  background-color: #f9f9f9;
-  border: 1px solid #fff;
-}
-.bs-glyphicons .glyphicon {
-  margin-top: 5px;
-  margin-bottom: 10px;
-  font-size: 24px;
-}
-.bs-glyphicons .glyphicon-class {
-  display: block;
-  text-align: center;
-  word-wrap: break-word; /* Help out IE10+ with class names */
-}
-.bs-glyphicons li:hover {
-  color: #fff;
-  background-color: #563d7c;
-}
-
-@media (min-width: 768px) {
-  .bs-glyphicons {
-    margin-right: 0;
-    margin-left: 0;
-  }
-  .bs-glyphicons li {
-    width: 12.5%;
-    font-size: 12px;
-  }
-}
-
-/*
- * Brand guidelines
- *
- * Extra styles for displaying wordmarks, logos, etc.
- */
-
-/* Logo series wrapper */
-.bs-brand-logos {
-  display: table;
-  width: 100%;
-  margin-bottom: 15px;
-  overflow: hidden;
-  color: #563d7c;
-  background-color: #f9f9f9;
-  border-radius: 4px;
-}
-
-/* Individual items */
-.bs-brand-item {
-  padding: 60px 0;
-  text-align: center;
-}
-.bs-brand-item + .bs-brand-item {
-  border-top: 1px solid #fff;
-}
-.bs-brand-logos .inverse {
-  color: #fff;
-  background-color: #563d7c;
-}
-
-/* Heading content within */
-.bs-brand-item h1,
-.bs-brand-item h3 {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-.bs-brand-item .bs-docs-booticon {
-  margin-right: auto;
-  margin-left: auto;
-}
-
-/* Make the icons stand out on what is/isn't okay */
-.bs-brand-item .glyphicon {
-  width: 30px;
-  height: 30px;
-  margin: 10px auto -10px;
-  line-height: 30px;
-  color: #fff;
-  border-radius: 50%;
-}
-.bs-brand-item .glyphicon-ok {
-  background-color: #5cb85c;
-}
-.bs-brand-item .glyphicon-remove {
-  background-color: #d9534f;
-}
-
-@media (min-width: 768px) {
-  .bs-brand-item {
-    display: table-cell;
-    width: 1%;
-  }
-  .bs-brand-item + .bs-brand-item {
-    border-top: 0;
-    border-left: 1px solid #fff;
-  }
-  .bs-brand-item h1 {
-    font-size: 60px;
-  }
-}
-
-
-/*
- * Miscellaneous
- *
- * Odds and ends for optimum docs display.
- */
-
-/* Pseudo :focus state for showing how it looks in the docs */
-#focusedInput {
-  border-color: rgb(204,204,204); /* Restate unfocused value to make CSSLint happy that there's a pre-CSS3 fallback*/
-  border-color: rgba(82,168,236,.8);
-  outline: 0;
-  outline: thin dotted \9; /* IE6-9 */
-  -moz-box-shadow: 0 0 8px rgba(82,168,236,.6);
-       box-shadow: 0 0 8px rgba(82,168,236,.6);
 }

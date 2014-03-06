@@ -27,12 +27,12 @@ $(function (){
 // bootstrap.affix
 // ==================================================
 
-  $('body').scrollspy({ target: '.bs-docs-sidenav' })
+  $('body').scrollspy({ target: '.ck-docs-sidenav' })
 
-  $('.bs-docs-sidebar').affix({
+  $('.ck-docs-sidebar').affix({
     offset: {
       top: function () {
-          return this.bottom = $('.bs-docs-nav').outerHeight() + $('.bs-docs-header').outerHeight();
+          return this.bottom = $('.ck-docs-nav').outerHeight() + $('.ck-docs-header').outerHeight();
       }, 
     }
   });

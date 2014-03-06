@@ -7,12 +7,9 @@ future
 less/js-components/future
 less/mixins/future
 js/future
-js/cooker-beautify.js
-js/cooker-beautify-min.js
+js/cooker.beautify.js
+js/cooker.beautify-min.js
 bower_components
 _gh_pages
 dist
-
-css.html
-components.html
 _include/javascript/future
