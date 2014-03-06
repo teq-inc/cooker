@@ -4,6 +4,8 @@ validation-status.json
 node_modules
 vendor
 future
+less/js-components/future
+less/mixins/future
 js/future
 js/cooker-beautify.js
 js/cooker-beautify-min.js

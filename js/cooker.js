@@ -29,11 +29,11 @@
             var $this = $(this);
             var $o = $this.parents("." + options.dropdownClass).siblings();
             $o.removeClass(options.activeClass);
-            e.stopPropagation();
             methods.toggle.apply(_this);
+            return false;
           });
           $("body").on("click", function() {
-            methods.close.apply(_this);
+            methods.hide.apply(_this);
           });
         };
         var mouseHover = function() {
@@ -41,7 +41,7 @@
             var $this = $(this);
             var $o = $this.parents("." + options.dropdownClass).siblings();
             $o.removeClass(options.activeClass);
-            methods.open.apply(_this);
+            methods.show.apply(_this);
           });
         };
         if (action === "hover") {
@@ -59,17 +59,17 @@
       options = $this.data(namespace).options;
       var active = $this.hasClass(options.activeClass);
       if (active) {
-        methods.close.call(this, options);
+        methods.hide.call(this, options);
       } else {
-        methods.open.call(this, options);
+        methods.show.call(this, options);
       }
     },
-    open: function() {
+    show: function() {
       var $this = $(this);
       options = $this.data(namespace).options;
       $this.addClass(options.activeClass);
     },
-    close: function() {
+    hide: function() {
       var $this = $(this);
       options = $this.data(namespace).options;
       $this.removeClass(options.activeClass);
