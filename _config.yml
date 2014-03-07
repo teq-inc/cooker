@@ -2,7 +2,7 @@ markdown:    redcarpet
 pygments:    true
 permalink:   pretty
 exclude:     ['less','dist','bower_components','bower.json','.gitignore','Gruntfile.js','package.json','node_modules','README.md','validation-report.json','validation-status.json','future','js/future']
-source:      docs/
+source:      docs
 destination: docs/_gh_pages
 encoding:    UTF-8
 url:         http://teq-inc.github.io/cooker/
