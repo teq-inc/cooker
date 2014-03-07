@@ -60,9 +60,7 @@
           report: 'min',
         },
         files: {
-          'css/<%= pkg.name %>.min.css': 'less/<%= pkg.name %>.less',
-          'css/vendor.min.css': 'less/vendor.less',     
-          '<%= pkg.docs %>/assets/css/docs.min.css': '<%= pkg.docs %>/assets/less/docs.less'        
+          'css/<%= pkg.name %>.min.css': 'less/<%= pkg.name %>.less'
         }
       },
     },
@@ -70,18 +68,17 @@
     // css成形
     csscomb: {
       options: {
-        config: '.csscomb.json'
+        config: 'less/.csscomb.json'
       },
       dist: {
         files: {
           'css/<%= pkg.name %>.css': 'css/<%= pkg.name %>.css',
-          'css/vendor.css': 'css/vendor.css',     
+          '<%= pkg.docs %>/assets/css/vendor.css': '<%= pkg.docs %>/assets/css/vendor.css',     
           '<%= pkg.docs %>/assets/css/docs.css': '<%= pkg.docs %>/assets/css/docs.css'
         }
       }
     },    
       
-    // コンパイルしたcssにバナー追加
     usebanner: {
       dist: {
         options: {
@@ -97,10 +94,9 @@
       }
     },
     
-    // cssデバッグ
     csslint: {
       options: {
-        csslintrc: '.csslintrc'
+        csslintrc: 'less/.csslintrc'
       },
       src: [
         'css/<%= pkg.name %>.css',
@@ -159,7 +155,6 @@
       },
     },
     
-    //js debug
     jshint: {
       files: [
         'Gruntfile.js',
@@ -167,12 +162,11 @@
       ],
       options: {
         browser: true,
-        jshintrc: '.jshintrc',
+        jshintrc: 'js/.jshintrc',
         reporter: require('jshint-stylish')
       }
     },
 
-    // html圧縮
     htmlmin: {
       dist: {
         options: {
@@ -214,7 +208,6 @@
       }
     },
         
-    // ファイルコピー
     copy: {
       css: {
         expand: true,
@@ -258,7 +251,6 @@
       }
     },
     
-    // ローカルサーバー
     connect: {
       server: {
         options: {
@@ -279,7 +271,6 @@
       }
     },
           
-    // 通知
     notify: {
       options: {
         title: '<%= pkg.name %> Grunt Notify',
@@ -296,7 +287,6 @@
       }
     },
     
-    // bower インストール設定
     bower: {
       install: {
         options: {
@@ -329,7 +319,6 @@
     esteWatch: {
       options: {
         dirs: [
-          './',
           '<%= pkg.docs %>/_layouts',
           '<%= pkg.docs %>/_includes',
           '<%= pkg.docs %>/_includes/javascript',
