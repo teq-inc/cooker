@@ -36,10 +36,10 @@
           sourceMap: true,
           outputSourceFiles: true,
           sourceMapURL: ['docs.css.map'],
-          sourceMapFilename: 'assets/css/docs.css.map'
+          sourceMapFilename: '<%= pkg.docs %>/assets/css/docs.css.map'
         },
         files: {
-          'assets/css/docs.css': 'assets/less/docs.less'
+          '<%= pkg.docs %>/assets/css/docs.css': '<%= pkg.docs %>/assets/less/docs.less'
         } 
       },
       vendor: {
@@ -48,10 +48,10 @@
           sourceMap: true,
           outputSourceFiles: true,
           sourceMapURL: ['vendor.map'],
-          sourceMapFilename: 'css/vendor.css.map'
+          sourceMapFilename: '<%= pkg.docs %>/assets/css/vendor.css.map'
         },
         files: {
-          'css/vendor.css': 'less/vendor.less'
+          '<%= pkg.docs %>/assets/css/vendor.css': '<%= pkg.docs %>/assets/less/vendor.less'
         } 
       },
       minify: {
@@ -62,7 +62,7 @@
         files: {
           'css/<%= pkg.name %>.min.css': 'less/<%= pkg.name %>.less',
           'css/vendor.min.css': 'less/vendor.less',     
-          'assets/css/docs.min.css': 'assets/less/docs.less'        
+          '<%= pkg.docs %>/assets/css/docs.min.css': '<%= pkg.docs %>/assets/less/docs.less'        
         }
       },
     },
@@ -76,7 +76,7 @@
         files: {
           'css/<%= pkg.name %>.css': 'css/<%= pkg.name %>.css',
           'css/vendor.css': 'css/vendor.css',     
-          'assets/css/docs.css': 'assets/css/docs.css'
+          '<%= pkg.docs %>/assets/css/docs.css': '<%= pkg.docs %>/assets/css/docs.css'
         }
       }
     },    
@@ -91,7 +91,7 @@
         files: {
           src: [
             'css/<%= pkg.name %>.css',
-            'assets/css/docs.css'
+            '<%= pkg.docs %>/assets/css/docs.css'
           ]
         }
       }
@@ -218,24 +218,44 @@
     copy: {
       css: {
         expand: true,
+        flatten: true,
+        filter: 'isFile',
         src: [
           'css/<%= pkg.name %>.css',
           'css/<%= pkg.name %>.min.css'
         ],
-        dest: '<%= pkg.dist %>/css/',
-        flatten: true,
-        filter: 'isFile'
+        dest: '<%= pkg.dist %>/css/'
       },
       js: {
         expand: true,
+        flatten: true,
+        filter: 'isFile',
         src: [
           'js/<%= pkg.name %>.js',
           'js/<%= pkg.name %>.min.js'
         ],
-        dest: '<%= pkg.dist %>/js/',
-        flatten: true,
-        filter: 'isFile'
+        dest: '<%= pkg.dist %>/js/'
       },
+      docsCss: {
+        expand: true,
+        flatten: true,
+        filter: 'isFile',
+        src: [
+          'css/<%= pkg.name %>.css',
+          'css/<%= pkg.name %>.css.map'
+        ],
+        dest: '<%= pkg.docs %>/assets/css/'
+      },
+      docsJs: {
+        expand: true,
+        flatten: true,
+        filter: 'isFile',
+        src: [
+          'js/<%= pkg.name %>.js',
+          'js/<%= pkg.name %>.min.js'
+        ],
+        dest: '<%= pkg.docs %>/assets/js/'
+      }
     },
     
     // ローカルサーバー
@@ -310,10 +330,10 @@
       options: {
         dirs: [
           './',
-          '_layouts',
-          '_includes',
-          '_includes/javascript',
-          '_includes/styles',
+          '<%= pkg.docs %>/_layouts',
+          '<%= pkg.docs %>/_includes',
+          '<%= pkg.docs %>/_includes/javascript',
+          '<%= pkg.docs %>/_includes/styles',
           'js',
           'less',
           'less/components',
@@ -323,9 +343,10 @@
           'less/utilities',
           'less/mixins',
           'less/variables',
-          'assets/less',
-          'assets/less/layout',
-          'assets/js',
+          '<%= pkg.docs %>/',
+          '<%= pkg.docs %>/assets/less',
+          '<%= pkg.docs %>/assets/less/layout',
+          '<%= pkg.docs %>/assets/js'
         ],
         livereload: {
           enabled: false
@@ -339,6 +360,7 @@
       },
       'js': function(filepath) { 
         return [ 
+          'copy:docsJs',
           'shell:jekyll_build',
           'jshint',
           'notify:jekyll'
@@ -346,9 +368,9 @@
       },
       'less': function(filepath) { 
         return [
-          'less:develop',
-          'notify:less',
+          'less',
           'usebanner',
+          'copy:docsCss',
           'shell:jekyll_build',
           'notify:jekyll'
         ] 
@@ -357,7 +379,6 @@
     
   });
 		
-  //
   grunt.loadNpmTasks('livereloadx');
   grunt.registerTask('default', function () {
     grunt.log.warn('`grunt` to start a watch.');
@@ -368,7 +389,6 @@
     ]);
   });
 
-  //
   grunt.registerTask('go', function () {
     grunt.log.warn('`grunt go` to start.');
     grunt.task.run([
@@ -388,7 +408,6 @@
     ]);
   });
   
-  //
   grunt.registerTask('build', function () {
     grunt.log.warn('`grunt build` to start.');
     grunt.task.run([
@@ -402,5 +421,4 @@
     ]);
   });
   
-  //
 };

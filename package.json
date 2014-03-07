@@ -1,7 +1,7 @@
 {
   "name": "cooker",
   "description": "",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "keywords": [],
   "homepage": "",
   "author": "TEQ inc.",
@@ -11,7 +11,8 @@
     "url": "https://github.com/teq-inc/cooker"
   },
   "dist": "dist",
-  "public": "_gh_pages",
+  "public": "docs/_gh_pages",
+  "docs": "docs",
   "dependencies": {},
   "devDependencies": {
     "grunt": "~0.4.2",
