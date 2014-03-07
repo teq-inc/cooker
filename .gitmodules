@@ -1,0 +1,4 @@
+[submodule "docs/_gh_pages"]
+	path = docs/_gh_pages
+	url = https://github.com/teq-inc/cooker.git
+	branch = gh-pages
