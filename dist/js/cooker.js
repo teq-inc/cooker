@@ -1,7 +1,8 @@
 /*!
- * cooker v0.1.0
+ * cooker v0.1.1
  * Copyright 2014 TEQ inc.
- * Licensed under ,, (,,)
+ * Licensed under MIT
+ * http://teq-inc.github.io/cooker/
  */
 (function($) {
   var namespace = "switchers";

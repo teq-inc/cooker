@@ -9,13 +9,29 @@
     
     pkg: grunt.file.readJSON('package.json'),
         
+    // Banner template
+    // ====================================================
     banner: 
       '/*!\n' +
       ' * <%= pkg.name %> v<%= pkg.version %>\n' +
       ' * Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
-      ' * Licensed under <%= _.pluck(pkg.licenses, "type") %> (<%= _.pluck(pkg.licenses, "url") %>)\n' +
+      ' * Licensed under <%= pkg.licenses %>\n' +
+      ' * <%= pkg.url %>\n' +
       ' */\n',
-        
+
+    // File delete
+    // ====================================================
+    clean: {
+      dist: [
+        'dist', 
+        'docs/dist',
+        'docs/assets/css',
+        'js/<%= pkg.name %>.beautify.js'
+      ]
+    },
+    
+    // Less compire
+    // ====================================================
     less:{
       cooker: {
         options: {
@@ -23,10 +39,10 @@
           sourceMap: true,
           outputSourceFiles: true,
           sourceMapURL: ['<%= pkg.name %>.css.map'],
-          sourceMapFilename: 'css/<%= pkg.name %>.css.map'
+          sourceMapFilename: 'dist/css/<%= pkg.name %>.css.map'
         },
         files: {
-          'css/<%= pkg.name %>.css': 'less/<%= pkg.name %>.less'
+          'dist/css/<%= pkg.name %>.css': 'less/<%= pkg.name %>.less'
         } 
       },
       docs: {
@@ -40,44 +56,45 @@
         files: {
           'docs/assets/css/docs.css': 'docs/assets/less/docs.less'
         } 
-      },
-      vendor: {
-        options: {
-          strictMath: true,
-          sourceMap: true,
-          outputSourceFiles: true,
-          sourceMapURL: ['vendor.map'],
-          sourceMapFilename: 'docs/assets/css/vendor.css.map'
-        },
-        files: {
-          'docs/assets/css/vendor.css': 'docs/assets/less/vendor.less'
-        } 
-      },
-      minify: {
-        options: {
-          cleancss: true,
-          report: 'min',
-        },
-        files: {
-          'css/<%= pkg.name %>.min.css': 'less/<%= pkg.name %>.less'
-        }
-      },
+      }
     },
-    
-    // css成形
+
+    // css autoprefixer
+    // ====================================================
+    autoprefixer: {
+      options: {
+        browsers: ['last 2 versions', 'ie 8', 'ie 9', 'android 2.3', 'android 4', 'opera 12']
+      },
+      core: {
+        options: {
+          map: true
+        },
+        src: 'dist/css/<%= pkg.name %>.css'
+      },
+      docs: {
+        options: {
+          map: true
+        },
+        src: 'docs/assets/css/docs.css'
+      }
+    },
+
+    // css csscomb 成形
+    // ====================================================
     csscomb: {
       options: {
         config: 'less/.csscomb.json'
       },
       dist: {
         files: {
-          'css/<%= pkg.name %>.css': 'css/<%= pkg.name %>.css',
-          'docs/assets/css/vendor.css': 'docs/assets/css/vendor.css',     
+          'dist/css/<%= pkg.name %>.css': 'dist/css/<%= pkg.name %>.css',
           'docs/assets/css/docs.css': 'docs/assets/css/docs.css'
         }
       }
     },    
-      
+
+    // css add banner
+    // ====================================================
     usebanner: {
       dist: {
         options: {
@@ -86,24 +103,45 @@
         },
         files: {
           src: [
-            'css/<%= pkg.name %>.css',
+            'dist/css/<%= pkg.name %>.css',
+            'dist/css/<%= pkg.name %>.min.css',
             'docs/assets/css/docs.css'
           ]
         }
       }
     },
     
+    // css minify
+    // ====================================================
+    cssmin: {
+      compress: {
+        options: {
+          keepSpecialComments: '*',
+          noAdvanced: true,
+          report: 'min',
+          compatibility: 'ie8'
+        },
+        src: [
+          'dist/css/<%= pkg.name %>.css'
+        ],
+        dest: 'dist/css/<%= pkg.name %>.min.css'
+      }
+    },
+    
+    // css csslint
+    // ====================================================
     csslint: {
       options: {
         csslintrc: 'less/.csslintrc'
       },
       src: [
-        'css/<%= pkg.name %>.css',
-        'css/<%= pkg.name %>.min.css'
+        'dist/css/<%= pkg.name %>.css',
+        'dist/css/<%= pkg.name %>.min.css'
       ]
     },
 
-    // js結合、成形、圧縮
+    // js uglify (結合、成形、圧縮)
+    // ====================================================
     uglify: {
       develop:{
         options: {
@@ -115,7 +153,7 @@
           beautify: true
         },
         files :  { 
-          'js/<%= pkg.name %>.js' : [
+          'dist/js/<%= pkg.name %>.js' : [
             'js/switchers.js'
            ]
         } 
@@ -128,7 +166,7 @@
           compress:false,
         },
         files :  { 
-          'js/<%= pkg.name %>.min.js' : ['js/<%= pkg.name %>.js' ]
+          'dist/js/<%= pkg.name %>.min.js' : ['dist/js/<%= pkg.name %>.js' ]
         } 
       },
       comp:{
@@ -140,36 +178,30 @@
           beautify: true
         },
         files :  { 
-          'js/<%= pkg.name %>.beautify.js' : ['js/<%= pkg.name %>.js' ]
+          'js/<%= pkg.name %>.beautify.js' : ['dist/js/<%= pkg.name %>.js' ]
         } 
-      },
-      compMinify:{
-        options: {
-          banner: '<%= banner %>',
-          report: 'min',
-        },
-        files :  { 
-          'js/<%= pkg.name %>.beautify.min.js' : ['js/<%= pkg.name %>.beautify.js' ]
-        } 
-      },
+      }
     },
     
+    // js jshint
+    // ====================================================
     jshint: {
       options: {
         jshintrc: 'js/.jshintrc',
-        reporter: require('jshint-stylish')
       },
       grunt: {
         src: 'Gruntfile.js'
       },
       js: {
-        src: 'js/*.js'
+        src: 'dist/js/*.js'
       },
       assets: {
         src: 'docs/assets/js/common.js'
       }      
     },
 
+    // html minify
+    // ====================================================
     htmlmin: {
       dist: {
         options: {
@@ -191,7 +223,8 @@
       }
     },     
     
-    // html debug
+    // html validation check
+    // ====================================================
     validation: {
       options: {
         charset: 'utf-8',
@@ -210,50 +243,24 @@
         ]
       }
     },
-        
+    
+    // html file copy
+    // ====================================================
     copy: {
-      css: {
+      docs: {
         expand: true,
-        flatten: true,
-        filter: 'isFile',
+        cwd: './dist',
         src: [
-          'css/<%= pkg.name %>.css',
-          'css/<%= pkg.name %>.min.css'
+          'js/*.js',
+          'css/*.css',
+          'css/*.map'
         ],
-        dest: 'dist/css/'
-      },
-      js: {
-        expand: true,
-        flatten: true,
-        filter: 'isFile',
-        src: [
-          'js/<%= pkg.name %>.js',
-          'js/<%= pkg.name %>.min.js'
-        ],
-        dest: 'dist/js/'
-      },
-      docsCss: {
-        expand: true,
-        flatten: true,
-        filter: 'isFile',
-        src: [
-          'css/<%= pkg.name %>.css',
-          'css/<%= pkg.name %>.css.map'
-        ],
-        dest: 'docs/assets/css/'
-      },
-      docsJs: {
-        expand: true,
-        flatten: true,
-        filter: 'isFile',
-        src: [
-          'js/<%= pkg.name %>.js',
-          'js/<%= pkg.name %>.min.js'
-        ],
-        dest: 'docs/assets/js/'
+        dest: 'docs/dist'
       }
     },
     
+    // connect
+    // ====================================================
     connect: {
       server: {
         options: {
@@ -273,10 +280,17 @@
         }
       }
     },
-          
+    
+    // notify
+    // ====================================================
     notify: {
       options: {
         title: '<%= pkg.name %> Grunt Notify',
+      },
+      grunt:{
+        options: {
+          message: 'Grunt Success!',
+        }
       },
       less:{
         options: {
@@ -290,6 +304,8 @@
       }
     },
     
+    // Bower
+    // ====================================================
     bower: {
       install: {
         options: {
@@ -304,7 +320,9 @@
         }
       }
     },
-        
+    
+    // Shell
+    // ====================================================
     shell: {
       jekyll_build: {
         command: 'jekyll build'
@@ -313,17 +331,30 @@
         command: 'jekyll build --future'
       }
     },
-        
+    
+    // File watch
+    // ====================================================
     watch: {
-      js: {
+      grunt: {
         files: [
-          '<%= jshint.js.src %>',
-          '<%= jshint.assets.src %>'
+          '<%= jshint.grunt.src %>'
         ],
         tasks: [
+          'jshint:grunt',
+          'notify:grunt'
+        ]
+      },
+      js: {
+        files: [
+          '<%= jshint.assets.src %>',
+          'js/*.js'
+        ],
+        tasks: [
+          'uglify',
           'copy',
           'shell:jekyll_build',
-          'jshint',
+          'jshint:js',
+          'jshint:assets',
           'notify:jekyll'
         ],
         options: {
@@ -332,10 +363,13 @@
       },
       html: {
         files: [
-          '<%= validation.files.src %>'
+          'docs/*.html',
+          'docs/_includes/*.html',
+          'docs/_layouts/*.html'
         ],
         tasks: [
           'shell:jekyll_build',
+          'validation',
           'notify:jekyll'
         ],
         options: {
@@ -345,11 +379,17 @@
       less: {
         files: [
           'less/*.less',
-          'less/**/*.less'
+          'less/**/*.less',
+          'docs/assets/less/*.less',
+          'docs/assets/less/**/*.less'
         ],
         tasks: [
           'less',
+          'autoprefixer',
+          'csscomb',
           'usebanner',
+          'cssmin',
+          'csslint',
           'copy',
           'shell:jekyll_build',
           'notify:jekyll'
@@ -361,8 +401,9 @@
     }  
     
   });
-		
-  grunt.loadNpmTasks('livereloadx');
+
+  // Default task
+  // ====================================================
   grunt.registerTask('default', function () {
     grunt.log.warn('`grunt` to start a watch.');
     grunt.task.run([
@@ -370,16 +411,21 @@
       'watch'
     ]);
   });
-
+  
+  // Go task
+  // ====================================================
   grunt.registerTask('go', function () {
     grunt.log.warn('`grunt go` to start.');
     grunt.task.run([
+      'clean',
       'bower:install',
       'test',
       'default'
     ]);
   });
   
+  // Test task
+  // ====================================================
   grunt.registerTask('test', function () {
     grunt.log.warn('`grunt test` to start.');
     grunt.task.run([
@@ -390,13 +436,17 @@
     ]);
   });
   
+  // Build task
+  // ====================================================
   grunt.registerTask('build', function () {
     grunt.log.warn('`grunt build` to start.');
     grunt.task.run([
       'uglify',
       'less',
+      'autoprefixer',
       'csscomb',
       'usebanner',
+      'cssmin',
       'copy',
       'shell:jekyll_build',
       'htmlmin'

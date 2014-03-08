@@ -1,14 +1,14 @@
 markdown:    redcarpet
 pygments:    true
 permalink:   pretty
-exclude:     ['less','dist','bower_components','bower.json','.gitignore','Gruntfile.js','package.json','node_modules','README.md','validation-report.json','validation-status.json','future','js/future']
+exclude:     ['less','future']
 source:      docs
 destination: docs/_gh_pages
 encoding:    UTF-8
 url:         http://teq-inc.github.io/cooker/
 title:       Cooker
 
-current_version:  0.1.0
+current_version:  0.1.1
 repo:             https://github.com/teq-inc/cooker
 
 download:

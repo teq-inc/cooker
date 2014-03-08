@@ -1,6 +1,6 @@
 {
   "name": "cooker",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "dependencies": {
     "bootstrap": "~3.1.1",
     "font-awesome": "~4.0.3"
