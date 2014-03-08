@@ -15,8 +15,7 @@
       ' * Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
       ' * Licensed under <%= _.pluck(pkg.licenses, "type") %> (<%= _.pluck(pkg.licenses, "url") %>)\n' +
       ' */\n',
-      
-    // lessをpureとminifyでcssにコンパイル
+        
     less:{
       cooker: {
         options: {
@@ -36,10 +35,10 @@
           sourceMap: true,
           outputSourceFiles: true,
           sourceMapURL: ['docs.css.map'],
-          sourceMapFilename: '<%= pkg.docs %>/assets/css/docs.css.map'
+          sourceMapFilename: 'docs/assets/css/docs.css.map'
         },
         files: {
-          '<%= pkg.docs %>/assets/css/docs.css': '<%= pkg.docs %>/assets/less/docs.less'
+          'docs/assets/css/docs.css': 'docs/assets/less/docs.less'
         } 
       },
       vendor: {
@@ -48,10 +47,10 @@
           sourceMap: true,
           outputSourceFiles: true,
           sourceMapURL: ['vendor.map'],
-          sourceMapFilename: '<%= pkg.docs %>/assets/css/vendor.css.map'
+          sourceMapFilename: 'docs/assets/css/vendor.css.map'
         },
         files: {
-          '<%= pkg.docs %>/assets/css/vendor.css': '<%= pkg.docs %>/assets/less/vendor.less'
+          'docs/assets/css/vendor.css': 'docs/assets/less/vendor.less'
         } 
       },
       minify: {
@@ -73,8 +72,8 @@
       dist: {
         files: {
           'css/<%= pkg.name %>.css': 'css/<%= pkg.name %>.css',
-          '<%= pkg.docs %>/assets/css/vendor.css': '<%= pkg.docs %>/assets/css/vendor.css',     
-          '<%= pkg.docs %>/assets/css/docs.css': '<%= pkg.docs %>/assets/css/docs.css'
+          'docs/assets/css/vendor.css': 'docs/assets/css/vendor.css',     
+          'docs/assets/css/docs.css': 'docs/assets/css/docs.css'
         }
       }
     },    
@@ -88,7 +87,7 @@
         files: {
           src: [
             'css/<%= pkg.name %>.css',
-            '<%= pkg.docs %>/assets/css/docs.css'
+            'docs/assets/css/docs.css'
           ]
         }
       }
@@ -156,15 +155,19 @@
     },
     
     jshint: {
-      files: [
-        'Gruntfile.js',
-        'js',
-      ],
       options: {
-        browser: true,
         jshintrc: 'js/.jshintrc',
         reporter: require('jshint-stylish')
-      }
+      },
+      grunt: {
+        src: 'Gruntfile.js'
+      },
+      js: {
+        src: 'js/*.js'
+      },
+      assets: {
+        src: 'docs/assets/js/common.js'
+      }      
     },
 
     htmlmin: {
@@ -217,7 +220,7 @@
           'css/<%= pkg.name %>.css',
           'css/<%= pkg.name %>.min.css'
         ],
-        dest: '<%= pkg.dist %>/css/'
+        dest: 'dist/css/'
       },
       js: {
         expand: true,
@@ -227,7 +230,7 @@
           'js/<%= pkg.name %>.js',
           'js/<%= pkg.name %>.min.js'
         ],
-        dest: '<%= pkg.dist %>/js/'
+        dest: 'dist/js/'
       },
       docsCss: {
         expand: true,
@@ -237,7 +240,7 @@
           'css/<%= pkg.name %>.css',
           'css/<%= pkg.name %>.css.map'
         ],
-        dest: '<%= pkg.docs %>/assets/css/'
+        dest: 'docs/assets/css/'
       },
       docsJs: {
         expand: true,
@@ -247,7 +250,7 @@
           'js/<%= pkg.name %>.js',
           'js/<%= pkg.name %>.min.js'
         ],
-        dest: '<%= pkg.docs %>/assets/js/'
+        dest: 'docs/assets/js/'
       }
     },
     
@@ -310,55 +313,52 @@
         command: 'jekyll build --future'
       }
     },
-    
-    livereloadx: {
-      static: true,
-      dir: '<%= pkg.public %>'
-    },
-    
-    esteWatch: {
-      options: {
-        dirs: [
-          '<%= pkg.docs %>/_layouts',
-          '<%= pkg.docs %>/_includes',
-          '<%= pkg.docs %>/_includes/javascript',
-          '<%= pkg.docs %>/_includes/styles',
-          'js',
-          'less',
-          'less/inc',
-          '<%= pkg.docs %>/',
-          '<%= pkg.docs %>/assets/less',
-          '<%= pkg.docs %>/assets/less/inc',
-          '<%= pkg.docs %>/assets/js'
+        
+    watch: {
+      js: {
+        files: [
+          '<%= jshint.js.src %>',
+          '<%= jshint.assets.src %>'
         ],
-        livereload: {
-          enabled: false
-        }
-      },
-      'html': function(filepath) { 
-        return [
-          'shell:jekyll_build',
-          'notify:jekyll'
-        ]
-      },
-      'js': function(filepath) { 
-        return [ 
+        tasks: [
           'copy',
           'shell:jekyll_build',
           'jshint',
           'notify:jekyll'
-        ] 
+        ],
+        options: {
+          livereload: true
+        }
       },
-      'less': function(filepath) { 
-        return [
+      html: {
+        files: [
+          '<%= validation.files.src %>'
+        ],
+        tasks: [
+          'shell:jekyll_build',
+          'notify:jekyll'
+        ],
+        options: {
+          livereload: true
+        }
+      },
+      less: {
+        files: [
+          'less/*.less',
+          'less/**/*.less'
+        ],
+        tasks: [
           'less',
           'usebanner',
           'copy',
           'shell:jekyll_build',
           'notify:jekyll'
-        ] 
+        ],
+        options: {
+          livereload: true
+        }
       }
-    }    
+    }  
     
   });
 		
@@ -366,9 +366,8 @@
   grunt.registerTask('default', function () {
     grunt.log.warn('`grunt` to start a watch.');
     grunt.task.run([
-      'livereloadx',
       'connect',
-      'esteWatch'
+      'watch'
     ]);
   });
 
