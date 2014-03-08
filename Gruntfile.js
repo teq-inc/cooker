@@ -325,16 +325,10 @@
           '<%= pkg.docs %>/_includes/styles',
           'js',
           'less',
-          'less/components',
-          'less/js-components',
-          'less/core',
-          'less/layout',
-          'less/utilities',
-          'less/mixins',
-          'less/variables',
+          'less/inc',
           '<%= pkg.docs %>/',
           '<%= pkg.docs %>/assets/less',
-          '<%= pkg.docs %>/assets/less/layout',
+          '<%= pkg.docs %>/assets/less/inc',
           '<%= pkg.docs %>/assets/js'
         ],
         livereload: {
@@ -349,7 +343,7 @@
       },
       'js': function(filepath) { 
         return [ 
-          'copy:docsJs',
+          'copy',
           'shell:jekyll_build',
           'jshint',
           'notify:jekyll'
@@ -359,7 +353,7 @@
         return [
           'less',
           'usebanner',
-          'copy:docsCss',
+          'copy',
           'shell:jekyll_build',
           'notify:jekyll'
         ] 
