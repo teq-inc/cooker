@@ -1,0 +1,106 @@
+// ※のプロパティは必須
+.drawer{
+  position: fixed;//※
+  height:100%;//※
+  width:@drawer-width;//※
+  top:0;//※
+  left: 0;//※
+  background-color:@gray-darkest;
+  .box-shadow(inset 0 3px 9px rgba(0,0,0,.5));
+  .transition(left 0.4s @ease-out-expo);
+  &:extend(.clearfix all);
+}
+
+.drawer-body{
+  position: relative; //※
+  left:0;//※
+  .transition(left 0.4s @ease-out-expo);
+  background-color: #fff;
+}
+
+.drawer-close{}
+
+.drawer-open{
+   overflow:hidden;//※
+  .drawer{
+    overflow-y: auto;//※
+    -webkit-overflow-scrolling:touch;//※
+  }
+  .drawer-body{
+    position: absolute;//※
+    overflow-x: hidden;//※
+    left:@drawer-width;//※
+    width: 100%;    
+  }
+  .drawer-toggle{
+    left:(@drawer-width + 10);
+  }
+  @media (min-width: @screen-tablet) { //768px以上
+    .drawer-body{
+      //left:0;
+    }    
+  }    
+  
+}
+.drawer-toggle{
+  position: fixed;
+  display: block;
+  visibility: visible;
+  z-index: @zindex-navbar;
+  left:10px;
+  top:15px;
+  .transition(all 0.4s @ease-out-expo);
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+@media (min-width: @screen-tablet) { // 768px以上
+  .drawer{
+    //width:@drawer-width-tablet;
+  }
+  .drawer-body{
+    //margin-left:@drawer-width-tablet;
+  }
+  .drawer-toggle{
+    //display: none;
+    //visibility: hidden;
+  }
+}
+@media (min-width: @screen-lg-desktop) { // 1200px以上
+  .drawer{
+    //width:@drawer-width;
+  }
+  .drawer-body{
+    //margin-left:@drawer-width;
+  }
+}
+
+.drawer-brand a{
+  margin-top:15px;
+  margin-bottom: 15px;
+  padding:5px 15px;
+  color: #ddd;
+  display: block;
+  width: 100%;
+  font-size: 20px;
+  &:hover{
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+.drawer-nav li{
+  color: @gray;
+  &:last-child{
+    border-bottom: 1px solid #2a2a2a;
+  }
+  a{
+    padding: 15px;
+    color: @gray;
+    &:hover{
+      color: #fff;
+      background-color: #333;
+    }
+  }
+}

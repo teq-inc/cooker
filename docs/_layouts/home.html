@@ -3,14 +3,19 @@
   <head>
     {% include header.html %}
   </head>
-  <body class="ck-docs-home">
+  <body class="home drawer-wrap">
     <a class="sr-only" href="#content">Skip to main content</a>
 
     {% include nav-main.html %}
+    
+    <div class="drawer-wrap">
+      <div class="drawer-body">
+        {{ content }}
+        
+        {% include footer.html %}
+      </div>
+    </div>
 
-    {{ content }}
-
-    {% include footer.html %}
   </body>
 </html>
 

@@ -154,7 +154,8 @@
         },
         files :  { 
           'dist/js/<%= pkg.name %>.js' : [
-            'js/switchers.js'
+            'js/switchers.js',
+            'js/drawer.js'
            ]
         } 
       },
@@ -369,7 +370,7 @@
         ],
         tasks: [
           'shell:jekyll_build',
-          'validation',
+          //'validation',
           'notify:jekyll'
         ],
         options: {
@@ -386,10 +387,10 @@
         tasks: [
           'less',
           'autoprefixer',
-          'csscomb',
-          'usebanner',
-          'cssmin',
-          'csslint',
+          //'csscomb',
+          //'usebanner',
+          //'cssmin',
+          //'csslint',
           'copy',
           'shell:jekyll_build',
           'notify:jekyll'

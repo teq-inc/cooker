@@ -8,7 +8,7 @@ encoding:    UTF-8
 url:         http://teq-inc.github.io/cooker/
 title:       Cooker
 
-current_version:  0.1.1
+current_version:  0.1.2
 repo:             https://github.com/teq-inc/cooker
 
 download:

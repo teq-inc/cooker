@@ -1,102 +1,33 @@
 /*!
- * cooker v0.1.1
+ * cooker v0.1.2
  * Copyright 2014 TEQ inc.
  * Licensed under MIT
  * http://teq-inc.github.io/cooker/
  */
 
+/* easeInExpo */
+/* easeOutExpo */
+body,
+html {
+  height: 100%;
+  min-height: 100%;
+  overflow-x: none;
+  background: #fff;
+}
+a {
+  color: #0074d9;
+}
 .lead {
   font-size: 17px;
   line-height: 1.6;
 }
-/* Outline button for use within the docs */
-.btn-outline {
-  color: #060434;
-  background-color: transparent;
-  border-color: #060434;
+@media (min-width: 992px) {
+  .container {
+    width: auto;
+    max-width: 768px;
+  }
 }
-.btn-outline:hover,
-.btn-outline:focus,
-.btn-outline:active {
-  color: #fff;
-  background-color: #060434;
-  border-color: #060434;
-}
-/* Inverted outline button (white on dark) */
-.btn-outline-inverse {
-  color: #fff;
-  background-color: transparent;
-  border-color: #87e4f9;
-}
-.btn-outline-inverse:hover,
-.btn-outline-inverse:focus,
-.btn-outline-inverse:active {
-  color: #060434;
-  text-shadow: none;
-  background-color: #fff;
-  border-color: #fff;
-}
-/* cooker "C" icon */
-.ck-docs-booticon {
-  display: block;
-  font-weight: 500;
-  color: #fff;
-  text-align: center;
-  cursor: default;
-  background-color: #060434;
-  border-radius: 15%;
-}
-.ck-docs-booticon-sm {
-  width: 30px;
-  height: 30px;
-  font-size: 20px;
-  line-height: 28px;
-}
-.ck-docs-booticon-lg {
-  width: 144px;
-  height: 144px;
-  font-size: 108px;
-  line-height: 140px;
-}
-.ck-docs-booticon-inverse {
-  color: #060434;
-  background-color: #fff;
-}
-.ck-docs-booticon-outline {
-  background-color: transparent;
-  border: 1px solid #87e4f9;
-}
-.ck-docs-nav {
-  margin-bottom: 0;
-  background-color: transparent;
-  border-bottom: 0;
-}
-.ck-home-nav .ck-nav-b {
-  display: none;
-}
-.ck-docs-nav .navbar-brand,
-.ck-docs-nav .navbar-nav > li > a {
-  font-weight: 500;
-  color: #060434;
-}
-.ck-docs-nav .navbar-nav > li > a:hover,
-.ck-docs-nav .navbar-nav > .active > a,
-.ck-docs-nav .navbar-nav > .active > a:hover {
-  color: #463265;
-  background-color: #f9f9f9;
-}
-.ck-docs-nav .navbar-toggle .icon-bar {
-  background-color: #563d7c;
-}
-.ck-docs-nav .navbar-header .navbar-toggle {
-  border-color: #fff;
-}
-.ck-docs-nav .navbar-header .navbar-toggle:hover,
-.ck-docs-nav .navbar-header .navbar-toggle:focus {
-  background-color: #f9f9f9;
-  border-color: #f9f9f9;
-}
-.ck-docs-footer {
+.ck-footer {
   padding-top: 40px;
   padding-bottom: 40px;
   margin-top: 100px;
@@ -104,34 +35,34 @@
   text-align: center;
   border-top: 1px solid #e5e5e5;
 }
-.ck-docs-footer-links {
+.ck-footer-links {
   padding-left: 0;
   margin-top: 20px;
   color: #999;
 }
-.ck-docs-footer-links li {
+.ck-footer-links li {
   display: inline;
   padding: 0 2px;
 }
-.ck-docs-footer-links li:first-child {
+.ck-footer-links li:first-child {
   padding-left: 0;
 }
 @media (min-width: 768px) {
-  .ck-docs-footer p {
+  .ck-footer p {
     margin-bottom: 0;
   }
 }
-.ck-docs-social {
+.ck-social {
   margin-bottom: 20px;
   text-align: center;
 }
-.ck-docs-social-buttons {
+.ck-social-buttons {
   display: inline-block;
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
 }
-.ck-docs-social-buttons li {
+.ck-social-buttons li {
   display: inline-block;
   padding: 5px 8px;
   line-height: 1;
@@ -151,222 +82,58 @@
   float: right;
   text-align: right !important;
 }
-body.ck-docs-home .ck-docs-footer {
-  margin-top: 0;
-  border-top: 0;
-}
-/* Share masthead with page headers */
-.ck-docs-masthead,
-.ck-docs-header {
+.ck-masthead,
+.ck-header {
   position: relative;
   padding: 30px 15px;
   color: #cdbfe3;
   text-align: center;
   text-shadow: 0 1px 0 rgba(0, 0, 0, .1);
   background-color: #6f5499;
-  background-image: -webkit-linear-gradient(45deg, #060434 0%, #098eab 100%);
-  background-image:      -o-linear-gradient(45deg, #060434 0%, #098eab 100%);
-  background-image:         linear-gradient(45deg, #060434 0%, #098eab 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#060434, endColorstr=#098eab, GradientType=0);
+  background-image: -webkit-linear-gradient(45deg, #3d9970 0%, #0074d9 100%);
+  background-image:      -o-linear-gradient(45deg, #3d9970 0%, #0074d9 100%);
+  background-image:         linear-gradient(45deg, #3d9970 0%, #0074d9 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#3d9970, endColorstr=#098eab, GradientType=0);
   background-repeat: repeat-x;
 }
-/* Masthead (headings and download button) */
-.ck-docs-masthead .ck-docs-booticon {
-  margin: 0 auto 30px;
-}
-.ck-docs-masthead h1 {
-  font-weight: 300;
-  line-height: 1;
-  color: #fff;
-}
-.ck-docs-masthead .lead {
-  margin: 0 auto 30px;
-  font-size: 20px;
-  color: #fff;
-}
-.ck-docs-masthead .version {
-  margin-top: -15px;
-  margin-bottom: 30px;
-  color: #87e4f9;
-  opacity: .8;
-}
-.ck-docs-masthead .btn {
-  width: 100%;
-  padding: 15px 30px;
-  font-size: 20px;
-}
-@media (min-width: 480px) {
-  .ck-docs-masthead .btn {
-    width: auto;
-  }
-}
-@media (min-width: 768px) {
-  .ck-docs-masthead {
-    padding-top: 80px;
-    padding-bottom: 80px;
-  }
-  .ck-docs-masthead h1 {
-    font-size: 60px;
-  }
-  .ck-docs-masthead .lead {
-    font-size: 24px;
-  }
-}
-@media (min-width: 992px) {
-  .ck-docs-masthead .lead {
-    width: 80%;
-    font-size: 30px;
-  }
-}
-.ck-docs-header {
+.ck-header {
   margin-bottom: 40px;
   font-size: 20px;
 }
-.ck-docs-header h1 {
+.ck-header h1 {
   margin-top: 0;
   color: #fff;
 }
-.ck-docs-header p {
+.ck-header p {
   margin-bottom: 0;
   font-weight: 300;
   line-height: 1.4;
 }
-.ck-docs-header .container {
+.ck-header .container {
   position: relative;
 }
 @media (min-width: 768px) {
-  .ck-docs-header {
+  .ck-header {
     padding-top: 60px;
     padding-bottom: 60px;
     font-size: 24px;
     text-align: left;
   }
-  .ck-docs-header h1 {
+  .ck-header h1 {
     font-size: 60px;
     line-height: 1;
   }
 }
 @media (min-width: 992px) {
-  .ck-docs-header h1,
-  .ck-docs-header p {
+  .ck-header h1,
+  .ck-header p {
     margin-right: 380px;
   }
 }
-.ck-docs-sidebar.affix {
-  position: static;
-}
-@media (min-width: 768px) {
-  .ck-docs-sidebar {
-    padding-left: 20px;
-  }
-}
-/* First level of nav */
-.ck-docs-sidenav {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-/* All levels of nav */
-.ck-docs-sidebar .nav > li > a {
-  display: block;
-  padding: 4px 20px;
-  font-size: 13px;
-  font-weight: 500;
-  color: #999;
-}
-.ck-docs-sidebar .nav > li > a:hover,
-.ck-docs-sidebar .nav > li > a:focus {
-  padding-left: 19px;
-  color: #563d7c;
-  text-decoration: none;
-  background-color: transparent;
-  border-left: 1px solid #563d7c;
-}
-.ck-docs-sidebar .nav > .active > a,
-.ck-docs-sidebar .nav > .active:hover > a,
-.ck-docs-sidebar .nav > .active:focus > a {
-  padding-left: 18px;
-  font-weight: bold;
-  color: #563d7c;
-  background-color: transparent;
-  border-left: 2px solid #563d7c;
-}
-/* Nav: second level (shown on .active) */
-.ck-docs-sidebar .nav .nav {
-  display: none;
-  /* Hide by default, but at >768px, show it */
-  padding-bottom: 10px;
-}
-.ck-docs-sidebar .nav .nav > li > a {
-  padding-top: 1px;
-  padding-bottom: 1px;
-  padding-left: 30px;
-  font-size: 12px;
-  font-weight: normal;
-}
-.ck-docs-sidebar .nav .nav > li > a:hover,
-.ck-docs-sidebar .nav .nav > li > a:focus {
-  padding-left: 29px;
-}
-.ck-docs-sidebar .nav .nav > .active > a,
-.ck-docs-sidebar .nav .nav > .active:hover > a,
-.ck-docs-sidebar .nav .nav > .active:focus > a {
-  padding-left: 28px;
-  font-weight: 500;
-}
-/* Back to top (hidden on mobile) */
-.back-to-top {
-  display: none;
-  padding: 4px 10px;
-  margin-top: 10px;
-  margin-left: 10px;
-  font-size: 12px;
-  font-weight: 500;
-  color: #999;
-}
-.back-to-top:hover {
-  color: #563d7c;
-  text-decoration: none;
-}
-@media (min-width: 768px) {
-  .back-to-top {
-    display: block;
-  }
-}
-/* Show and affix the side nav when space allows it */
-@media (min-width: 992px) {
-  .ck-docs-sidebar .nav > .active > ul {
-    display: block;
-  }
-  /* Widen the fixed sidebar */
-  .ck-docs-sidebar.affix,
-  .ck-docs-sidebar.affix-bottom {
-    width: 213px;
-  }
-  .ck-docs-sidebar.affix {
-    position: fixed;
-    /* Undo the static from mobile first approach */
-    top: 20px;
-  }
-  .ck-docs-sidebar.affix-bottom {
-    position: absolute;
-    /* Undo the static from mobile first approach */
-  }
-  .ck-docs-sidebar.affix-bottom .ck-docs-sidenav,
-  .ck-docs-sidebar.affix .ck-docs-sidenav {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-}
-@media (min-width: 1200px) {
-  .ck-docs-sidebar.affix-bottom,
-  .ck-docs-sidebar.affix {
-    width: 263px;
-  }
-}
-.ck-docs-section {
+.ck-section {
   margin-bottom: 60px;
 }
-.ck-docs-section:last-child {
+.ck-section:last-child {
   margin-bottom: 0;
 }
 h1[id] {
@@ -419,6 +186,66 @@ h1[id] {
     border-bottom-right-radius: 4px;
     border-bottom-left-radius: 4px;
   }
+}
+body.home {
+  /*
+  @media (min-width: @screen-desktop) {
+    .container{
+      width: auto;
+      max-width: @screen-desktop;
+    }
+  }
+*/
+}
+body.home .ck-masthead .text-icon-lg {
+  margin: 0 auto 30px;
+}
+body.home .ck-masthead h1 {
+  font-weight: 300;
+  line-height: 1;
+  color: #fff;
+}
+body.home .ck-masthead .lead {
+  margin: 0 auto 30px;
+  font-size: 20px;
+  color: #fff;
+}
+body.home .ck-masthead .version {
+  margin-top: -15px;
+  margin-bottom: 30px;
+  color: #fff;
+  opacity: .8;
+}
+body.home .ck-masthead .btn {
+  width: 100%;
+  padding: 15px 30px;
+  font-size: 20px;
+}
+@media (min-width: 480px) {
+  body.home .ck-masthead .btn {
+    width: auto;
+  }
+}
+@media (min-width: 768px) {
+  body.home .ck-masthead {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  body.home .ck-masthead h1 {
+    font-size: 60px;
+  }
+  body.home .ck-masthead .lead {
+    font-size: 24px;
+  }
+}
+@media (min-width: 992px) {
+  body.home .ck-masthead .lead {
+    font-size: 30px;
+  }
+}
+body.home .ck-footer {
+  margin-top: 0;
+  border-top: 0;
 }
 .highlight {
   padding: 9px 14px;
