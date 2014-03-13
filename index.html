@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
 <meta name="description" content="Cooker">
 <meta name="keywords" content="HTML, CSS, JS, JavaScript, framework, cooker, front-end, frontend, web development">
 <meta name="author" content="blivesta">
@@ -45,64 +45,44 @@
 <!-- docs js -->
 <script src="./assets/js/common.js"></script>
   </head>
-  <body class="ck-docs-home">
+  <body class="home drawer-wrap">
     <a class="sr-only" href="#content">Skip to main content</a>
 
-    <header class="navbar navbar-static-top ck-docs-nav" id="top" role="banner">
+    <!-- <div class="drawer-toggle text-icon text-icon-sm text-icon-outline">C</div> -->
+<button class="drawer-toggle btn btn-outline-white"><i class="fa fa-bars"></i></button>
+<nav class="drawer-nav drawer" role="navigation">
+  <div class="drawer-brand"><a href="./">Cooker</a></div>
+  <ul class="nav">
+    <li>
+      <a href="./usage">Usage</a>
+    </li>
+    <li>
+      <a href="./javascript">JavaScript</a>
+    </li>
+  </ul>
+</nav>
+    
+    <div class="drawer-wrap">
+      <div class="drawer-body">
+        <main class="ck-masthead" id="content" role="main">
   <div class="container">
-    <div class="navbar-header">
-      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".ck-navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a href="./" class="navbar-brand">Cooker</a>
-    </div>
-    <nav class="collapse navbar-collapse ck-navbar-collapse" role="navigation">
-      <ul class="nav navbar-nav">
-        <li>
-          <a href="./usage">Usage</a>
-        </li>
-<!--
-        <li>
-          <a href="./css">CSS</a>
-        </li>
-        <li>
-          <a href="./components">Components</a>
-        </li>
--->
-        <li>
-          <a href="./javascript">JavaScript</a>
-        </li>
-
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-      </ul>
-    </nav>
-  </div>
-</header>
-
-
-    <main class="ck-docs-masthead" id="content" role="main">
-  <div class="container">
-    <span class="ck-docs-booticon ck-docs-booticon-lg ck-docs-booticon-outline">C</span>
+    <span class="text-icon text-icon-lg text-icon-outline">C</span>
 <!--     <h1>Cooker</h1> -->
     <p class="lead">CSS of the Cooker is The most popular front-end framework bootstrap base</p>
     <p class="lead">
-      <a href="https://github.com/teq-inc/cooker" class="btn btn-outline-inverse btn-lg" target="_blank">View GitHub Project</a>
-      <a href="https://github.com/teq-inc/cooker/archive/master.zip" class="btn btn-outline-inverse btn-lg">Download Cooker</a>
+      <a href="https://github.com/teq-inc/cooker" class="btn btn-outline-white btn-lg" target="_blank">View GitHub Project</a>
+      <a href="https://github.com/teq-inc/cooker/archive/master.zip" class="btn btn-outline-white btn-lg">Download Cooker</a>
     </p>
-    <p class="version">Currently Cooker v 0.1.1  ·  Bootstrap v 3.1.1</p>
+    <p class="version">Currently Cooker v 0.1.2  ·  Bootstrap v 3.1.1</p>
   </div>
 </main>
-
-    <!-- Footer
+        
+        <!-- Footer
 ================================================== -->
-<footer class="ck-docs-footer" role="contentinfo">
+<footer class="ck-footer" role="contentinfo">
   <div class="container">
-    <div class="ck-docs-social">
-  <ul class="ck-docs-social-buttons">
+    <div class="ck-social">
+  <ul class="ck-social-buttons">
     <li>
       <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=teq-inc&amp;repo=cooker&amp;type=watch&amp;count=true" width="100" height="20" title="Star on GitHub"></iframe>
     </li>
@@ -114,8 +94,8 @@
 
 
     <p>Code licensed under MIT</p>
-    <ul class="ck-docs-footer-links muted">
-      <li>Currently v0.1.1</li>
+    <ul class="ck-footer-links muted">
+      <li>Currently v0.1.2</li>
       <li>&middot;</li>
       <li><a href="https://github.com/teq-inc/cooker">GitHub</a></li>
       <li>&middot;</li>
@@ -128,6 +108,9 @@
     
   </div>
 </footer>
+
+      </div>
+    </div>
 
   </body>
 </html>

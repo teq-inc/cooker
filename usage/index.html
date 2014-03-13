@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
 <meta name="description" content="Cooker">
 <meta name="keywords" content="HTML, CSS, JS, JavaScript, framework, cooker, front-end, frontend, web development">
 <meta name="author" content="blivesta">
@@ -48,73 +48,48 @@
   <body>
     <a class="sr-only" href="#content">Skip to main content</a>
 
-    <!-- Docs master nav -->
-    <header class="navbar navbar-static-top ck-docs-nav" id="top" role="banner">
-  <div class="container">
-    <div class="navbar-header">
-      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".ck-navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a href="../" class="navbar-brand">Cooker</a>
-    </div>
-    <nav class="collapse navbar-collapse ck-navbar-collapse" role="navigation">
-      <ul class="nav navbar-nav">
-        <li>
-          <a href="../usage">Usage</a>
-        </li>
-<!--
-        <li>
-          <a href="../css">CSS</a>
-        </li>
-        <li>
-          <a href="../components">Components</a>
-        </li>
--->
-        <li>
-          <a href="../javascript">JavaScript</a>
-        </li>
+    <!-- <div class="drawer-toggle text-icon text-icon-sm text-icon-outline">C</div> -->
+<button class="drawer-toggle btn btn-outline-white"><i class="fa fa-bars"></i></button>
+<nav class="drawer-nav drawer" role="navigation">
+  <div class="drawer-brand"><a href="../">Cooker</a></div>
+  <ul class="nav">
+    <li>
+      <a href="../usage">Usage</a>
+    </li>
+    <li>
+      <a href="../javascript">JavaScript</a>
+    </li>
+  </ul>
+</nav>
 
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-      </ul>
-    </nav>
-  </div>
-</header>
-
-
-    <!-- Docs page layout -->
-    <div class="ck-docs-header" id="content">
-      <div class="container">
-        <h1>Usage</h1>
-        <p></p>
+    <div class="drawer-body">
+      <div class="ck-header" id="content">
+        <div class="container">
+          <h1>Usage</h1>
+          <p></p>
+        </div>
       </div>
-    </div>
-
-    <div class="container ck-docs-container">
-
-      <div class="row">
-        <div class="col-md-9" role="main">
-          <!-- Download
+  
+      <div class="container ck-container" role="main">
+        <div class="">
+            <!-- Download
 ================================================== -->
-<div class="ck-docs-section">
+<div class="ck-section">
   <h1 id="download" class="page-header">Download</h1>
 
   <div class="ck-downloads">
-    <a href="https://github.com/teq-inc/cooker/archive/master.zip" class="btn btn-lg btn-outline" role="button">Zip File Download cooker</a> 
-    <span class="muted">Currently v0.1.1.</span>
+    <a href="https://github.com/teq-inc/cooker/archive/master.zip" class="btn btn-outline-default btn-lg" role="button">Zip File Download cooker</a> 
+    <span class="muted">Currently v0.1.2.</span>
   </div>
 
 </div>
 
 <!-- Install
 ================================================== -->
-<div class="ck-docs-section">
+<div class="ck-section">
   <h1 id="install" class="page-header">Install</h1>
 
-  <p class="lead">コンパイルする場合には、<code>git</code>,<code>node</code>,<code>npm</code>,<code>ruby</code>,<code>gem</code>,<code>jekyll</code>,<code>grunt</code>,<code>bower</code>をローカルにインストールする必要有り。</p>
+  <p class="lead">コンパイルする場合には、<code>git</code>, <code>node</code>, <code>npm</code>, <code>ruby</code>, <code>gem</code>, <code>jekyll</code>, <code>grunt</code>, <code>bower</code>をローカルにインストールする必要有り。</p>
   
   <div>
 <div class="highlight"><pre><code class="text">$ git version
@@ -150,7 +125,7 @@ $ npm install
 
 <!-- Grunt
 ================================================== -->
-<div class="ck-docs-section">
+<div class="ck-section">
   <h1 id="grunt-file" class="page-header">Gruntfile.js</h1>
 
   <p class="lead">gruntタスクの実行コマンド。</p>
@@ -184,7 +159,7 @@ $ npm install
 <!-- Grunt Task
 ================================================== -->
 <!--
-<div class="ck-docs-section">
+<div class="ck-section">
   <h1 id="grunt-task" class="page-header">Grunt Task</h1>
 
   <p class="lead">gruntの主なタスク</p>
@@ -217,32 +192,14 @@ $ npm install
 
 
         </div>
-        <div class="col-md-3">
-          <div class="ck-docs-sidebar hidden-print" role="complementary">
-            <ul class="nav ck-docs-sidenav">
-              
-  <li><a href="#download">Download</a></li>
-  <li><a href="#install">Install</a></li>
-  <li><a href="#grunt-file">Gruntfile.js</a></li>
-<!--   <li><a href="#grunt-task">Grunt Task</a></li> -->
-
-
-            </ul>
-            <a class="back-to-top" href="#top">
-              Back to top
-            </a>
-          </div>
-        </div>
       </div>
-
-    </div>
-
-    <!-- Footer
+      
+      <!-- Footer
 ================================================== -->
-<footer class="ck-docs-footer" role="contentinfo">
+<footer class="ck-footer" role="contentinfo">
   <div class="container">
-    <div class="ck-docs-social">
-  <ul class="ck-docs-social-buttons">
+    <div class="ck-social">
+  <ul class="ck-social-buttons">
     <li>
       <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=teq-inc&amp;repo=cooker&amp;type=watch&amp;count=true" width="100" height="20" title="Star on GitHub"></iframe>
     </li>
@@ -254,8 +211,8 @@ $ npm install
 
 
     <p>Code licensed under MIT</p>
-    <ul class="ck-docs-footer-links muted">
-      <li>Currently v0.1.1</li>
+    <ul class="ck-footer-links muted">
+      <li>Currently v0.1.2</li>
       <li>&middot;</li>
       <li><a href="https://github.com/teq-inc/cooker">GitHub</a></li>
       <li>&middot;</li>
@@ -268,6 +225,9 @@ $ npm install
     
   </div>
 </footer>
+
+    
+    </div>
 
   </body>
 </html>

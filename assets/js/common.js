@@ -18,6 +18,7 @@ $(function (){
 	$('.tooltips').tooltips();
 */
 	
+	$('.drawer').drawer();
 	$('.switchers').switchers();
 	
 /*
