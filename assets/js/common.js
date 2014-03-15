@@ -10,7 +10,7 @@ $(function (){
   });
 */
 
-//	$('a[href^=#]').scrollmethods();
+	$('a[href^=#]').scrollmethod();
 
 /*
 	$('.dropdown').dropdowns();
