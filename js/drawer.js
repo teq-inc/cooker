@@ -4,13 +4,19 @@
   var iphone = agent.search(/iPhone/) != -1;
   var ipad =   agent.search(/iPad/) != -1;
   var android = agent.search(/Android/) != -1;
+  var touches = iphone || ipad || android;
   var methods = {
     init: function(options){
       options = $.extend({
-        drawerBody:  namespace+'-body',
-        toggleClass: namespace+'-toggle',
+        nav:  namespace+'-nav',
+        navList:  namespace+'-nav-list',
+        overlay:  namespace+'-overlay',
+        toggle: namespace+'-toggle',
         openClass:   namespace+'-open',
-        closeClass:  namespace+'-close'
+        closeClass:  namespace+'-close',
+    		speed: 200,
+    		width: 280,
+    		bottomMargin: 80
       }, options);
       return this.each(function(){
         var _this = this;
@@ -23,67 +29,143 @@
               options: options
           });
         }
+
+    		smY = 0;
+    		var navListHeight;
         var $window = $(window)
-        var $toggle = $('.'+options.toggleClass)
-        var $body = $('.'+options.drawerBody)        
-        
+        var $toggle = $('.'+options.toggle)
+        var $overlay = $('.'+options.overlay)        
+        var $nav = $('.'+options.nav)
+	      var $body = $('body')
+       
         methods.resize.call(_this, 'init')
         
         $window.resize(function() {
           methods.resize.call(_this, 'resize')          
-        });	                
-        $toggle.off('click.'+namespace).on('click.'+namespace, function(e){
-           methods.toggle.apply(_this)
         });
-        $body.off('click.'+namespace).on('click.'+namespace, function(){
-          methods.hide.apply(_this)
-        });     
+                
+        if(touches){        
+        
+          $toggle.bind('touchstart.'+namespace, function(e){
+             methods.toggle.apply(_this)
+          });
+
+          $overlay.bind('touchstart.'+namespace, function(){
+            methods.hide.apply(_this)
+          });     
+
+    			$nav.bind('touchstart.'+namespace, function() {
+  	        var $this = $(this);
+  	        navListHeight = $('.'+options.navList).height();
+    				sfY = event.touches[0].screenY;
+    				//startTime = (new Date()).getTime();
+    				startTime = new Date().getTime();
+    				startY = event.changedTouches[0].clientY;
+    			});
+    
+    			$nav.bind('touchmove.'+namespace, function() {
+  	        var $this = $(this);
+    				mfY = event.changedTouches[0].screenY;
+    				moveY = smY + mfY - sfY;
+    				draggedY = event.changedTouches[0].clientY - startY;
+    				$this.css({
+    					'-webkit-transition': 'none',
+    					'-webkit-transform': 'translate3d(0px,'+ moveY +'px,0px)'
+    				});
+    			});
+    
+    			$nav.bind('touchend.'+namespace, function() {
+  	        var $this = $(this);
+    				//diffTime = (new Date()).getTime() - startTime;
+    				diffTime = new Date().getTime() - startTime;
+    				smY = smY + (mfY - sfY);
+    				if (diffTime < 200 && draggedY > 0) { // scroll up
+    					moveY += Math.abs((draggedY / diffTime) * 500);
+    					$this.css({
+    						'-webkit-transition': '-webkit-transform .7s ease-out',
+    						'-webkit-transform': 'translate3d(0px,'+ moveY +'px,0px)'
+    					});
+    					smY = moveY;
+    				} else if (diffTime < 200 && draggedY < 0) { // scroll down
+    					moveY -= Math.abs((draggedY / diffTime) * 500);
+    					$this.css({
+    						'-webkit-transition': '-webkit-transform .7s ease-out',
+    						'-webkit-transform': 'translate3d(0px,'+ moveY +'px,0px)'
+    					});
+    					smY = moveY;
+    				}
+    				if (moveY > 0) {
+    					$this.css({
+    						'-webkit-transition': '-webkit-transform .5s ease-out',
+    						'-webkit-transform': 'translate3d(0px,'+ 0 +'px,0px)'
+    					});
+    					smY = 0;
+    				} else if (screen.height - navListHeight > moveY + options.bottomMargin) {
+    					$this.css({
+    						'-webkit-transition': '-webkit-transform .5s ease-out',
+    						'-webkit-transform': 'translate3d(0px,'+ (screen.height - navListHeight - options.bottomMargin) +'px,0px)'
+    					});
+    					smY = screen.height - navListHeight - options.bottomMargin;
+    				}
+    			});
+
+        } else {
+        
+          $toggle.off('click.'+namespace).on('click.'+namespace, function(e){
+             methods.toggle.apply(_this)
+          });
+          $overlay.off('click.'+namespace).on('click.'+namespace, function(){
+            methods.hide.apply(_this)
+          });    
+           
+        }
+        
       }); // end each
     },    
-    resize: function(str_value){
+    resize: function(value){
       var $this = $(this)
       options = $this.data(namespace).options
       var windowHeight = $(window).height()
-      var $body = $('.'+options.drawerBody)
-      $body.css({
+      var $overlay = $('.'+options.overlay)
+      methods.hide.call(this, options)
+      $overlay.css({
         'min-height': windowHeight,
       });
-      console.log(str_value);
+      console.log(value);
     },
-    toggle: function(options){
+    toggle: function(init,options){
       var $this = $(this)
       options = $this.data(namespace).options
-      var $wrapper = $('body')
-      var open = $wrapper.hasClass(options.openClass)
+      var $body = $('body')
+      var open = $body.hasClass(options.openClass)
       if(open){
         methods.hide.call(this, options)
       }else{
         methods.show.call(this, options)        
       }
     },
-    show: function(){
+    show: function(init){
       var $this = $(this)
       options = $this.data(namespace).options
-      var $wrapper = $('html,body')
-      var $body = $('.'+options.drawerBody)
-      if(iphone || ipad || android){
-        $body.on('touchmove.noScroll', function(e) {
-            e.preventDefault()
-        });        
+      var $body = $('body')
+      if(touches){
+    		$body.on('touchmove.'+namespace, function() {
+    			event.preventDefault();
+    		});
+    		event.preventDefault();
       }
-      $wrapper
+      $body
         .removeClass(options.closeClass)
         .addClass(options.openClass)
     },
-    hide: function(){
+    hide: function(init){
       var $this = $(this)
       options = $this.data(namespace).options
-      var $wrapper = $('html, body')
-      var $body = $('.'+options.drawerBody)
-      if(iphone || ipad || android){
-        $body.off('.noScroll')
+      var $body = $('body')
+      if(touches){
+    		$body.off('touchmove.'+namespace);
       }
-      $wrapper
+      $body
         .removeClass(options.openClass)
         .addClass(options.closeClass)
     },

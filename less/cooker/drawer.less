@@ -8,10 +8,10 @@
   background-color:@gray-darkest;
   .box-shadow(inset 0 3px 9px rgba(0,0,0,.5));
   .transition(left 0.4s @ease-out-expo);
-  &:extend(.clearfix all);
+  //&:extend(.clearfix all);
 }
 
-.drawer-body{
+.drawer-overlay{
   position: relative; //※
   left:0;//※
   .transition(left 0.4s @ease-out-expo);
@@ -22,25 +22,25 @@
 
 .drawer-open{
    overflow:hidden;//※
+   overflow-x:hidden !important;//※
+  .drawer-hook{
+    display: block;
+    left:@drawer-width;//※
+  }
   .drawer{
     overflow-y: auto;//※
     -webkit-overflow-scrolling:touch;//※
   }
-  .drawer-body{
+  .drawer-overlay{
     position: absolute;//※
     overflow-x: hidden;//※
     left:@drawer-width;//※
-    width: 100%;    
+  	min-width: 320px;
+  	width:100%;
   }
   .drawer-toggle{
     left:(@drawer-width + 10);
   }
-  @media (min-width: @screen-tablet) { //768px以上
-    .drawer-body{
-      //left:0;
-    }    
-  }    
-  
 }
 .drawer-toggle{
   position: fixed;
@@ -57,22 +57,22 @@
 
 @media (min-width: @screen-tablet) { // 768px以上
   .drawer{
-    //width:@drawer-width-tablet;
+    width:@drawer-width-tablet;
   }
-  .drawer-body{
-    //margin-left:@drawer-width-tablet;
+  .drawer-overlay{
+    margin-left:@drawer-width-tablet;
   }
   .drawer-toggle{
-    //display: none;
-    //visibility: hidden;
+    display: none;
+    visibility: hidden;
   }
 }
 @media (min-width: @screen-lg-desktop) { // 1200px以上
   .drawer{
-    //width:@drawer-width;
+    width:@drawer-width;
   }
-  .drawer-body{
-    //margin-left:@drawer-width;
+  .drawer-overlay{
+    margin-left:@drawer-width;
   }
 }
 
@@ -92,9 +92,6 @@
 
 .drawer-nav li{
   color: @gray;
-  &:last-child{
-    border-bottom: 1px solid #2a2a2a;
-  }
   a{
     padding: 15px;
     color: @gray;

@@ -3,18 +3,16 @@
   <head>
     {% include header.html %}
   </head>
-  <body class="home drawer-wrap">
+  <body class="home">
     <a class="sr-only" href="#content">Skip to main content</a>
 
     {% include nav-main.html %}
     
-    <div class="drawer-wrap">
-      <div class="drawer-body">
+      <div class="drawer-overlay">
         {{ content }}
         
         {% include footer.html %}
       </div>
-    </div>
 
   </body>
 </html>

@@ -1,5 +1,5 @@
 /*!
- * cooker v0.1.2
+ * cooker v0.1.3
  * Copyright 2014 TEQ inc.
  * Licensed under MIT
  * http://teq-inc.github.io/cooker/
@@ -301,7 +301,7 @@
        -o-transition: left .4s cubic-bezier(.19, 1, .22, 1);
           transition: left .4s cubic-bezier(.19, 1, .22, 1);
 }
-.drawer-body {
+.drawer-overlay {
   position: relative;
   left: 0;
   background-color: #fff;
@@ -311,15 +311,21 @@
 }
 .drawer-open {
   overflow: hidden;
+  overflow-x: hidden !important;
+}
+.drawer-open .drawer-hook {
+  left: 280px;
+  display: block;
 }
 .drawer-open .drawer {
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
-.drawer-open .drawer-body {
+.drawer-open .drawer-overlay {
   position: absolute;
   left: 280px;
   width: 100%;
+  min-width: 320px;
   overflow-x: hidden;
 }
 .drawer-open .drawer-toggle {
@@ -339,6 +345,26 @@
 .drawer-toggle:hover {
   cursor: pointer;
 }
+@media (min-width: 768px) {
+  .drawer {
+    width: 120px;
+  }
+  .drawer-overlay {
+    margin-left: 120px;
+  }
+  .drawer-toggle {
+    display: none;
+    visibility: hidden;
+  }
+}
+@media (min-width: 1200px) {
+  .drawer {
+    width: 280px;
+  }
+  .drawer-overlay {
+    margin-left: 280px;
+  }
+}
 .drawer-brand a {
   display: block;
   width: 100%;
@@ -354,9 +380,6 @@
 }
 .drawer-nav li {
   color: #aaa;
-}
-.drawer-nav li:last-child {
-  border-bottom: 1px solid #2a2a2a;
 }
 .drawer-nav li a {
   padding: 15px;

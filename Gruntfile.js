@@ -194,7 +194,7 @@
         src: 'Gruntfile.js'
       },
       js: {
-        src: 'dist/js/*.js'
+        src: 'dist/js/cooker.js'
       },
       assets: {
         src: 'docs/assets/js/common.js'
