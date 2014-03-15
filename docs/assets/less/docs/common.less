@@ -5,8 +5,6 @@ body,html {
   
   min-height: 100%;
   height: 100%;
-  
-  overflow-x: none;
 }
 
 a{
@@ -16,12 +14,20 @@ a{
   font-size: 17px;
   line-height: 1.6;
 }
-
+.container{
+  padding-left: 30px;
+  padding-right: 30px;
+}
+@media (min-width: @screen-tablet) {
+  .container{
+    width: auto !important;
+    max-width: @screen-tablet - @drawer-width-tablet;
+  }
+}
 @media (min-width: @screen-desktop) {
   .container{
     width: auto;
-//    max-width: @screen-desktop;
-    max-width: @screen-tablet;
+    max-width: @screen-desktop;
   }
 }
 
@@ -84,6 +90,57 @@ a{
 .github-watchers{
   text-align: right !important;
   float: right;
+}
+
+// drawer
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+.drawer{
+  background-color:@gray-darkest;
+  .box-shadow(inset 0 3px 9px rgba(0,0,0,.5));
+}
+.drawer-toggle{
+  position: fixed;
+  left:0px;
+  top:0px;
+  background: rgba(0,0,0,.4);
+  color:#fff;
+  border: none;
+  border-radius: 0;
+  border-bottom-right-radius: 4px;
+  font-size: 24px;
+  &:hover{
+    cursor: pointer;
+    border: none;
+    background: rgba(0,0,0,.6);
+    color:#fff;
+  }
+  &:focus{
+    border: none;
+  }
+}
+.drawer-brand a{
+  padding:20px 15px;
+  color: #fff;
+  display: block;
+  width: 100%;
+  font-size: 22px;
+  &:hover{
+    color: @gray;
+    text-decoration: none;
+  }
+}
+
+.drawer-nav li{
+  a{
+    padding: 15px;
+    color: #888;
+    &:hover{
+      background-color: #333;
+    }
+  }
+  ul a{
+    padding:6px 30px;
+  }
 }
 
 // ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::

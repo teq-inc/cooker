@@ -366,6 +366,7 @@
         files: [
           'docs/*.html',
           'docs/_includes/*.html',
+          'docs/_includes/**/*.html',
           'docs/_layouts/*.html'
         ],
         tasks: [

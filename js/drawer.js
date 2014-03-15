@@ -51,7 +51,7 @@
           });
 
           $overlay.bind('touchstart.'+namespace, function(){
-            methods.hide.apply(_this)
+            methods.close.apply(_this)
           });     
 
     			$nav.bind('touchstart.'+namespace, function() {
@@ -115,7 +115,7 @@
              methods.toggle.apply(_this)
           });
           $overlay.off('click.'+namespace).on('click.'+namespace, function(){
-            methods.hide.apply(_this)
+            methods.close.apply(_this)
           });    
            
         }
@@ -127,7 +127,7 @@
       options = $this.data(namespace).options
       var windowHeight = $(window).height()
       var $overlay = $('.'+options.overlay)
-      methods.hide.call(this, options)
+      methods.close.call(this, options)
       $overlay.css({
         'min-height': windowHeight,
       });
@@ -139,12 +139,12 @@
       var $body = $('body')
       var open = $body.hasClass(options.openClass)
       if(open){
-        methods.hide.call(this, options)
+        methods.close.call(this, options)
       }else{
-        methods.show.call(this, options)        
+        methods.open.call(this, options)        
       }
     },
-    show: function(init){
+    open: function(init){
       var $this = $(this)
       options = $this.data(namespace).options
       var $body = $('body')
@@ -158,7 +158,7 @@
         .removeClass(options.closeClass)
         .addClass(options.openClass)
     },
-    hide: function(init){
+    close: function(init){
       var $this = $(this)
       options = $this.data(namespace).options
       var $body = $('body')

@@ -1,5 +1,5 @@
 /*!
- * cooker v0.1.3
+ * cooker v0.1.4
  * Copyright 2014 TEQ inc.
  * Licensed under MIT
  * http://teq-inc.github.io/cooker/
@@ -124,7 +124,7 @@
             methods.toggle.apply(_this);
           });
           $overlay.bind("touchstart." + namespace, function() {
-            methods.hide.apply(_this);
+            methods.close.apply(_this);
           });
           $nav.bind("touchstart." + namespace, function() {
             var $this = $(this);
@@ -181,7 +181,7 @@
             methods.toggle.apply(_this);
           });
           $overlay.off("click." + namespace).on("click." + namespace, function() {
-            methods.hide.apply(_this);
+            methods.close.apply(_this);
           });
         }
       });
@@ -191,7 +191,7 @@
       options = $this.data(namespace).options;
       var windowHeight = $(window).height();
       var $overlay = $("." + options.overlay);
-      methods.hide.call(this, options);
+      methods.close.call(this, options);
       $overlay.css({
         "min-height": windowHeight
       });
@@ -203,12 +203,12 @@
       var $body = $("body");
       var open = $body.hasClass(options.openClass);
       if (open) {
-        methods.hide.call(this, options);
+        methods.close.call(this, options);
       } else {
-        methods.show.call(this, options);
+        methods.open.call(this, options);
       }
     },
-    show: function(init) {
+    open: function(init) {
       var $this = $(this);
       options = $this.data(namespace).options;
       var $body = $("body");
@@ -220,7 +220,7 @@
       }
       $body.removeClass(options.closeClass).addClass(options.openClass);
     },
-    hide: function(init) {
+    close: function(init) {
       var $this = $(this);
       options = $this.data(namespace).options;
       var $body = $("body");
