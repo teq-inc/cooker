@@ -1,0 +1,27 @@
+<div class="ck-section">
+  <h1 id="scrollmethod" class="page-header">Scrollmethod <small>scrollmethod.js</small></h1>
+
+  <h2 id="scrollmethod-examples">Examples</h2>
+  <p>クリックで要素までスクロールさせるJQueryプラグイン。<code>jquery.easing.js</code>が必要。
+  </p>
+  
+  <h2 id="scrollmethod-usage">Usage</h2>
+
+  <h3>Markup</h3>
+{% highlight html %}
+<body>
+  <a href="#target">Drower toggle</a>
+  <div id="target"></div>
+</body>
+{% endhighlight %}
+
+  <h3>JavaScript</h3>
+{% highlight js %}
+$('a[href^=#]').scrollmethod({
+    speed:     800,
+    easing:   'easeOutExpo',
+});
+{% endhighlight %}
+
+
+</div>

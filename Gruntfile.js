@@ -155,7 +155,8 @@
         files :  { 
           'dist/js/<%= pkg.name %>.js' : [
             'js/switchers.js',
-            'js/drawer.js'
+            'js/drawer.js',
+            'js/scrollmethod.js'
            ]
         } 
       },

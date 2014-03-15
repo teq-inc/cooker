@@ -6,6 +6,8 @@
   top:0;//※
   left: 0;//※
   .transition(left 0.4s @ease-out-expo);
+  overflow-y: auto;//※
+  -webkit-overflow-scrolling:touch;//※
 }
 
 .drawer-overlay{
@@ -18,14 +20,6 @@
 .drawer-open{
    overflow:hidden;//※
    overflow-x:hidden !important;//※
-  .drawer-hook{
-    display: block;
-    left:@drawer-width;//※
-  }
-  .drawer{
-    overflow-y: auto;//※
-    -webkit-overflow-scrolling:touch;//※
-  }
   .drawer-overlay{
     position: absolute;//※
     overflow-x: hidden;//※
