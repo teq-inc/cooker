@@ -5,8 +5,6 @@
  * http://teq-inc.github.io/cooker/
  */
 
-/* easeInExpo */
-/* easeOutExpo */
 .btn-outline-default {
   color: #aaa;
   background-color: transparent;
@@ -126,27 +124,6 @@
   background-color: #fff;
   border: 1px solid #fff;
 }
-.blocks .block {
-  margin-bottom: 20px;
-  border: 1px #ddd solid;
-  border-radius: 4px;
-}
-.blocks .block-header {
-  padding: 20px/2 20px;
-  border-bottom: 2px solid #ddd;
-}
-.blocks .block-header:last-child {
-  border-bottom-right-radius: 4px;
-  border-bottom-left-radius: 4px;
-}
-.blocks .block-title {
-  margin: 0;
-  font-size: 16px;
-}
-.blocks .block-body {
-  padding: 20px/2 20px;
-  padding-top: 20px;
-}
 .dtbl {
   display: table;
   width: 100%;
@@ -209,28 +186,28 @@
   background-color: transparent;
   border: 1px solid #fff;
 }
-.switchers .switcher {
+.switcher {
   position: relative;
   border: 1px #ddd solid;
   border-bottom: none;
 }
-.switchers .switcher:first-child {
+.switcher:first-child {
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
 }
-.switchers .switcher:last-child {
+.switcher:last-child {
   border-bottom: 1px #ddd solid;
   border-bottom-right-radius: 4px;
   border-bottom-left-radius: 4px;
 }
-.switchers .switcher-head {
+.switcher-head {
   padding: 15px 20px;
   font-weight: bold;
   border: 1px #ddd solid;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
 }
-.switchers .switcher-header {
+.switcher-header {
   display: table;
   width: 100%;
   line-height: 1.2;
@@ -241,50 +218,49 @@
           user-select: none;
   border-bottom: 0;
 }
-.switchers .switcher-header:hover {
+.switcher-header:hover {
   background-color: #eee;
 }
-.switchers .switcher-header .switcher-header-col {
+.switcher-header .switcher-header-col {
   display: table-cell;
   padding: 10px;
   vertical-align: middle;
 }
-.switchers .switcher-header .switcher-header-col:first-child {
+.switcher-header .switcher-header-col:first-child {
   padding-left: 20px;
 }
-.switchers .switcher-header .switcher-header-col:last-child {
+.switcher-header .switcher-header-col:last-child {
   padding-right: 20px;
 }
-.switchers .switcher-toggle {
+.switcher-toggle {
   color: #3271a8;
 }
-.switchers .switcher-toggle:hover {
+.switcher-toggle:hover {
   cursor: pointer;
 }
-.switchers .switcher-body {
-  position: relative;
+.switcher-body {
   height: 0;
   overflow: hidden;
   opacity: 0;
-  -webkit-transition: opacity .15s linear;
-       -o-transition: opacity .15s linear;
-          transition: opacity .15s linear;
+  -webkit-transition: all .8s cubic-bezier(.19, 1, .22, 1);
+       -o-transition: all .8s cubic-bezier(.19, 1, .22, 1);
+          transition: all .8s cubic-bezier(.19, 1, .22, 1);
 }
-.switchers .switcher-active {
+.switcher-body-inner {
+  padding: 10px 20px;
+}
+.switcher-open {
   z-index: 1;
   border: 1px #ddd solid;
   border-bottom: none;
   -webkit-box-shadow: 0 1px 6px #94bcdf;
           box-shadow: 0 1px 6px #94bcdf;
 }
-.switchers .switcher-active .switcher-body {
+.switcher-open .switcher-body {
   height: auto;
   opacity: 1;
-  -webkit-transition: opacity .2s linear;
-       -o-transition: opacity .2s linear;
-          transition: opacity .2s linear;
 }
-.switchers .switcher-active .switcher-header {
+.switcher-open .switcher-header {
   background-color: #f5f5f5;
   border-bottom: 1px #ddd solid;
 }

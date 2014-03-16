@@ -63,11 +63,15 @@
 @padding-inner-base-vertical: @line-height-computed/2; //25px
 @padding-inner-base-horizontal: @line-height-computed; //25px
 
+@ease-in-expo:  cubic-bezier(0.950, 0.050, 0.795, 0.035); // easeInExpo
+@ease-out-expo: cubic-bezier(0.190, 1.000, 0.220, 1.000); // easeOutExpo
 
+// drawer.js
 @drawer-width: 280px;
 @drawer-width-tablet: 120px;
 
-
-@ease-in-expo:  cubic-bezier(0.950, 0.050, 0.795, 0.035); /* easeInExpo */
-@ease-out-expo: cubic-bezier(0.190, 1.000, 0.220, 1.000); /* easeOutExpo */
-
+// switchers.js
+@switcher-body-padding:    10px 20px;
+@switcher-header-active:   @table-bg-active;
+@switcher-border-radius:   @border-radius-base;
+@switcher-border:          @border-base;
