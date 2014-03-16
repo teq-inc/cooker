@@ -9,10 +9,11 @@
   var methods = {
     init: function(options) {
       options = $.extend({
-        switcherClass: "switcher",
-        toggleClass: "switcher-toggle",
-        allToggleClass: "switcher-toggle-all",
-        activeClass: "switcher-active"
+        switcher: "switcher",
+        toggle: "switcher-toggle",
+        toggleAll: "switcher-toggle-all",
+        open: "switcher-open",
+        close: "switcher-close"
       }, options);
       return this.each(function() {
         var _this = this;
@@ -24,40 +25,75 @@
             options: options
           });
         }
-        var $aToggle = $this.find("." + options.allToggleClass);
-        var $iToggle = $this.find("." + options.toggleClass);
-        var switcher = options.switcherClass;
-        var active = options.activeClass;
-        $aToggle.off("click").on("click", function() {
-          var $this = $(this);
-          var $a = $this.parents("." + namespace).find("." + switcher);
-          if ($a.hasClass(active)) {
-            $a.removeClass(active);
-          } else {
-            $a.addClass(active);
-          }
+        var $aToggle = $this.find("." + options.toggleAll);
+        var $iToggle = $this.find("." + options.toggle);
+        $aToggle.off("click." + namespace).on("click." + namespace, function() {
+          methods.toggleAll.apply(_this);
         });
-        $iToggle.off("click").on("click", function() {
-          var $this = $(this);
-          var mode = $this.parents("." + namespace).data("mode");
-          var $i = $this.parents("." + switcher);
-          var $o = $i.siblings();
-          if (mode === "accordion") {
-            if ($i.hasClass(active)) {
-              $o, $i.removeClass(active);
-            } else {
-              $o.removeClass(active);
-              $i.addClass(active);
-            }
-          } else {
-            if ($i.hasClass(active)) {
-              $i.removeClass(active);
-            } else {
-              $i.addClass(active);
-            }
-          }
+        $iToggle.off("click." + namespace).on("click." + namespace, function() {
+          methods.toggle.apply(_this);
         });
       });
+    },
+    toggleAll: function() {
+      var $this = $(this);
+      options = $this.data(namespace).options;
+      var open = options.open;
+      var close = options.close;
+      var $a = $this.find("." + options.switcher);
+      var statusOpen = $a.hasClass(options.open);
+      var $aToggle = $a.find("." + options.toggleAll);
+      if (statusOpen) {
+        $a.removeClass(open).addClass(close);
+      } else {
+        $a.removeClass(close).addClass(open);
+      }
+      console.log("methods.toggleAll");
+    },
+    toggle: function() {
+      var $this = $(this);
+      options = $this.data(namespace).options;
+      var open = options.open;
+      var close = options.close;
+      var $i = $(event.target).parents("." + options.switcher);
+      var statusOpen = $i.hasClass(options.open);
+      if (statusOpen) {
+        methods.close.call(this);
+      } else {
+        methods.open.call(this);
+      }
+      console.log("methods.toggle");
+    },
+    open: function() {
+      var $this = $(this);
+      options = $this.data(namespace).options;
+      var open = options.open;
+      var close = options.close;
+      var mode = $this.data("mode");
+      var $i = $(event.target).parents("." + options.switcher);
+      var $o = $i.siblings();
+      if (mode === "accordion") {
+        $o.removeClass(open).addClass(close);
+        $i.removeClass(close).addClass(open);
+      } else {
+        $i.removeClass(close).addClass(open);
+      }
+      console.log("methods.open");
+    },
+    close: function() {
+      var $this = $(this);
+      options = $this.data(namespace).options;
+      var open = options.open;
+      var close = options.close;
+      var mode = $this.data("mode");
+      var $i = $(event.target).parents("." + options.switcher);
+      var $o = $i.siblings();
+      if (mode === "accordion") {
+        $o, $i.removeClass(open).addClass(close);
+      } else {
+        $i.removeClass(open).addClass(close);
+      }
+      console.log("methods.close");
     },
     destroy: function() {
       return this.each(function() {
@@ -279,6 +315,64 @@
     }
   };
   $.fn.scrollmethod = function(method) {
+    if (methods[method]) {
+      return methods[method].apply(this, Array.prototype.slice.call(arguments, 1));
+    } else if (typeof method === "object" || !method) {
+      return methods.init.apply(this, arguments);
+    } else {
+      $.error("Method " + method + " does not exist on jQuery." + namespace);
+    }
+  };
+})(jQuery);
+
+(function($) {
+  var namespace = "inputcounter";
+  var methods = {
+    init: function(options) {
+      options = $.extend({
+        warningClass: "warning",
+        errorClass: "error",
+        warningCounter: 60,
+        errorCounter: 65,
+        maxCounter: ""
+      }, options);
+      return this.each(function() {
+        var _this = this;
+        var $this = $(this);
+        var data = $this.data(namespace);
+        if (!data) {
+          options = $.extend({}, options);
+          $this.data(namespace, {
+            options: options
+          });
+          methods.check.apply(_this);
+          $this.bind("keydown keyup keypress change", function() {
+            methods.check.apply(_this);
+          });
+        }
+      });
+    },
+    check: function() {
+      var $this = $(this);
+      options = $this.data(namespace).options;
+      var val = $this.val(), length = val.length;
+      $this.removeClass(options.errorClass);
+      $this.removeClass(options.warningClass);
+      if (options.errorCounter <= length) {
+        $this.addClass(options.errorClass);
+      } else if (options.warningCounter <= length) {
+        $this.addClass(options.warningClass);
+      }
+    },
+    destroy: function() {
+      return this.each(function() {
+        var $this = $(this);
+        $(window).unbind("." + namespace);
+        $this.removeData(namespace);
+      });
+    }
+  };
+  $.fn.inputcounter = function(method) {
     if (methods[method]) {
       return methods[method].apply(this, Array.prototype.slice.call(arguments, 1));
     } else if (typeof method === "object" || !method) {
