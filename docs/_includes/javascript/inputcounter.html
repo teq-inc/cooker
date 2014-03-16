@@ -1,0 +1,53 @@
+<div class="ck-section">
+  <h1 id="inputcounter" class="page-header">Inputcounter <small>inputcounter.js</small></h1>
+
+  <h2 id="inputcounter-examples">Examples</h2>
+
+  <h3>Wrarnning 12 characters. Error 24 characters. </h3>
+  <div class="ck-example">
+    
+  <p><input type="text" class="form-control inputcounter" value="Inputconunter" /></p>
+  
+{% highlight js %}
+$('.inputcounter').inputcounter({
+    warningCounter: 12,
+    errorCounter:   24
+});
+{% endhighlight %}
+{% highlight html %}
+<input type="text" class="form-control inputcounter" value="Inputconunter" />
+{% endhighlight %}
+
+  </div> <!-- /example -->
+
+  <h2 id="inputcounter-usage">Usage</h2>
+
+  <h3>Markup</h3>
+{% highlight html %}
+<input type="text" class="inputcounter" value="" />
+{% endhighlight %}
+
+  <h3>JavaScript</h3>
+{% highlight js %}
+$('.inputcounter').inputcounter({
+  warningClass:     'warning',
+  errorClass:       'error',
+  warningCounter:   60,
+  errorCounter:     65,
+  maxCounter:       ''
+});
+{% endhighlight %}
+
+  <h2 id="inputcounter-method">Methods</h2>
+
+  <h3>$().inputcounter(options)</h3>
+  <p> </p>
+
+  <h4>$().switchers('check')</h4>
+  {% highlight js %}$('#element').switchers('check'){% endhighlight %}
+
+  <h4>$().switchers('destroy')</h4>
+  {% highlight js %}$('#element').switchers('destroy'){% endhighlight %}
+
+</div>
+

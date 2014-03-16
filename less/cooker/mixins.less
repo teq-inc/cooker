@@ -1,3 +1,5 @@
+// buttons.less
+//=================================================
 .button-outline-variant(@color; @color-hover){
   background-color: transparent;
   border: 1px solid @color;
@@ -14,4 +16,14 @@
     background-color: @color;
     border: 1px solid @color;
   }
+}
+
+// inputconter.less
+//=================================================
+.inputcounter-status(@color: @input-border-focus) {
+  @color-rgba: rgba(red(@color), green(@color), blue(@color), .6);
+  border-color: @color;
+  color: @color;
+  outline: 0;
+  .box-shadow(~"inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px @{color-rgba}");
 }

@@ -3,20 +3,12 @@ $(function (){
 // cooker
 // ==================================================
 
-/*
-  $('#input').inputcounters({
-      warningCounter:2,
-      errorCounter:4
+  $('.inputcounter').inputcounter({
+    warningCounter: 12,
+    errorCounter:   24
   });
-*/
-
+  
 	$('a[href^=#]').scrollmethod();
-
-/*
-	$('.dropdown').dropdowns();
-
-	$('.tooltips').tooltips();
-*/
 	
 	$('.drawer').drawer();
 	

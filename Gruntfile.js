@@ -156,7 +156,8 @@
           'dist/js/<%= pkg.name %>.js' : [
             'js/switchers.js',
             'js/drawer.js',
-            'js/scrollmethod.js'
+            'js/scrollmethod.js',
+            'js/inputcounter.js'
            ]
         } 
       },
