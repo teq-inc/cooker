@@ -269,6 +269,15 @@ body.home .ck-masthead .version {
   color: #fff;
   opacity: .8;
 }
+body.home .ck-masthead .version a {
+  color: #fff;
+  text-decoration: underline;
+  opacity: .8;
+}
+body.home .ck-masthead .version a:hover {
+  text-decoration: none;
+  opacity: 1;
+}
 body.home .ck-masthead .btn {
   width: 100%;
   padding: 15px 30px;
