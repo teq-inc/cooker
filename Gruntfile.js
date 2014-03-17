@@ -157,7 +157,8 @@
             'js/switchers.js',
             'js/drawer.js',
             'js/scrollmethod.js',
-            'js/inputcounter.js'
+            'js/inputcounter.js',
+            'js/slidebar.js'
            ]
         } 
       },

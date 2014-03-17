@@ -186,6 +186,76 @@
   background-color: transparent;
   border: 1px solid #fff;
 }
+.drawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 280px;
+  height: 100%;
+  overflow-y: auto;
+  -webkit-transition: left .4s cubic-bezier(.19, 1, .22, 1);
+       -o-transition: left .4s cubic-bezier(.19, 1, .22, 1);
+          transition: left .4s cubic-bezier(.19, 1, .22, 1);
+}
+.drawer-overlay {
+  position: relative;
+  left: 0;
+  background-color: #fff;
+  -webkit-transition: left .4s cubic-bezier(.19, 1, .22, 1);
+       -o-transition: left .4s cubic-bezier(.19, 1, .22, 1);
+          transition: left .4s cubic-bezier(.19, 1, .22, 1);
+}
+.drawer-open {
+  overflow: hidden;
+  overflow-x: hidden !important;
+}
+.drawer-open .drawer {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.drawer-open .drawer-overlay {
+  position: absolute;
+  left: 280px;
+  width: 100%;
+  min-width: 320px;
+  overflow-x: hidden;
+}
+.drawer-open .drawer-toggle {
+  left: 280px;
+}
+.drawer-toggle {
+  z-index: 1000;
+  display: none;
+  visibility: hidden;
+  -webkit-transition: all .4s cubic-bezier(.19, 1, .22, 1);
+       -o-transition: all .4s cubic-bezier(.19, 1, .22, 1);
+          transition: all .4s cubic-bezier(.19, 1, .22, 1);
+}
+.drawer-toggle:hover {
+  cursor: pointer;
+}
+@media (max-width: 767px) {
+  .drawer-toggle {
+    display: block;
+    visibility: visible;
+  }
+}
+@media (min-width: 768px) {
+  .drawer {
+    width: 120px !important;
+  }
+  .drawer-overlay {
+    margin-left: 120px;
+  }
+}
+@media (min-width: 1200px) {
+  .drawer {
+    width: 280px !important;
+  }
+  .drawer-overlay {
+    margin-left: 280px;
+  }
+}
 .switcher {
   position: relative;
   border: 1px #ddd solid;
@@ -264,75 +334,130 @@
   background-color: #f5f5f5;
   border-bottom: 1px #ddd solid;
 }
-.drawer {
+.slidebar {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 280px;
-  height: 100%;
-  overflow-y: auto;
-  -webkit-transition: left .4s cubic-bezier(.19, 1, .22, 1);
-       -o-transition: left .4s cubic-bezier(.19, 1, .22, 1);
-          transition: left .4s cubic-bezier(.19, 1, .22, 1);
+  z-index: 100;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
-.drawer-overlay {
-  position: relative;
-  left: 0;
-  background-color: #fff;
-  -webkit-transition: left .4s cubic-bezier(.19, 1, .22, 1);
-       -o-transition: left .4s cubic-bezier(.19, 1, .22, 1);
-          transition: left .4s cubic-bezier(.19, 1, .22, 1);
-}
-.drawer-open {
-  overflow: hidden;
-  overflow-x: hidden !important;
-}
-.drawer-open .drawer {
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-}
-.drawer-open .drawer-overlay {
+.slidebar-toggle {
   position: absolute;
-  left: 280px;
-  width: 100%;
-  min-width: 320px;
-  overflow-x: hidden;
+  z-index: 101;
+  font-size: 12px;
+  color: #3271a8;
+  background: #fff;
+  background: rgba(255, 255, 255, .8);
+  border: 1px #ddd solid;
 }
-.drawer-open .drawer-toggle {
-  left: 280px;
-}
-.drawer-toggle {
-  z-index: 1000;
-  display: none;
-  visibility: hidden;
-  -webkit-transition: all .4s cubic-bezier(.19, 1, .22, 1);
-       -o-transition: all .4s cubic-bezier(.19, 1, .22, 1);
-          transition: all .4s cubic-bezier(.19, 1, .22, 1);
-}
-.drawer-toggle:hover {
+.slidebar-toggle:hover {
+  color: #222;
   cursor: pointer;
 }
-@media (max-width: 767px) {
-  .drawer-toggle {
-    display: block;
-    visibility: visible;
-  }
+.slidebar-body {
+  position: relative;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  color: #222;
+  background: #fff;
+  background-image: rgba(255, 255, 255, .8);
 }
-@media (min-width: 768px) {
-  .drawer {
-    width: 120px !important;
-  }
-  .drawer-overlay {
-    margin-left: 120px;
-  }
+.slidebar-body::-webkit-scrollbar {
+  z-index: 2000;
+  width: 8px;
+  background-color: #eee;
+  border-left: 1px solid #d5d5d5;
 }
-@media (min-width: 1200px) {
-  .drawer {
-    width: 280px !important;
-  }
-  .drawer-overlay {
-    margin-left: 280px;
-  }
+.slidebar-body::-webkit-scrollbar:hover {
+  background-color: #fff;
+}
+.slidebar-body::-webkit-scrollbar-thumb {
+  background-color: #999;
+}
+.slidebar-body::-webkit-scrollbar-thumb:hover {
+  background-color: #737373;
+}
+.slidebar-body .slidebar-resize {
+  position: absolute;
+}
+.slidebar-body .slidebar-resize:hover,
+.slidebar-body .slidebar-resize:active,
+.slidebar-body .slidebar-resize:focus {
+  background-color: #eee;
+}
+.slidebar-body-inner {
+  padding: 20px;
+}
+.slidebar-bottom {
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+}
+.slidebar-bottom .slidebar-toggle {
+  top: -43px;
+  right: 30px;
+  padding: 12px 20px;
+  border-top: 3px solid #3271a8;
+  border-bottom: none;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.slidebar-bottom .slidebar-toggle:hover {
+  border-top: 3px solid #ddd;
+}
+.slidebar-bottom .slidebar-body {
+  z-index: 100;
+  width: 100%;
+  border-top: 1px #ddd solid;
+}
+.slidebar-bottom .slidebar-body .slidebar-resize {
+  top: 4px;
+  width: 100%;
+  height: 10px;
+}
+.slidebar-bottom .slidebar-body .slidebar-resize:hover,
+.slidebar-bottom .slidebar-body .slidebar-resize:active,
+.slidebar-bottom .slidebar-body .slidebar-resize:focus {
+  cursor: row-resize;
+}
+.slidebar-right {
+  top: 0;
+  right: -1px;
+  height: 100%;
+}
+.slidebar-right .slidebar-toggle {
+  left: -70px;
+  padding: 20px 12px;
+  margin-top: 100px;
+  border-right: none;
+  border-left: 3px solid #3271a8;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+
+  -webkit-writing-mode: vertical-rl;
+          writing-mode: tb-rl;
+  direction: ltr;
+}
+.slidebar-right .slidebar-toggle:hover {
+  border-left: 3px solid #ddd;
+}
+.slidebar-right .slidebar-body {
+  height: 100%;
+  padding-bottom: 10px;
+  border-left: 1px #ddd solid;
+}
+.slidebar-right .slidebar-body .slidebar-resize {
+  position: fixed;
+  top: 0;
+  width: 10px;
+  height: 100%;
+  margin-left: 4px;
+}
+.slidebar-right .slidebar-body .slidebar-resize:hover,
+.slidebar-right .slidebar-body .slidebar-resize:active,
+.slidebar-right .slidebar-body .slidebar-resize:focus {
+  cursor: col-resize;
 }
 .inputcounter.warning {
   color: #8a6d3b;
