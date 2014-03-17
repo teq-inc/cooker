@@ -19,20 +19,7 @@ a {
   line-height: 1.6;
 }
 .container {
-  padding-right: 30px;
-  padding-left: 30px;
-}
-@media (min-width: 768px) {
-  .container {
-    width: auto !important;
-    max-width: 768px - 120px;
-  }
-}
-@media (min-width: 992px) {
-  .container {
-    width: auto;
-    max-width: 992px;
-  }
+  max-width: 768px;
 }
 .ck-footer {
   padding-top: 40px;
@@ -133,7 +120,7 @@ a {
   background-color: #333;
 }
 .drawer-nav li ul a {
-  padding: 6px 20px;
+  padding: 8px 20px;
 }
 .ck-masthead,
 .ck-header {
