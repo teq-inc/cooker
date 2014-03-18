@@ -28,6 +28,17 @@
   .box-shadow(~"inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px @{color-rgba}");
 }
 
+// drilldown.less
+//=================================================
+.drilldown-level (@level) when (@level > 0) { 
+  .drilldown-level((@level - 1));// next iteration
+	[data-level="@{level}"]{
+		td:first-child{
+			padding-left: (@level * 10px);
+		}
+	}  
+}
+
 // etc
 //=================================================
 

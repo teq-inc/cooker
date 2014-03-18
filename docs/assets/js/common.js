@@ -23,6 +23,8 @@ $('.slidebar-bottom').slidebar({
   position: 'bottom',
 });
 
+$('.drilldown').drilldown();
+
 // docs script
 // ==================================================
 

@@ -158,7 +158,8 @@
             'js/drawer.js',
             'js/scrollmethod.js',
             'js/inputcounter.js',
-            'js/slidebar.js'
+            'js/slidebar.js',
+            'js/drilldown.js'
            ]
         } 
       },

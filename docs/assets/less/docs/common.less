@@ -17,7 +17,11 @@ a{
 .container{
   max-width: @screen-tablet;
 }
-
+@media (min-width: @screen-tablet) {
+  .container{
+    width:auto;
+  }
+}
 // Footer
 // ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 .ck-footer {
