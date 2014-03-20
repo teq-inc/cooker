@@ -130,6 +130,7 @@
         toggle: namespace + "-toggle",
         openClass: namespace + "-open",
         closeClass: namespace + "-close",
+        desktopEvent: "mouseover",
         speed: 200,
         width: 280,
         bottomMargin: 0
@@ -156,6 +157,9 @@
         methods.resize.call(_this, "init");
         $window.resize(function() {
           methods.resize.call(_this, "resize");
+        });
+        $nav.find("a").off("click." + namespace).on("click." + namespace, function() {
+          methods.close.call(_this);
         });
         if (touches) {
           $toggle.bind("touchstart." + namespace, function(e) {
@@ -217,7 +221,7 @@
             });
           }
         } else {
-          $toggle.off("click." + namespace).on("click." + namespace, function(e) {
+          $toggle.off(options.desktopEvent + "." + namespace).on(options.desktopEvent + "." + namespace, function(e) {
             methods.toggle.apply(_this);
           });
           $overlay.off("click." + namespace).on("click." + namespace, function() {
