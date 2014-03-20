@@ -132,7 +132,7 @@
         closeClass: namespace + "-close",
         speed: 200,
         width: 280,
-        bottomMargin: 80
+        bottomMargin: 180
       }, options);
       return this.each(function() {
         var _this = this;
@@ -149,6 +149,7 @@
         var $window = $(window);
         var $toggle = $("." + options.toggle);
         var $overlay = $("." + options.overlay);
+        var $open = $("." + options.openClass);
         var $nav = $("." + options.nav);
         var $body = $("body");
         methods.resize.call(_this, "init");

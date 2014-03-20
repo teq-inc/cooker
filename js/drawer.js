@@ -8,15 +8,15 @@
   var methods = {
     init: function(options){
       options = $.extend({
-        nav:  namespace+'-nav',
-        navList:  namespace+'-nav-list',
-        overlay:  namespace+'-overlay',
-        toggle: namespace+'-toggle',
+        nav:         namespace+'-nav',
+        navList:     namespace+'-nav-list',
+        overlay:     namespace+'-overlay',
+        toggle:      namespace+'-toggle',
         openClass:   namespace+'-open',
         closeClass:  namespace+'-close',
     		speed: 200,
     		width: 280,
-    		bottomMargin: 80
+    		bottomMargin: 180
       }, options);
       return this.each(function(){
         var _this = this;
@@ -34,15 +34,16 @@
     		var navListHeight;
         var $window = $(window)
         var $toggle = $('.'+options.toggle)
-        var $overlay = $('.'+options.overlay)        
+        var $overlay = $('.'+options.overlay)
+        var $open = $('.'+options.openClass)
         var $nav = $('.'+options.nav)
 	      var $body = $('body')
-       
+               
         methods.resize.call(_this, 'init')
         
         $window.resize(function() {
           methods.resize.call(_this, 'resize')          
-        });
+        }); 
                 
         if(touches){        
         
@@ -57,9 +58,10 @@
     			$nav.bind('touchstart.'+namespace, function() {
   	        var $this = $(this);
   	        navListHeight = $('.'+options.navList).height();
+  	        //navListHeight = $('.drawer').outerHeight();
     				sfY = event.touches[0].screenY;
-    				//startTime = (new Date()).getTime();
-    				startTime = new Date().getTime();
+    				startTime = (new Date()).getTime();
+    				//startTime = new Date().getTime();
     				startY = event.changedTouches[0].clientY;
     			});
     
@@ -74,6 +76,7 @@
     				});
     			});
     
+    			//$nav.bind('touchend.'+namespace, function() {
     			$nav.bind('touchend.'+namespace, function() {
   	        var $this = $(this);
     				//diffTime = (new Date()).getTime() - startTime;
@@ -103,6 +106,7 @@
     				} else if (screen.height - navListHeight > moveY + options.bottomMargin) {
     					$this.css({
     						'-webkit-transition': '-webkit-transform .5s ease-out',
+    						//'-webkit-transform': 'translate3d(0px,'+ (navListHeight - screen.height - options.bottomMargin) +'px,0px)'
     						'-webkit-transform': 'translate3d(0px,'+ (screen.height - navListHeight - options.bottomMargin) +'px,0px)'
     					});
     					smY = screen.height - navListHeight - options.bottomMargin;

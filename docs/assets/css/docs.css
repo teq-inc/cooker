@@ -81,52 +81,56 @@ a {
   float: right;
   text-align: right !important;
 }
-.drawer {
-  background-color: #222;
-  -webkit-box-shadow: inset 0 3px 9px rgba(0, 0, 0, .5);
-          box-shadow: inset 0 3px 9px rgba(0, 0, 0, .5);
+/*
+.drawer{
+  background-color:@gray-darkest;
+  .box-shadow(inset 0 3px 9px rgba(0,0,0,.5));
 }
-.drawer-toggle {
+.drawer-toggle{
   position: fixed;
-  top: 0;
-  left: 0;
-  font-size: 24px;
-  color: #fff;
-  background: rgba(0, 0, 0, .4);
+  left:0px;
+  top:0px;
+  background: rgba(0,0,0,.4);
+  color:#fff;
   border: none;
   border-radius: 0;
   border-bottom-right-radius: 4px;
+  font-size: 24px;
+  &:hover{
+    cursor: pointer;
+    border: none;
+    background: rgba(0,0,0,.6);
+    color:#fff;
+  }
+  &:focus{
+    border: none;
+  }
 }
-.drawer-toggle:hover {
+.drawer-brand a{
+  padding:20px 15px;
   color: #fff;
-  cursor: pointer;
-  background: rgba(0, 0, 0, .6);
-  border: none;
-}
-.drawer-toggle:focus {
-  border: none;
-}
-.drawer-brand a {
   display: block;
   width: 100%;
-  padding: 20px 15px;
   font-size: 22px;
-  color: #fff;
+  &:hover{
+    color: @gray;
+    text-decoration: none;
+  }
 }
-.drawer-brand a:hover {
-  color: #aaa;
-  text-decoration: none;
+
+.drawer-nav li{
+  a{
+    padding: 15px;
+    color: #888;
+    &:hover{
+      background-color: #333;
+    }
+  }
+  ul a{
+    padding:8px 20px;
+  }
 }
-.drawer-nav li a {
-  padding: 15px;
-  color: #888;
-}
-.drawer-nav li a:hover {
-  background-color: #333;
-}
-.drawer-nav li ul a {
-  padding: 8px 20px;
-}
+*/
 .ck-masthead,
 .ck-header {
   position: relative;
@@ -231,6 +235,25 @@ h1[id] {
     border-bottom-right-radius: 4px;
     border-bottom-left-radius: 4px;
   }
+}
+.fixedthead-wrap {
+  height: 200px;
+  overflow: auto;
+}
+.fixedthead-wrap::-webkit-scrollbar {
+  z-index: 2000;
+  width: 8px;
+  background-color: #eee;
+  border-left: 1px solid #d5d5d5;
+}
+.fixedthead-wrap::-webkit-scrollbar:hover {
+  background-color: #fff;
+}
+.fixedthead-wrap::-webkit-scrollbar-thumb {
+  background-color: #999;
+}
+.fixedthead-wrap::-webkit-scrollbar-thumb:hover {
+  background-color: #737373;
 }
 body.home {
   /*

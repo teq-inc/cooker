@@ -193,17 +193,10 @@
   width: 280px;
   height: 100%;
   overflow-y: auto;
-  -webkit-transition: left .4s cubic-bezier(.19, 1, .22, 1);
-       -o-transition: left .4s cubic-bezier(.19, 1, .22, 1);
-          transition: left .4s cubic-bezier(.19, 1, .22, 1);
 }
 .drawer-overlay {
   position: relative;
   left: 0;
-  background-color: #fff;
-  -webkit-transition: left .4s cubic-bezier(.19, 1, .22, 1);
-       -o-transition: left .4s cubic-bezier(.19, 1, .22, 1);
-          transition: left .4s cubic-bezier(.19, 1, .22, 1);
 }
 .drawer-open {
   overflow: hidden;
@@ -216,28 +209,75 @@
 .drawer-open .drawer-overlay {
   position: absolute;
   left: 280px;
-  width: 100%;
-  min-width: 320px;
   overflow-x: hidden;
 }
 .drawer-open .drawer-toggle {
   left: 280px;
 }
 .drawer-toggle {
+  position: fixed;
+  top: 0;
+  left: 0;
   z-index: 1000;
-  display: none;
-  visibility: hidden;
+  display: block;
+  font-size: 24px;
+  color: #fff;
+  visibility: visible;
+  background: #000;
+  background: rgba(0, 0, 0, .4);
+  border: none;
+  border-radius: 0;
+  border-bottom-right-radius: 4px;
   -webkit-transition: all .4s cubic-bezier(.19, 1, .22, 1);
        -o-transition: all .4s cubic-bezier(.19, 1, .22, 1);
           transition: all .4s cubic-bezier(.19, 1, .22, 1);
 }
 .drawer-toggle:hover {
+  color: #fff;
   cursor: pointer;
+  background: #000;
+  background: rgba(0, 0, 0, .6);
+  border: none;
 }
-@media (max-width: 767px) {
+.drawer-toggle:focus {
+  border: none;
+}
+.drawer-default {
+  background-color: #222;
+  -webkit-box-shadow: inset 0 3px 9px rgba(0, 0, 0, .5);
+          box-shadow: inset 0 3px 9px rgba(0, 0, 0, .5);
+}
+.drawer-default + .drawer-overlay {
+  background-color: #fff;
+  -webkit-transition: left .4s cubic-bezier(.19, 1, .22, 1);
+       -o-transition: left .4s cubic-bezier(.19, 1, .22, 1);
+          transition: left .4s cubic-bezier(.19, 1, .22, 1);
+}
+.drawer-default .drawer-brand a {
+  display: block;
+  width: 100%;
+  padding: 20px 15px;
+  font-size: 22px;
+  color: #fff;
+}
+.drawer-default .drawer-brand a:hover {
+  color: #aaa;
+  text-decoration: none;
+}
+.drawer-default .drawer-nav li a {
+  padding: 15px;
+  color: #888;
+}
+.drawer-default .drawer-nav li a:hover {
+  background-color: #333;
+}
+.drawer-default .drawer-nav li ul a {
+  padding: 8px 20px;
+}
+@media (min-width: 767px) {
   .drawer-toggle {
-    display: block;
-    visibility: visible;
+    display: none;
+    visibility: hidden;
   }
 }
 @media (min-width: 768px) {
