@@ -16,7 +16,7 @@
         closeClass:  namespace+'-close',
     		speed: 200,
     		width: 280,
-    		bottomMargin: 180
+    		bottomMargin: 0
       }, options);
       return this.each(function(){
         var _this = this;
@@ -38,12 +38,18 @@
         var $open = $('.'+options.openClass)
         var $nav = $('.'+options.nav)
 	      var $body = $('body')
-               
+				//var bodyHeight = $body.outerHeight();
+				var bodyHeight = $body.height();
+
         methods.resize.call(_this, 'init')
         
         $window.resize(function() {
           methods.resize.call(_this, 'resize')          
         }); 
+                
+        $nav.find('a').off('click.'+namespace).on('click.'+namespace, function(){
+          methods.close.call(_this)          
+        });	
                 
         if(touches){        
         
@@ -55,75 +61,71 @@
             methods.close.apply(_this)
           });     
 
-    			$nav.bind('touchstart.'+namespace, function() {
-  	        var $this = $(this);
-  	        navListHeight = $('.'+options.navList).height();
-  	        //navListHeight = $('.drawer').outerHeight();
-    				sfY = event.touches[0].screenY;
-    				startTime = (new Date()).getTime();
-    				//startTime = new Date().getTime();
-    				startY = event.changedTouches[0].clientY;
-    			});
+          if($this.height() < $nav.height()){
+  
+      			$nav.bind('touchstart.'+namespace, function() {
+    	        var $this = $(this);
+    	        navListHeight = $this.height();
+      				sfY = event.touches[0].screenY;
+      				startTime = (new Date()).getTime();
+      				startY = event.changedTouches[0].clientY;
+      			});
+      
+      			$nav.bind('touchmove.'+namespace, function() {
+    	        var $this = $(this);
+      				mfY = event.changedTouches[0].screenY;
+      				moveY = smY + mfY - sfY;
+      				draggedY = event.changedTouches[0].clientY - startY;
+      				$this.css({
+      					'-webkit-transition': 'none',
+      					'-webkit-transform': 'translate3d(0px,'+ moveY +'px,0px)'
+      				});
+      			});
     
-    			$nav.bind('touchmove.'+namespace, function() {
-  	        var $this = $(this);
-    				mfY = event.changedTouches[0].screenY;
-    				moveY = smY + mfY - sfY;
-    				draggedY = event.changedTouches[0].clientY - startY;
-    				$this.css({
-    					'-webkit-transition': 'none',
-    					'-webkit-transform': 'translate3d(0px,'+ moveY +'px,0px)'
-    				});
-    			});
-    
-    			//$nav.bind('touchend.'+namespace, function() {
-    			$nav.bind('touchend.'+namespace, function() {
-  	        var $this = $(this);
-    				//diffTime = (new Date()).getTime() - startTime;
-    				diffTime = new Date().getTime() - startTime;
-    				smY = smY + (mfY - sfY);
-    				if (diffTime < 200 && draggedY > 0) { // scroll up
-    					moveY += Math.abs((draggedY / diffTime) * 500);
-    					$this.css({
-    						'-webkit-transition': '-webkit-transform .7s ease-out',
-    						'-webkit-transform': 'translate3d(0px,'+ moveY +'px,0px)'
-    					});
-    					smY = moveY;
-    				} else if (diffTime < 200 && draggedY < 0) { // scroll down
-    					moveY -= Math.abs((draggedY / diffTime) * 500);
-    					$this.css({
-    						'-webkit-transition': '-webkit-transform .7s ease-out',
-    						'-webkit-transform': 'translate3d(0px,'+ moveY +'px,0px)'
-    					});
-    					smY = moveY;
-    				}
-    				if (moveY > 0) {
-    					$this.css({
-    						'-webkit-transition': '-webkit-transform .5s ease-out',
-    						'-webkit-transform': 'translate3d(0px,'+ 0 +'px,0px)'
-    					});
-    					smY = 0;
-    				} else if (screen.height - navListHeight > moveY + options.bottomMargin) {
-    					$this.css({
-    						'-webkit-transition': '-webkit-transform .5s ease-out',
-    						//'-webkit-transform': 'translate3d(0px,'+ (navListHeight - screen.height - options.bottomMargin) +'px,0px)'
-    						'-webkit-transform': 'translate3d(0px,'+ (screen.height - navListHeight - options.bottomMargin) +'px,0px)'
-    					});
-    					smY = screen.height - navListHeight - options.bottomMargin;
-    				}
-    			});
-
-        } else {
-        
-          $toggle.off('click.'+namespace).on('click.'+namespace, function(e){
-             methods.toggle.apply(_this)
-          });
-          $overlay.off('click.'+namespace).on('click.'+namespace, function(){
-            methods.close.apply(_this)
-          });    
-           
+      			$nav.bind('touchend.'+namespace, function() {
+    	        var $this = $(this);
+      				//diffTime = (new Date()).getTime() - startTime;
+      				diffTime = new Date().getTime() - startTime;
+      				smY = smY + (mfY - sfY);
+      				if (diffTime < 200 && draggedY > 0) { // scroll up
+      					moveY += Math.abs((draggedY / diffTime) * 500);
+      					$this.css({
+      						'-webkit-transition': '-webkit-transform .7s ease-out',
+      						'-webkit-transform': 'translate3d(0px,'+ moveY +'px,0px)'
+      					});
+      					smY = moveY;
+      				} else if (diffTime < 200 && draggedY < 0) { // scroll down
+      					moveY -= Math.abs((draggedY / diffTime) * 500);
+      					$this.css({
+      						'-webkit-transition': '-webkit-transform .7s ease-out',
+      						'-webkit-transform': 'translate3d(0px,'+ moveY +'px,0px)'
+      					});
+      					smY = moveY;
+      				}
+      				if (moveY > 0) {
+      					$this.css({
+      						'-webkit-transition': '-webkit-transform .5s ease-out',
+      						'-webkit-transform': 'translate3d(0px,0px,0px)'
+      					});
+      					smY = 0;
+      				} else if (bodyHeight - navListHeight > moveY + options.bottomMargin) {
+      					$this.css({
+      						'-webkit-transition': '-webkit-transform .5s ease-out',
+      						'-webkit-transform': 'translate3d(0px,'+ (bodyHeight - navListHeight - options.bottomMargin) +'px,0px)'
+      					});
+      					smY = bodyHeight - navListHeight - options.bottomMargin;
+      				} 
+      			});
+          } else {
+            $toggle.off('click.'+namespace).on('click.'+namespace, function(e){
+               methods.toggle.apply(_this)
+            });
+            $overlay.off('click.'+namespace).on('click.'+namespace, function(){
+              methods.close.apply(_this)
+            });               
+          }
         }
-        
+
       }); // end each
     },    
     resize: function(value){
