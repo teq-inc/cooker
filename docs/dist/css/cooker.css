@@ -209,7 +209,6 @@
 .drawer-open .drawer-overlay {
   position: absolute;
   left: 280px;
-  width: 100%;
   overflow-x: hidden;
 }
 .drawer-open .drawer-toggle {
@@ -275,30 +274,28 @@
 .drawer-default .drawer-nav li ul a {
   padding: 8px 20px;
 }
-/*
-@media (min-width: (@screen-tablet - 1)) { // 768px以下
-  .drawer-toggle{
+@media (min-width: 767px) {
+  .drawer-toggle {
     display: none;
     visibility: hidden;
   }
 }
-@media (min-width: @screen-tablet) { // 768px以上
-  .drawer{
-    width:@drawer-width-tablet !important;
+@media (min-width: 768px) {
+  .drawer {
+    width: 120px !important;
   }
-  .drawer-overlay{
-    margin-left:@drawer-width-tablet;
-  }
-}
-@media (min-width: @screen-lg-desktop) { // 1200px以上
-  .drawer{
-    width:@drawer-width!important;
-  }
-  .drawer-overlay{
-    margin-left:@drawer-width;
+  .drawer-overlay {
+    margin-left: 120px;
   }
 }
-*/
+@media (min-width: 1200px) {
+  .drawer {
+    width: 280px !important;
+  }
+  .drawer-overlay {
+    margin-left: 280px;
+  }
+}
 .drilldown [data-level="1"] td:first-child {
   padding-left: 10px;
 }
