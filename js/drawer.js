@@ -14,6 +14,7 @@
         toggle:      namespace+'-toggle',
         openClass:   namespace+'-open',
         closeClass:  namespace+'-close',
+        desktopEvent: 'mouseover',
     		speed: 200,
     		width: 280,
     		bottomMargin: 0
@@ -46,11 +47,9 @@
           methods.resize.call(_this, 'resize')          
         }); 
                 
-/*
         $nav.find('a').off('click.'+namespace).on('click.'+namespace, function(){
           methods.close.call(_this)          
         });	
-*/
                 
         if(touches){        
         
@@ -116,76 +115,73 @@
       					smY = bodyHeight - navListHeight - options.bottomMargin;
       				} 
       			});
-      			
-          }
-      			
+          }      			
         } else {
-          $toggle.off('click.'+namespace).on('click.'+namespace, function(e){
+          $toggle.off(options.desktopEvent+'.'+namespace).on(options.desktopEvent+'.'+namespace, function(e){
              methods.toggle.apply(_this)
           });
           $overlay.off('click.'+namespace).on('click.'+namespace, function(){
             methods.close.apply(_this)
           });               
         }
-    //  }
 
-    }); // end each
-  },    
-  resize: function(value){
-    var $this = $(this)
-    options = $this.data(namespace).options
-    var windowHeight = $(window).height()
-    var $overlay = $('.'+options.overlay)
-    methods.close.call(this, options)
-    $overlay.css({
-      'min-height': windowHeight,
-    });
-    console.log(value);
-  },
-  toggle: function(init,options){
-    var $this = $(this)
-    options = $this.data(namespace).options
-    var $body = $('body')
-    var open = $body.hasClass(options.openClass)
-    if(open){
+      }); // end each
+    },    
+    resize: function(value){
+      var $this = $(this)
+      options = $this.data(namespace).options
+      var windowHeight = $(window).height()
+      var $overlay = $('.'+options.overlay)
       methods.close.call(this, options)
-    }else{
-      methods.open.call(this, options)        
-    }
-  },
-  open: function(init){
-    var $this = $(this)
-    options = $this.data(namespace).options
-    var $body = $('body')
-    if(touches){
-  		$body.on('touchmove.'+namespace, function() {
-  			event.preventDefault();
-  		});
-  		event.preventDefault();
-    }
-    $body
-      .removeClass(options.closeClass)
-      .addClass(options.openClass)
-  },
-  close: function(init){
-    var $this = $(this)
-    options = $this.data(namespace).options
-    var $body = $('body')
-    if(touches){
-  		$body.off('touchmove.'+namespace);
-    }
-    $body
-      .removeClass(options.openClass)
-      .addClass(options.closeClass)
-  },
-  destroy: function(){
-    return this.each(function(){
-      var $this = $(this);
-      $(window).unbind('.'+namespace);
-      $this.removeData(namespace);
-    });
-  },
-};
+      $overlay.css({
+        'min-height': windowHeight,
+      });
+      console.log(value);
+    },
+    toggle: function(init,options){
+      var $this = $(this)
+      options = $this.data(namespace).options
+      var $body = $('body')
+      var open = $body.hasClass(options.openClass)
+      if(open){
+        methods.close.call(this, options)
+      }else{
+        methods.open.call(this, options)        
+      }
+    },
+    open: function(init){
+      var $this = $(this)
+      options = $this.data(namespace).options
+      var $body = $('body')
+      if(touches){
+    		$body.on('touchmove.'+namespace, function() {
+    			event.preventDefault();
+    		});
+    		event.preventDefault();
+      }
+      $body
+        .removeClass(options.closeClass)
+        .addClass(options.openClass)
+    },
+    close: function(init){
+      var $this = $(this)
+      options = $this.data(namespace).options
+      var $body = $('body')
+      if(touches){
+    		$body.off('touchmove.'+namespace);
+      }
+      $body
+        .removeClass(options.openClass)
+        .addClass(options.closeClass)
+    },
+    destroy: function(){
+      return this.each(function(){
+        var $this = $(this);
+        $(window).unbind('.'+namespace);
+        $this.removeData(namespace);
+      });
+    },
+  };
   $.fn.drawer = function(method){
     if ( methods[method] ) {
       return methods[method].apply( this, Array.prototype.slice.call( arguments, 1 ));
