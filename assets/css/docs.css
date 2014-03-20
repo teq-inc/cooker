@@ -19,6 +19,7 @@ a {
   line-height: 1.6;
 }
 .container {
+  min-width: 320px;
   max-width: 768px;
 }
 @media (min-width: 768px) {
