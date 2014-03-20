@@ -157,6 +157,9 @@
         $window.resize(function() {
           methods.resize.call(_this, "resize");
         });
+        $nav.find("a").off("click." + namespace).on("click." + namespace, function() {
+          methods.close.call(_this);
+        });
         if (touches) {
           $toggle.bind("touchstart." + namespace, function(e) {
             methods.toggle.apply(_this);
