@@ -1,22 +1,19 @@
 <div class="ck-section">
   <h1 id="drawer" class="page-header">Drawer <small>drawer.js</small></h1>
-
-  <h2 id="drawer-examples">Examples</h2>
-  <p>Check the navigation on the left side of this site</p>
   
   <h3>Phone</h3>
   <p>
-    <img class="img-responsive img-thumbnail" src="{{ page.base_url }}assets/images/drower/iphone.jpg" alt="iphone" />
+    <img class="img-responsive" src="{{ page.base_url }}assets/images/drower/iphone.jpg" alt="iphone" />
   </p>
   
   <h3>Tablet</h3>
   <p>
-    <img class="img-responsive img-thumbnail" src="{{ page.base_url }}assets/images/drower/ipad.jpg" alt="Tablet" />
+    <img class="img-responsive" src="{{ page.base_url }}assets/images/drower/ipad.jpg" alt="Tablet" />
   </p>
   
   <h3>Desktop</h3>
   <p>
-    <img class="img-responsive img-thumbnail" src="{{ page.base_url }}assets/images/drower/desktop.jpg" alt="Desktop" />
+    <img class="img-responsive" src="{{ page.base_url }}assets/images/drower/desktop.jpg" alt="Desktop" />
   </p>
 
   <h2 id="drawer-usage">Usage</h2>
@@ -48,6 +45,7 @@ $('.drawer').drawer({
   toggle:       'drawer-toggle',
   openClass:    'drawer-open',
   closeClass:   'drawer-close',
+  desktopEvent: 'mouseover', // or click 
   speed:        200,
   width:        280,
   bottomMargin: 80
