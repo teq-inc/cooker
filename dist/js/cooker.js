@@ -124,16 +124,15 @@
   var methods = {
     init: function(options) {
       options = $.extend({
-        nav: namespace + "-nav",
-        navList: namespace + "-nav-list",
-        overlay: namespace + "-overlay",
-        toggle: namespace + "-toggle",
-        openClass: namespace + "-open",
-        closeClass: namespace + "-close",
+        nav: "drawer-nav",
+        navList: "drawer-nav-list",
+        overlay: "drawer-overlay",
+        toggle: "drawer-toggle",
+        openClass: "drawer-open",
+        closeClass: "drawer-close",
         desktopEvent: "mouseover",
         speed: 200,
-        width: 280,
-        bottomMargin: 0
+        width: 280
       }, options);
       return this.each(function() {
         var _this = this;
@@ -211,12 +210,12 @@
                   "-webkit-transform": "translate3d(0px,0px,0px)"
                 });
                 smY = 0;
-              } else if (bodyHeight - navListHeight > moveY + options.bottomMargin) {
+              } else if (bodyHeight - navListHeight > moveY) {
                 $this.css({
                   "-webkit-transition": "-webkit-transform .5s ease-out",
-                  "-webkit-transform": "translate3d(0px," + (bodyHeight - navListHeight - options.bottomMargin) + "px,0px)"
+                  "-webkit-transform": "translate3d(0px," + (bodyHeight - navListHeight) + "px,0px)"
                 });
-                smY = bodyHeight - navListHeight - options.bottomMargin;
+                smY = bodyHeight - navListHeight;
               }
             });
           }

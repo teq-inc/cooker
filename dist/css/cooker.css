@@ -192,7 +192,7 @@
   left: 0;
   width: 280px;
   height: 100%;
-  overflow-y: auto;
+  overflow: hidden;
 }
 .drawer-overlay {
   position: relative;
