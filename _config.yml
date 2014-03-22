@@ -1,7 +1,7 @@
 markdown:    redcarpet
 pygments:    true
 permalink:   pretty
-exclude:     ['less','future']
+exclude:     ['less','future','*.psd']
 source:      docs
 destination: docs/_gh_pages
 encoding:    UTF-8

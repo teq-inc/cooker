@@ -2,17 +2,17 @@
 // ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 body,html {
   background: #fff;
-  
+  line-height: 1.6;
   min-height: 100%;
   height: 100%;
 }
 
 a{
-  color: @blue;
+  color: @color-main;
 }
 .lead{
   font-size: 17px;
-  line-height: 1.6;
+  line-height: 1.8;
 }
 .container{
   max-width: @screen-tablet;
@@ -70,71 +70,8 @@ a{
 .github-btn {
   overflow: hidden;
   border: 0;
-  &:first-child{
-    float: right;
-    text-align: right !important;
-    iframe{
-      float: right;
-    }
-  }
-}
-.github-watchers{
-  text-align: right !important;
-  float: right;
 }
 
-// drawer
-// ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-/*
-.drawer{
-  background-color:@gray-darkest;
-  .box-shadow(inset 0 3px 9px rgba(0,0,0,.5));
-}
-.drawer-toggle{
-  position: fixed;
-  left:0px;
-  top:0px;
-  background: rgba(0,0,0,.4);
-  color:#fff;
-  border: none;
-  border-radius: 0;
-  border-bottom-right-radius: 4px;
-  font-size: 24px;
-  &:hover{
-    cursor: pointer;
-    border: none;
-    background: rgba(0,0,0,.6);
-    color:#fff;
-  }
-  &:focus{
-    border: none;
-  }
-}
-.drawer-brand a{
-  padding:20px 15px;
-  color: #fff;
-  display: block;
-  width: 100%;
-  font-size: 22px;
-  &:hover{
-    color: @gray;
-    text-decoration: none;
-  }
-}
-
-.drawer-nav li{
-  a{
-    padding: 15px;
-    color: #888;
-    &:hover{
-      background-color: #333;
-    }
-  }
-  ul a{
-    padding:8px 20px;
-  }
-}
-*/
 // ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 .ck-masthead,
 .ck-header {
@@ -144,8 +81,8 @@ a{
   text-align: center;
   text-shadow: 0 1px 0 rgba(0,0,0,.1);
   background-color: #6f5499;
-  background-image: linear-gradient(45deg, @olive 0%, @blue 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=@olive, endColorstr=@color-sub, GradientType=0);
+  background-image: linear-gradient(45deg, @color-sub 0%, @color-main 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=@color-sub, endColorstr=@color-main, GradientType=0);
   background-repeat: repeat-x;
 }
 
@@ -192,6 +129,9 @@ a{
 // ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 .ck-section {
   margin-bottom: 60px;
+  h2{
+    margin-top: 40px;
+  }
 }
 .ck-section:last-child {
   margin-bottom: 0;
@@ -200,6 +140,9 @@ a{
 h1[id] {
   padding-top: 20px;
   margin-top: 0;
+  & + h2{
+    margin-top: 20px;
+  }
 }
 
 
@@ -230,7 +173,6 @@ h1[id] {
     border-width: 0 0 1px;
     border-radius: 0;
   }
-
 }
 
 @media (min-width: 768px) {
@@ -254,11 +196,20 @@ h1[id] {
 }
 
 
-// fixethead
+/* column */
 // ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-.fixedthead-wrap{
-  height:200px;
-  overflow: auto;
-  .scrollbar();
+.column-docs {
+  margin-bottom: 1rem;
+  [class*="col-"] {
+    line-height: 3;
+    text-align: center;
+    color: #444;
+    background-color: rgba(22,34,49,.15);
+    &:nth-child(odd) {
+      background-color: rgba(22,34,49,.3);
+    }
+  }
 }
-
+.column-valign-middle .column-docs {
+  margin-bottom: 0px;
+}

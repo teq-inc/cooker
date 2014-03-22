@@ -1,31 +1,7 @@
 //
 // Variables
 // --------------------------------------------------
-@prefix : 'ck';
-//
-// COLOR VARIABLES
-//
-// Cool
-@aqua:     #7FDBFF;
-@blue:     #0074D9;
-@navy:     #001F3F;
-@teal:     #39CCCC;
-@green:    #2ECC40;
-@olive:    #3D9970;
-@lime:     #01FF70;
-// Warm
-@yellow:  #FFDC00;
-@orange:  #FF851B;
-@red:     #FF4136;
-@fuchsia: #F012BE;
-@purple:  #B10DC9;
-@maroon:  #85144B;
-// Gray Scale
-@white:  #fff;
-@silver: #ddd;
-@gray:   #aaa;
-@black:  #111;
-
+// color
 @gray-light:     #eee;
 @gray-lighter:   #f9f9f9;
 @gray-lightest:  #fcfcfc;
@@ -34,19 +10,18 @@
 @gray-darker:   #f9f9f9;
 @gray-darkest:  #222;
 
-//brand?って感じなのでオーバーライド
 @primary-color:         #3271a8;
-@brand-primary:         @primary-color;
+//@brand-primary:         @primary-color;
 @secondary-color:       #242d35;
 //
 @success-color:         #46b283;
-@brand-success:         @success-color;
+//@brand-success:         @success-color;
 @warning-color:         #f0ad4e;
-@brand-warning:         @warning-color;
+//@brand-warning:         @warning-color;
 @danger-color:          #e34646;
-@brand-danger:          @danger-color;
+//@brand-danger:          @danger-color;
 @info-color:            #5cb9db;
-@brand-info:            @info-color;
+//@brand-info:            @info-color;
 
 //btn用変数追加分
 @btn-secondary-color:            #fff;
@@ -66,12 +41,17 @@
 @ease-in-expo:  cubic-bezier(0.950, 0.050, 0.795, 0.035); // easeInExpo
 @ease-out-expo: cubic-bezier(0.190, 1.000, 0.220, 1.000); // easeOutExpo
 
-// drawer.js
+// drawer.less
 @drawer-width: 280px;
 @drawer-width-tablet: 120px;
 
-// switchers.js
+// switchers.less
 @switcher-body-padding:    10px 20px;
 @switcher-header-active:   @table-bg-active;
 @switcher-border-radius:   @border-radius-base;
 @switcher-border:          @border-base;
+
+// column.less
+@column-number:        12;
+@column-gutter-width:  1rem;
+@column-breakpoint:    480px;

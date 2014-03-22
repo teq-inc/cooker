@@ -17,6 +17,12 @@
           <li><a href="{{ page.base_url }}javascript/#scrollmethod">Scrollmethod</a></li>
         </ul>
       </li>
+      <li{% if page.slug == "css" %} class="active"{% endif %}>
+        <a href="{{ page.base_url }}css">CSS</a>
+        <ul class="nav">
+          <li><a href="{{ page.base_url }}css/#column">Column</a></li>
+        </ul>
+      </li>
     </ul>
   </nav>
 </div>

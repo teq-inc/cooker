@@ -1,0 +1,31 @@
+// colomn.less
+//=================================================
+
+@media (min-width: @column-breakpoint) {
+
+  .column {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    
+    [class*="col-"]{
+      display: table-cell;
+    }
+      
+  }
+  
+  .column-gutter {
+    margin-left:  -@column-gutter-width;
+    margin-right: -@column-gutter-width;
+    .column {
+      border-spacing: @column-gutter-width 0;
+    }
+  }
+  
+  .colomn-generate(@column-number);
+
+}
+
+.column-valign-middle [class*="col-"] {
+  vertical-align: middle;
+}

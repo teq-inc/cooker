@@ -11,7 +11,9 @@ $('.inputcounter').inputcounter({
 
 $('a[href^=#]').scrollmethod();
 
-$('.drawer').drawer();
+$('.drawer').drawer({
+  desktopEvent:'click'
+});
 
 $('.switchers').switchers();
 

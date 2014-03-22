@@ -5,3 +5,4 @@ vendor
 bower_components
 cooker.beautify*.js
 *.txt
+*.psd
