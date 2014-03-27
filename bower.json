@@ -1,6 +1,20 @@
 {
   "name": "cooker",
   "version": "0.1.4",
+  "main": [
+    "dist/css/cooker.css",
+    "dist/css/cooker.min.css",
+    "dist/js/cooker.js",
+    "dist/js/cooker.min.js",
+    "less/**"
+  ],
+  "ignore": [
+    ".*",
+    "*.md",
+    "_config.yml",
+    "js",
+    "docs"
+  ],
   "dependencies": {
     "bootstrap": "~3.1.1",
     "font-awesome": "~4.0.3"
@@ -22,3 +36,4 @@
     }
   }
 }
+
