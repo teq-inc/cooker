@@ -369,7 +369,6 @@
         ],
         tasks: [
           'shell:jekyll_build',
-          //'validation',
           'notify:jekyll'
         ],
         options: {
@@ -380,17 +379,24 @@
         files: [
           'less/*.less',
           'less/**/*.less',
+        ],
+        tasks: [
+          'less:cooker',
+          'copy',
+          'shell:jekyll_build',
+          'notify:jekyll'
+        ],
+        options: {
+          livereload: true
+        }
+      },
+      lessDocs: {
+        files: [
           'docs/assets/less/*.less',
           'docs/assets/less/**/*.less'
         ],
         tasks: [
-          'less',
-          'autoprefixer',
-          //'csscomb',
-          //'usebanner',
-          //'cssmin',
-          //'csslint',
-          'copy',
+          'less:docs',
           'shell:jekyll_build',
           'notify:jekyll'
         ],
