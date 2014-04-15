@@ -271,11 +271,6 @@
               path: 'http://<%= connect.server.options.hostname %>:<%= connect.server.options.port %>'
             }
           }
-        },
-        livereload: {
-          options: {
-            open: true,
-          }
         }
       }
     },
@@ -286,19 +281,9 @@
       options: {
         title: '<%= pkg.name %> Grunt Notify',
       },
-      grunt:{
+      success:{
         options: {
-          message: 'Grunt Success!',
-        }
-      },
-      less:{
-        options: {
-          message: 'Less Compile Success!',
-        }
-      },
-      jekyll:{
-        options: {
-          message: 'jekyll Compile Success!',
+          message: 'Success!',
         }
       }
     },
@@ -344,11 +329,8 @@
         ],
         tasks: [
           'jshint:grunt',
-          'notify:grunt'
-        ],
-        options: {
-          livereload: false
-        }
+          'notify'
+        ]
       },
       js: {
         files: [
@@ -361,7 +343,7 @@
           'shell:jekyll_build',
           'jshint:js',
           'jshint:assets',
-          'notify:jekyll'
+          'notify'
         ]
       },
       html: {
@@ -373,13 +355,13 @@
         ],
         tasks: [
           'shell:jekyll_build',
-          'notify:jekyll'
+          'notify'
         ]
       },
       less: {
         files: [
           'less/*.less',
-          'less/**/*.less',
+          'less/**/*.less'
         ],
         tasks: [
           'less:cooker',
@@ -389,7 +371,7 @@
           'cssmin',
           'copy',
           'shell:jekyll_build',
-          'notify:jekyll'
+          'notify'
         ]
       },
       lessDocs: {
@@ -400,7 +382,7 @@
         tasks: [
           'less:docs',
           'shell:jekyll_build',
-          'notify:jekyll'
+          'notify'
         ]
       }
     }  
