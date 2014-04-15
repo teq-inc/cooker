@@ -334,6 +334,10 @@
     // File watch
     // ====================================================
     watch: {
+      options: {
+        spawn: false,
+        livereload: true
+      },
       grunt: {
         files: [
           '<%= jshint.grunt.src %>'
@@ -341,7 +345,10 @@
         tasks: [
           'jshint:grunt',
           'notify:grunt'
-        ]
+        ],
+        options: {
+          livereload: false
+        }
       },
       js: {
         files: [
@@ -355,10 +362,7 @@
           'jshint:js',
           'jshint:assets',
           'notify:jekyll'
-        ],
-        options: {
-          livereload: true
-        }
+        ]
       },
       html: {
         files: [
@@ -370,10 +374,7 @@
         tasks: [
           'shell:jekyll_build',
           'notify:jekyll'
-        ],
-        options: {
-          livereload: true
-        }
+        ]
       },
       less: {
         files: [
@@ -382,13 +383,14 @@
         ],
         tasks: [
           'less:cooker',
+          'autoprefixer',
+          'csscomb',
+          'usebanner',
+          'cssmin',
           'copy',
           'shell:jekyll_build',
           'notify:jekyll'
-        ],
-        options: {
-          livereload: true
-        }
+        ]
       },
       lessDocs: {
         files: [
@@ -399,10 +401,7 @@
           'less:docs',
           'shell:jekyll_build',
           'notify:jekyll'
-        ],
-        options: {
-          livereload: true
-        }
+        ]
       }
     }  
     
