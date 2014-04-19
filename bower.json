@@ -1,6 +1,6 @@
 {
   "name": "cooker",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "main": [
     "dist/css/cooker.css",
     "dist/css/cooker.min.css",
@@ -11,12 +11,11 @@
   "ignore": [
     ".*",
     "*.md",
-    "_config.yml",
-    "js",
-    "docs"
+    "_config.yml"
   ],
   "dependencies": {
     "bootstrap": "~3.1.1",
+    "drawer": "~0.2.1",
     "font-awesome": "~4.0.3"
   },
   "exportsOverride": {
@@ -27,6 +26,11 @@
       ],
       "css": "dist/css/*.css",
       "fonts": "dist/fonts/**",
+      "less": "less/**"
+    },
+    "drawer": {
+      "js": "dist/js/drawer.min.js",
+      "css": "dist/css/*.css",
       "less": "less/**"
     },
     "font-awesome": {

@@ -155,7 +155,6 @@
         files :  { 
           'dist/js/<%= pkg.name %>.js' : [
             'js/switchers.js',
-            'js/drawer.js',
             'js/scrollmethod.js',
             'js/inputcounter.js',
             'js/slidebar.js',
@@ -436,7 +435,7 @@
       'cssmin',
       'copy',
       'shell:jekyll_build',
-      'htmlmin'
+      //'htmlmin'
     ]);
   });
   

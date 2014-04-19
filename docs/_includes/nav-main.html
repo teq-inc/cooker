@@ -1,4 +1,4 @@
-<button class="drawer-toggle btn btn-outline-white"><i class="fa fa-bars"></i></button>
+<button class="drawer-toggle btn"><i class="fa fa-bars"></i></button>
 <div class="drawer drawer-default">
   <nav class="drawer-nav" role="navigation">
     <div class="drawer-brand"><a href="{{ page.base_url }}">Cooker</a></div>
@@ -9,7 +9,6 @@
       <li{% if page.slug == "js" %} class="active"{% endif %}>
         <a href="{{ page.base_url }}javascript">JavaScript</a>
         <ul class="nav">
-          <li><a href="{{ page.base_url }}javascript/#drawer">Drawer</a></li>
           <li><a href="{{ page.base_url }}javascript/#slidebar">Slidebar</a></li>
           <li><a href="{{ page.base_url }}javascript/#drilldown">Drilldown</a></li>
           <li><a href="{{ page.base_url }}javascript/#switchers">Switchers</a></li>
