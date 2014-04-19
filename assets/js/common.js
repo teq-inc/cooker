@@ -11,10 +11,6 @@ $('.inputcounter').inputcounter({
 
 $('a[href^=#]').scrollmethod();
 
-$('.drawer').drawer({
-  desktopEvent:'click'
-});
-
 $('.switchers').switchers();
 
 $('.slidebar-right').slidebar({
@@ -30,6 +26,7 @@ $('.drilldown').drilldown();
 
 // docs script
 // ==================================================
+$('.drawer').drawer();
 
 // slidebar
 // ---------------------------
