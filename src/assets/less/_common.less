@@ -1,0 +1,69 @@
+// Examples
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+.ck-example {
+  position: relative;
+  margin: 0 -15px 15px;
+  padding: 45px 15px 15px;
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: #e5e5e5 #eee #eee;
+  background-color: #fafafa;
+  box-shadow: inset 0 3px 6px rgba(0,0,0,.05);
+  &:after {
+    position: absolute;
+    top:  15px;
+    left: 15px;
+    color: #bbb;
+    content: "Example";
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 12px;
+  }
+  & + .highlight {
+    margin: -15px -15px 15px;
+    border-width: 0 0 1px;
+    border-radius: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .ck-example {
+    margin-right: 0;
+    margin-left: 0;
+    border-width: 1px;
+    border-color: #ddd;
+    border-radius: 4px 4px 0 0;
+    background-color: #fff;
+    box-shadow: none;
+    & + .highlight {
+      margin-top: -16px;
+      margin-right: 0;
+      margin-left: 0;
+      border-width: 1px;
+      border-bottom-right-radius: 4px;
+      border-bottom-left-radius: 4px;
+    }
+  }
+}
+
+
+/* column */
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+.column-docs {
+  margin-bottom: 1rem;
+  [class*="col-"] {
+    background: @color-main;
+    background: rgba(22,34,49,.15);
+    color: #444;
+    text-align: center;
+    line-height: 3;
+    &:nth-child(odd) {
+      background: @color-main;
+      background: rgba(22,34,49,.3);
+    }
+  }
+}
+.column-valign-middle .column-docs {
+  margin-bottom: 0px;
+}

@@ -1,0 +1,86 @@
+<div class="ck-section">
+  <h1 id="slidebar" class="page-header">Slidebar <small>slidebar.js</small></h1>
+  <p>イージング効果はjquery.easing.jsを利用。</p>
+  <h2 id="slidebar-examples">Examples</h2>
+
+  <div class="ck-example">
+    
+    <button class="btn btn-default slidebar-example-right">View Right Example</button>
+    <button class="btn btn-default slidebar-example-bottom">View Bottom Example</button>
+    
+		<div class="slidebar slidebar-right" data-width="300">
+  		<div class="slidebar-toggle">Slidebar Right</div>
+			<div class="slidebar-body" style="width: 0;">
+      	<div class="slidebar-resize"></div>
+        	<div class="slidebar-body-inner">
+            <h3>Slidebar Right</h3>
+        	</div>
+  		</div>
+		</div>
+		
+		<div class="slidebar slidebar-bottom" data-height="300">
+  		<div class="slidebar-toggle">Slidebar Bottom</div>
+			<div class="slidebar-body" style="height: 0;">
+      	<div class="slidebar-resize"></div>
+        	<div class="slidebar-body-inner">
+            <h3>Slidebar Bottom</h3>
+        	</div>
+  		</div>
+		</div>
+
+  </div> <!-- /example -->
+
+  <h2 id="slidebar-usage">Usage</h2>
+
+  <h3>Markup</h3>
+{% highlight html %}
+// Position Right
+<div class="slidebar slidebar-right" data-width="240">
+  <div class="slidebar-toggle">Slidebar Right</div>
+  <div class="slidebar-body" style="width: 0;">
+    <div class="slidebar-resize"></div>
+      <div class="slidebar-body-inner">
+        <h3>Slidebar Right</h3>
+      </div>
+    </div>
+</div>
+
+// Position Bottom
+<div class="slidebar slidebar-bottom" data-height="300">
+  <div class="slidebar-toggle">Slidebar Bottom</div>
+  <div class="slidebar-body" style="height: 0;">
+    <div class="slidebar-resize"></div>
+    <div class="slidebar-body-inner">
+      <h3>Slidebar Bottom</h3>
+    </div>
+  </div>
+</div>
+{% endhighlight %}
+<p><code>data-width</code>,<code>data-height</code>で開いた時のサイズを指定。</p>
+
+  <h3>JavaScript</h3>
+{% highlight js %}
+$('.slidebar').slidebar({
+  position: 'left',
+  speed: 500,
+  easing: 'easeOutExpo',
+  minSize: 10,
+  parentClass: '.tab-content'
+});
+{% endhighlight %}
+
+  <h2 id="slidebar-method">Methods</h2>
+
+  <h3>$().slidebar(options)</h3>
+  <p> </p>
+
+  <h4>$().slidebar('open')</h4>
+  {% highlight js %}$('#element').slidebar('open'){% endhighlight %}
+  <h4>$().slidebar('close')</h4>
+  {% highlight js %}$('#element').slidebar('close'){% endhighlight %}
+  <h4>$().slidebar('toggle')</h4>
+  {% highlight js %}$('#element').slidebar('toggle'){% endhighlight %}
+  <h4>$().slidebar('destroy')</h4>
+  {% highlight js %}$('#element').slidebar('destroy'){% endhighlight %}
+
+</div>

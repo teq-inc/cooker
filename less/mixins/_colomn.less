@@ -1,8 +1,0 @@
-// colomn.less
-//=================================================
-.colomn-generate(@n, @i: 1) when (@i =< @n) {
-  .col-@{i} {
-    width: (@i * 100% / @n);
-  }
-  .colomn-generate(@n, (@i + 1));
-}

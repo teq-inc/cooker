@@ -1,15 +1,19 @@
-markdown:    redcarpet
-pygments:    true
-permalink:   pretty
-exclude:     ['less','future','*.psd']
-source:      docs
-destination: docs/_gh_pages
-encoding:    UTF-8
-url:         http://teq-inc.github.io/cooker/
-title:       Cooker
-
-current_version:  0.2.0
-repo:             https://github.com/teq-inc/cooker
-
-download:
-  source:         https://github.com/teq-inc/cooker/archive/master.zip
+markdown:         redcarpet
+pygments:         true
+permalink:        pretty
+exclude:          ['less','*.json','Gruntfile.js','bower_components','node_modules','future']
+source:           ./src
+destination:      ./_gh_pages
+encoding:         UTF-8
+title:            cooker
+discription:      
+url:              http://teq-inc.github.io/cooker/
+repo:             cooker
+repo_url:         https://github.com/teq-inc/cooker
+author:           teq-inc
+author_url:       
+current_version:  0.3.0
+twitter:          blivesta
+tag:              
+git_fork_btn:     http://ghbtns.com/github-btn.html?user=teq-inc&amp;repo=cooker&amp;type=fork&amp;count=true
+git_star_btn:     http://ghbtns.com/github-btn.html?user=teq-inc&amp;repo=cooker&amp;type=watch&amp;count=true

@@ -1,0 +1,57 @@
+//
+// Variables
+// --------------------------------------------------
+// color
+@gray-light:     #eee;
+@gray-lighter:   #f9f9f9;
+@gray-lightest:  #fcfcfc;
+
+@gray-dark:     #222;
+@gray-darker:   #f9f9f9;
+@gray-darkest:  #222;
+
+@primary-color:         #3271a8;
+//@brand-primary:         @primary-color;
+@secondary-color:       #242d35;
+//
+@success-color:         #46b283;
+//@brand-success:         @success-color;
+@warning-color:         #f0ad4e;
+//@brand-warning:         @warning-color;
+@danger-color:          #e34646;
+//@brand-danger:          @danger-color;
+@info-color:            #5cb9db;
+//@brand-info:            @info-color;
+
+//btn用変数追加分
+@btn-secondary-color:            #fff;
+@btn-secondary-bg:               @secondary-color;
+@btn-secondary-border:           darken(@secondary-color, 5%);
+
+//ボーダー変数追加分
+@border-base: 1px @border-base-color @border-base-style;
+@border-base-color: #ddd;
+@border-base-style: solid;
+
+// スタイル変数追加
+@padding-inner-base: @padding-inner-base-vertical @padding-inner-base-horizontal;
+@padding-inner-base-vertical: @line-height-computed/2; //25px
+@padding-inner-base-horizontal: @line-height-computed; //25px
+
+@ease-in-expo:  cubic-bezier(0.950, 0.050, 0.795, 0.035); // easeInExpo
+@ease-out-expo: cubic-bezier(0.190, 1.000, 0.220, 1.000); // easeOutExpo
+
+// drawer.less
+@drawer-width: 280px;
+@drawer-width-tablet: 120px;
+
+// switchers.less
+@switcher-body-padding:    10px 20px;
+@switcher-header-active:   @table-bg-active;
+@switcher-border-radius:   @border-radius-base;
+@switcher-border:          @border-base;
+
+// column.less
+@column-number:        12;
+@column-gutter-width:  1rem;
+@column-breakpoint:    480px;

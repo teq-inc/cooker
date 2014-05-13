@@ -1,0 +1,39 @@
+---
+layout: home
+slug: home
+title: Cooker is a set of user interface that is built on top of the Bootstrap.
+lead: 
+class: site-home
+base_url: "./"
+---
+<main class="site-masthead" role="main">
+  <div class="container">
+    <span class="text-icon text-icon-lg text-icon-outline">C</span>
+    <h1>{{ site.title }}</h1>
+    <p class="lead">{{ page.title }}</p>
+    <p><a href="{{ site.repo_url }}" class="btn btn- btn-lg">Download on GitHub</a></p>
+    {% include social-buttons.html %}  
+    <p>Currently v{{ site.current_version }}</p>
+  </div><!-- /.container -->
+</main>
+
+<div class="site-body">
+  <div class="site-body-inner container">
+  
+    <div class="site-section">
+      <h2 class="site-section-title">Install {{ site.title }}</h2>
+      <p class="lead">There must be installed <code>git</code>,<code>node</code>,<code>npm</code>,<code>ruby</code>,<code>gem</code>,<code>jekyll</code>,<code>grunt</code>,<code>bower</code> to the local machine.  </p>
+      <div class="site-section-body">
+{% highlight html %}
+$ cd my-site
+$ git clone https://github.com/teq-inc/cooker.git
+$ cd ashiba
+$ npm cooker
+$ grunt b
+{% endhighlight %}
+      </div>
+    </div>
+
+  </div><!-- /.container -->
+</div><!-- /.site-body -->
+  

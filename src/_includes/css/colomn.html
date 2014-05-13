@@ -1,0 +1,179 @@
+<div class="ck-section">
+  <h1 id="colomns" class="page-header">Colomn <small>colomn.less</small></h1>
+  <p class="lead"><code>.colomn</code>はCSSの<code>float</code>プロパティは使用せずに、<code>.column</code>クラスを<code>display: table</code>に設定。その子要素<code>.col-*</code>クラスには<code>display: table-cell</code>を設定することでコラムレイアウトを実装。</p>
+    
+  <h2>Basic 12 Column</h2>
+  <p>lessを利用の場合は<code>cooker/variables.less</code>に書かれている<code>@column-number</code>の数値をを作りたいコラムの最大数に変更することで横列を好きな数でコンパイル可能。</p>
+  <div class="ck-example">
+
+    <div class="column column-docs">
+      <div class="col-1">col-1</div>
+      <div class="col-1">col-1</div>
+      <div class="col-1">col-1</div>
+      <div class="col-1">col-1</div>
+      <div class="col-1">col-1</div>
+      <div class="col-1">col-1</div>
+      <div class="col-1">col-1</div>
+      <div class="col-1">col-1</div>
+      <div class="col-1">col-1</div>
+      <div class="col-1">col-1</div>
+      <div class="col-1">col-1</div>
+      <div class="col-1">col-1</div>
+    </div>
+    <div class="column column-docs">
+      <div class="col-2">col-2</div>
+      <div class="col-2">col-2</div>
+      <div class="col-2">col-2</div>
+      <div class="col-2">col-2</div>
+      <div class="col-2">col-2</div>
+      <div class="col-2">col-2</div>
+    </div>
+    <div class="column column-docs">
+      <div class="col-3">col-3</div>
+      <div class="col-3">col-3</div>
+      <div class="col-3">col-3</div>
+      <div class="col-3">col-3</div>
+    </div>
+    <div class="column column-docs">
+      <div class="col-4">col-4</div>
+      <div class="col-4">col-4</div>
+      <div class="col-4">col-4</div>
+    </div>
+    <div class="column column-docs">
+      <div class="col-5">col-5</div>
+      <div class="col-7">col-7</div>
+    </div>
+    <div class="column column-docs">
+      <div class="col-6">col-6</div>
+      <div class="col-6">col-6</div>
+    </div>
+    <div class="column column-docs">
+      <div class="col-8">col-8</div>
+      <div class="col-4">col-4</div>
+    </div>
+    <div class="column column-docs">
+      <div class="col-12">col-12</div>
+    </div>
+
+  </div> <!-- /example -->
+{% highlight html %}
+<div class="column">
+  <div class="col-6">col-6</div>
+  <div class="col-6">col-6</div>
+</div>
+<div class="column">
+  <div class="col-8">col-8</div>
+  <div class="col-4">col-4</div>
+</div>
+<div class="column">
+  <div class="col-12">col-12</div>
+</div>
+{% endhighlight %}
+  
+  
+  <h2>Nest and Vertical-align</h2>
+  <p><code>.column</code>クラスの入れ子（サンプルでは3階層）と、<code>.column</code>クラスに<code>.column-valign-middle</code>クラスを追加することでCSSの<code>vertical-align</code>プロパティを有効にすることが可能。</p>
+  <div class="ck-example">
+    
+    <div class="column column-valign-middle column-docs">
+      <div class="col-3">col-3</div>
+      <div class="col-9">
+        col-9
+        <div class="column column-docs">
+          <div class="col-6">
+            col-6
+            <div class="column column-docs">
+              <div class="col-6">col-6</div>
+              <div class="col-6">col-6</div>
+            </div>
+          </div>
+          <div class="col-6">col-6</div>
+        </div>
+      </div>
+    </div>
+        
+  </div> <!-- /example -->
+
+{% highlight html %}
+<div class="column column-valign-middle">
+  <div class="col-3">col-3</div>
+  <div class="col-9">
+    col-9
+    <div class="column">
+      <div class="col-6">
+        col-6
+        <div class="column">
+          <div class="col-6">col-6</div>
+          <div class="col-6">col-6</div>
+        </div>
+      </div>
+      <div class="col-6">col-6</div>
+    </div>
+  </div>
+</div>
+{% endhighlight %}
+
+  
+  <h2>Gutters</h2>
+  <p><code>.column</code>クラスにラッパー要素<code>.column-gutter</code>を追加することで、コラム間にマージンを付ける事が可能。</p>
+  
+  <div class="ck-example">
+  
+    <div class="column-gutter">
+      <div class="column column-docs">
+        <div class="col-1">col-1</div>
+        <div class="col-2">col-2</div>
+        <div class="col-4">col-4</div>
+        <div class="col-5">col-6</div>
+      </div>
+    </div>
+    <div class="column-gutter">
+      <div class="column column-docs">
+        <div class="col-3">col-3</div>
+        <div class="col-3">col-3</div>
+        <div class="col-6">col-6</div>
+      </div>
+    </div>
+    <div class="column-gutter">
+      <div class="column column-docs">
+        <div class="col-9">col-9</div>
+        <div class="col-3">col-3</div>
+      </div>
+    </div>
+    <div class="column-gutter">
+      <div class="column column-docs">
+        <div class="col-4">col-4</div>
+        <div class="col-4">col-4</div>
+        <div class="col-4">col-4</div>
+      </div>
+    </div>
+    <div class="column-gutter">
+      <div class="column column-docs">
+        <div class="col-3">col-3</div>
+        <div class="col-3">col-3</div>
+        <div class="col-3">col-3</div>
+        <div class="col-3">col-3</div>
+      </div>
+    </div>
+      
+  </div> <!-- /example -->
+{% highlight html %}
+<div class="column-gutter">
+  <div class="column">
+    <div class="col-4">col-4</div>
+    <div class="col-4">col-4</div>
+    <div class="col-4">col-4</div>
+  </div>
+</div>
+<div class="column-gutter">
+  <div class="column">
+    <div class="col-3">col-3</div>
+    <div class="col-3">col-3</div>
+    <div class="col-3">col-3</div>
+    <div class="col-3">col-3</div>
+  </div>
+</div>
+{% endhighlight %}
+
+</div>
+

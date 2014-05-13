@@ -1,0 +1,155 @@
+<div class="ck-section">
+  <h1 id="drilldown" class="page-header">Drilldown <small>drilldown.js</small></h1>
+
+  <h2 id="drilldown-examples">Examples</h2>
+
+  <div class="ck-example">
+  
+    <table class="table drilldown">
+      <thead>
+        <tr>
+          <td colspan="4">
+            <button class="btn btn-default drilldown-open-all">All Open</button>
+            <button class="btn btn-default drilldown-close-all">All Close</button>
+          </td>
+        </tr>
+        <tr>
+          <th>Date</th>
+          <th>Plugin</th>
+          <th>Lib</th>
+          <th>Level</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="drilldown-body drilldown-toggle" data-level="1">
+          <td>2014.02.16</td>
+          <td>drilldown</td>
+          <td>jquery</td>
+          <td>1</td>
+        </tr>
+        <tr class="drilldown-body drilldown-toggle" data-level="2" style="display:none;">
+          <td>2014.03.16</td>
+          <td>0.0.0</td>
+          <td>jquery</td>
+          <td>2</td>
+        </tr>
+        <tr class="drilldown-body drilldown-toggle" data-level="3" style="display:none;">
+          <td>2014.03.20</td>
+          <td>0.0.1</td>
+          <td>jquery</td>
+          <td>3</td>
+        </tr>
+        <tr class="drilldown-body" data-level="4" style="display:none;">
+          <td>2014.03.25</td>
+          <td>0.0.1</td>
+          <td>jquery</td>
+          <td>4</td>
+        </tr>
+        <tr class="drilldown-body drilldown-toggle" data-level="1">
+          <td>2014.03.16</td>
+          <td>drilldown</td>
+          <td>jquery</td>
+          <td>1</td>
+        </tr>
+        <tr class="drilldown-body" data-level="2" style="display:none;">
+          <td>2014.03.16</td>
+          <td>0.0.0</td>
+          <td>jquery</td>
+          <td>2</td>
+        </tr>
+        <tr class="drilldown-body drilldown-toggle" data-level="1">
+          <td>2014.02.16</td>
+          <td>drilldown</td>
+          <td>jquery</td>
+          <td>1</td>
+        </tr>
+        <tr class="drilldown-body drilldown-toggle" data-level="2" style="display:none;">
+          <td>2014.03.16</td>
+          <td>0.0.0</td>
+          <td>jquery</td>
+          <td>2</td>
+        </tr>
+        <tr class="drilldown-body drilldown-toggle" data-level="3" style="display:none;">
+          <td>2014.03.20</td>
+          <td>0.0.1</td>
+          <td>jquery</td>
+          <td>3</td>
+        </tr>
+        <tr class="drilldown-body" data-level="4" style="display:none;">
+          <td>2014.03.25</td>
+          <td>0.0.1</td>
+          <td>jquery</td>
+          <td>4</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div> <!-- /example -->
+
+  <h2 id="drilldown-usage">Usage</h2>
+
+  <h3>Markup</h3>
+{% highlight html %}
+<table class="drilldown">
+  <thead>
+    <tr>
+      <td>
+        <button class="btn btn-default drilldown-open-all">All Open</button>
+        <button class="btn btn-default drilldown-close-all">All Close</button>
+      </td>
+    </tr>
+    <tr>
+      <th>....</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="drilldown-body drilldown-toggle" data-level="1">
+      <td>...</td>
+    </tr>
+    <tr class="drilldown-body drilldown-toggle" data-level="2" style="display:none;">
+      <td>...</td>
+    </tr>
+    <tr class="drilldown-body drilldown-toggle" data-level="3" style="display:none;">
+      <td>...</td>
+    </tr>
+    <tr class="drilldown-body" data-level="4" style="display:none;">
+      <td>...</td>
+    </tr>
+    <tr class="drilldown-body drilldown-toggle" data-level="1">
+      <td>...</td>
+    </tr>
+    <tr class="drilldown-body drilldown-toggle" data-level="2" style="display:none;">
+      <td>...</td>
+    </tr>
+    <tr class="drilldown-body" data-level="3" style="display:none;">
+      <td>...</td>
+    </tr>
+  </tbody>
+</table>
+{% endhighlight %}
+
+  <h3>JavaScript</h3>
+{% highlight js %}
+$('.drilldown').drilldown({
+  speed: 'fast'
+});
+{% endhighlight %}
+
+  <h2 id="drilldown-method">Methods</h2>
+
+  <h3>$().drilldown(options)</h3>
+  <p> </p>
+
+  <h4>$().drilldown('openAll')</h4>
+  {% highlight js %}$('#element').drilldown('openAll'){% endhighlight %}
+
+  <h4>$().drilldown('closeAll')</h4>
+  {% highlight js %}$('#element').drilldown('closeAll'){% endhighlight %}
+
+  <h4>$().switchers('destroy')</h4>
+  {% highlight js %}$('#element').drilldown('destroy'){% endhighlight %}
+
+
+
+</div>
+

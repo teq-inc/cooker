@@ -9,40 +9,35 @@
     
     pkg: grunt.file.readJSON('package.json'),
         
-    // Banner template
-    // ====================================================
     banner: 
       '/*!\n' +
       ' * <%= pkg.name %> v<%= pkg.version %>\n' +
-      ' * Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
-      ' * Licensed under <%= pkg.licenses %>\n' +
       ' * <%= pkg.url %>\n' +
+      ' * Licensed under <%= pkg.licenses %>\n' +
+      ' * Copyright 2013-<%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
+      ' * <%= pkg.authorUrl %>\n' +
       ' */\n',
-
-    // File delete
     // ====================================================
     clean: {
-      dist: [
-        'dist', 
-        'docs/dist',
-        'docs/assets/css',
-        'js/<%= pkg.name %>.beautify.js'
+      files: [
+        '<%= pkg.dist %>',
+        '<%= pkg.source %>/js/<%= pkg.name %>.js',
+        '<%= pkg.source %>/js/<%= pkg.name %>.min.js',
+        '<%= pkg.public %>'
       ]
     },
-    
-    // Less compire
     // ====================================================
     less:{
-      cooker: {
+      source: {
         options: {
           strictMath: true,
           sourceMap: true,
           outputSourceFiles: true,
           sourceMapURL: ['<%= pkg.name %>.css.map'],
-          sourceMapFilename: 'dist/css/<%= pkg.name %>.css.map'
+          sourceMapFilename: '<%= pkg.source %>/css/<%= pkg.name %>.css.map'
         },
         files: {
-          'dist/css/<%= pkg.name %>.css': 'less/<%= pkg.name %>.less'
+          '<%= pkg.source %>/css/<%= pkg.name %>.css': '<%= pkg.source %>/less/<%= pkg.name %>.less'
         } 
       },
       docs: {
@@ -51,177 +46,178 @@
           sourceMap: true,
           outputSourceFiles: true,
           sourceMapURL: ['docs.css.map'],
-          sourceMapFilename: 'docs/assets/css/docs.css.map'
+          sourceMapFilename: '<%= pkg.source %>/assets/css/docs.css.map'
         },
         files: {
-          'docs/assets/css/docs.css': 'docs/assets/less/docs.less'
+          '<%= pkg.source %>/assets/css/docs.css': '<%= pkg.source %>/assets/less/docs.less'
         } 
+      },
+      source_minify: {
+        options: {
+          cleancss: true
+        },
+        files: {
+          '<%= pkg.source %>/css/<%= pkg.name %>.min.css': '<%= pkg.source %>/css/<%= pkg.name %>.css'
+        }
+      },
+      docs_minify: {
+        options: {
+          cleancss: true
+        },
+        files: {
+          '<%= pkg.source %>/assets/css/docs.min.css': '<%= pkg.source %>/assets/css/docs.css'
+        }
       }
     },
-
-    // css autoprefixer
     // ====================================================
     autoprefixer: {
       options: {
-        browsers: ['last 2 versions', 'ie 8', 'ie 9', 'android 2.3', 'android 4', 'opera 12']
+        browsers: ['last 2 versions', 'ie 8', 'ie 9', 'android 2.3', 'android 4', 'opera 12'],
+        map: true
       },
-      core: {
-        options: {
-          map: true
-        },
-        src: 'dist/css/<%= pkg.name %>.css'
+      source: {
+        src: '<%= pkg.source %>/css/<%= pkg.name %>.css'
       },
       docs: {
-        options: {
-          map: true
-        },
-        src: 'docs/assets/css/docs.css'
+        src: '<%= pkg.source %>/assets/css/docs.css'
       }
     },
-
-    // css csscomb 成形
     // ====================================================
     csscomb: {
       options: {
-        config: 'less/.csscomb.json'
+        config: '<%= pkg.source %>/less/.csscomb.json'
       },
-      dist: {
-        files: {
-          'dist/css/<%= pkg.name %>.css': 'dist/css/<%= pkg.name %>.css',
-          'docs/assets/css/docs.css': 'docs/assets/css/docs.css'
-        }
+      source: {
+        expand: true,
+        cwd: '<%= pkg.source %>/css/',
+        src: ['*.css', '!*.min.css'],
+        dest: '<%= pkg.source %>/css/'
+      },
+      docs: {
+        expand: true,
+        cwd: '<%= pkg.source %>/assets/css/',
+        src: ['*.css', '!*.min.css'],
+        dest: '<%= pkg.source %>/assets/css/'
       }
     },    
-
-    // css add banner
     // ====================================================
     usebanner: {
-      dist: {
-        options: {
-          position: 'top',
-          banner: '<%= banner %>'
-        },
-        files: {
-          src: [
-            'dist/css/<%= pkg.name %>.css',
-            'dist/css/<%= pkg.name %>.min.css',
-            'docs/assets/css/docs.css'
-          ]
-        }
+      options: {
+        position: 'top',
+        banner: '<%= banner %>'
+      },
+      source: {
+        src: '<%= pkg.source %>/css/*.css'
       }
     },
-    
-    // css minify
-    // ====================================================
-    cssmin: {
-      compress: {
-        options: {
-          keepSpecialComments: '*',
-          noAdvanced: true,
-          report: 'min',
-          compatibility: 'ie8'
-        },
-        src: [
-          'dist/css/<%= pkg.name %>.css'
-        ],
-        dest: 'dist/css/<%= pkg.name %>.min.css'
-      }
-    },
-    
-    // css csslint
     // ====================================================
     csslint: {
       options: {
-        csslintrc: 'less/.csslintrc'
+        csslintrc: '<%= pkg.source %>/less/.csslintrc'
       },
-      src: [
-        'dist/css/<%= pkg.name %>.css',
-        'dist/css/<%= pkg.name %>.min.css'
+      source: [
+        '<%= pkg.source %>/css/<%= pkg.name %>.css'
+      ],
+      docs: [
+        '<%= pkg.source %>/assets/css/docs.css'
       ]
     },
-
-    // js uglify (結合、成形、圧縮)
+     // ====================================================
+     concat: {
+       options: {
+         banner: '<%= banner %>',
+         stripBanners: false
+       },
+       source: {
+         src: [
+            '<%= pkg.source %>/js/switchers.js',
+            '<%= pkg.source %>/js/scrollmethod.js',
+            '<%= pkg.source %>/js/inputcounter.js',
+            '<%= pkg.source %>/js/slidebar.js',
+            '<%= pkg.source %>/js/drilldown.js'
+         ],
+         dest: '<%= pkg.source %>/js/<%= pkg.name %>.js'
+       }
+     },
     // ====================================================
     uglify: {
-      develop:{
+      options: {
+        banner: '<%= banner %>',
+        report: 'min',
+        mangle: false,
+        compress:false,
+      },
+      source:{
         options: {
-          banner: '<%= banner %>',
-          report: 'min',
-          mangle: false,
-          compress:false,
           indentLevel: 2,
           beautify: true
         },
         files :  { 
-          'dist/js/<%= pkg.name %>.js' : [
-            'js/switchers.js',
-            'js/scrollmethod.js',
-            'js/inputcounter.js',
-            'js/slidebar.js',
-            'js/drilldown.js'
-           ]
+          '<%= pkg.source %>/js/<%= pkg.name %>.js' : [
+            '<%= pkg.source %>/js/plugin.js'
+          ]
         } 
       },
       minify:{
-        options: {
-          banner: '<%= banner %>',
-          report: 'min',
-          mangle: false,
-          compress:false,
-        },
         files :  { 
-          'dist/js/<%= pkg.name %>.min.js' : ['dist/js/<%= pkg.name %>.js' ]
-        } 
-      },
-      comp:{
-        options: {
-          banner: '<%= banner %>',
-          report: 'min',
-          mangle: false,
-          indentLevel: 2,
-          beautify: true
-        },
-        files :  { 
-          'js/<%= pkg.name %>.beautify.js' : ['dist/js/<%= pkg.name %>.js' ]
+          '<%= pkg.source %>/js/<%= pkg.name %>.min.js' : [
+            '<%= pkg.source %>/js/<%= pkg.name %>.js' 
+          ]
         } 
       }
     },
-    
-    // js jshint
     // ====================================================
     jshint: {
       options: {
-        jshintrc: 'js/.jshintrc',
+        jshintrc: '<%= pkg.source %>/js/.jshintrc',
       },
       grunt: {
         src: 'Gruntfile.js'
       },
-      js: {
-        src: 'dist/js/cooker.js'
-      },
-      assets: {
-        src: 'docs/assets/js/common.js'
-      }      
+      source: {
+        src: [
+          '<%= pkg.source %>/js/<%= pkg.name %>.js',
+          '<%= pkg.source %>/js/<%= pkg.name %>.min.js'
+        ]
+      }
     },
-
-    // html minify
+    // ====================================================
+    jscs: {
+      options: {
+        config: '<%= pkg.source %>/js/.jscsrc'
+      },
+      grunt: {
+        options: {
+          requireCamelCaseOrUpperCaseIdentifiers: null,
+          requireParenthesesAroundIIFE: true
+        },
+        src: '<%= jshint.grunt.src %>'
+      },
+      source: {
+        src: '<%= jshint.source.src %>'
+      }
+    },
     // ====================================================
     htmlmin: {
-      dist: {
+      publish: {
         options: {
+          collapseBooleanAttributes: true,
           collapseWhitespace: true,
-          removeComments: true
+          removeAttributeQuotes: true,
+          removeCommentsFromCDATA: true,
+          removeEmptyAttributes: true,
+          removeOptionalTags: true,
+          removeRedundantAttributes: true,
+          useShortDoctype: true
         },
         files: [{
-            expand: true,
-            cwd: '<%= pkg.public %>',
-            src: '{,*/}*.html',
-            dest: '<%= pkg.public %>'
+          expand: true,
+          cwd: '<%= pkg.public %>',
+          src: '{,*/}*.html',
+          dest: '<%= pkg.public %>'
         }]
       }
     },     
-    
-    // html validation check
     // ====================================================
     validation: {
       options: {
@@ -241,28 +237,25 @@
         ]
       }
     },
-    
-    // html file copy
     // ====================================================
     copy: {
-      docs: {
+      dist: {
         expand: true,
-        cwd: './dist',
+        cwd: './<%= pkg.source %>',
         src: [
-          'js/*.js',
+          'js/<%= pkg.name %>.js',
+          'js/<%= pkg.name %>.min.js',
           'css/*.css',
           'css/*.map'
         ],
-        dest: 'docs/dist'
+        dest: './<%= pkg.dist %>'
       }
     },
-    
-    // connect
     // ====================================================
     connect: {
       server: {
         options: {
-          port: 9001,
+          port: 9999,
           hostname: '0.0.0.0',
           base: '<%= pkg.public %>/',
           open: {
@@ -273,8 +266,6 @@
         }
       }
     },
-    
-    // notify
     // ====================================================
     notify: {
       options: {
@@ -286,46 +277,35 @@
         }
       }
     },
-    
-    // Bower
     // ====================================================
     bower: {
       install: {
         options: {
-          targetDir: 'vendor',
-          //layoutのパラメータ　'byType' or 'byComponent'
-          //https://github.com/yatskevich/grunt-bower-task
+          targetDir: '<%= pkg.source %>/vendor',
           layout: 'byComponent',
           install: true,
           verbose: false,
           cleanTargetDir: true,
-          cleanBowerDir: true
+          cleanBowerDir: false
         }
       }
     },
-    
-    // Shell
     // ====================================================
-    shell: {
-      jekyll_build: {
-        command: 'jekyll build'
-      },
-      jekyll_rebuild: {
-        command: 'jekyll build --future'
+    jekyll: {
+      dist: {
+        options: {
+          config: '_config.yml'
+        }
       }
     },
-    
-    // File watch
     // ====================================================
     watch: {
       options: {
         spawn: false,
-        livereload: true
+        livereload : true
       },
       grunt: {
-        files: [
-          '<%= jshint.grunt.src %>'
-        ],
+        files: ['<%= jshint.grunt.src %>'],
         tasks: [
           'jshint:grunt',
           'notify'
@@ -333,62 +313,133 @@
       },
       js: {
         files: [
-          '<%= jshint.assets.src %>',
-          'js/*.js'
+          '<%= pkg.source %>/js/*.js'
         ],
         tasks: [
-          'uglify',
-          'copy',
-          'shell:jekyll_build',
-          'jshint:js',
-          'jshint:assets',
+          'build-js',
+          'jshint:source',
+          'jekyll',
           'notify'
         ]
       },
       html: {
         files: [
-          'docs/*.html',
-          'docs/_includes/*.html',
-          'docs/_includes/**/*.html',
-          'docs/_layouts/*.html'
+          '<%= pkg.source %>/*.html',
+          '<%= pkg.source %>/_includes/*',
+          '<%= pkg.source %>/_posts/*',
+          '<%= pkg.source %>/_layouts/*'
         ],
         tasks: [
-          'shell:jekyll_build',
+          'build-html',
           'notify'
         ]
       },
-      less: {
+      less_source: {
         files: [
-          'less/*.less',
-          'less/**/*.less'
+          '<%= pkg.source %>/less/*.less',
+          '<%= pkg.source %>/less/**/*.less'
         ],
         tasks: [
-          'less:cooker',
-          'autoprefixer',
-          'csscomb',
-          'usebanner',
-          'cssmin',
-          'copy',
-          'shell:jekyll_build',
+          'build-less-source',
+          'jekyll',
           'notify'
         ]
       },
-      lessDocs: {
+      less_docs: {
         files: [
-          'docs/assets/less/*.less',
-          'docs/assets/less/**/*.less'
+          '<%= pkg.source %>/assets/less/*.less',
+          '<%= pkg.source %>/assets/less/**/*.less'
         ],
         tasks: [
-          'less:docs',
-          'shell:jekyll_build',
+          'build-less-docs',
+          'jekyll',
           'notify'
         ]
       }
-    }  
-    
+    },
+    // ====================================================
+    buildcontrol: {
+      options: {
+        dir: '<%= pkg.public %>',
+        commit: true,
+        push: true,
+        message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
+      },
+      pages: {
+        options: {
+          remote: 'git@github.com:<%= pkg.repository.user %>/<%= pkg.name %>.git',
+          branch: 'gh-pages'
+        }
+      }
+    }        
+     
   });
 
-  // Default task
+  //publicに指定したディレクトリをgh-pagesブランチにデプロイ。
+  // ====================================================
+  grunt.registerTask('deploy', [
+    'buildcontrol',
+    'notify'
+  ]);
+
+  // lessコンパイル
+  // ====================================================
+  grunt.registerTask('build-less-source', [
+    'less:source', 
+    'autoprefixer:source', 
+    'usebanner', 
+    'csscomb:source', 
+    'less:source_minify',
+    'csslint:source'
+  ]);
+
+  // lessコンパイル
+  // ====================================================
+  grunt.registerTask('build-less-docs', [
+    'less:docs', 
+    'autoprefixer:docs', 
+    'csscomb:docs', 
+    'less:docs_minify',
+    'csslint:docs'
+  ]);
+
+  // jsコンパイル
+  // ====================================================
+  grunt.registerTask('build-js', [
+    'concat',
+    'uglify'
+  ]);
+  
+  // jekyllコンパイル
+  // ====================================================
+  grunt.registerTask('build-html', [
+    'jekyll',
+    //'htmlmin'
+  ]);
+
+  // js,css,htmlのテスト
+  // ====================================================
+  grunt.registerTask('test', [
+    'jshint:source',
+    //'jscs:source',
+    'csslint',
+    'validation'
+  ]);
+
+  // ベンダーファイルのインストール →　コンパイル　→　テスト　→　ウォッチ
+  // ====================================================
+  grunt.registerTask('b', [
+    'clean',
+    'bower',
+    'build-less-source',
+    'build-less-docs',
+    'build-js',
+    'build-html',
+    'test',
+    'copy'
+  ]);
+  
+  // サーバー起動　→　ウオッチ
   // ====================================================
   grunt.registerTask('default', function () {
     grunt.log.warn('`grunt` to start a watch.');
@@ -397,46 +448,5 @@
       'watch'
     ]);
   });
-  
-  // Go task
-  // ====================================================
-  grunt.registerTask('go', function () {
-    grunt.log.warn('`grunt go` to start.');
-    grunt.task.run([
-      'clean',
-      'bower:install',
-      'test',
-      'default'
-    ]);
-  });
-  
-  // Test task
-  // ====================================================
-  grunt.registerTask('test', function () {
-    grunt.log.warn('`grunt test` to start.');
-    grunt.task.run([
-      'build',
-      'jshint',
-      'csslint',
-      'validation'
-    ]);
-  });
-  
-  // Build task
-  // ====================================================
-  grunt.registerTask('build', function () {
-    grunt.log.warn('`grunt build` to start.');
-    grunt.task.run([
-      'uglify',
-      'less',
-      'autoprefixer',
-      'csscomb',
-      'usebanner',
-      'cssmin',
-      'copy',
-      'shell:jekyll_build',
-      //'htmlmin'
-    ]);
-  });
-  
+    
 };
