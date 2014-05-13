@@ -1,54 +1,48 @@
 <!DOCTYPE html>
-<html lang="ja">
-  <head>
-    <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Cooker">
-<meta name="keywords" content="HTML, CSS, JS, JavaScript, framework, cooker, front-end, bootstrap, web development">
-<meta name="author" content="blivesta">
-<title>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   
-    JavaScript &middot; Cooker
+  <title>
+    
+      JavaScript &middot; cooker
+    
+  </title>
   
-</title>
+  <!-- icon -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../ico/touch-icon-144.png">
+  <link rel="shortcut icon" href="../ico/favicon.ico">
 
-<!-- Vendor CSS -->
-<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
-<link rel="stylesheet" href="//rawgithub.com/blivesta/drawer/gh-pages/dist/css/drawer.min.css">
+  <!-- Vendor CSS -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//rawgithub.com/blivesta/0788a01a58f262b0b2b0/raw/syntax.css">
+  <link rel="stylesheet" href="../vendor/ashiba/css/ashiba.min.css">
+  <link rel="stylesheet" href="../vendor/drawer/css/drawer.min.css">
 
-<!-- Cooker CSS -->
-<link rel="stylesheet" href="../dist/css/cooker.css">
+  <link rel="stylesheet" href="../assets/css/docs.css">
 
-<!-- Doc CSS -->
-<link rel="stylesheet" href="../assets/css/docs.css">
+  <!-- cooker CSS -->
+  <link rel="stylesheet" href="../css/cooker.css">
 
-<!--[if lt IE 9]>
-  <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-  <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-<![endif]-->
+  <!-- Vendor js -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+  <script src="../vendor/drawer/js/drawer.js"></script>
 
-<!-- Favicons -->
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
-<link rel="icon" sizes="16x16" href="../assets/ico/favicon.ico">
+  <script src="../assets/js/common.js"></script>
 
+  
+  <!-- cooker js -->
+  <script src="../js/cooker.min.js"></script>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="//cdn.jsdelivr.net/jquery.easing/1.3/jquery.easing.1.3.js"></script>
-<script src="//rawgithub.com/blivesta/drawer/gh-pages/dist/js/drawer.min.js"></script>
-
-<!-- cooker -->
-<script src="../dist/js/cooker.js"></script>
-
-<!-- docs js -->
-<script src="../assets/js/common.js"></script>
-  </head>
-  <body class="drawer-body">
-    <a class="sr-only" href="#content">Skip to main content</a>
+</head>
+<body class=" drawer">
 
     <button class="drawer-toggle btn"><i class="fa fa-bars"></i></button>
-<div class="drawer drawer-default">
+<div class="drawer-masta drawer-default">
   <nav class="drawer-nav" role="navigation">
     <div class="drawer-brand"><a href="../">Cooker</a></div>
     <ul class="nav drawer-nav-list">
@@ -76,17 +70,64 @@
 </div>
 
 
-    <div class="drawer-overlay">
-      <div class="ck-header" id="content">
-        <div class="container">
-          <h1>JavaScript</h1>
-          <p></p>
-        </div>
-      </div>
-  
-      <div class="container ck-container" role="main">
-        <div class="">
-            <div class="ck-section">
+
+<!-- <header class="site-header navbar navbar-default navbar-static-top" id="top" role="banner">
+  <div class="site-header-inner container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".site-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="site-header-brand navbar-brand" href="../">cooker</a>
+    </div>
+    <nav class="collapse navbar-collapse site-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav dropdown">
+        <li>
+          <a href="../base">Base layout</a>
+        </li>
+        <li>
+          <a data-toggle="dropdown" href="#">Example</a>
+          <ul class="dropdown-menu" role="menu">
+            <li>
+              <a href="#">Example1</a>
+            </li>
+            <li>
+              <a href="#">Example2</a>
+            </li>
+            <li>
+              <a href="#">Example3</a>
+            </li>
+            <li>
+              <a href="#">Example4</a>
+            </li>
+            <li>
+              <a href="#">Example5</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="https://github.com/teq-inc/cooker">GitHub</a></li>
+      </ul>
+    </nav>
+  </div>
+</header> -->
+		
+		<div class="drawer-overlay">
+
+			<main class="site-masthead" role="main">
+			  <div class="container">
+			    <h1>JavaScript</h1>
+			    <p class="lead"></p>
+			  </div><!-- /.container -->
+			</main>
+
+			<div class="site-body">
+			  <div class="site-body-inner container">
+
+			    <div class="ck-section">
   <h1 id="slidebar" class="page-header">Slidebar <small>slidebar.js</small></h1>
   <p>イージング効果はjquery.easing.jsを利用。</p>
   <h2 id="slidebar-examples">Examples</h2>
@@ -804,43 +845,30 @@
 
 
 </div>
-        </div>
-      </div>
-      
-      <!-- Footer
-================================================== -->
-<footer class="ck-footer" role="contentinfo">
-  <div class="container">
-    <div class="ck-social">
-  <ul class="ck-social-buttons">
-    <li>
-      <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=teq-inc&amp;repo=cooker&amp;type=watch&amp;count=true" width="80" height="20" title="Star on GitHub"></iframe>
-    </li>
-    <li>
-      <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=teq-inc&amp;repo=cooker&amp;type=fork&amp;count=true" width="80" height="20" title="Fork on GitHub"></iframe>
-    </li>
-  </ul>
-</div>
+			  
+			  </div><!-- /.container -->
+			</div><!-- /.site-body -->
 
+	    <footer class="site-footer">
+  <div class="site-footer-inner container">
+	  <h2>cooker</h2>
+    <p>Currently v0.3.0 / Author <a href="">teq-inc</a>
+    <br>Code licensed under the MIT license.</p>
+        <ul class="site-social">
+  <li>
+    <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=teq-inc&amp;repo=cooker&amp;type=fork&amp;count=true" width="100" height="20"></iframe>
+  </li>
+  <li>
+    <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=teq-inc&amp;repo=cooker&amp;type=watch&amp;count=true" width="100" height="20"></iframe>
+  </li>
+  <li>
+    <a href="https://twitter.com/share" class="twitter-share-button" data-text="" data-url="http://teq-inc.github.io/cooker/" data-related="blivesta" data-count="true" data-hashtags="">Tweet</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  </li>
+</ul>       
 
-    <p>Code licensed under MIT</p>
-    <ul class="ck-footer-links muted">
-      <li>Currently v0.2.0</li>
-      <li>&middot;</li>
-      <li><a href="https://github.com/teq-inc/cooker">GitHub</a></li>
-      <li>&middot;</li>
-      <li><a href="https://github.com/teq-inc/cooker/issues?state=open">Issues</a></li>
-      <li>&middot;</li>
-      <li><a href="https://github.com/teq-inc/cooker/releases">Releases</a></li>
-    </ul>
-    
-    <p>&copy; <a href="#">blivesta</a></p>
-    
   </div>
 </footer>
-
-    
-    </div>
-
-  </body>
+	</div>
+</body>
 </html>

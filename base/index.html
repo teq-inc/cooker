@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  
+  <title>
+    
+      Base layout &middot; cooker
+    
+  </title>
+  
+  <!-- icon -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../ico/touch-icon-144.png">
+  <link rel="shortcut icon" href="../ico/favicon.ico">
+
+  <!-- Vendor CSS -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//rawgithub.com/blivesta/0788a01a58f262b0b2b0/raw/syntax.css">
+  <link rel="stylesheet" href="../vendor/ashiba/css/ashiba.min.css">
+  <link rel="stylesheet" href="../vendor/drawer/css/drawer.min.css">
+
+  <link rel="stylesheet" href="../assets/css/docs.css">
+
+  <!-- cooker CSS -->
+  <link rel="stylesheet" href="../css/cooker.css">
+
+  <!-- Vendor js -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+  <script src="../vendor/drawer/js/drawer.js"></script>
+
+  <script src="../assets/js/common.js"></script>
+
+  
+  <!-- cooker js -->
+  <script src="../js/cooker.min.js"></script>
+
+</head>
+<body class="site-default drawer">
+
+    <button class="drawer-toggle btn"><i class="fa fa-bars"></i></button>
+<div class="drawer-masta drawer-default">
+  <nav class="drawer-nav" role="navigation">
+    <div class="drawer-brand"><a href="../">Cooker</a></div>
+    <ul class="nav drawer-nav-list">
+      <li>
+        <a href="../usage">Usage</a>
+      </li>
+      <li>
+        <a href="../javascript">JavaScript</a>
+        <ul class="nav">
+          <li><a href="../javascript/#slidebar">Slidebar</a></li>
+          <li><a href="../javascript/#drilldown">Drilldown</a></li>
+          <li><a href="../javascript/#switchers">Switchers</a></li>
+          <li><a href="../javascript/#inputcounter">Inputcounter</a></li>
+          <li><a href="../javascript/#scrollmethod">Scrollmethod</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="../css">CSS</a>
+        <ul class="nav">
+          <li><a href="../css/#column">Column</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+
+
+<!-- <header class="site-header navbar navbar-default navbar-static-top" id="top" role="banner">
+  <div class="site-header-inner container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".site-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="site-header-brand navbar-brand" href="../">cooker</a>
+    </div>
+    <nav class="collapse navbar-collapse site-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav dropdown">
+        <li>
+          <a href="../base">Base layout</a>
+        </li>
+        <li>
+          <a data-toggle="dropdown" href="#">Example</a>
+          <ul class="dropdown-menu" role="menu">
+            <li>
+              <a href="#">Example1</a>
+            </li>
+            <li>
+              <a href="#">Example2</a>
+            </li>
+            <li>
+              <a href="#">Example3</a>
+            </li>
+            <li>
+              <a href="#">Example4</a>
+            </li>
+            <li>
+              <a href="#">Example5</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="https://github.com/teq-inc/cooker">GitHub</a></li>
+      </ul>
+    </nav>
+  </div>
+</header> -->
+		
+		<div class="drawer-overlay">
+
+			<main class="site-masthead" role="main">
+			  <div class="container">
+			    <h1>Base layout</h1>
+			    <p class="lead">Grunt and jekyll that will be used as a scaffold of application development.</p>
+			  </div><!-- /.container -->
+			</main>
+
+			<div class="site-body">
+			  <div class="site-body-inner container">
+
+			    <div class="site-section">
+  <h2 class="site-section-title">Install cooker</h2>
+  <p class="lead">There must be installed <code>git</code>,<code>node</code>,<code>npm</code>,<code>ruby</code>,<code>gem</code>,<code>jekyll</code>,<code>grunt</code>,<code>bower</code> to the local machine.  </p>
+  <div class="site-section-body">
+<div class="highlight"><pre><code class="html">$ cd my-site
+$ git clone https://github.com/blivesta/ashiba.git
+$ cd ashiba
+$ npm install
+$ grunt build
+</code></pre></div>
+  </div>
+</div>
+
+<div class="site-section">
+  <h2 class="site-section-title">Grunt Tasks</h2>
+  <p class="lead">install vendor files → Build app</p>
+  <div class="site-section-body">
+<div class="highlight"><pre><code class="html">$ grunt build
+</code></pre></div>
+
+  <p class="lead">Starting the local server → watching of file update → Livereload</p>
+<div class="highlight"><pre><code class="html">$ grunt　
+</code></pre></div>
+
+  <p class="lead">Deploying to <code>gh-pages</code> branch the contents of <br />the <code>master</code> branch <code>_gh_page</code> directory. </p>
+<div class="highlight"><pre><code class="html">$ grunt deploy
+</code></pre></div>
+  </div>
+</div>
+
+			  
+			  </div><!-- /.container -->
+			</div><!-- /.site-body -->
+
+	    <footer class="site-footer">
+  <div class="site-footer-inner container">
+	  <h2>cooker</h2>
+    <p>Currently v0.3.0 / Author <a href="">teq-inc</a>
+    <br>Code licensed under the MIT license.</p>
+        <ul class="site-social">
+  <li>
+    <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=teq-inc&amp;repo=cooker&amp;type=fork&amp;count=true" width="100" height="20"></iframe>
+  </li>
+  <li>
+    <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=teq-inc&amp;repo=cooker&amp;type=watch&amp;count=true" width="100" height="20"></iframe>
+  </li>
+  <li>
+    <a href="https://twitter.com/share" class="twitter-share-button" data-text="" data-url="http://teq-inc.github.io/cooker/" data-related="blivesta" data-count="true" data-hashtags="">Tweet</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  </li>
+</ul>       
+
+  </div>
+</footer>
+	</div>
+</body>
+</html>
