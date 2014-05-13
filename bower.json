@@ -1,6 +1,6 @@
 {
   "name": "cooker",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "main": [
     "dist/css/cooker.css",
     "dist/css/cooker.min.css",
@@ -15,7 +15,8 @@
   ],
   "dependencies": {
     "bootstrap": "~3.1.1",
-    "drawer": "~0.2.1",
+    "drawer": "~1.0.0",
+    "ashiba": "~0.3.0",
     "font-awesome": "~4.0.3"
   },
   "exportsOverride": {
@@ -24,17 +25,16 @@
         "dist/js/*.js",
         "js/*.js"
       ],
-      "css": "dist/css/*.css",
-      "fonts": "dist/fonts/**",
       "less": "less/**"
     },
     "drawer": {
-      "js": "dist/js/drawer.min.js",
-      "css": "dist/css/*.css",
-      "less": "less/**"
+      "js": "dist/js/*.js",
+      "css": "dist/css/*.css"
+    },
+    "ashiba": {
+      "css": "src/css/*.css"
     },
     "font-awesome": {
-      "css": "css/*.css",
       "fonts": "fonts/**",
       "less": "less/**"
     }

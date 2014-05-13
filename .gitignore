@@ -1,8 +1,5 @@
-*future
-validation*.json
+validation-*.json
 node_modules
-vendor
+_gh_pages
 bower_components
-cooker.beautify*.js
-*.txt
-*.psd
+*future
