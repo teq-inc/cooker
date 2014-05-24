@@ -126,19 +126,19 @@
   border: 1px solid #fff;
 }
 @media (min-width: 480px) {
-  .column {
+  .gridtable {
     display: table;
     width: 100%;
     table-layout: fixed;
   }
-  .column [class*="col-"] {
+  .gridtable [class*="col-"] {
     display: table-cell;
   }
-  .column-gutter {
+  .gridtable-gutter {
     margin-right: -1rem;
     margin-left: -1rem;
   }
-  .column-gutter .column {
+  .gridtable-gutter .gridtable {
     border-spacing: 1rem 0;
   }
   .col-1 {
@@ -178,7 +178,7 @@
     width: 100%;
   }
 }
-.column-valign-middle [class*="col-"] {
+.gridtable-valign-middle [class*="col-"] {
   vertical-align: middle;
 }
 .drilldown [data-level="1"] td:first-child {

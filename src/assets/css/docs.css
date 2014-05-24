@@ -46,21 +46,21 @@
   }
 }
 /* column */
-.column-docs {
+.gridtable-docs {
   margin-bottom: 1rem;
 }
-.column-docs [class*="col-"] {
+.gridtable-docs [class*="col-"] {
   line-height: 3;
   color: #444;
   text-align: center;
   background: #242d35;
   background: rgba(22, 34, 49, .15);
 }
-.column-docs [class*="col-"]:nth-child(odd) {
+.gridtable-docs [class*="col-"]:nth-child(odd) {
   background: #242d35;
   background: rgba(22, 34, 49, .3);
 }
-.column-valign-middle .column-docs {
+.gridtable-valign-middle .gridtable-docs {
   margin-bottom: 0;
 }
 .highlight {

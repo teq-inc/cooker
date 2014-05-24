@@ -1,0 +1,31 @@
+// gridtable.less
+//=================================================
+
+@media (min-width: @gridtable-breakpoint) {
+
+    .gridtable {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    
+    [class*="col-"]{
+      display: table-cell;
+    }
+      
+  }
+  
+  .gridtable-gutter {
+    margin-left:  -@gridtable-gutter-width;
+    margin-right: -@gridtable-gutter-width;
+    .gridtable {
+      border-spacing: @gridtable-gutter-width 0;
+    }
+  }
+  
+  .gridtable-generate(@gridtable-number);
+
+}
+
+.gridtable-valign-middle [class*="col-"] {
+  vertical-align: middle;
+}
