@@ -1,65 +1,84 @@
 /*!
- * drawer v1.0.0
+ * drawer v1.4.1
  * 
  * Licensed under MIT
- * Copyright 2013-2014 blivesta
  * http://blivesta.com
  */
 (function($) {
-  var namespace = "drawer";
-  var agent = navigator.userAgent;
-  var iphone = agent.search(/iPhone/) != -1;
-  var ipad = agent.search(/iPad/) != -1;
-  var android = agent.search(/Android/) != -1;
-  var touches = iphone || ipad || android;
-  var methods = {
+  
+  var 
+  namespace = "drawer",
+  agent = navigator.userAgent,
+  iphone = agent.search(/iPhone/) != -1,
+  ipad = agent.search(/iPad/) != -1,
+  android = agent.search(/Android/) != -1,
+  touches = iphone || ipad || android,
+  methods = {
+    
     init: function(options) {
+      
       options = $.extend({
+
         masta: "drawer-masta",
         nav: "drawer-nav",
         navList: "drawer-nav-list",
         overlay: "drawer-overlay",
         toggle: "drawer-toggle",
+        upper: "drawer-overlay-upper",
         openClass: "drawer-open",
         closeClass: "drawer-close",
-        desktopEvent: "click",
+        desktopEvent: "click", // or mouseover 
         width: 280
+
       }, options);
+      
       return this.each(function() {
-        var _this = this;
-        var $this = $(this);
-        var data = $this.data(namespace);
+        
+        var 
+        _this = this,
+        $this = $(this),
+        data = $this.data(namespace),
+        $toggle = $("." + options.toggle),
+        $navList = $("." + options.navList),
+        $upper = $("<div>").addClass(options.upper),
+        $nav = $("." + options.nav),
+        $masta = $("." + options.masta),
+        drawerHeight = $this.height(),
+        navHeight = $nav.height(),
+        mastaHeight = $masta.height();
+
         if (!data) {
           options = $.extend({}, options);
           $this.data(namespace, {
             options: options
           });
         }
+                    
         smY = 0;
-        var $toggle = $("." + options.toggle);
-        var $overlay = $("." + options.overlay);
-        var $navList = $("." + options.navList);
-        var $nav = $("." + options.nav);
-        var $masta = $("." + options.masta);
-        var drawerHeight = $this.height();
-        var navHeight = $nav.height();
-        var mastaHeight = $masta.height();
+        $this.append($upper);            
+
         methods.resize.call(_this);
+
         $(window).resize(function() {
           methods.resize.call(_this);
         });
+
         if (touches) {
+
           $toggle.bind("touchend." + namespace, function() {
             methods.toggle.apply(_this);
           });
-          $overlay.bind("touchend." + namespace, function() {
+
+          $upper.bind("touchend." + namespace, function() {
             methods.close.apply(_this);
           });
+
           $nav.bind("touchstart." + namespace, function() {
             sfY = event.touches[0].screenY;
-            startTime = new Date().getTime();
+            startTime = Date.now();
             startY = event.changedTouches[0].clientY;
           });
+
           $nav.bind("touchmove." + namespace, function() {
             var $self = $(this);
             mfY = event.changedTouches[0].screenY;
@@ -70,16 +89,18 @@
               "-webkit-transform": "translate3d(0px," + moveY + "px,0px)"
             });
           });
+
           $nav.bind("touchend." + namespace, function() {
             var $self = $(this);
-            diffTime = new Date().getTime() - startTime;
+            diffTime = Date.now() - startTime;
             smY = smY + (mfY - sfY);
+
             var ease = function() {
-              if (diffTime < 300 && draggedY > 0) {
-                moveY += Math.abs(draggedY / diffTime * 300);
+              if (diffTime < 300 && draggedY > 0) { // scroll up
+                moveY += Math.abs((draggedY / diffTime) * 300);
                 smY = moveY;
-              } else if (diffTime < 300 && draggedY < 0) {
-                moveY -= Math.abs(draggedY / diffTime * 300);
+              } else if (diffTime < 300 && draggedY < 0) { // scroll down
+                moveY -= Math.abs((draggedY / diffTime) * 300);
                 smY = moveY;
               }
               $self.css({
@@ -87,6 +108,7 @@
                 "-webkit-transform": "translate3d(0px," + moveY + "px,0px)"
               });
             };
+
             var bounce = function() {
               if (moveY > 0) {
                 smY = 0;
@@ -102,58 +124,135 @@
                 "-webkit-transform": "translate3d(0px," + smY + "px,0px)"
               });
             };
+
             ease.call();
             bounce.call();
+
           });
         } else {
-          $toggle.off(options.desktopEvent + "." + namespace).on(options.desktopEvent + "." + namespace, function() {
-            methods.toggle.apply(_this);
-          });
-          $overlay.off("click." + namespace).on("click." + namespace, function() {
-            methods.close.apply(_this);
-          });
+          
+          $toggle
+            .off(options.desktopEvent + "." + namespace)
+            .on(options.desktopEvent + "." + namespace, function() {
+              methods.toggle.apply(_this);
+            });
+          
+          $upper
+            .off("click." + namespace)
+            .on("click." + namespace, function() {
+              methods.close.apply(_this);
+            });
+            
         }
-      });
+
+      }); // end each
     },
     resize: function(options) {
+      
       var $this = $(this);
+      
       options = $this.data(namespace).options;
-      var windowHeight = $(window).height();
-      var $overlay = $("." + options.overlay);
+      
+      var 
+        windowHeight = $(window).height(),
+        $overlay = $("." + options.overlay);
+      
       methods.close.call(this, options);
+      
       $overlay.css({
         "min-height": windowHeight
       });
+      
     },
+    
     toggle: function(options) {
+      
       var $this = $(this);
+      
       options = $this.data(namespace).options;
+      
       var open = $this.hasClass(options.openClass);
+      
       if (open) {
         methods.close.call(this);
       } else {
         methods.open.call(this);
       }
+      
     },
+    
     open: function(options) {
+      
       var $this = $(this);
+      
       options = $this.data(namespace).options;
+      
       if (touches) {
         $this.on("touchmove." + namespace, function() {
           event.preventDefault();
         });
         event.preventDefault();
       }
-      $this.removeClass(options.closeClass).addClass(options.openClass);
+      
+      $this
+        .removeClass(options.closeClass)
+        .addClass(options.openClass);
+
+      var 
+      duration = $('.' + options.overlay)
+        .css('transition-duration')
+        .replace(/s/g, '') * 1000;
+        
+      setTimeout(function() {
+          
+        $this.css({
+          "overflow": "hidden"
+        });
+        
+        var
+        windowWidth = $(window).width(),
+        upperWidth = windowWidth - options.width;
+
+        $("."+options.upper).css({
+          "width":upperWidth,
+          "display":"block"
+        });
+        
+      }, duration);
+
     },
+    
     close: function(options) {
       var $this = $(this);
       options = $this.data(namespace).options;
+      
       if (touches) {
         $this.off("touchmove." + namespace);
       }
-      $this.removeClass(options.openClass).addClass(options.closeClass);
+      
+      $this
+        .removeClass(options.openClass)
+        .addClass(options.closeClass);
+
+      var 
+      duration = $('.' + options.overlay)
+        .css('transition-duration')
+        .replace(/s/g, '') * 1000;
+
+      setTimeout(function() {
+        
+        $this.css({
+          "overflow": "auto"
+        });
+        
+        $("."+options.upper).css({
+          "display":"none"
+        });
+        
+      }, duration);
+
     },
+    
     destroy: function() {
       return this.each(function() {
         var $this = $(this);
@@ -161,7 +260,9 @@
         $this.removeData(namespace);
       });
     }
+    
   };
+  
   $.fn.drawer = function(method) {
     if (methods[method]) {
       return methods[method].apply(this, Array.prototype.slice.call(arguments, 1));
@@ -171,4 +272,5 @@
       $.error("Method " + method + " does not exist on jQuery." + namespace);
     }
   };
+  
 })(jQuery);

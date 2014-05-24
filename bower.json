@@ -15,9 +15,9 @@
   ],
   "dependencies": {
     "bootstrap": "~3.1.1",
-    "drawer": "~1.0.0",
+    "drawer": "~1.4.1",
     "ashiba": "~0.3.0",
-    "font-awesome": "~4.0.3"
+    "font-awesome": "~4.1.0"
   },
   "exportsOverride": {
     "bootstrap": {
