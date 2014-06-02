@@ -1,5 +1,5 @@
 /*!
- * cooker v0.3.0
+ * cooker v0.4.0
  * 
  * Licensed under MIT
  * Copyright 2013-2014 
