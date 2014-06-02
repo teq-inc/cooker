@@ -1,19 +1,21 @@
 ---
 layout: home
 slug: home
-title: 
+title: home
 lead: 
 class: site-home
 base_url: "./"
 ---
 <main class="site-masthead" role="main">
   <div class="container">
-    <span class="text-icon text-icon-lg text-icon-outline">C</span>
-    <h1>{{ site.title }}</h1>
-    <p class="lead">{{ page.title }}</p>
-    <p><a href="{{ site.repo_url }}" class="btn btn- btn-lg">Download on GitHub</a></p>
-    {% include social-buttons.html %}  
-    <p>Currently v{{ site.current_version }}</p>
+    <div class="grita">
+      <div class="col col-6">
+        <h1 class="lead">{{ site.title }}</h1>
+      </div>
+      <div class="col col-6">
+        <p class="text-right"><a href="{{ site.repo_url }}">Download on GitHub</a></p>
+      </div>
+    </div>
   </div><!-- /.container -->
 </main>
 
@@ -21,13 +23,13 @@ base_url: "./"
   <div class="site-body-inner container">
   
     <div class="site-section">
-      <h2 class="site-section-title">Install {{ site.title }}</h2>
+      <h2 class="page-header ">Install {{ site.title }}</h2>
       <p class="lead">There must be installed <code>git</code>,<code>node</code>,<code>npm</code>,<code>ruby</code>,<code>gem</code>,<code>jekyll</code>,<code>grunt</code>,<code>bower</code> to the local machine.  </p>
       <div class="site-section-body">
 {% highlight html %}
 $ cd my-site
 $ git clone https://github.com/teq-inc/cooker.git
-$ cd ashiba
+$ cd cooker
 $ npm cooker
 $ grunt b
 {% endhighlight %}

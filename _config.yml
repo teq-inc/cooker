@@ -12,8 +12,8 @@ repo:             cooker
 repo_url:         https://github.com/teq-inc/cooker
 author:           teq-inc
 author_url:       
-current_version:  0.3.0
-twitter:          blivesta
+current_version:  0.4.0
+twitter:          
 tag:              
 git_fork_btn:     http://ghbtns.com/github-btn.html?user=teq-inc&amp;repo=cooker&amp;type=fork&amp;count=true
 git_star_btn:     http://ghbtns.com/github-btn.html?user=teq-inc&amp;repo=cooker&amp;type=watch&amp;count=true

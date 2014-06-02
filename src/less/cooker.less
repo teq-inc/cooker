@@ -1,30 +1,41 @@
-// Bootstrap 3.1.1
-@import "../vendor/bootstrap/less/variables.less";
-@import "../vendor/bootstrap/less/mixins.less";
 
+// Cooker variables
+@import "variables/cooker.less";
+@import "mixins/mixins.less";
+// Bootstrap 3.1.1
+// @import "../vendor/bootstrap/less/variables.less";
+@import "../vendor/bootstrap/less/mixins.less";
 // Font awsome 4.0.3
 @import "../vendor/font-awesome/less/variables.less";
 @import "../vendor/font-awesome/less/mixins.less";
 
-// Cooker variables
-@import "variables/variables.less";
+// Bootstrap
+// ==============================================
+@import "../vendor/bootstrap/less/normalize.less";
+@import "../vendor/bootstrap/less/print.less";
+@import "../vendor/bootstrap/less/scaffolding.less";
+@import "../vendor/bootstrap/less/type.less";
+@import "../vendor/bootstrap/less/code.less";
+@import "../vendor/bootstrap/less/grid.less";
+@import "../vendor/bootstrap/less/navs.less";
+@import "../vendor/bootstrap/less/utilities.less";
+@import "../vendor/bootstrap/less/responsive-utilities.less";
 
-// Cooker mixins
-@import "mixins/buttons.less";
-@import "mixins/gridtable.less";
-@import "mixins/drilldown.less";
-@import "mixins/inputcounter.less";
-@import "mixins/scrollbar.less";
-
-// Cooker core
-@import "component/buttons.less";
-@import "component/gridtable.less";
-
+// Components
+// ==============================================
 // Cooker components
-@import "component/utilities.less";
+@import "component/buttons.less";
+@import "component/grita.less";
+@import "component/colors.less";
 
 // Cooker js components
+// ==============================================
 @import "component/drilldown.less";
 @import "component/switchers.less";
 @import "component/slidebar.less";
 @import "component/inputcounter.less";
+
+// Utility classes
+// ==============================================
+// Cooker Utility
+@import "component/utilities.less";

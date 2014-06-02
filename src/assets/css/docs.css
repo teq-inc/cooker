@@ -1,3 +1,47 @@
+body,
+html {
+  height: 100%;
+  min-height: 100%;
+  background: #eee;
+}
+h1[id] {
+  padding-top: 60px;
+  margin-top: 0;
+}
+.container {
+  max-width: 768px;
+}
+.site-social {
+  padding: 0;
+  list-style: none;
+}
+.site-social:before,
+.site-social:after {
+  display: table;
+  content: " ";
+}
+.site-social:after {
+  clear: both;
+}
+.site-social .github-btn {
+  overflow: hidden;
+  border: 0;
+}
+.site-masthead {
+  border-bottom: 1px solid #eee;
+}
+.site-masthead h1 {
+  font-size: 18px;
+}
+.site-footer {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  color: #777;
+  border-top: 1px solid #fff;
+}
+.site-footer .site-social {
+  margin-top: 20px;
+}
 .ck-example {
   position: relative;
   padding: 45px 15px 15px;
@@ -45,22 +89,36 @@
     border-bottom-left-radius: 4px;
   }
 }
-/* column */
-.gridtable-docs {
+.drawer-default {
+  background-color: #eee;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.drawer-default .drawer-brand a {
+  color: #3271a8;
+}
+.ck-colors {
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 100;
+  color: #fff;
+  letter-spacing: .5em;
+}
+.grita-docs {
   margin-bottom: 1rem;
 }
-.gridtable-docs [class*="col-"] {
+.grita-docs .col {
   line-height: 3;
   color: #444;
   text-align: center;
-  background: #242d35;
+  background: #3271a8;
   background: rgba(22, 34, 49, .15);
 }
-.gridtable-docs [class*="col-"]:nth-child(odd) {
-  background: #242d35;
+.grita-docs .col:nth-child(odd) {
+  background: #3271a8;
   background: rgba(22, 34, 49, .3);
 }
-.gridtable-valign-middle .gridtable-docs {
+.grita-valign-middle .grita-docs {
   margin-bottom: 0;
 }
 .highlight {

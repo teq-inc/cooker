@@ -26,28 +26,28 @@ $('.drilldown').drilldown();
 
 // docs script
 // ==================================================
-$('.drawer').drawer();
+$('#drawer').drawer();
 
 // slidebar
 // ---------------------------
-$slidebar = $('.slidebar')
-$slidebarRight = $('.slidebar-right')
-$slidebarBottom = $('.slidebar-bottom')
+$slidebar = $('.slidebar');
+$slidebarRight = $('.slidebar-right');
+$slidebarBottom = $('.slidebar-bottom');
 
-$slidebar.hide().addClass('hide')
+$slidebar.hide().addClass('hide');
 
 $('.slidebar-example-right').on('click', function(){
   if($slidebarRight.hasClass('hide')){
-    $slidebarRight.show().removeClass('hide')
+    $slidebarRight.show().removeClass('hide');
   } else{
-    $slidebarRight.hide().addClass('hide')
+    $slidebarRight.hide().addClass('hide');
   }
 });	
 $('.slidebar-example-bottom').on('click', function(){
   if($slidebarBottom.hasClass('hide')){
-    $slidebarBottom.show().removeClass('hide')
+    $slidebarBottom.show().removeClass('hide');
   } else{
-    $slidebarBottom.hide().addClass('hide')
+    $slidebarBottom.hide().addClass('hide');
   }
 });	
 

@@ -1,0 +1,29 @@
+
+@media (min-width: @grita-breakpoint) {
+
+  .grita {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    
+    .col{
+      display: table-cell;
+    }
+      
+  }
+  
+  .grita-gutter {
+    margin-left:  -@grita-gutter-width;
+    margin-right: -@grita-gutter-width;
+    .gridtable {
+      border-spacing: @grita-gutter-width 0;
+    }
+  }
+  
+  .grita-generate(@grita-number);
+
+}
+
+.grita-valign-middle .col {
+  vertical-align: middle;
+}

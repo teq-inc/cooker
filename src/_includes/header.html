@@ -6,68 +6,27 @@
       <li{% if page.slug == "getting-started" %} class="active"{% endif %}>
         <a href="{{ page.base_url }}usage">Usage</a>
       </li>
+      <li{% if page.slug == "guide" %} class="active"{% endif %}>
+        <a href="{{ page.base_url }}guide">Guide</a>
+      </li>
       <li{% if page.slug == "js" %} class="active"{% endif %}>
-        <a href="{{ page.base_url }}javascript">JavaScript</a>
+        <a href="#">JavaScript</a>
         <ul class="nav">
-          <li><a href="{{ page.base_url }}javascript/#slidebar">Slidebar</a></li>
-          <li><a href="{{ page.base_url }}javascript/#drilldown">Drilldown</a></li>
-          <li><a href="{{ page.base_url }}javascript/#switchers">Switchers</a></li>
-          <li><a href="{{ page.base_url }}javascript/#inputcounter">Inputcounter</a></li>
-          <li><a href="{{ page.base_url }}javascript/#scrollmethod">Scrollmethod</a></li>
+          <li><a href="{{ page.base_url }}slidebar">Slidebar</a></li>
+          <li><a href="{{ page.base_url }}drilldown">Drilldown</a></li>
+          <li><a href="{{ page.base_url }}switchers">Switchers</a></li>
+          <li><a href="{{ page.base_url }}inputcounter">Inputcounter</a></li>
+          <li><a href="{{ page.base_url }}scrollmethod">Scrollmethod</a></li>
         </ul>
       </li>
       <li{% if page.slug == "css" %} class="active"{% endif %}>
-        <a href="{{ page.base_url }}css">CSS</a>
+        <a href="#">Styles</a>
         <ul class="nav">
-          <li><a href="{{ page.base_url }}css/#column">Column</a></li>
+          <li><a href="{{ page.base_url }}colors">colors</a></li>
+          <li><a href="{{ page.base_url }}grita">grita</a></li>
+          <li><a href="{{ page.base_url }}forms">Forms</a></li>
         </ul>
       </li>
     </ul>
   </nav>
 </div>
-
-
-
-<!-- <header class="site-header navbar navbar-default navbar-static-top" id="top" role="banner">
-  <div class="site-header-inner container">
-    <div class="navbar-header">
-      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".site-navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="site-header-brand navbar-brand" href="{{ page.base_url }}">{{ site.title }}</a>
-    </div>
-    <nav class="collapse navbar-collapse site-navbar-collapse" role="navigation">
-      <ul class="nav navbar-nav dropdown">
-        <li>
-          <a href="{{ page.base_url }}base">Base layout</a>
-        </li>
-        <li>
-          <a data-toggle="dropdown" href="#">Example</a>
-          <ul class="dropdown-menu" role="menu">
-            <li>
-              <a href="#">Example1</a>
-            </li>
-            <li>
-              <a href="#">Example2</a>
-            </li>
-            <li>
-              <a href="#">Example3</a>
-            </li>
-            <li>
-              <a href="#">Example4</a>
-            </li>
-            <li>
-              <a href="#">Example5</a>
-            </li>
-          </ul>
-        </li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="{{ site.repo_url }}">GitHub</a></li>
-      </ul>
-    </nav>
-  </div>
-</header> -->

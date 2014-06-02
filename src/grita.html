@@ -1,0 +1,191 @@
+---
+layout: base
+slug: grita
+title: grita
+lead: 
+class: site-grita
+base_url: "../"
+---
+  
+<div class="ck-section">
+  <h2 id="grita" class="page-header ">Grita <small>grita.less</small></h2>
+  <p class="lead"><code>.grita</code>はCSSの<code>float</code>プロパティは使用せずに、<code>.grita</code>クラスを<code>display: table</code>に設定。その子要素<code>.col-*</code>クラスには<code>display: table-cell</code>を設定することでコラムレイアウトを実装。</p>
+    
+  <h3>Basic 12 grita</h3>
+  <p>lessを利用の場合は<code>cooker/variables.less</code>に書かれている<code>@grita-number</code>の数値をを作りたいコラムの最大数に変更することで横列を好きな数でコンパイル可能。</p>
+  <div class="ck-example">
+
+    <div class="grita grita-docs">
+      <div class="col col-1">col-1</div>
+      <div class="col col-1">col-1</div>
+      <div class="col col-1">col-1</div>
+      <div class="col col-1">col-1</div>
+      <div class="col col-1">col-1</div>
+      <div class="col col-1">col-1</div>
+      <div class="col col-1">col-1</div>
+      <div class="col col-1">col-1</div>
+      <div class="col col-1">col-1</div>
+      <div class="col col-1">col-1</div>
+      <div class="col col-1">col-1</div>
+      <div class="col col-1">col-1</div>
+    </div>
+    <div class="grita grita-docs">
+      <div class="col col-2">col-2</div>
+      <div class="col col-2">col-2</div>
+      <div class="col col-2">col-2</div>
+      <div class="col col-2">col-2</div>
+      <div class="col col-2">col-2</div>
+      <div class="col col-2">col-2</div>
+    </div>
+    <div class="grita grita-docs">
+      <div class="col col-3">col-3</div>
+      <div class="col col-3">col-3</div>
+      <div class="col col-3">col-3</div>
+      <div class="col col-3">col-3</div>
+    </div>
+    <div class="grita grita-docs">
+      <div class="col col-4">col-4</div>
+      <div class="col col-4">col-4</div>
+      <div class="col col-4">col-4</div>
+    </div>
+    <div class="grita grita-docs">
+      <div class="col col-5">col-5</div>
+      <div class="col col-7">col-7</div>
+    </div>
+    <div class="grita grita-docs">
+      <div class="col col-6">col-6</div>
+      <div class="col col-6">col-6</div>
+    </div>
+    <div class="grita grita-docs">
+      <div class="col col-8">col-8</div>
+      <div class="col col-4">col-4</div>
+    </div>
+    <div class="grita grita-docs">
+      <div class="col col-12">col-12</div>
+    </div>
+
+  </div> <!-- /example -->
+{% highlight html %}
+<div class="grita">
+  <div class="col col-6">col-6</div>
+  <div class="col col-6">col-6</div>
+</div>
+<div class="grita">
+  <div class="col col-8">col-8</div>
+  <div class="col col-4">col-4</div>
+</div>
+<div class="grita">
+  <div class="col col-12">col-12</div>
+</div>
+{% endhighlight %}
+  
+  
+  <h2>Nest and Vertical-align</h2>
+  <p><code>.grita</code>クラスの入れ子（サンプルでは3階層）と、<code>.grita</code>クラスに<code>.grita-valign-middle</code>クラスを追加することでCSSの<code>vertical-align</code>プロパティを有効にすることが可能。</p>
+  <div class="ck-example">
+    
+    <div class="grita grita-valign-middle grita-docs">
+      <div class="col col-3">col-3</div>
+      <div class="col col-9">
+        col-9
+        <div class="grita grita-docs">
+          <div class="col col-6">
+            col-6
+            <div class="grita grita-docs">
+              <div class="col col-6">col-6</div>
+              <div class="col col-6">col-6</div>
+            </div>
+          </div>
+          <div class="col col-6">col-6</div>
+        </div>
+      </div>
+    </div>
+        
+  </div> <!-- /example -->
+
+{% highlight html %}
+<div class="grita grita-valign-middle">
+  <div class="col col-3">col-3</div>
+  <div class="col col-9">
+    col-9
+    <div class="grita">
+      <div class="col col-6">
+        col-6
+        <div class="grita">
+          <div class="col col-6">col-6</div>
+          <div class="col col-6">col-6</div>
+        </div>
+      </div>
+      <div class="col col-6">col-6</div>
+    </div>
+  </div>
+</div>
+{% endhighlight %}
+
+  
+  <h2>Gutters</h2>
+  <p><code>.grita</code>クラスにラッパー要素<code>.grita-gutter</code>を追加することで、コラム間にマージンを付ける事が可能。</p>
+  
+  <div class="ck-example">
+  
+    <div class="grita-gutter">
+      <div class="grita grita-docs">
+        <div class="col col-1">col-1</div>
+        <div class="col col-2">col-2</div>
+        <div class="col col-4">col-4</div>
+        <div class="col col-5">col-6</div>
+      </div>
+    </div>
+    <div class="grita-gutter">
+      <div class="grita grita-docs">
+        <div class="col col-3">col-3</div>
+        <div class="col col-3">col-3</div>
+        <div class="col col-6">col-6</div>
+      </div>
+    </div>
+    <div class="grita-gutter">
+      <div class="grita grita-docs">
+        <div class="col col-9">col-9</div>
+        <div class="col col-3">col-3</div>
+      </div>
+    </div>
+    <div class="grita-gutter">
+      <div class="grita grita-docs">
+        <div class="col col-4">col-4</div>
+        <div class="col col-4">col-4</div>
+        <div class="col col-4">col-4</div>
+      </div>
+    </div>
+    <div class="grita-gutter">
+      <div class="grita grita-docs">
+        <div class="col col-3">col-3</div>
+        <div class="col col-3">col-3</div>
+        <div class="col col-3">col-3</div>
+        <div class="col col-3">col-3</div>
+      </div>
+    </div>
+      
+  </div> <!-- /example -->
+{% highlight html %}
+<div class="grita-gutter">
+  <div class="grita">
+    <div class="col col-4">col-4</div>
+    <div class="col col-4">col-4</div>
+    <div class="col col-4">col-4</div>
+  </div>
+</div>
+<div class="grita-gutter">
+  <div class="grita">
+    <div class="col col-3">col-3</div>
+    <div class="col col-3">col-3</div>
+    <div class="col col-3">col-3</div>
+    <div class="col col-3">col-3</div>
+  </div>
+</div>
+{% endhighlight %}
+
+</div>
+
+
+
+  

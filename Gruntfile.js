@@ -325,8 +325,8 @@
       html: {
         files: [
           '<%= pkg.source %>/*.html',
-          '<%= pkg.source %>/_includes/*',
-          '<%= pkg.source %>/_posts/*',
+          '<%= pkg.source %>/_includes/**',
+          '<%= pkg.source %>/style/*',
           '<%= pkg.source %>/_layouts/*'
         ],
         tasks: [
@@ -423,7 +423,7 @@
     'jshint:source',
     //'jscs:source',
     'csslint',
-    'validation'
+    // 'validation'
   ]);
 
   // ベンダーファイルのインストール →　コンパイル　→　テスト　→　ウォッチ
