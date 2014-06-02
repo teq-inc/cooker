@@ -1,5 +1,5 @@
 /*!
- * cooker v0.3.0
+ * cooker v0.4.0
  * 
  * Licensed under MIT
  * Copyright 2013-2014 
@@ -282,7 +282,7 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
-  color: #222;
+  color: #333;
   background-color: #fff;
 }
 input,
@@ -341,7 +341,7 @@ hr {
   margin-top: 20px;
   margin-bottom: 20px;
   border: 0;
-  border-top: 1px solid #f9f9f9;
+  border-top: 1px solid #eee;
 }
 .sr-only {
   position: absolute;
@@ -396,7 +396,7 @@ h6 .small,
 .h6 .small {
   font-weight: normal;
   line-height: 1;
-  color: #eee;
+  color: #999;
 }
 h1,
 .h1,
@@ -502,7 +502,7 @@ cite {
   text-align: justify;
 }
 .text-muted {
-  color: #eee;
+  color: #999;
 }
 .text-primary {
   color: #3271a8;
@@ -568,7 +568,7 @@ a.bg-danger:hover {
 .page-header {
   padding-bottom: 9px;
   margin: 40px 0 20px;
-  border-bottom: 1px solid #f9f9f9;
+  border-bottom: 1px solid #eee;
 }
 ul,
 ol {
@@ -626,7 +626,7 @@ dd {
 abbr[title],
 abbr[data-original-title] {
   cursor: help;
-  border-bottom: 1px dotted #eee;
+  border-bottom: 1px dotted #999;
 }
 .initialism {
   font-size: 90%;
@@ -636,7 +636,7 @@ blockquote {
   padding: 10px 20px;
   margin: 0 0 20px;
   font-size: 17.5px;
-  border-left: 5px solid #f9f9f9;
+  border-left: 5px solid #eee;
 }
 blockquote p:last-child,
 blockquote ul:last-child,
@@ -649,7 +649,7 @@ blockquote .small {
   display: block;
   font-size: 80%;
   line-height: 1.42857143;
-  color: #eee;
+  color: #999;
 }
 blockquote footer:before,
 blockquote small:before,
@@ -661,7 +661,7 @@ blockquote.pull-right {
   padding-right: 15px;
   padding-left: 0;
   text-align: right;
-  border-right: 5px solid #f9f9f9;
+  border-right: 5px solid #eee;
   border-left: 0;
 }
 .blockquote-reverse footer:before,
@@ -718,7 +718,7 @@ pre {
   margin: 0 0 10px;
   font-size: 13px;
   line-height: 1.42857143;
-  color: #222;
+  color: #333;
   word-break: break-all;
   word-wrap: break-word;
   background-color: #f5f5f5;
@@ -1421,14 +1421,14 @@ pre code {
 .nav > li > a:hover,
 .nav > li > a:focus {
   text-decoration: none;
-  background-color: #f9f9f9;
+  background-color: #eee;
 }
 .nav > li.disabled > a {
-  color: #eee;
+  color: #999;
 }
 .nav > li.disabled > a:hover,
 .nav > li.disabled > a:focus {
-  color: #eee;
+  color: #999;
   text-decoration: none;
   cursor: not-allowed;
   background-color: transparent;
@@ -1436,7 +1436,7 @@ pre code {
 .nav .open > a,
 .nav .open > a:hover,
 .nav .open > a:focus {
-  background-color: #f9f9f9;
+  background-color: #eee;
   border-color: #3271a8;
 }
 .nav .nav-divider {
@@ -1462,12 +1462,12 @@ pre code {
   border-radius: 4px 4px 0 0;
 }
 .nav-tabs > li > a:hover {
-  border-color: #f9f9f9 #f9f9f9 #ddd;
+  border-color: #eee #eee #ddd;
 }
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
-  color: #aaa;
+  color: #555;
   cursor: default;
   background-color: #fff;
   border: 1px solid #ddd;
@@ -1763,21 +1763,21 @@ pre code {
   }
 }
 .btn-outline-default {
-  color: #aaa;
+  color: #555;
   background-color: transparent;
-  border: 1px solid #aaa;
+  border: 1px solid #555;
 }
 .btn-outline-default:focus {
-  color: #aaa;
-  border: 1px solid #aaa;
+  color: #555;
+  border: 1px solid #555;
   outline: none;
 }
 .btn-outline-default:hover,
 .btn-outline-default:active,
 .btn-outline-default.active {
   color: #fff;
-  background-color: #aaa;
-  border: 1px solid #aaa;
+  background-color: #555;
+  border: 1px solid #555;
 }
 .btn-outline-primary {
   color: #3271a8;
@@ -1882,19 +1882,19 @@ pre code {
   border: 1px solid #fff;
 }
 @media (min-width: 480px) {
-  .gridtable {
+  .grita {
     display: table;
     width: 100%;
     table-layout: fixed;
   }
-  .gridtable .col {
+  .grita .col {
     display: table-cell;
   }
-  .gridtable-gutter {
+  .grita-gutter {
     margin-right: -1rem;
     margin-left: -1rem;
   }
-  .gridtable-gutter .gridtable {
+  .grita-gutter .gridtable {
     border-spacing: 1rem 0;
   }
   .col-1 {
@@ -1934,8 +1934,105 @@ pre code {
     width: 100%;
   }
 }
-.gridtable-valign-middle .col {
+.grita-valign-middle .col {
   vertical-align: middle;
+}
+/* Backgrounds */
+.bg-primary {
+  background-color: #3271a8;
+}
+.bg-success {
+  background-color: #46b283;
+}
+.bg-warning {
+  background-color: #f0ad4e;
+}
+.bg-danger {
+  background-color: #e34646;
+}
+.bg-info {
+  background-color: #5cb9db;
+}
+.bg-primary-dark-45 {
+  background-color: #000;
+}
+.bg-primary-dark-40 {
+  background-color: #03070b;
+}
+.bg-primary-dark-35 {
+  background-color: #09141e;
+}
+.bg-primary-dark-30 {
+  background-color: #0f2232;
+}
+.bg-primary-dark-25 {
+  background-color: #152f46;
+}
+.bg-primary-dark-20 {
+  background-color: #1b3c59;
+}
+.bg-primary-dark-15 {
+  background-color: #20496d;
+}
+.bg-primary-dark-10 {
+  background-color: #265781;
+}
+.bg-primary-dark-5 {
+  background-color: #2c6494;
+}
+.bg-primary-light-45 {
+  background-color: #cfe1f1;
+}
+.bg-primary-light-40 {
+  background-color: #bbd5eb;
+}
+.bg-primary-light-35 {
+  background-color: #a8c8e5;
+}
+.bg-primary-light-30 {
+  background-color: #94bcdf;
+}
+.bg-primary-light-25 {
+  background-color: #80b0d9;
+}
+.bg-primary-light-20 {
+  background-color: #6da3d3;
+}
+.bg-primary-light-15 {
+  background-color: #5997ce;
+}
+.bg-primary-light-10 {
+  background-color: #458bc8;
+}
+.bg-primary-light-5 {
+  background-color: #387ebc;
+}
+.silver-45 {
+  background-color: #fbfbfb;
+}
+.silver-40 {
+  background-color: #eee;
+}
+.silver-35 {
+  background-color: #e1e1e1;
+}
+.silver-30 {
+  background-color: #d4d4d4;
+}
+.silver-25 {
+  background-color: #c8c8c8;
+}
+.silver-20 {
+  background-color: #bbb;
+}
+.silver-15 {
+  background-color: #aeaeae;
+}
+.silver-10 {
+  background-color: #a2a2a2;
+}
+.silver-5 {
+  background-color: #959595;
 }
 .drilldown [data-level="1"] td:first-child {
   padding-left: 10px;
@@ -2080,14 +2177,14 @@ pre code {
   border: 1px #ddd solid;
 }
 .slidebar-toggle:hover {
-  color: #222;
+  color: #333;
   cursor: pointer;
 }
 .slidebar-body {
   position: relative;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  color: #222;
+  color: #333;
   background: #fff;
   background-image: rgba(255, 255, 255, .8);
 }
@@ -2112,7 +2209,7 @@ pre code {
 .slidebar-body .slidebar-resize:hover,
 .slidebar-body .slidebar-resize:active,
 .slidebar-body .slidebar-resize:focus {
-  background-color: #eee;
+  background-color: #999;
 }
 .slidebar-body-inner {
   padding: 20px;
