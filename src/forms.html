@@ -1,41 +1,48 @@
 ---
 layout: base
-slug: colors
-title: colors
+slug: forms
+title: Forms
 lead: 
-class: site-colors
+class: site-forms
 base_url: "../"
 ---
 <div class="site-body">
   <div class="site-body-inner container">
   
 <div id="contents-forms">
-  <h2>forms</h2>
+  <h2>Forms</h2>
    <h3>Example</h3>
    <div class="blocks">
    
      <div class="block">
        <div class="block-header">
-         <h4>Normal</h4>
+         <h4>Basic <small>input</small></h4>
        </div>
        <div class="block-body">
-         <p><input type="text" placeholder="Search" /></p>
-         <h5>Code</h5>
+         <p><input class="input-base input-sm" type="text" placeholder="Small" /></p>
+         <p><input class="input-base" type="text" placeholder="Base" /></p>
+         <p><input class="input-base input-lg" type="text" placeholder="Large" /></p>
 {% highlight js %}
-<input type="text" placeholder="Search" />
+<input type="text" class="inpu-base input-sm" placeholder="Small" />
+<input type="text" class="input-base" placeholder="Base" />
+<input type="text" class="input-base input-lg" placeholder="Large" />
 {% endhighlight %}
        </div>
      </div><!-- /.blocks -->
      
      <div class="block">
        <div class="block-header">
-         <h4>Minimal <small>form-minimal</small></h4>
+         <h4>Minimal <small>input-minimal</small></h4>
        </div>
        <div class="block-body">
-         <p><input class="form-minimal" type="text" placeholder="Search" /></p>
+         <p><input class="input-minimal input-sm" type="text" placeholder="Small" /></p>
+         <p><input class="input-minimal" type="text" placeholder="Base" /></p>
+         <p><input class="input-minimal input-lg" type="text" placeholder="Large" /></p>
          <h5>Code</h5>
 {% highlight js %}
-<input type="text" class="form-minimal" placeholder="Search" />
+<input class="input-minimal input-sm" type="text" placeholder="Small" />
+<input class="input-minimal" type="text" placeholder="Base" />
+<input class="input-minimal input-lg" type="text" placeholder="Large" />
 {% endhighlight %}
        </div>
      </div><!-- /.blocks -->
