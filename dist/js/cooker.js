@@ -31,10 +31,10 @@
         var $aToggle = $this.find('.'+options.toggleAll);
         var $iToggle = $this.find('.'+options.toggle);
         $aToggle.off('click.'+namespace).on('click.'+namespace, function(){
-            methods.toggleAll.apply(_this)
+            methods.toggleAll.apply(_this);
         });
         $iToggle.off('click.'+namespace).on('click.'+namespace, function(){
-            methods.toggle.apply(_this)
+            methods.toggle.apply(_this);
         });                
       }); // end each
     },
@@ -44,63 +44,63 @@
       options = $this.data(namespace).options
       var open =  options.open;  
       var close = options.close;    
-      var $a = $this.find('.'+options.switcher);
+      var $a = $this.children('.'+options.switcher);
       var statusOpen = $a.hasClass(options.open)
-      //var $aToggle = $a.find('.'+options.toggleAll);
       if(statusOpen){
         $a.removeClass(open).addClass(close);
       }else{
         $a.removeClass(close).addClass(open);
       }
-      console.log('methods.toggleAll')
     },
     
     toggle: function(){
-      var $this = $(this)
-      options = $this.data(namespace).options
-      //var open =  options.open;  
-      //var close = options.close;    
+      var $this = $(this);
+      options = $this.data(namespace).options;
       var $i = $(event.target).parents('.'+options.switcher);
-      var statusOpen = $i.hasClass(options.open)
+      var statusOpen = $i.hasClass(options.open);
       if(statusOpen){
-        methods.close.call(this)
+        methods.close.call(this);
       }else{
-        methods.open.call(this)        
+        methods.open.call(this);      
       }
-      console.log('methods.toggle')
     },
     
     open: function(){
-      var $this = $(this)
-      options = $this.data(namespace).options
+      var $this = $(this);
+      options = $this.data(namespace).options;
       var open =  options.open;  
       var close = options.close;    
       var mode = $this.data('mode');
       var $i = $(event.target).parents('.'+options.switcher);
+      var $iPrev = $i.prev('.'+options.switcher);
+      var $iNext = $i.next('.'+options.switcher);
       var $o = $i.siblings();          
       if(mode === 'accordion'){
         $o.removeClass(open).addClass(close);
-        $i.removeClass(close).addClass(open);
+        $i.removeClass(close).addClass(open);    
+        $o.removeClass("switcher-open-prev switcher-open-next");
+        $iPrev.addClass("switcher-open-prev");
+        $iNext.addClass("switcher-open-next");
       }else{
         $i.removeClass(close).addClass(open);
       }
-      console.log('methods.open')      
     },
 
     close: function(){
-      var $this = $(this)
-      options = $this.data(namespace).options    
+      var $this = $(this);
+      options = $this.data(namespace).options;
       var open =  options.open;  
       var close = options.close;    
       var mode = $this.data('mode');
       var $i = $(event.target).parents('.'+options.switcher);
       var $o = $i.siblings();          
       if(mode === 'accordion'){
-        $o,$i.removeClass(open).addClass(close);
+        $o,
+        $i.removeClass(open).addClass(close);
+        $o.removeClass("switcher-open-prev switcher-open-next");
       }else{
         $i.removeClass(open).addClass(close);
       }
-      console.log('methods.close')      
     },
     
     destroy: function(){
@@ -122,7 +122,6 @@
     }    
   };
 })(jQuery);
-
 (function($) {
   var namespace = 'scrollmethod';
   var methods = {

@@ -16,8 +16,8 @@
   "dependencies": {
     "bootstrap": "~3.1.1",
     "drawer": "~1.5.1",
-    "ashiba": "~0.3.2",
-    "font-awesome": "~4.1.0"
+    "font-awesome": "~4.1.0",
+    "animate.css": "~3.1.1"
   },
   "exportsOverride": {
     "bootstrap": {
@@ -31,12 +31,12 @@
       "js": "dist/js/*.js",
       "css": "dist/css/*.css"
     },
-    "ashiba": {
-      "css": "src/css/*.css"
-    },
     "font-awesome": {
       "fonts": "fonts/**",
       "less": "less/**"
+    },
+    "animate.css": {
+      "css":"animate.min.css"
     }
   }
 }
