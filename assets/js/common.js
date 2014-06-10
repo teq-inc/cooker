@@ -30,9 +30,9 @@ $('#drawer').drawer();
 
 // slidebar
 // ---------------------------
-$slidebar = $('.slidebar');
-$slidebarRight = $('.slidebar-right');
-$slidebarBottom = $('.slidebar-bottom');
+var $slidebar = $('.slidebar');
+var $slidebarRight = $('.slidebar-right');
+var $slidebarBottom = $('.slidebar-bottom');
 
 $slidebar.hide().addClass('hide');
 
