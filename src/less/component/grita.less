@@ -12,10 +12,26 @@
       
   }
   
+  .grita-padding .col {
+    padding: @grita-gutter-padding-base;
+  }
+  .grita-padding-sm .col {
+    padding: @grita-gutter-padding-sm;
+  }
+  .grita-padding-xs .col {
+    padding: @grita-gutter-padding-xs;
+  }
+  .grita-padding-form .col {
+    padding-right: @grita-gutter-padding-form;
+    &:last-child{
+      padding-right: 0;
+    }
+  }
+  
   .grita-gutter {
     margin-left:  -@grita-gutter-width;
     margin-right: -@grita-gutter-width;
-    .gridtable {
+    .grita {
       border-spacing: @grita-gutter-width 0;
     }
   }

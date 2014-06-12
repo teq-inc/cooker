@@ -1890,11 +1890,26 @@ pre code {
   .grita .col {
     display: table-cell;
   }
+  .grita-padding .col {
+    padding: 10px;
+  }
+  .grita-padding-sm .col {
+    padding: 6px;
+  }
+  .grita-padding-xs .col {
+    padding: 3px;
+  }
+  .grita-padding-form .col {
+    padding-right: 3px;
+  }
+  .grita-padding-form .col:last-child {
+    padding-right: 0;
+  }
   .grita-gutter {
     margin-right: -1rem;
     margin-left: -1rem;
   }
-  .grita-gutter .gridtable {
+  .grita-gutter .grita {
     border-spacing: 1rem 0;
   }
   .col-1 {

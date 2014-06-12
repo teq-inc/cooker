@@ -1890,11 +1890,26 @@ pre code {
   .grita .col {
     display: table-cell;
   }
+  .grita-padding .col {
+    padding: 6px 12px;
+  }
+  .grita-padding-sm .col {
+    padding: 6px;
+  }
+  .grita-padding-xs .col {
+    padding: 3px;
+  }
+  .grita-padding-form .col {
+    padding-right: 3px;
+  }
+  .grita-padding-form .col:last-child {
+    padding-right: 0;
+  }
   .grita-gutter {
     margin-right: -1rem;
     margin-left: -1rem;
   }
-  .grita-gutter .gridtable {
+  .grita-gutter .grita {
     border-spacing: 1rem 0;
   }
   .col-1 {
@@ -2007,31 +2022,31 @@ pre code {
 .bg-primary-light-5 {
   background-color: #387ebc;
 }
-.silver-45 {
+.bg-silver-45 {
   background-color: #fbfbfb;
 }
-.silver-40 {
+.bg-silver-40 {
   background-color: #eee;
 }
-.silver-35 {
+.bg-silver-35 {
   background-color: #e1e1e1;
 }
-.silver-30 {
+.bg-silver-30 {
   background-color: #d4d4d4;
 }
-.silver-25 {
+.bg-silver-25 {
   background-color: #c8c8c8;
 }
-.silver-20 {
+.bg-silver-20 {
   background-color: #bbb;
 }
-.silver-15 {
+.bg-silver-15 {
   background-color: #aeaeae;
 }
-.silver-10 {
+.bg-silver-10 {
   background-color: #a2a2a2;
 }
-.silver-5 {
+.bg-silver-5 {
   background-color: #959595;
 }
 .input {
