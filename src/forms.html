@@ -19,16 +19,82 @@ base_url: "../"
          <h4>Basic <small>input</small></h4>
        </div>
        <div class="block-body">
-         <p><input class="input-base input-sm" type="text" placeholder="Small" /></p>
-         <p><input class="input-base" type="text" placeholder="Base" /></p>
-         <p><input class="input-base input-lg" type="text" placeholder="Large" /></p>
+         <p><input class="form-base form-sm" type="text" placeholder="Small" /></p>
+         <p><input class="form-base" type="text" placeholder="Base" /></p>
+         <p><input class="form-base form-lg" type="text" placeholder="Large" /></p>
 {% highlight js %}
-<input type="text" class="inpu-base input-sm" placeholder="Small" />
-<input type="text" class="input-base" placeholder="Base" />
-<input type="text" class="input-base input-lg" placeholder="Large" />
+<input type="text" class="form-base form-sm" placeholder="Small" />
+<input type="text" class="form-base" placeholder="Base" />
+<input type="text" class="form-base form-lg" placeholder="Large" />
 {% endhighlight %}
        </div>
      </div><!-- /.blocks -->
+
+
+      <div class="block">
+       <div class="block-header">
+         <h4>form grid <small>input</small></h4>
+       </div>
+       <div class="block-body">
+         <p class="form-col">
+          <input class="form-base form-col-4" type="text" placeholder="form-col-4" />
+          <input class="form-base form-col-4" type="text" placeholder="form-col-4" />
+          <input class="form-base form-col-4" type="text" placeholder="form-col-4" />
+        </p>
+         <p class="form-col">
+          <input class="form-base form-col-3" type="text" placeholder="form-col-3" />
+          <input class="form-base form-col-3" type="text" placeholder="form-col-3" />
+          <input class="form-base form-col-3" type="text" placeholder="form-col-3" />
+          <input class="form-base form-col-3" type="text" placeholder="form-col-3" />
+        </p>
+
+{% highlight js %}
+<div class="form-col">
+  <input class="form-base form-col-4" type="text" placeholder="form-col-4" />
+  <input class="form-base form-col-4" type="text" placeholder="form-col-4" />
+  <input class="form-base form-col-4" type="text" placeholder="form-col-4" />
+</div>
+{% endhighlight %}
+
+         <p class="form-col">
+          <input class="form-base form-col-3" type="text" placeholder="Small" />
+          <label class="form-base form-col-3">
+            <input type="checkbox">
+            checkbox form-col-3
+          </label>
+          <label class="form-base form-col-3">
+            <input type="radio">
+            radio form-col-3
+          </label>
+          <select class="form-base form-col-3">
+            <option value="form-col-3">form-col-3</option>
+          </select>
+        </p>
+
+{% highlight js %}
+<div class="form-col">
+  <input class="form-base form-col-3" type="text" placeholder="Small" />
+  <label class="form-base form-col-3">
+    <input type="checkbox">
+    checkbox form-col-3
+  </label>
+  <label class="form-base form-col-3">
+    <input type="radio">
+    radio form-col-3
+  </label>
+  <select class="form-base form-col-3">
+    <option value="form-col-3">form-col-3</option>
+  </select>
+</div>
+{% endhighlight %}
+
+
+
+
+       </div>
+     </div><!-- /.blocks -->
+
+
      
      <div class="block">
        <div class="block-header">
