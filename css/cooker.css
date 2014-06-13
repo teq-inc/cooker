@@ -1890,11 +1890,26 @@ pre code {
   .grita .col {
     display: table-cell;
   }
+  .grita-padding .col {
+    padding: 6px 12px;
+  }
+  .grita-padding-sm .col {
+    padding: 6px;
+  }
+  .grita-padding-xs .col {
+    padding: 3px;
+  }
+  .grita-padding-form .col {
+    padding-right: 3px;
+  }
+  .grita-padding-form .col:last-child {
+    padding-right: 0;
+  }
   .grita-gutter {
     margin-right: -1rem;
     margin-left: -1rem;
   }
-  .grita-gutter .gridtable {
+  .grita-gutter .grita {
     border-spacing: 1rem 0;
   }
   .col-1 {
@@ -2007,34 +2022,34 @@ pre code {
 .bg-primary-light-5 {
   background-color: #387ebc;
 }
-.silver-45 {
+.bg-silver-45 {
   background-color: #fbfbfb;
 }
-.silver-40 {
+.bg-silver-40 {
   background-color: #eee;
 }
-.silver-35 {
+.bg-silver-35 {
   background-color: #e1e1e1;
 }
-.silver-30 {
+.bg-silver-30 {
   background-color: #d4d4d4;
 }
-.silver-25 {
+.bg-silver-25 {
   background-color: #c8c8c8;
 }
-.silver-20 {
+.bg-silver-20 {
   background-color: #bbb;
 }
-.silver-15 {
+.bg-silver-15 {
   background-color: #aeaeae;
 }
-.silver-10 {
+.bg-silver-10 {
   background-color: #a2a2a2;
 }
-.silver-5 {
+.bg-silver-5 {
   background-color: #959595;
 }
-.input {
+.form {
   display: block;
   width: 100%;
   height: 34px;
@@ -2045,7 +2060,7 @@ pre code {
   background-color: #fff;
   background-image: none;
 }
-.input-base {
+.form-base {
   display: block;
   width: 100%;
   height: 34px;
@@ -2063,51 +2078,185 @@ pre code {
        -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
           transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
-.input-base:focus {
+.form-base:focus {
   border-color: #66afe9;
   outline: 0;
   -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
           box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
 }
-.input-base::-moz-placeholder {
+.form-base:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+          box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+}
+.form-base::-moz-placeholder {
   color: #999;
   opacity: 1;
 }
-.input-base:-ms-input-placeholder {
+.form-base:-ms-input-placeholder {
   color: #999;
 }
-.input-base::-webkit-input-placeholder {
+.form-base::-webkit-input-placeholder {
   color: #999;
 }
-.input-base.input-sm {
+.form-base.form-sm {
   height: 30px;
   padding: 5px 10px;
   font-size: 12px;
   line-height: 1.5;
   border-radius: 3px;
 }
-select.input-base.input-sm {
+select.form-base.form-sm {
   height: 30px;
   line-height: 30px;
 }
-textarea.input-base.input-sm,
-select[multiple].input-base.input-sm {
+textarea.form-base.form-sm,
+select[multiple].form-base.form-sm {
   height: auto;
 }
-.input-base.input-lg {
+select.form-base.form-sm {
+  height: 30px;
+  line-height: 30px;
+}
+textarea.form-base.form-sm,
+select[multiple].form-base.form-sm {
+  height: auto;
+}
+.form-base.form-lg {
   height: 46px;
   padding: 10px 16px;
   font-size: 18px;
   line-height: 1.33;
   border-radius: 6px;
 }
-select.input-base.input-lg {
+select.form-base.form-lg {
   height: 46px;
   line-height: 46px;
 }
-textarea.input-base.input-lg,
-select[multiple].input-base.input-lg {
+textarea.form-base.form-lg,
+select[multiple].form-base.form-lg {
   height: auto;
+}
+select.form-base.form-lg {
+  height: 46px;
+  line-height: 46px;
+}
+textarea.form-base.form-lg,
+select[multiple].form-base.form-lg {
+  height: auto;
+}
+.form-col:before,
+.form-col:after {
+  display: table;
+  content: " ";
+}
+.form-col:after {
+  clear: both;
+}
+.form-col:before,
+.form-col:after {
+  display: table;
+  content: " ";
+}
+.form-col:after {
+  clear: both;
+}
+.form-col .form-col-1 {
+  float: left;
+  width: 7.93333333%;
+  margin-right: .4%;
+}
+.form-col .form-col-1:last-child {
+  margin-right: 0;
+}
+.form-col .form-col-2 {
+  float: left;
+  width: 16.26666667%;
+  margin-right: .4%;
+}
+.form-col .form-col-2:last-child {
+  margin-right: 0;
+}
+.form-col .form-col-3 {
+  float: left;
+  width: 24.6%;
+  margin-right: .4%;
+}
+.form-col .form-col-3:last-child {
+  margin-right: 0;
+}
+.form-col .form-col-4 {
+  float: left;
+  width: 32.93333333%;
+  margin-right: .4%;
+}
+.form-col .form-col-4:last-child {
+  margin-right: 0;
+}
+.form-col .form-col-5 {
+  float: left;
+  width: 41.26666667%;
+  margin-right: .4%;
+}
+.form-col .form-col-5:last-child {
+  margin-right: 0;
+}
+.form-col .form-col-6 {
+  float: left;
+  width: 49.6%;
+  margin-right: .4%;
+}
+.form-col .form-col-6:last-child {
+  margin-right: 0;
+}
+.form-col .form-col-7 {
+  float: left;
+  width: 57.93333333%;
+  margin-right: .4%;
+}
+.form-col .form-col-7:last-child {
+  margin-right: 0;
+}
+.form-col .form-col-8 {
+  float: left;
+  width: 66.26666667%;
+  margin-right: .4%;
+}
+.form-col .form-col-8:last-child {
+  margin-right: 0;
+}
+.form-col .form-col-9 {
+  float: left;
+  width: 74.6%;
+  margin-right: .4%;
+}
+.form-col .form-col-9:last-child {
+  margin-right: 0;
+}
+.form-col .form-col-10 {
+  float: left;
+  width: 82.93333333%;
+  margin-right: .4%;
+}
+.form-col .form-col-10:last-child {
+  margin-right: 0;
+}
+.form-col .form-col-11 {
+  float: left;
+  width: 91.26666667%;
+  margin-right: .4%;
+}
+.form-col .form-col-11:last-child {
+  margin-right: 0;
+}
+.form-col .form-col-12 {
+  float: left;
+  width: 99.6%;
+  margin-right: .4%;
+}
+.form-col .form-col-12:last-child {
+  margin-right: 0;
 }
 .input-minimal {
   display: block;
@@ -2143,12 +2292,28 @@ textarea.input-minimal.input-sm,
 select[multiple].input-minimal.input-sm {
   height: auto;
 }
+select.input-minimal.input-sm {
+  height: 30px;
+  line-height: 30px;
+}
+textarea.input-minimal.input-sm,
+select[multiple].input-minimal.input-sm {
+  height: auto;
+}
 .input-minimal.input-lg {
   height: 46px;
   padding: 10px 16px;
   font-size: 18px;
   line-height: 1.33;
   border-radius: none;
+}
+select.input-minimal.input-lg {
+  height: 46px;
+  line-height: 46px;
+}
+textarea.input-minimal.input-lg,
+select[multiple].input-minimal.input-lg {
+  height: auto;
 }
 select.input-minimal.input-lg {
   height: 46px;

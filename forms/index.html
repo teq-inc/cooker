@@ -105,15 +105,79 @@
          <h4>Basic <small>input</small></h4>
        </div>
        <div class="block-body">
-         <p><input class="input-base input-sm" type="text" placeholder="Small" /></p>
-         <p><input class="input-base" type="text" placeholder="Base" /></p>
-         <p><input class="input-base input-lg" type="text" placeholder="Large" /></p>
-<div class="highlight"><pre><code class="js"><span class="o">&lt;</span><span class="nx">input</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;inpu-base input-sm&quot;</span> <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;Small&quot;</span> <span class="o">/&gt;</span>
-<span class="o">&lt;</span><span class="nx">input</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;input-base&quot;</span> <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;Base&quot;</span> <span class="o">/&gt;</span>
-<span class="o">&lt;</span><span class="nx">input</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;input-base input-lg&quot;</span> <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;Large&quot;</span> <span class="o">/&gt;</span>
+         <p><input class="form-base form-sm" type="text" placeholder="Small" /></p>
+         <p><input class="form-base" type="text" placeholder="Base" /></p>
+         <p><input class="form-base form-lg" type="text" placeholder="Large" /></p>
+<div class="highlight"><pre><code class="js"><span class="o">&lt;</span><span class="nx">input</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;form-base form-sm&quot;</span> <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;Small&quot;</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="nx">input</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;form-base&quot;</span> <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;Base&quot;</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="nx">input</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;form-base form-lg&quot;</span> <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;Large&quot;</span> <span class="o">/&gt;</span>
 </code></pre></div>
        </div>
      </div><!-- /.blocks -->
+
+
+      <div class="block">
+       <div class="block-header">
+         <h4>form grid <small>input</small></h4>
+       </div>
+       <div class="block-body">
+         <p class="form-col">
+          <input class="form-base form-col-4" type="text" placeholder="form-col-4" />
+          <input class="form-base form-col-4" type="text" placeholder="form-col-4" />
+          <input class="form-base form-col-4" type="text" placeholder="form-col-4" />
+        </p>
+         <p class="form-col">
+          <input class="form-base form-col-3" type="text" placeholder="form-col-3" />
+          <input class="form-base form-col-3" type="text" placeholder="form-col-3" />
+          <input class="form-base form-col-3" type="text" placeholder="form-col-3" />
+          <input class="form-base form-col-3" type="text" placeholder="form-col-3" />
+        </p>
+
+<div class="highlight"><pre><code class="js"><span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;form-col&quot;</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="nx">input</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;form-base form-col-4&quot;</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span> <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;form-col-4&quot;</span> <span class="o">/&gt;</span>
+  <span class="o">&lt;</span><span class="nx">input</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;form-base form-col-4&quot;</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span> <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;form-col-4&quot;</span> <span class="o">/&gt;</span>
+  <span class="o">&lt;</span><span class="nx">input</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;form-base form-col-4&quot;</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span> <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;form-col-4&quot;</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="err">/div&gt;</span>
+</code></pre></div>
+
+         <p class="form-col">
+          <input class="form-base form-col-3" type="text" placeholder="Small" />
+          <label class="form-base form-col-3">
+            <input type="checkbox">
+            checkbox form-col-3
+          </label>
+          <label class="form-base form-col-3">
+            <input type="radio">
+            radio form-col-3
+          </label>
+          <select class="form-base form-col-3">
+            <option value="form-col-3">form-col-3</option>
+          </select>
+        </p>
+
+<div class="highlight"><pre><code class="js"><span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;form-col&quot;</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="nx">input</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;form-base form-col-3&quot;</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span> <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;Small&quot;</span> <span class="o">/&gt;</span>
+  <span class="o">&lt;</span><span class="nx">label</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;form-base form-col-3&quot;</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;checkbox&quot;</span><span class="o">&gt;</span>
+    <span class="nx">checkbox</span> <span class="nx">form</span><span class="o">-</span><span class="nx">col</span><span class="o">-</span><span class="mi">3</span>
+  <span class="o">&lt;</span><span class="err">/label&gt;</span>
+  <span class="o">&lt;</span><span class="nx">label</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;form-base form-col-3&quot;</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;radio&quot;</span><span class="o">&gt;</span>
+    <span class="nx">radio</span> <span class="nx">form</span><span class="o">-</span><span class="nx">col</span><span class="o">-</span><span class="mi">3</span>
+  <span class="o">&lt;</span><span class="err">/label&gt;</span>
+  <span class="o">&lt;</span><span class="nx">select</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;form-base form-col-3&quot;</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">option</span> <span class="nx">value</span><span class="o">=</span><span class="s2">&quot;form-col-3&quot;</span><span class="o">&gt;</span><span class="nx">form</span><span class="o">-</span><span class="nx">col</span><span class="o">-</span><span class="mi">3</span><span class="o">&lt;</span><span class="err">/option&gt;</span>
+  <span class="o">&lt;</span><span class="err">/select&gt;</span>
+<span class="o">&lt;</span><span class="err">/div&gt;</span>
+</code></pre></div>
+
+
+
+
+       </div>
+     </div><!-- /.blocks -->
+
+
      
      <div class="block">
        <div class="block-header">
