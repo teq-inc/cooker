@@ -1,75 +1,108 @@
 // Tasks
-// ・フォームグリッド(gritaのクラス付けた場合も試してみる。)
-// ・セレクト・チェックボックス等のスタイル
 // ・フォームステータスカラー
-// ・フォーム内の両サイドにアイコンが配置できるクラス追加。
-// ・フォーム外の両サイドにテキストが配置できるクラス追加。
 
 
+//
+// form要素のベースクラス
+// =====================
 .form{
-  display: block;
-	width:100%;
-	height:@input-height-base;
   padding: @padding-base-vertical @padding-base-horizontal;
-  font-size: @font-size-base;
-  line-height: @line-height-base;
-  color: @input-color;
+  width:100%;
+  height:@input-height-base;
   background-color: @input-bg;
-  background-image: none; 
+  background-image: none;
+  color: @input-color;
+  font-size: @font-size-base;
+  line-height: @line-height-base; 
 }
 
-.form-base{
-	.form();
-	border:@input-border;
-  border-radius: @input-border-radius;
+//
+//input要素とselect要素
+// =====================
+.input,
+.select {
+  .form();
   .box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
   .transition(~"border-color ease-in-out .15s, box-shadow ease-in-out .15s");
-  // Customize the `:focus` state to imitate native WebKit styles.
-  //
   .form-control-focus();
-  // Placeholder
   .placeholder();
-	
-	&.form-sm {
-	  .input-size(
-      @input-height-small; 
-      @padding-small-vertical; 
-      @padding-small-horizontal; 
-      @font-size-small; 
-      @line-height-small; 
-      @border-radius-small
-    );
-	}
-	&.form-lg {
-	  .input-size(
-      @input-height-large; 
-      @padding-large-vertical; 
-      @padding-large-horizontal; 
-      @font-size-large; 
-      @line-height-large; 
-      @border-radius-large
-    );
-	}
+  display: block;
+  border:@input-border;
+  border-radius: @input-border-radius;
 }
 
+//
+// checkbox
+// =====================
+.checkbox{
+  .form();
+  .checkbox-radio-style("checkbox");
+}
+.checkbox-inline {
+  .checkbox-radio-style("checkbox");
+  margin-right: 1em;
+}
+
+//
+// radio button
+// =====================
+.radio{
+  .form();
+  .checkbox-radio-style("radio");
+}
+.radio-inline {
+  .checkbox-radio-style("radio");
+  margin-right: 1em;
+}
+
+//
+// フォームのサイズ
+// =====================
+.form-sm {
+  .input-size(
+    @input-height-small; 
+    @padding-small-vertical; 
+    @padding-small-horizontal; 
+    @font-size-small; 
+    @line-height-small; 
+    @border-radius-small
+  );
+}
+.form-lg {
+  .input-size(
+    @input-height-large; 
+    @padding-large-vertical; 
+    @padding-large-horizontal; 
+    @font-size-large; 
+    @line-height-large; 
+    @border-radius-large
+  );
+}
+
+//
 // form grid
+// =====================
 .form-col{
   .clearfix();
   .form-col-generate(12);
 }
 
-// input要素のスタイル。
-.input-minimal{
-	.form();
+//
+// input-underline
+// =====================
+.input-underline{
+  .form();
+  .placeholder();
+  display: block;
+  outline:none;
   border: none;
-  border-radius: none;
-  box-shadow:none;
-	outline:none;	
-	&:focus{
-		background-color:#eee;
-	}
-	&.input-sm {
-	  .input-size(
+  border-bottom: @input-border;
+  border-radius: 0;
+  &:focus{
+    border-bottom: 1px solid @primary-color;
+  }
+  &.form-sm {
+    .input-size(
       @input-height-small; 
       @padding-small-vertical; 
       @padding-small-horizontal; 
@@ -77,9 +110,9 @@
       @line-height-small; 
       none
     );
-	}
-	&.input-lg {
-	  .input-size(
+  }
+  &.form-lg {
+    .input-size(
       @input-height-large; 
       @padding-large-vertical; 
       @padding-large-horizontal; 
@@ -87,6 +120,234 @@
       @line-height-large; 
       none
     );
-	}
+  }
 }
 
+//
+// input-minimal
+// =====================
+.input-minimal{
+  .form();
+  .placeholder();
+  display: block;
+  outline:none;
+  border: none;
+  border-radius: 0;
+  &:focus{
+    background-color:@gray-lighter;
+  }
+  &.form-sm {
+    .input-size(
+      @input-height-small; 
+      @padding-small-vertical; 
+      @padding-small-horizontal; 
+      @font-size-small; 
+      @line-height-small; 
+      none
+    );
+  }
+  &.form-lg {
+    .input-size(
+      @input-height-large; 
+      @padding-large-vertical; 
+      @padding-large-horizontal; 
+      @font-size-large; 
+      @line-height-large; 
+      none
+    );
+  }
+}
+
+//
+// input-left-bar
+// =====================
+.input-left-bar{
+  .form();
+  .placeholder();
+  display: block;
+  outline:none;
+  border: none;
+  border-left: 3px solid @border-base-color;
+  border-radius: 0;
+  &:focus{
+    border-left: 3px solid @primary-color;
+  }
+  &.form-sm {
+    .input-size(
+      @input-height-small; 
+      @padding-small-vertical; 
+      @padding-small-horizontal; 
+      @font-size-small; 
+      @line-height-small; 
+      none
+    );
+  }
+  &.form-lg {
+    .input-size(
+      @input-height-large; 
+      @padding-large-vertical; 
+      @padding-large-horizontal; 
+      @font-size-large; 
+      @line-height-large; 
+      none
+    );
+  }
+}
+
+//
+// input-inset-icons
+// =====================
+.input-inset-icons{
+
+  position: relative;
+
+  .input-inset-left,
+  .input-inset-right {
+    position : absolute;
+    top: 0;
+    display : block;
+    padding : @padding-base;
+    height : @input-height-base;
+    border : 0;
+    background-color: transparent;
+    + button{
+      color: @link-color;
+      &:hover{
+        color: @link-hover-color;
+      }
+    }
+  }
+
+  .input-inset-left{
+    left: 0;
+    ~ .input-inset{
+      padding-left: ( @padding-base-horizontal * 3 );
+    }
+  }
+  .input-inset{}
+  
+  .input-inset-right{
+    right: 0;
+    ~ .input-inset {
+      padding-right: ( @padding-base-horizontal * 3 );
+    }
+  }
+
+}
+
+// input-inset-icons-sm
+.input-inset-icons-sm{
+  .input-inset-left,
+  .input-inset-right{
+    padding: @padding-small;
+    height:@input-height-small;
+    font-size: @font-size-small;
+  }
+  .input-inset-left{
+    ~ .input-inset {
+      padding-left: (@padding-small-horizontal * 3);
+    }
+  }
+  .input-inset-right{
+    ~ .input-inset {
+      padding-right: (@padding-small-horizontal * 3);
+    }
+  }
+}
+
+// input-inset-icons-lg
+.input-inset-icons-lg{
+  .input-inset-left,
+  .input-inset-right{
+    padding: @padding-large;
+    height:@input-height-large;
+    font-size: @font-size-large;
+  }
+  .input-inset-left{
+    ~ .input-inset {
+      padding-left: (@padding-large-horizontal * 3);
+    }
+  }
+  .input-inset-right{
+    ~ .input-inset {
+      padding-right: (@padding-large-horizontal * 3);
+    }
+  }
+}
+
+//
+// input-outset-label
+// =====================
+.input-outset-label{
+  display: inline-block;
+  .clearfix();
+  .input-outset-left,
+  .input-outset-right{
+    display: block;
+    padding : @padding-base;
+    border: @border-base;
+  }
+  .input-outset-left{
+    float: left;
+    border-right: 0;
+
+    ~ .input{
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+
+  }
+  .input-outset-right{
+    float: right;
+    border-left: 0;
+
+    ~ .input{
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+  .input-outset{
+    float: left;
+    width: 250px;
+  }
+
+}
+
+.input-outset-label-sm{
+  .input-outset-left,
+  .input-outset-right{
+    padding: @padding-small;
+    height:@input-height-small;
+    font-size: @font-size-small;
+    ~ .input {
+      .input-size(
+        @input-height-small; 
+        @padding-small-vertical; 
+        @padding-small-horizontal; 
+        @font-size-small; 
+        @line-height-small; 
+        none
+      );
+    }
+  }
+}
+
+.input-outset-label-lg{
+  .input-outset-left,
+  .input-outset-right{
+    padding: @padding-large;
+    height:@input-height-large;
+    font-size: @font-size-large;
+    ~ .input {
+      .input-size(
+        @input-height-large; 
+        @padding-large-vertical; 
+        @padding-large-horizontal; 
+        @font-size-large; 
+        @line-height-large; 
+        none
+      );
+    }
+  }
+}
