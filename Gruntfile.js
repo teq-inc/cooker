@@ -390,7 +390,7 @@
     'usebanner', 
     'csscomb:source', 
     'less:source_minify',
-    'csslint:source'
+    // 'csslint:source'
   ]);
 
   // lessコンパイル
