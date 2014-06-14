@@ -95,7 +95,7 @@ h1[id] {
           box-shadow: none;
 }
 .drawer-default .drawer-brand a {
-  color: #3271a8;
+  color: #242d35;
 }
 .ck-colors {
   padding: 20px;
@@ -111,11 +111,11 @@ h1[id] {
   line-height: 3;
   color: #444;
   text-align: center;
-  background: #3271a8;
+  background: #242d35;
   background: rgba(22, 34, 49, .15);
 }
 .grita-docs .col:nth-child(odd) {
-  background: #3271a8;
+  background: #242d35;
   background: rgba(22, 34, 49, .3);
 }
 .grita-valign-middle .grita-docs {

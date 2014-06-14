@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  
+  <title>
+    
+      Buttons &middot; cooker
+    
+  </title>
+  
+  <!-- icon -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../ico/touch-icon-144.png">
+  <link rel="shortcut icon" href="../ico/favicon.ico">
+
+  <!-- Vendor CSS -->
+  <link href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Lekton|Ubuntu+Mono:400,700" rel=stylesheet>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.0/animate.min.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../vendor/drawer/css/drawer.min.css">
+
+  <link rel="stylesheet" href="../assets/css/docs.css">
+
+  <!-- cooker CSS -->
+  <link rel="stylesheet" href="../css/cooker.css">
+
+  <!-- Vendor js -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+  <script src="../vendor/drawer/js/drawer.min.js"></script>
+
+  <script src="../assets/js/common.js"></script>
+  
+  <!-- cooker js -->
+  <script src="../js/cooker.min.js"></script>
+
+</head>
+<body id="drawer" class="site-buttons drawer-left drawer-responsive">
+
+    <button class="drawer-toggle btn"><i class="fa fa-bars"></i></button>
+<div class="drawer-masta drawer-default">
+  <nav class="drawer-nav" role="navigation">
+    <div class="drawer-brand"><a href="../">Cooker</a></div>
+    <ul class="nav drawer-nav-list">
+      <li>
+        <a href="../usage">Usage</a>
+      </li>
+      <li>
+        <a href="#">JavaScript</a>
+        <ul class="nav">
+          <li><a href="../slidebar">Slidebar</a></li>
+          <li><a href="../drilldown">Drilldown</a></li>
+          <li><a href="../switchers">Switchers</a></li>
+          <li><a href="../inputcounter">Inputcounter</a></li>
+          <li><a href="../scrollmethod">Scrollmethod</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Styles</a>
+        <ul class="nav">
+          <li><a href="../colors">colors</a></li>
+          <li><a href="../grita">grita</a></li>
+          <li><a href="../forms">Forms</a></li>
+          <li><a href="../buttons">Buttons</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+		
+		<div class="drawer-overlay">
+
+      <main class="site-masthead" role="main">
+        <div class="container">
+          <div class="grita">
+            <div class="col col-6">
+              <h1 class="lead">Buttons</h1>
+            </div>
+            <div class="col col-6">
+              <p class="text-right"><a href="https://github.com/teq-inc/cooker">Download on GitHub</a></p>
+            </div>
+          </div>
+        </div><!-- /.container -->
+      </main>
+
+			<div class="site-body">
+			  <div class="site-body-inner container">
+
+			    <div class="site-body">
+  <div class="site-body-inner container">
+    <div id="contents-forms">
+      <h2>Buttons</h2>
+      <div class="blocks">
+        
+        <div class="block">
+          <div class="block-header">
+            <h3>Basic <small>.button</small></h3>
+          </div>
+          <div class="block-body">
+            <h4>"button.button-*" element</h4>
+            <p>
+              <button class="button button-default">default</button>
+              <button class="button button-primary">primary</button>
+              <button class="button button-info">info</button>
+              <button class="button button-success">success</button>
+              <button class="button button-warning">warning</button>
+              <button class="button button-danger">danger</button>
+            </p>
+
+            <h4>"a.button-*" element</h4>
+            <p>
+              <a class="button button-default" href="#">default</a>
+              <a class="button button-primary" href="#">primary</a>
+              <a class="button button-info" href="#">info</a>
+              <a class="button button-success" href="#">success</a>
+              <a class="button button-warning" href="#">warning</a>
+              <a class="button button-danger" href="#">danger</a>
+            </p>
+
+            <h4>disabled</h4>
+            <p>
+              <button class="button button-default" disabled>default</button>
+              <button class="button button-primary" disabled>primary</button>
+              <button class="button button-info" disabled>info</button>
+              <button class="button button-success" disabled>success</button>
+              <button class="button button-warning" disabled>warning</button>
+              <button class="button button-danger" disabled>danger</button>
+            </p>
+
+            <h4>active</h4>
+            <p>
+              <button class="button button-default active">default</button>
+              <button class="button button-primary active">primary</button>
+              <button class="button button-info active">info</button>
+              <button class="button button-success active">success</button>
+              <button class="button button-warning active">warning</button>
+              <button class="button button-danger active">danger</button>
+            </p>
+
+
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;button button-default&quot;</span><span class="nt">&gt;</span>default<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;button button-primary&quot;</span><span class="nt">&gt;</span>primary<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;button button-info&quot;</span><span class="nt">&gt;</span>info<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;button button-success&quot;</span><span class="nt">&gt;</span>success<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;button button-warning&quot;</span><span class="nt">&gt;</span>warning<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;button button-danger&quot;</span><span class="nt">&gt;</span>danger<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;button button-default&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Default<span class="nt">&lt;/a&gt;</span>
+</code></pre></div>
+          </div>
+        </div>
+        <!-- /.block -->
+
+
+        <div class="block">
+          <div class="block-header">
+            <h3>Sizing</h3>
+          </div>
+          <div class="block-body">
+            <h4>"button.button-*" element</h4>
+
+            <p>
+              <button class="button button-default button-xs">.button-xs</button>
+              <button class="button button-default button-sm">.button-sm</button>
+              <button class="button button-default">Default</button>
+              <button class="button button-default button-lg">.button-lg</button>
+            </p>
+
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;button button-default button-xs&quot;</span><span class="nt">&gt;</span>.button-xs<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;button button-default button-sm&quot;</span><span class="nt">&gt;</span>.button-sm<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;button button-default&quot;</span><span class="nt">&gt;</span>Default<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;button button-default button-lg&quot;</span><span class="nt">&gt;</span>.button-lg<span class="nt">&lt;/button&gt;</span>
+<span class="c">&lt;!-- block --&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;button button-default button-block button-sm&quot;</span><span class="nt">&gt;</span>Default<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;button button-default button-block&quot;</span><span class="nt">&gt;</span>Default<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;button button-default button-block button-lg&quot;</span><span class="nt">&gt;</span>Default<span class="nt">&lt;/button&gt;</span>
+</code></pre></div>
+          </div>
+        </div>
+        <!-- /.block -->
+
+
+        <div class="block">
+          <div class="block-header">
+            <h3>block</h3>
+          </div>
+          <div class="block-body">
+            <h4>".button-block"</h4>
+            <p>
+              <button class="button button-default button-block button-xs">button-block button-xs</button>
+            </p>
+            <p>
+              <button class="button button-default button-block button-sm">button-block button-sm</button>
+            </p>
+            <p>
+              <button class="button button-default button-block">button-block</button>
+            </p>
+            <p>
+              <button class="button button-default button-block button-lg">button-block button-lg</button>
+            </p>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;button button-default button-block button-xs&quot;</span><span class="nt">&gt;</span>button-block button-xs<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;button button-default button-block button-sm&quot;</span><span class="nt">&gt;</span>button-block button-sm<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;button button-default button-block&quot;</span><span class="nt">&gt;</span>button-block<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;button button-default button-block button-lg&quot;</span><span class="nt">&gt;</span>button-block button-lg<span class="nt">&lt;/button&gt;</span>
+</code></pre></div>
+          </div>
+        </div>
+        <!-- /.block -->
+
+
+        <div class="block">
+          <div class="block-header">
+            <h3>link button</h3>
+          </div>
+          <div class="block-body">
+            <h4>".button-link"</h4>
+            <p>
+              <button class="button button-link">button-link</button>
+              <button class="button button-link-info">button-link-info</button>
+              <button class="button button-link-success">button-link-success</button>
+              <button class="button button-link button-link-warning">button-link-warning</button>
+              <button class="button button-link button-link-danger">button-link-danger</button>
+            </p>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;button button-link&quot;</span><span class="nt">&gt;</span>button-link<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;button button-link-info&quot;</span><span class="nt">&gt;</span>button-link-info<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;button button-link button-link-success&quot;</span><span class="nt">&gt;</span>button-link-success<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;button button-link button-link-warning&quot;</span><span class="nt">&gt;</span>button-link-warning<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;button button-link button-link-danger&quot;</span><span class="nt">&gt;</span>button-link-danger<span class="nt">&lt;/button&gt;</span>
+</code></pre></div>
+
+
+            <h4>sizes</h4>
+            <p>
+              <button class="button button-link button-xs">button-xs</button>
+              <button class="button button-link button-sm">button-sm</button>
+              <button class="button button-link">button-link</button>
+              <button class="button button-link button-lg">button-lg</button>
+            </p>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;button button-link button-xs&quot;</span><span class="nt">&gt;</span>button-xs<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;button button-link button-sm&quot;</span><span class="nt">&gt;</span>button-sm<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;button button-link&quot;</span><span class="nt">&gt;</span>button-link<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;button button-link button-lg&quot;</span><span class="nt">&gt;</span>button-lg<span class="nt">&lt;/button&gt;</span>
+</code></pre></div>
+          </div>
+        </div>
+        <!-- /.block -->
+
+
+        <div class="block">
+          <div class="block-header">
+            <h3>outline button</h3>
+          </div>
+          <div class="block-body">
+            <h4>".button-outline"</h4>
+            <p>
+              <button class="button button-outline-default button-xs">default</button>
+              <button class="button button-outline-primary button-sm">primary</button>
+              <button class="button button-outline-info">info</button>
+              <button class="button button-outline-success">success</button>
+              <button class="button button-outline-warning">warning</button>
+              <button class="button button-outline-danger button-lg">danger</button>
+            </p>
+            <h4>disabled</h4>
+            <p>
+              <button class="button button-outline-default" disabled>default</button>
+              <button class="button button-outline-primary" disabled>primary</button>
+              <button class="button button-outline-info" disabled>info</button>
+              <button class="button button-outline-success" disabled>success</button>
+              <button class="button button-outline-warning" disabled>warning</button>
+              <button class="button button-outline-danger" disabled>danger</button>
+            </p>
+            <h4>active</h4>
+            <p>
+              <button class="button button-outline-default active" active>default</button>
+              <button class="button button-outline-primary active" active>primary</button>
+              <button class="button button-outline-info active" active>info</button>
+              <button class="button button-outline-success active" active>success</button>
+              <button class="button button-outline-warning active" active>warning</button>
+              <button class="button button-outline-danger active" active>danger</button>
+            </p>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;button button-outline-default&quot;</span><span class="nt">&gt;</span>default<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;button button-outline-primary&quot;</span><span class="nt">&gt;</span>primary<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;button button-outline-info&quot;</span><span class="nt">&gt;</span>info<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;button button-outline-success&quot;</span><span class="nt">&gt;</span>success<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;button button-outline-warning&quot;</span><span class="nt">&gt;</span>warning<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;button button-outline-danger&quot;</span><span class="nt">&gt;</span>danger<span class="nt">&lt;/button&gt;</span>
+</code></pre></div>
+          </div>
+        </div>
+        <!-- /.block -->
+
+
+        <div class="block">
+          <div class="block-header">
+            <h3>curcle button</h3>
+          </div>
+          <div class="block-body">
+            <h4>".button-circle"</h4>
+            <p>
+              <button class="button button-icon-circle-default">
+                <i class="qcon qcon-quota"></i>
+              </button>
+              <button class="button button-icon-circle-primary">
+                <i class="qcon qcon-x"></i>
+              </button>
+              <button class="button button-icon-circle-info">
+                <i class="qcon qcon-x-circle"></i>
+              </button>
+              <button class="button button-icon-circle-success button-sm">
+                <i class="qcon qcon-hypo-square"></i>
+              </button>
+              <button class="button button-icon-circle-warning">
+                <i class="qcon qcon-blivesta"></i>
+              </button>
+              <button class="button button-icon-circle-danger button-lg">
+                <i class="qcon qcon-quota"></i>
+              </button>
+            </p>
+
+            <h4>disabled</h4>
+            <p>
+              <button class="button button-icon-circle-default" disabled>
+                <i class="qcon qcon-quota"></i>
+              </button>
+              <button class="button button-icon-circle-primary" disabled>
+                <i class="qcon qcon-quota"></i>
+              </button>
+              <button class="button button-icon-circle-success button-sm" disabled>
+                <i class="qcon qcon-quota"></i>
+              </button>
+              <button class="button button-icon-circle-warning" disabled>
+                <i class="qcon qcon-quota"></i>
+              </button>
+              <button class="button button-icon-circle-danger button-lg" disabled>
+                <i class="qcon qcon-quota"></i>
+              </button>
+            </p>
+            <h4>active</h4>
+            <p>
+              <button class="button button-icon-circle-default active">
+                <i class="qcon qcon-quota"></i>
+              </button>
+              <button class="button button-icon-circle-primary active">
+                <i class="qcon qcon-quota"></i>
+              </button>
+              <button class="button button-icon-circle-success button-sm active">
+                <i class="qcon qcon-quota"></i>
+              </button>
+              <button class="button button-icon-circle-warning active">
+                <i class="qcon qcon-quota"></i>
+              </button>
+              <button class="button button-icon-circle-danger button-lg active">
+                <i class="qcon qcon-quota"></i>
+              </button>
+            </p>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;button button-icon-circle-default&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;qcon qcon-quota&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;button button-icon-circle-primary&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;qcon qcon-quota&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;button button-icon-circle-info&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;qcon qcon-quota&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;button button-icon-circle-success&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;qcon qcon-quota&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;button button-icon-circle-warning&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;qcon qcon-quota&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;button button-icon-circle-danger&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;qcon qcon-quota&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+</code></pre></div>
+          </div>
+        </div>
+        <!-- /.block -->
+
+
+        <div class="block">
+          <div class="block-header">
+            <h3>curcle outline button</h3>
+          </div>
+          <div class="block-body">
+            <h4>".button-circle-outline-*"</h4>
+            <p>
+              <button class="button button-icon-circle-outline-default">
+                <i class="qcon qcon-quota"></i>
+              </button>
+              <button class="button button-icon-circle-outline-primary">
+                <i class="qcon qcon-quota"></i>
+              </button>
+              <button class="button button-icon-circle-outline-info">
+                <i class="qcon qcon-quota"></i>
+              </button>
+              <button class="button button-icon-circle-outline-success">
+                <i class="qcon qcon-quota"></i>
+              </button>
+              <button class="button button-icon-circle-outline-warning button-sm">
+                <i class="qcon qcon-quota"></i>
+              </button>
+              <button class="button button-icon-circle-outline-danger button-lg">
+                <i class="qcon qcon-quota"></i>
+              </button>
+            </p>
+            <h4>disabled</h4>
+            <p>
+              <button class="button button-icon-circle-outline-default" disabled>
+                <i class="qcon qcon-quota"></i>
+              </button>
+              <button class="button button-icon-circle-outline-primary" disabled>
+                <i class="qcon qcon-quota"></i>
+              </button>
+              <button class="button button-icon-circle-outline-info" disabled>
+                <i class="qcon qcon-quota"></i>
+              </button>
+              <button class="button button-icon-circle-outline-success" disabled>
+                <i class="qcon qcon-quota"></i>
+              </button>
+              <button class="button button-icon-circle-outline-warning button-sm" disabled>
+                <i class="qcon qcon-quota"></i>
+              </button>
+              <button class="button button-icon-circle-outline-danger button-lg" disabled>
+                <i class="qcon qcon-quota"></i>
+              </button>
+            </p>
+            <h4>active</h4>
+            <p>
+              <button class="button button-icon-circle-outline-default active">
+                <i class="qcon qcon-quota"></i>
+              </button>
+              <button class="button button-icon-circle-outline-primary active">
+                <i class="qcon qcon-quota"></i>
+              </button>
+              <button class="button button-icon-circle-outline-info active">
+                <i class="qcon qcon-quota"></i>
+              </button>
+              <button class="button button-icon-circle-outline-success active">
+                <i class="qcon qcon-quota"></i>
+              </button>
+              <button class="button button-icon-circle-outline-warning button-sm active">
+                <i class="qcon qcon-quota"></i>
+              </button>
+              <button class="button button-icon-circle-outline-danger button-lg active">
+                <i class="qcon qcon-quota"></i>
+              </button>
+            </p>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;button button-icon-circle-outline-default&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;qcon qcon-quota&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;button button-icon-circle-outline-primary&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;qcon qcon-quota&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;button button-icon-circle-outline-info&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;qcon qcon-quota&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;button button-icon-circle-outline-success&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;qcon qcon-quota&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;button button-icon-circle-outline-warning button-sm&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;qcon qcon-quota&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;button button-icon-circle-outline-danger button-lg&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;qcon qcon-quota&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+</code></pre></div>
+          </div>
+        </div>
+        <!-- /.block -->
+
+
+        <div class="block">
+          <div class="block-header">
+            <h3>icon button</h3>
+          </div>
+          <div class="block-body">
+            <h4>".button-circle-outline-*"</h4>
+            <p>
+              <button class="button button-icon-default">
+                <i class="qcon qcon-blivesta"></i>
+              </button>
+              <button class="button button-icon-primary">
+                <i class="qcon qcon-quota"></i>
+              </button>
+              <button class="button button-icon-info">
+                <i class="qcon qcon-x"></i>
+              </button>
+              <button class="button button-icon-success">
+                <i class="qcon qcon-hypo-square"></i>
+              </button>
+              <button class="button button-icon-warning button-sm">
+                <i class="qcon qcon-x-circle-o"></i>
+              </button>
+              <button class="button button-icon-danger button-lg">
+                <i class="qcon qcon-x-circle"></i>
+              </button>
+            </p>
+            <h4>disabled</h4>
+            <p>
+              <button class="button button-icon-default" disabled>
+                <i class="qcon qcon-blivesta"></i>
+              </button>
+              <button class="button button-icon-primary" disabled>
+                <i class="qcon qcon-quota"></i>
+              </button>
+              <button class="button button-icon-info" disabled>
+                <i class="qcon qcon-x"></i>
+              </button>
+              <button class="button button-icon-success" disabled>
+                <i class="qcon qcon-hypo-square"></i>
+              </button>
+              <button class="button button-icon-warning button-sm" disabled>
+                <i class="qcon qcon-x-circle-o"></i>
+              </button>
+              <button class="button button-icon-danger button-lg" disabled>
+                <i class="qcon qcon-x-circle"></i>
+              </button>
+            </p>
+            <h4>active</h4>
+            <p>
+              <button class="button button-icon-default active">
+                <i class="qcon qcon-blivesta"></i>
+              </button>
+              <button class="button button-icon-primary active">
+                <i class="qcon qcon-quota"></i>
+              </button>
+              <button class="button button-icon-info active">
+                <i class="qcon qcon-x"></i>
+              </button>
+              <button class="button button-icon-success active">
+                <i class="qcon qcon-hypo-square"></i>
+              </button>
+              <button class="button button-icon-warning button-sm active">
+                <i class="qcon qcon-x-circle-o"></i>
+              </button>
+              <button class="button button-icon-danger button-lg active">
+                <i class="qcon qcon-x-circle"></i>
+              </button>
+            </p>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;button button-icon-default&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;qcon qcon-quota&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;button button-icon-primary&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;qcon qcon-quota&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;button button-icon-info&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;qcon qcon-quota&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;button button-icon-success&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;qcon qcon-quota&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;button button-icon-warning button-sm&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;qcon qcon-quota&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;button button-icon-danger button-lg&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;qcon qcon-quota&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+</code></pre></div>
+          </div>
+        </div>
+        <!-- /.block -->
+
+
+        <div class="block">
+          <div class="block-header">
+            <h3>gradient button</h3>
+          </div>
+          <div class="block-body">
+            <h4>".button-circle-outline-*"</h4>
+            <p>
+              <button class="button button-gradient-default">
+                <i class="qcon qcon-blivesta"></i> blivesta
+              </button>
+              <button class="button button-gradient-primary">
+                <i class="qcon qcon-quota"></i> Quota
+              </button>
+              <button class="button button-gradient-info">
+                <i class="qcon qcon-hypo-square"></i> Hypo
+              </button>
+              <button class="button button-gradient-success">
+                <i class="qcon qcon-quota"></i> Quota
+              </button>
+              <button class="button button-gradient-warning button-sm">
+                <i class="qcon qcon-quota"></i> Quota
+              </button>
+              <button class="button button-gradient-danger button-lg">
+                <i class="qcon qcon-quota"></i> Quota
+              </button>
+            </p>
+            <h4>disabled</h4>
+            <p>
+              <button class="button button-gradient-default" disabled>
+                <i class="qcon qcon-blivesta"></i> blivesta
+              </button>
+              <button class="button button-gradient-primary" disabled>
+                <i class="qcon qcon-quota"></i> Quota
+              </button>
+              <button class="button button-gradient-info" disabled>
+                <i class="qcon qcon-hypo-square"></i> Hypo
+              </button>
+              <button class="button button-gradient-success" disabled>
+                <i class="qcon qcon-quota"></i> Quota
+              </button>
+              <button class="button button-gradient-warning button-sm" disabled>
+                <i class="qcon qcon-quota"></i> Quota
+              </button>
+              <button class="button button-gradient-danger button-lg" disabled>
+                <i class="qcon qcon-quota"></i> Quota
+              </button>
+            </p>
+            <h4>active</h4>
+            <p>
+              <button class="button button-gradient-default active">
+                <i class="qcon qcon-blivesta"></i> blivesta
+              </button>
+              <button class="button button-gradient-primary active">
+                <i class="qcon qcon-quota"></i> Quota
+              </button>
+              <button class="button button-gradient-info active">
+                <i class="qcon qcon-hypo-square"></i> Hypo
+              </button>
+              <button class="button button-gradient-success active">
+                <i class="qcon qcon-quota"></i> Quota
+              </button>
+              <button class="button button-gradient-warning button-sm active">
+                <i class="qcon qcon-quota"></i> Quota
+              </button>
+              <button class="button button-gradient-danger button-lg active">
+                <i class="qcon qcon-quota"></i> Quota
+              </button>
+            </p>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;button button-gradient-default&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;qcon qcon-blivesta&quot;</span><span class="nt">&gt;&lt;/i&gt;</span> blivesta
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;button button-gradient-primary&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;qcon qcon-quota&quot;</span><span class="nt">&gt;&lt;/i&gt;</span> Quota
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;button button-gradient-info&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;qcon qcon-hypo-square&quot;</span><span class="nt">&gt;&lt;/i&gt;</span> Hypo
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;button button-gradient-success&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;qcon qcon-quota&quot;</span><span class="nt">&gt;&lt;/i&gt;</span> Quota
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;button button-gradient-warning button-sm&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;qcon qcon-quota&quot;</span><span class="nt">&gt;&lt;/i&gt;</span> Quota
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;button button-gradient-danger button-lg&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;qcon qcon-quota&quot;</span><span class="nt">&gt;&lt;/i&gt;</span> Quota
+<span class="nt">&lt;/button&gt;</span>
+</code></pre></div>
+          </div>
+        </div>
+        <!-- /.block -->
+
+
+
+
+      </div>
+      <!-- /.blocks -->
+    </div><!-- /#contents-forms -->
+  </div><!-- /.container -->
+</div><!-- /.site-body -->
+			  
+			  </div><!-- /.container -->
+			</div><!-- /.site-body -->
+
+	    <footer class="site-footer">
+  <div class="site-footer-inner container">
+	  <h2>cooker</h2>
+    <p>Currently v0.4.0 / Author <a href="">teq-inc</a>
+    <br>Code licensed under the MIT license.</p>
+        <ul class="site-social nav nav-pills">
+  <li>
+    <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=teq-inc&amp;repo=cooker&amp;type=fork&amp;count=true" width="100" height="20"></iframe>
+  </li>
+  <li>
+    <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=teq-inc&amp;repo=cooker&amp;type=watch&amp;count=true" width="100" height="20"></iframe>
+  </li>
+</ul>       
+
+  </div>
+</footer>
+	</div>
+</body>
+</html>
