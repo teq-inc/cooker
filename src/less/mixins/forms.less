@@ -73,12 +73,12 @@
 }
 
 //
-// boostrap
+// 
 // =====================
 .form-control-focus(@color: @input-border-focus) {
   @color-rgba: rgba(red(@color), green(@color), blue(@color), .6);
   &:focus {
-    .box-shadow(~"inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px @{color-rgba}");
+    .box-shadow(~"inset 0 1px 1px rgba(0,0,0,.075), 0 0 4px @{color-rgba}");
     outline: 0;
     border-color: @color;
   }
@@ -89,7 +89,6 @@
 // Relative text size, padding, and border-radii changes for form controls. For
 // horizontal sizing, wrap controls in the predefined grid classes. `<select>`
 // element gets special love because it's special, and that's a fact!
-
 .input-size(
   @input-height; 
   @padding-vertical; 
@@ -103,12 +102,10 @@
   border-radius: @border-radius;
   font-size: @font-size;
   line-height: @line-height;
-
   select& {
     height: @input-height;
     line-height: @input-height;
   }
-
   textarea&,
   select[multiple]& {
     height: auto;

@@ -1,63 +1,41 @@
 // == colors
 // ::::::::::::::::::::::::::::::::::::::::::::::::::
-@gray-darker:            lighten(#000, 13.5%); // #222
-@gray-dark:              lighten(#000, 20%);   // #333
-@gray:                   lighten(#000, 33.5%); // #555
-@gray-light:             lighten(#000, 60%);   // #999
-@gray-lighter:           lighten(#000, 93.5%); // #eee
+@gray-darker:               lighten(#000, 13.5%); // #222
+@gray-dark:                 lighten(#000, 33.5%); // #555
+@gray:                      lighten(#000, 53.5%); // #888
+@gray-light:                lighten(#000, 83.5%); // #d5d5d5
+@gray-lighter:              lighten(#000, 93.5%); // #eee
 
 //サイトカラー
-@primary-color:         #3271a8; //1番目
-// @primary-color:         @primary-color;　//削除予定
-@brand-secondary:       #242d35; //2番目
-@secondary-color:       @brand-secondary; //削除予定
-@brand-tertiary:        #242d35; //3番目
+@primary-color:             #242d35; //黒紅 くろべに
+@secondary-color:           #302833; //2番目
+@tertiary-color:            #203744; //3番目
 
 //この変数はあくまでもステータスなどの色。サイトのメインカラーなどとは別。
-@brand-success:         #46b283;
-@success-color:         @brand-success;//削除予定
-@brand-warning:         #f0ad4e;
-@warning-color:         @brand-warning;//削除予定
-@brand-danger:          #e34646;
-@danger-color:          @brand-danger;//削除予定
-@brand-info:            #5cb9db;
-@info-color:            @brand-info;//削除予定
+@success-color:             #028760;
+@warning-color:             #e6b422;
+@danger-color:              #d3381c;
+@info-color:                @primary-color-light;
 
-//
-@primary-color-dark-45: darken(@primary-color, 45%);
-@primary-color-dark-40: darken(@primary-color, 40%);
-@primary-color-dark-35: darken(@primary-color, 35%);
-@primary-color-dark-30: darken(@primary-color, 30%);
-@primary-color-dark-25: darken(@primary-color, 25%);
-@primary-color-dark-20: darken(@primary-color, 20%);
-@primary-color-dark-15: darken(@primary-color, 15%);
-@primary-color-dark-10: darken(@primary-color, 10%);
-@primary-color-dark-5:  darken(@primary-color, 5%);
+@primary-color-darker:      darken(@primary-color, 30%);
+@primary-color-dark:        darken(@primary-color, 15%);
+@primary-color-light:       lighten(@primary-color, 20%);
+@primary-color-lighter:     lighten(@primary-color, 40%);
 
-@primary-color-light-45: lighten(@primary-color, 45%);
-@primary-color-light-40: lighten(@primary-color, 40%);
-@primary-color-light-35: lighten(@primary-color, 35%);
-@primary-color-light-30: lighten(@primary-color, 30%);
-@primary-color-light-25: lighten(@primary-color, 25%);
-@primary-color-light-20: lighten(@primary-color, 20%);
-@primary-color-light-15: lighten(@primary-color, 15%);
-@primary-color-light-10: lighten(@primary-color, 10%);
-@primary-color-light-5:  lighten(@primary-color, 5%);
+@secondary-color-darker:    darken(@secondary-color, 30%);
+@secondary-color-dark:      darken(@secondary-color, 15%);
+@secondary-color-light:     lighten(@secondary-color, 20%);
+@secondary-color-lighter:   lighten(@secondary-color, 40%);
 
-@silver-45: lighten(#888, 45%);
-@silver-40: lighten(#888, 40%);
-@silver-35: lighten(#888, 35%);
-@silver-30: lighten(#888, 30%);
-@silver-25: lighten(#888, 25%);
-@silver-20: lighten(#888, 20%);
-@silver-15: lighten(#888, 15%);
-@silver-10: lighten(#888, 10%);
-@silver-5:  lighten(#888, 5%);
+@tertiary-color-darker:     darken(@tertiary-color, 30%);
+@tertiary-color-dark:       darken(@tertiary-color, 15%);
+@tertiary-color-light:      lighten(@tertiary-color, 20%);
+@tertiary-color-lighter:    lighten(@tertiary-color, 40%);
 
-@body-bg:               #fff;
-@text-color:            @gray-dark;
-@link-color:            @primary-color;
-@link-hover-color:      darken(@link-color, 15%);
+@body-bg:                   #fff;
+@text-color:                @gray-dark;
+@link-color:                @primary-color-light;
+@link-hover-color:          @primary-color-lighter;
 
 //== Typography
 // ::::::::::::::::::::
@@ -179,7 +157,7 @@
 @input-color:               @gray;
 @input-border:              @border-base;
 @input-border-radius:       @border-radius-base;
-@input-border-focus:        #66afe9;
+@input-border-focus:        @primary-color-light;
 
 @input-color-placeholder:   @gray-light;
 
@@ -195,6 +173,36 @@
 //** Border color for textual input addons
 @input-group-addon-border-color: @input-border;
 
+
+//== Buttons
+//
+@btn-font-weight:                normal;
+
+@btn-default-color:              #333;
+@btn-default-bg:                 #fff;
+@btn-default-border:             #ccc;
+
+@btn-primary-color:              #fff;
+@btn-primary-bg:                 @primary-color;
+@btn-primary-border:             darken(@btn-primary-bg, 5%);
+
+@btn-success-color:              #fff;
+@btn-success-bg:                 @success-color;
+@btn-success-border:             darken(@btn-success-bg, 5%);
+
+@btn-info-color:                 #fff;
+@btn-info-bg:                    @info-color;
+@btn-info-border:                darken(@btn-info-bg, 5%);
+
+@btn-warning-color:              #fff;
+@btn-warning-bg:                 @warning-color;
+@btn-warning-border:             darken(@btn-warning-bg, 5%);
+
+@btn-danger-color:               #fff;
+@btn-danger-bg:                  @danger-color;
+@btn-danger-border:              darken(@btn-danger-bg, 5%);
+
+@btn-link-disabled-color:        @gray-light;
 
 //
 //== Thumbnails
@@ -244,7 +252,7 @@
 
 
 //
-// Variables
+// 
 // --------------------------------------------------
 
 //** Global color for active items (e.g., navs or dropdowns).
@@ -268,38 +276,6 @@
 @table-bg-hover:                #f5f5f5;
 @table-bg-active:               @table-bg-hover;
 @table-border-color:            #ddd;
-
-
-//== Buttons
-//
-@btn-font-weight:                normal;
-
-@btn-default-color:              #333;
-@btn-default-bg:                 #fff;
-@btn-default-border:             #ccc;
-
-@btn-primary-color:              #fff;
-@btn-primary-bg:                 @primary-color;
-@btn-primary-border:             darken(@btn-primary-bg, 5%);
-
-@btn-success-color:              #fff;
-@btn-success-bg:                 @brand-success;
-@btn-success-border:             darken(@btn-success-bg, 5%);
-
-@btn-info-color:                 #fff;
-@btn-info-bg:                    @brand-info;
-@btn-info-border:                darken(@btn-info-bg, 5%);
-
-@btn-warning-color:              #fff;
-@btn-warning-bg:                 @brand-warning;
-@btn-warning-border:             darken(@btn-warning-bg, 5%);
-
-@btn-danger-color:               #fff;
-@btn-danger-bg:                  @brand-danger;
-@btn-danger-border:              darken(@btn-danger-bg, 5%);
-
-@btn-link-disabled-color:        @gray-light;
-
 
 //== Grid system
 //
