@@ -4,8 +4,9 @@
   .form-col-generate(@number, (@i + 1));
   .form-col-@{i} {
     float: left;
-    margin-right: 0.4%;
-    width: ((@i * 100% / @number) - 0.4%);
+    // margin-right: 0.4%;
+    // width: ((@i * 100% / @number) - 0.4%);
+    width: (@i * 100% / @number);
     &:last-child {
       margin-right: 0;
     }
