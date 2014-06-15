@@ -422,7 +422,7 @@
   grunt.registerTask('test', [
     'jshint:source',
     //'jscs:source',
-    'csslint',
+    // 'csslint',
     // 'validation'
   ]);
 
