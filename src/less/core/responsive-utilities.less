@@ -21,7 +21,7 @@
   width: device-width;
 }
 
-
+//
 // Visibility utilities
 .visible-xs,
 .visible-sm,
@@ -72,11 +72,10 @@
   }
 }
 
-
+//
 // Print utilities
 //
 // Media queries are placed on the inside to be mixin-friendly.
-
 .visible-print {
   .responsive-invisibility();
 
@@ -84,7 +83,6 @@
     .responsive-visibility();
   }
 }
-
 .hidden-print {
   @media print {
     .responsive-invisibility();

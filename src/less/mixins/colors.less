@@ -1,19 +1,24 @@
-.bg-shade-generate(@bg:#000, @n : 9, @i: 1) when (@i =< @n) {
-  .color-test-@{i * 5}{
-    background-color: darken(@bg, ((@i * @n) * 5));
+// .bg-shade-generate(@bg:#000, @n : 9, @i: 1) when (@i =< @n) {
+//   .color-test-@{i * 5}{
+//     background-color: darken(@bg, ((@i * @n) * 5));
+//   }
+//   .bg-shade-generate(@n, (@i + 1));
+// }
+
+// Contextual backgrounds
+
+.bg-variant(@color) {
+  background-color: @color;
+  a&:hover {
+    background-color: darken(@color, 10%);
   }
-  
-  .bg-shade-generate(@n, (@i + 1));
 }
 
+// Typography
 
-
-// ベースカラーの上下に濃度の色を生成。※要検証
-// @baseColor: @brand-primary;
-// // Shades
-// @difference: 10%; // Difference (in perecent) between each shade
-// @shade1: lighten(@baseColor, (@difference * 2));
-// @shade2: lighten(@baseColor, @difference);
-// @shade3: @baseColor;
-// @shade4: darken(@baseColor, @difference);
-// @shade5: darken(@baseColor, (@difference * 2));
+.text-emphasis-variant(@color) {
+  color: @color;
+  a&:hover {
+    color: darken(@color, 10%);
+  }
+}

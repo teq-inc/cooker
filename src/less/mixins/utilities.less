@@ -78,24 +78,6 @@
 }
 
 
-// Contextual backgrounds
-
-.bg-variant(@color) {
-  background-color: @color;
-  a&:hover {
-    background-color: darken(@color, 10%);
-  }
-}
-
-// Typography
-
-.text-emphasis-variant(@color) {
-  color: @color;
-  a&:hover {
-    color: darken(@color, 10%);
-  }
-}
-
 
 // Text overflow
 // Requires inline-block or block for proper styling
@@ -129,23 +111,6 @@
   .hide-text();
 }
 
-
-
-// Responsive utilities
-
-//
-// More easily include all the states for responsive-utilities.less.
-.responsive-visibility() {
-  display: block !important;
-  table&  { display: table; }
-  tr&     { display: table-row !important; }
-  th&,
-  td&     { display: table-cell !important; }
-}
-
-.responsive-invisibility() {
-  display: none !important;
-}
 
 
 // Single side border-radius

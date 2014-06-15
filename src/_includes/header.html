@@ -1,4 +1,4 @@
-<button class="drawer-toggle btn"><i class="fa fa-bars"></i></button>
+<button class="drawer-toggle btn"><i class="qcon qcon-quota"></i></button>
 <div class="drawer-masta drawer-default">
   <nav class="drawer-nav" role="navigation">
     <div class="drawer-brand"><a href="{{ page.base_url }}">Cooker</a></div>
@@ -14,15 +14,25 @@
           <li><a href="{{ page.base_url }}switchers">Switchers</a></li>
           <li><a href="{{ page.base_url }}inputcounter">Inputcounter</a></li>
           <li><a href="{{ page.base_url }}scrollmethod">Scrollmethod</a></li>
-        </ul>
+<!--           <li><a href="#">dropdown</a></li>
+          <li><a href="#">tooltip</a></li>
+ -->        </ul>
       </li>
       <li{% if page.slug == "css" %} class="active"{% endif %}>
         <a href="#">Styles</a>
         <ul class="nav">
+          <li><a href="{{ page.base_url }}type">Typography</a></li>
           <li><a href="{{ page.base_url }}colors">colors</a></li>
           <li><a href="{{ page.base_url }}grita">grita</a></li>
           <li><a href="{{ page.base_url }}forms">Forms</a></li>
           <li><a href="{{ page.base_url }}buttons">Buttons</a></li>
+          <li><a href="{{ page.base_url }}container">container</a></li>
+ <!--           <li><a href="#">Table</a></li>
+          <li><a href="#">nav</a></li>
+          <li><a href="#">row grid</a></li>
+          <li><a href="#">container</a></li>
+          <li><a href="#">responsive</a></li>
+          <li><a href="#">utilities</a></li> -->
         </ul>
       </li>
     </ul>
