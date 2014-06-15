@@ -17,8 +17,6 @@
 
   <!-- Vendor CSS -->
   <link href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Lekton|Ubuntu+Mono:400,700" rel=stylesheet>
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.0/animate.min.css">
-  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
   <link rel="stylesheet" href="../vendor/drawer/css/drawer.min.css">
 
   <link rel="stylesheet" href="../assets/css/docs.css">
@@ -40,7 +38,7 @@
 </head>
 <body id="drawer" class="site-colors drawer-left drawer-responsive">
 
-    <button class="drawer-toggle btn"><i class="fa fa-bars"></i></button>
+    <button class="drawer-toggle btn"><i class="qcon qcon-quota"></i></button>
 <div class="drawer-masta drawer-default">
   <nav class="drawer-nav" role="navigation">
     <div class="drawer-brand"><a href="../">Cooker</a></div>
@@ -56,15 +54,25 @@
           <li><a href="../switchers">Switchers</a></li>
           <li><a href="../inputcounter">Inputcounter</a></li>
           <li><a href="../scrollmethod">Scrollmethod</a></li>
-        </ul>
+<!--           <li><a href="#">dropdown</a></li>
+          <li><a href="#">tooltip</a></li>
+ -->        </ul>
       </li>
       <li>
         <a href="#">Styles</a>
         <ul class="nav">
+          <li><a href="../type">Typography</a></li>
           <li><a href="../colors">colors</a></li>
           <li><a href="../grita">grita</a></li>
           <li><a href="../forms">Forms</a></li>
           <li><a href="../buttons">Buttons</a></li>
+          <li><a href="../container">container</a></li>
+ <!--           <li><a href="#">Table</a></li>
+          <li><a href="#">nav</a></li>
+          <li><a href="#">row grid</a></li>
+          <li><a href="#">container</a></li>
+          <li><a href="#">responsive</a></li>
+          <li><a href="#">utilities</a></li> -->
         </ul>
       </li>
     </ul>
@@ -97,49 +105,82 @@
   <h3></h3>
   <p></p>
   <div class="ck-example">
-    <div class="ck-colors bg-primary">@primary-color</div>
-    <div class="ck-colors bg-success">@success-color</div>
-    <div class="ck-colors bg-info">@info-color</div>
-    <div class="ck-colors bg-warning">@warning-color</div>
-    <div class="ck-colors bg-danger">@danger-color</div>
+    <div class="ck-colors bg-primary">.bg-primary</div>
+    <div class="ck-colors bg-info">.bg-info</div>
+    <div class="ck-colors bg-success">.bg-success</div>
+    <div class="ck-colors bg-warning">.bg-warning</div>
+    <div class="ck-colors bg-danger">.bg-danger</div>
+  </div> <!-- /example -->
+
+  <h3></h3>
+  <p></p>
+  <div class="ck-example">
+    <div class="ck-colors bg-primary-state">.bg-primary-state</div>
+    <div class="ck-colors bg-info-state">.bg-info-state</div>
+    <div class="ck-colors bg-success-state">.bg-success-state</div>
+    <div class="ck-colors bg-warning-state">.bg-warning-state</div>
+    <div class="ck-colors bg-danger-state">.bg-danger-state</div>
   </div> <!-- /example -->
   
   <h3></h3>
   <p></p>
 
   <div class="ck-example">
-    <div class="ck-colors bg-primary-darker">@primary-color-darker</div>
-    <div class="ck-colors bg-primary-dark">@primary-color-dark</div>
-    <div class="ck-colors bg-primary">@primary-color</div>
-    <div class="ck-colors bg-primary-light">@primary-color-light</div>
-    <div class="ck-colors bg-primary-lighter">@primary-color-lighter</div>
+    <div class="ck-colors bg-primary-darker">.bg-primary-darker</div>
+    <div class="ck-colors bg-primary-dark">.bg-primary-dark</div>
+    <div class="ck-colors bg-primary">.bg-primary</div>
+    <div class="ck-colors bg-primary-light">.bg-primary-light</div>
+    <div class="ck-colors bg-primary-lighter">.bg-primary-lighter</div>
   </div> <!-- /example -->
 
 
   <div class="ck-example">
-    <div class="ck-colors bg-secondary-darker">@secondary-color-darker</div>
-    <div class="ck-colors bg-secondary-dark">@secondary-color-dark</div>
-    <div class="ck-colors bg-secondary">@secondary-color</div>
-    <div class="ck-colors bg-secondary-light">@secondary-color-light</div>
-    <div class="ck-colors bg-secondary-lighter">@secondary-color-lighter</div>
+    <div class="ck-colors bg-secondary-darker">.bg-secondary-darker</div>
+    <div class="ck-colors bg-secondary-dark">.bg-secondary-dark</div>
+    <div class="ck-colors bg-secondary">.bg-secondary</div>
+    <div class="ck-colors bg-secondary-light">.bg-secondary-light</div>
+    <div class="ck-colors bg-secondary-lighter">.bg-secondary-lighter</div>
   </div> <!-- /example -->
 
   <div class="ck-example">
-    <div class="ck-colors bg-tertiary-darker">@tertiary-color-darker</div>
-    <div class="ck-colors bg-tertiary-dark">@tertiary-color-dark</div>
-    <div class="ck-colors bg-tertiary">@tertiary-color</div>
-    <div class="ck-colors bg-tertiary-light">@tertiary-color-light</div>
-    <div class="ck-colors bg-tertiary-lighter">@tertiary-color-lighter</div>
-  </div> <!-- /example -->
-
-  <div class="ck-example">
-    <div class="ck-colors bg-gray-darker">@gray-darker</div>
-    <div class="ck-colors bg-gray-dark">@gray-dark</div>
-    <div class="ck-colors bg-gray">@gray</div>
-    <div class="ck-colors bg-gray-light">@gray-light</div>
-    <div class="ck-colors bg-gray-lighter">@gray-lighter</div>
+    <div class="ck-colors bg-gray-darker">.bg-gray-darker</div>
+    <div class="ck-colors bg-gray-dark">.bg-gray-dark</div>
+    <div class="ck-colors bg-gray">.bg-gray</div>
+    <div class="ck-colors bg-gray-light">.bg-gray-light</div>
+    <div class="ck-colors bg-gray-lighter">.bg-gray-lighter</div>
   </div> <!-- /example -->  
 
+        <div class="block">
+          <div class="block-header">
+            <h3>Contextual colors</h3>
+          </div>
+          <div class="block-body">
+            <h4>EN</h4>
+            <p class="text-muted">Lorem ipsum dolor sit amet,consectetur adipiscing elit.</p> 
+            <p class="text-primary">Lorem ipsum dolor sit amet,consectetur adipiscing elit.</p> 
+            <p class="text-info">Lorem ipsum dolor sit amet,consectetur adipiscing elit.</p> 
+            <p class="text-success">Lorem ipsum dolor sit amet,consectetur adipiscing elit.</p> 
+            <p class="text-warning">Lorem ipsum dolor sit amet,consectetur adipiscing elit.</p> 
+            <p class="text-danger">Lorem ipsum dolor sit amet,consectetur adipiscing elit.</p> 
+            
+            <h4>JA</h4>
+            <p class="text-muted">小屋もかっこうの鍛冶外国たちを虎をし楽長ますまし。それでこう残念んずって慈悲たう。</p> 
+            <p class="text-primary">小屋もかっこうの鍛冶外国たちを虎をし楽長ますまし。それでこう残念んずって慈悲たう。</p> 
+            <p class="text-info">小屋もかっこうの鍛冶外国たちを虎をし楽長ますまし。それでこう残念んずって慈悲たう。</p> 
+            <p class="text-success">小屋もかっこうの鍛冶外国たちを虎をし楽長ますまし。それでこう残念んずって慈悲たう。</p> 
+            <p class="text-warning">小屋もかっこうの鍛冶外国たちを虎をし楽長ますまし。それでこう残念んずって慈悲たう。</p> 
+            <p class="text-danger">小屋もかっこうの鍛冶外国たちを虎をし楽長ますまし。それでこう残念んずって慈悲たう。</p> 
+
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;text-muted&quot;</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet,consectetur adipiscing elit.<span class="nt">&lt;/p&gt;</span> 
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;text-primary&quot;</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet,consectetur adipiscing elit.<span class="nt">&lt;/p&gt;</span> 
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;text-info&quot;</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet,consectetur adipiscing elit.<span class="nt">&lt;/p&gt;</span> 
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;text-success&quot;</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet,consectetur adipiscing elit.<span class="nt">&lt;/p&gt;</span> 
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;text-warning&quot;</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet,consectetur adipiscing elit.<span class="nt">&lt;/p&gt;</span> 
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;text-danger&quot;</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet,consectetur adipiscing elit.<span class="nt">&lt;/p&gt;</span> 
+</code></pre></div>
+          </div>
+        </div>
+        <!-- /.block -->
 
 </div>
 
