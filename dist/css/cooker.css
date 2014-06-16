@@ -3136,6 +3136,10 @@ select[multiple].form-lg {
   background-color: transparent;
   background-image: none;
 }
+.form-col .input + .button {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
 .form-col .form-col-12 {
   float: left;
   width: 100%;
