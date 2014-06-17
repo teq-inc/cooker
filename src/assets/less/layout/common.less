@@ -121,9 +121,9 @@ h1[id] {
 }
 // grita 
 // ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-.grita-docs {
+.row-table-docs {
   margin-bottom: 1rem;
-  .col {
+  [class^="col-"]  {
     background: @primary-color;
     background: rgba(22,34,49,.15);
     color: #444;
@@ -135,6 +135,10 @@ h1[id] {
     }
   }
 }
-.grita-valign-middle .grita-docs {
+.grita-valign-middle.row-table-docs,
+.row-table.valign-middle.row-table-docs {
   margin-bottom: 0px;
 }
+.row-table-valign-middle-docs .row-table-docs {
+      margin-bottom: 0;
+  }

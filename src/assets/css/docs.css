@@ -104,21 +104,25 @@ h1[id] {
   color: #fff;
   letter-spacing: .5em;
 }
-.grita-docs {
+.row-table-docs {
   margin-bottom: 1rem;
 }
-.grita-docs .col {
+.row-table-docs [class^="col-"] {
   line-height: 3;
   color: #444;
   text-align: center;
   background: #242d35;
   background: rgba(22, 34, 49, .15);
 }
-.grita-docs .col:nth-child(odd) {
+.row-table-docs [class^="col-"]:nth-child(odd) {
   background: #242d35;
   background: rgba(22, 34, 49, .3);
 }
-.grita-valign-middle .grita-docs {
+.grita-valign-middle.row-table-docs,
+.row-table.valign-middle.row-table-docs {
+  margin-bottom: 0;
+}
+.row-table-valign-middle-docs .row-table-docs {
   margin-bottom: 0;
 }
 .highlight {

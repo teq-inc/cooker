@@ -2588,34 +2588,48 @@ fieldset[disabled] .button.circle.outline.danger.active {
   border-color: #942714;
 }
 @media (min-width: 768px) {
-  .grita {
+  .grita,
+  .row-table {
     display: table;
     width: 100%;
+    line-height: 1.42857143;
     table-layout: fixed;
   }
-  .grita .col {
+  .grita .col,
+  .row-table .col,
+  .grita [class^="col-"],
+  .row-table [class^="col-"] {
     display: table-cell;
   }
-  .grita-padding .col {
+  .grita-padding .col,
+  .row-table.padding [class^="col-"] {
     padding: 6px 12px;
   }
-  .grita-padding-sm .col {
+  .grita-padding-sm .col,
+  .row-table.padding-sm [class^="col-"] {
     padding: 6px;
   }
-  .grita-padding-xs .col {
+  .grita-padding-xs .col,
+  .row-table.padding-xs [class^="col-"] {
     padding: 3px;
   }
-  .grita-padding-form .col {
+  .grita-padding-form .col,
+  .row-table.padding-form [class^="col-"] {
     padding-right: 3px;
   }
-  .grita-padding-form .col:last-child {
+  .grita-padding-form .col:last-child,
+  .row-table.padding-form [class^="col-"]:last-child {
     padding-right: 0;
   }
-  .grita-gutter {
+  .grita-gutter,
+  .row-table-gutter {
     margin-right: -30px;
     margin-left: -30px;
   }
-  .grita-gutter .grita {
+  .grita-gutter .grita,
+  .row-table-gutter .grita,
+  .grita-gutter .row-table,
+  .row-table-gutter .row-table {
     border-spacing: 30px 0;
   }
   .col-1 {
@@ -2655,7 +2669,9 @@ fieldset[disabled] .button.circle.outline.danger.active {
     width: 100%;
   }
 }
-.grita-valign-middle .col {
+.grita-valign-middle .col,
+.grita-valign-middle [class^="col-"],
+.row-table.valign-middle [class^="col-"] {
   vertical-align: middle;
 }
 .bg-primary {
