@@ -1,8 +1,8 @@
-// grid-table.less
+// row-table.less
 //=================================================
-.grita-generate(@n, @i: 1) when (@i =< @n) {
+.row-table-generate(@n, @i: 1) when (@i =< @n) {
   .col-@{i} {
     width: (@i * 100% / @n);
   }
-  .grita-generate(@n, (@i + 1));
+  .row-table-generate(@n, (@i + 1));
 }
