@@ -2588,6 +2588,90 @@ fieldset[disabled] .button.circle.outline.danger.active {
   border-color: #942714;
 }
 @media (min-width: 768px) {
+  .row {
+    width: 100%;
+    line-height: 1.42857143;
+  }
+  .row:before,
+  .row:after {
+    display: table;
+    content: " ";
+  }
+  .row:after {
+    clear: both;
+  }
+  .row:before,
+  .row:after {
+    display: table;
+    content: " ";
+  }
+  .row:after {
+    clear: both;
+  }
+  .row [class^="col-"] {
+    display: block;
+    float: left;
+  }
+  .row.padding [class^="col-"] {
+    padding: 6px 12px;
+  }
+  .row.padding-sm [class^="col-"] {
+    padding: 6px;
+  }
+  .row.padding-xs [class^="col-"] {
+    padding: 3px;
+  }
+  .row.padding-form [class^="col-"] {
+    padding-right: 3px;
+  }
+  .row.padding-form [class^="col-"]:last-child {
+    padding-right: 0;
+  }
+  .row-gutter {
+    margin-right: -30px;
+    margin-left: -30px;
+  }
+  .row-gutter .row [class^="col-"] {
+    margin: 30px;
+  }
+  .col-1 {
+    width: 8.33333333%;
+  }
+  .col-2 {
+    width: 16.66666667%;
+  }
+  .col-3 {
+    width: 25%;
+  }
+  .col-4 {
+    width: 33.33333333%;
+  }
+  .col-5 {
+    width: 41.66666667%;
+  }
+  .col-6 {
+    width: 50%;
+  }
+  .col-7 {
+    width: 58.33333333%;
+  }
+  .col-8 {
+    width: 66.66666667%;
+  }
+  .col-9 {
+    width: 75%;
+  }
+  .col-10 {
+    width: 83.33333333%;
+  }
+  .col-11 {
+    width: 91.66666667%;
+  }
+  .col-12 {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
   .grita,
   .row-table {
     display: table;

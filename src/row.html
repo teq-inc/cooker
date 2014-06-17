@@ -1,0 +1,266 @@
+---
+layout: base
+slug: row
+title: row
+lead: 
+class: site-row
+base_url: "../"
+---
+  
+<div class="ck-section">
+  <h2 id="row" class="page-header ">row <small>row.less</small></h2>
+  <p class="lead"></p>
+    
+  <h3>Basic 12 row</h3>
+  <p>lessを利用の場合は<code>cooker/variables.less</code>に書かれている<code>@row-number</code>の数値をを作りたいコラムの最大数に変更することで横列を好きな数でコンパイル可能。</p>
+  <div class="ck-example">
+
+    <div class="row row-docs">
+      <div class="col-1">col-1</div>
+      <div class="col-1">col-1</div>
+      <div class="col-1">col-1</div>
+      <div class="col-1">col-1</div>
+      <div class="col-1">col-1</div>
+      <div class="col-1">col-1</div>
+      <div class="col-1">col-1</div>
+      <div class="col-1">col-1</div>
+      <div class="col-1">col-1</div>
+      <div class="col-1">col-1</div>
+      <div class="col-1">col-1</div>
+      <div class="col-1">col-1</div>
+    </div>
+    <div class="row row-docs">
+      <div class="col-2">col-2</div>
+      <div class="col-2">col-2</div>
+      <div class="col-2">col-2</div>
+      <div class="col-2">col-2</div>
+      <div class="col-2">col-2</div>
+      <div class="col-2">col-2</div>
+    </div>
+    <div class="row row-docs">
+      <div class="col-3">col-3</div>
+      <div class="col-3">col-3</div>
+      <div class="col-3">col-3</div>
+      <div class="col-3">col-3</div>
+    </div>
+    <div class="row row-docs">
+      <div class="col-4">col-4</div>
+      <div class="col-4">col-4</div>
+      <div class="col-4">col-4</div>
+    </div>
+    <div class="row row-docs">
+      <div class="col-5">col-5</div>
+      <div class="col-7">col-7</div>
+    </div>
+    <div class="row row-docs">
+      <div class="col-6">col-6</div>
+      <div class="col-6">col-6</div>
+    </div>
+    <div class="row row-docs">
+      <div class="col-8">col-8</div>
+      <div class="col-4">col-4</div>
+    </div>
+    <div class="row row-docs">
+      <div class="col-12">col-12</div>
+    </div>
+
+  </div> <!-- /example -->
+{% highlight html %}
+<div class="row">
+  <div class="col-6">col-6</div>
+  <div class="col-6">col-6</div>
+</div>
+<div class="row">
+  <div class="col-8">col-8</div>
+  <div class="col-4">col-4</div>
+</div>
+<div class="row">
+  <div class="col-12">col-12</div>
+</div>
+{% endhighlight %}
+  
+
+  
+  <h2>Gutters</h2>
+  <p><code>.row</code>クラスにラッパー要素<code>.row-gutter</code>を追加することで、コラム間にマージンを付ける事が可能。</p>
+  
+  <div class="ck-example">
+  
+    <div class="row-gutter">
+      <div class="row row-docs">
+        <div class="col-1">col-1</div>
+        <div class="col-2">col-2</div>
+        <div class="col-4">col-4</div>
+        <div class="col-5">col-5</div>
+      </div>
+    </div>
+    <div class="row-gutter">
+      <div class="row row-docs">
+        <div class="col-3">col-3</div>
+        <div class="col-3">col-3</div>
+        <div class="col-6">col-6</div>
+      </div>
+    </div>
+    <div class="row-gutter">
+      <div class="row row-docs">
+        <div class="col-9">col-9</div>
+        <div class="col-3">col-3</div>
+      </div>
+    </div>
+    <div class="row-gutter">
+      <div class="row row-docs">
+        <div class="col-4">col-4</div>
+        <div class="col-4">col-4</div>
+        <div class="col-4">col-4</div>
+      </div>
+    </div>
+    <div class="row-gutter">
+      <div class="row row-docs">
+        <div class="col-3">col-3</div>
+        <div class="col-3">col-3</div>
+        <div class="col-3">col-3</div>
+        <div class="col-3">col-3</div>
+      </div>
+    </div>
+      
+  </div> <!-- /example -->
+{% highlight html %}
+<div class="row-gutter">
+  <div class="row">
+    <div class="col-4">col-4</div>
+    <div class="col-4">col-4</div>
+    <div class="col-4">col-4</div>
+  </div>
+</div>
+<div class="row-gutter">
+  <div class="row">
+    <div class="col-3">col-3</div>
+    <div class="col-3">col-3</div>
+    <div class="col-3">col-3</div>
+    <div class="col-3">col-3</div>
+  </div>
+</div>
+{% endhighlight %}
+
+
+
+  <h2>Padiing</h2>
+  <p></p>
+  <h3>Base</h3>
+  <div class="ck-example">
+  
+    <div class="row padding row-docs">
+      <div class="col-1">col-1</div>
+      <div class="col-2">col-2</div>
+      <div class="col-4">col-4</div>
+      <div class="col-5">col-5</div>
+    </div>
+    <div class="row padding row-docs">
+      <div class="col-3">col-3</div>
+      <div class="col-3">col-3</div>
+      <div class="col-6">col-6</div>
+    </div>
+      
+  </div> <!-- /example -->
+{% highlight html %}
+<div class="row padding">
+  <div class="col-6">col-6</div>
+  <div class="col-6">col-6</div>
+</div>
+<div class="row padding">
+  <div class="col-6">col-6</div>
+  <div class="col-6">col-6</div>
+</div>
+{% endhighlight %}
+
+<h3>Small</h3>
+  <div class="ck-example">
+  
+    <div class="row padding-sm row-docs">
+      <div class="col-1">col-1</div>
+      <div class="col-2">col-2</div>
+      <div class="col-4">col-4</div>
+      <div class="col-5">col-5</div>
+    </div>
+    <div class="row padding-sm row-docs">
+      <div class="col-3">col-3</div>
+      <div class="col-3">col-3</div>
+      <div class="col-6">col-6</div>
+    </div>
+      
+  </div> <!-- /example -->
+{% highlight html %}
+<div class="row padding-sm">
+  <div class="col-6">col-6</div>
+  <div class="col-6">col-6</div>
+</div>
+<div class="row padding-sm">
+  <div class="col-6">col-6</div>
+  <div class="col-6">col-6</div>
+</div>
+{% endhighlight %}
+
+
+<h3>X-Small</h3>
+  <div class="ck-example">
+  
+    <div class="row padding-xs row-docs">
+      <div class="col-1">col-1</div>
+      <div class="col-2">col-2</div>
+      <div class="col-4">col-4</div>
+      <div class="col-5">col-5</div>
+    </div>
+    <div class="row padding-xs row-docs">
+      <div class="col-3">col-3</div>
+      <div class="col-3">col-3</div>
+      <div class="col-6">col-6</div>
+    </div>
+      
+  </div> <!-- /example -->
+{% highlight html %}
+<div class="row padding-xs">
+  <div class="col-6">col-6</div>
+  <div class="col-6">col-6</div>
+</div>
+<div class="row padding-xs">
+  <div class="col-6">col-6</div>
+  <div class="col-6">col-6</div>
+</div>
+{% endhighlight %}
+
+
+
+<h3>forms</h3>
+  <div class="ck-example">
+  
+    <div class="row padding-form row-docs">
+      <div class="col-1">col-1</div>
+      <div class="col-2">col-2</div>
+      <div class="col-4">col-4</div>
+      <div class="col-5">col-5</div>
+    </div>
+    <div class="row padding-form row-docs">
+      <div class="col-3">col-3</div>
+      <div class="col-3">col-3</div>
+      <div class="col-6">col-6</div>
+    </div>
+      
+  </div> <!-- /example -->
+{% highlight html %}
+<div class="row padding-form">
+  <div class="col-6">col-6</div>
+  <div class="col-6">col-6</div>
+</div>
+<div class="row padding-form">
+  <div class="col-6">col-6</div>
+  <div class="col-6">col-6</div>
+</div>
+{% endhighlight %}
+
+
+
+</div>
+
+
+
+  
