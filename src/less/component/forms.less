@@ -15,6 +15,36 @@
   font-size: @font-size-base;
   line-height: @line-height-base;
 }
+//
+// フォームのサイズ
+// =====================
+.input,
+.select,
+.checkbox,
+.radio,
+.input-outset-label input {
+  &.sm {
+    .input-size(
+      @input-height-small; 
+      @padding-small-vertical; 
+      @padding-small-horizontal; 
+      @font-size-small; 
+      @line-height-small; 
+      @input-border-radius-sm
+    );
+  }
+  &.lg {
+    .input-size(
+      @input-height-large; 
+      @padding-large-vertical; 
+      @padding-large-horizontal; 
+      @font-size-large; 
+      @line-height-large; 
+      @input-border-radius-lg
+    );
+  }
+}
+
 
 //
 // input
@@ -47,10 +77,10 @@
   &:hover {
     background-color: @input-hover-bg;
   }
-  &.form-sm {
+  &.sm {
     padding: 0 @padding-small-horizontal;
   }
-  &.form-lg {
+  &.lg {
     padding: 0 @padding-large-horizontal;
   }
 }
@@ -79,43 +109,22 @@
   margin-right: 1em;
 }
 
-//
-// フォームのサイズ
-// =====================
-.form-sm {
-  .input-size(
-    @input-height-small; 
-    @padding-small-vertical; 
-    @padding-small-horizontal; 
-    @font-size-small; 
-    @line-height-small; 
-    @input-border-radius-sm
-  );
-}
-.form-lg {
-  .input-size(
-    @input-height-large; 
-    @padding-large-vertical; 
-    @padding-large-horizontal; 
-    @font-size-large; 
-    @line-height-large; 
-    @input-border-radius-lg
-  );
-}
 
 //
 // form grid
 // =====================
-.form-col{
+.form-col,
+.row-form {
   //フォームの間に入るテキスト用
-  .form-col-text{
+  .form-col-text,
+  .row-form-text {
     .form();
     background-color: transparent;
   }
   .input + .button{
     .border-left-radius(0);
   }
-  .form-col-generate(12);
+  .row-form-generate(12);
   .clearfix();
 }
 
@@ -135,7 +144,7 @@
   &:focus {
     border-bottom: 1px solid @primary-color;
   }
-  &.form-sm {
+  &.sm {
     .input-size(
       @input-height-small; 
       @padding-small-vertical; 
@@ -145,7 +154,7 @@
       none
     );
   }
-  &.form-lg {
+  &.lg {
     .input-size(
       @input-height-large; 
       @padding-large-vertical; 
@@ -171,7 +180,7 @@
   &:focus {
     background-color: @input-hover-bg;
   }
-  &.form-sm {
+  &.sm {
     .input-size(
       @input-height-small; 
       @padding-small-vertical; 
@@ -181,7 +190,7 @@
       none
     );
   }
-  &.form-lg {
+  &.lg {
     .input-size(
       @input-height-large; 
       @padding-large-vertical; 
@@ -208,7 +217,7 @@
   &:focus {
     border-left: 3px solid @primary-color;
   }
-  &.form-sm {
+  &.sm {
     .input-size(
       @input-height-small; 
       @padding-small-vertical; 
@@ -218,7 +227,7 @@
       none
     );
   }
-  &.form-lg {
+  &.lg {
     .input-size(
       @input-height-large; 
       @padding-large-vertical; 
@@ -236,7 +245,11 @@
 .input-inset-icons{
   position: relative;
   .input-inset-left,
-  .input-inset-right {
+  .left,
+  .prepend,
+  .input-inset-right,
+  .right,
+  .append {
     position : absolute;
     top: 0;
     display : block;
@@ -251,59 +264,80 @@
       }
     }
   }
-  .input-inset-left{
+  .input-inset-left,
+  .left,
+  .prepend{
     left: 0;
     ~ .input-inset{
       padding-left: ( @padding-base-horizontal * 3 );
     }
   }
   .input-inset{}
-  .input-inset-right{
+  .input-inset-right,
+  .right,
+  .append {
     right: 0;
     ~ .input-inset {
       padding-right: ( @padding-base-horizontal * 3 );
     }
   }
-}
 
-// input-inset-icons-sm
-.input-inset-icons-sm{
-  .input-inset-left,
-  .input-inset-right{
-    padding: @padding-small;
-    height:@input-height-small;
-    font-size: @font-size-small;
-  }
-  .input-inset-left{
-    ~ .input-inset {
-      padding-left: (@padding-small-horizontal * 3);
+  &.input-inset-icons-sm,
+  &.sm{
+    .input-inset-left,
+    .left,
+    .prepend,
+    .input-inset-right,
+    .right,
+    .append {
+      padding: @padding-small;
+      height:@input-height-small;
+      font-size: @font-size-small;
+    }
+    .input-inset-left,
+    .left,
+    .prepend{
+      ~ .input-inset {
+        padding-left: (@padding-small-horizontal * 3);
+      }
+    }
+    .input-inset-right,
+    .right,
+    .append {
+      ~ .input-inset {
+        padding-right: (@padding-small-horizontal * 3);
+      }
     }
   }
-  .input-inset-right{
-    ~ .input-inset {
-      padding-right: (@padding-small-horizontal * 3);
-    }
-  }
-}
 
-// input-inset-icons-lg
-.input-inset-icons-lg{
-  .input-inset-left,
-  .input-inset-right{
-    padding: @padding-large;
-    height:@input-height-large;
-    font-size: @font-size-large;
-  }
-  .input-inset-left{
-    ~ .input-inset {
-      padding-left: (@padding-large-horizontal * 3);
+  &.input-inset-icons-lg,
+  &.lg{
+    .input-inset-left,
+    .left,
+    .prepend,
+    .input-inset-right,
+    .right,
+    .append {
+      padding: @padding-large;
+      height:@input-height-large;
+      font-size: @font-size-large;
+    }
+    .input-inset-left,
+    .left,
+    .prepend{
+      ~ .input-inset {
+        padding-left: (@padding-large-horizontal * 3);
+      }
+    }
+    .input-inset-right,
+    .right,
+    .append {
+      ~ .input-inset {
+        padding-right: (@padding-large-horizontal * 3);
+      }
     }
   }
-  .input-inset-right{
-    ~ .input-inset {
-      padding-right: (@padding-large-horizontal * 3);
-    }
-  }
+
 }
 
 //
@@ -313,13 +347,19 @@
   display: inline-block;
   .clearfix();
   .input-outset-left,
-  .input-outset-right{
+  .input-outset-right,
+  .left,
+  .right,
+  .prepend,
+  .append {
     display: block;
     padding : @padding-base;
     border: @border-base;
     height : @input-height-base;
   }
-  .input-outset-left{
+  .input-outset-left,
+  .left,
+  .prepend{
     float: left;
     border-right: 0;
     ~ .input{
@@ -327,7 +367,9 @@
       border-bottom-left-radius: 0;
     }
   }
-  .input-outset-right{
+  .input-outset-right,
+  .right,
+  .append {
     float: right;
     border-left: 0;
     ~ .input{
@@ -336,45 +378,53 @@
     }
   }
   .input-outset{
+    .input();
     float: left;
     width: 250px;
   }
-}
-
-.input-outset-label-sm{
-  .input-outset-left,
-  .input-outset-right{
-    padding: @padding-small;
-    height:@input-height-small;
-    font-size: @font-size-small;
-    ~ .input {
-      .input-size(
-        @input-height-small; 
-        @padding-small-vertical; 
-        @padding-small-horizontal; 
-        @font-size-small; 
-        @line-height-small; 
-        none
-      );
+  &.sm{
+    .input-outset-left,
+    .input-outset-right,
+    .left,
+    .right,
+    .prepend,
+    .append {
+      padding: @padding-small;
+      height:@input-height-small;
+      font-size: @font-size-small;
+      ~ .input {
+        .input-size(
+          @input-height-small; 
+          @padding-small-vertical; 
+          @padding-small-horizontal; 
+          @font-size-small; 
+          @line-height-small; 
+          none
+        );
+      }
+    }
+  }
+  &.lg{
+    .input-outset-left,
+    .input-outset-right,
+    .left,
+    .right,
+    .prepend,
+    .append {
+      padding: @padding-large;
+      height:@input-height-large;
+      font-size: @font-size-large;
+      ~ .input {
+        .input-size(
+          @input-height-large; 
+          @padding-large-vertical; 
+          @padding-large-horizontal; 
+          @font-size-large; 
+          @line-height-large; 
+          none
+        );
+      }
     }
   }
 }
 
-.input-outset-label-lg{
-  .input-outset-left,
-  .input-outset-right{
-    padding: @padding-large;
-    height:@input-height-large;
-    font-size: @font-size-large;
-    ~ .input {
-      .input-size(
-        @input-height-large; 
-        @padding-large-vertical; 
-        @padding-large-horizontal; 
-        @font-size-large; 
-        @line-height-large; 
-        none
-      );
-    }
-  }
-}

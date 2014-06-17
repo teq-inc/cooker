@@ -1,8 +1,8 @@
 //
 // ====================
-.form-col-generate(@number, @i: 1) when (@i =< @number) {
-  .form-col-generate(@number, (@i + 1));
-  .form-col-@{i} {
+.row-form-generate(@number, @i: 1) when (@i =< @number) {
+  .row-form-generate(@number, (@i + 1));
+  .col-@{i} {
     float: left;
     // margin-right: 0.4%;
     // width: ((@i * 100% / @number) - 0.4%);
