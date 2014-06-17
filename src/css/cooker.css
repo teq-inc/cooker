@@ -2627,13 +2627,6 @@ fieldset[disabled] .button.circle.outline.danger.active {
   .row.padding-form [class^="col-"]:last-child {
     padding-right: 0;
   }
-  .row-gutter {
-    margin-right: -30px;
-    margin-left: -30px;
-  }
-  .row-gutter .row [class^="col-"] {
-    margin: 30px;
-  }
   .col-1 {
     width: 8.33333333%;
   }
