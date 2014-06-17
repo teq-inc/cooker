@@ -507,16 +507,15 @@
 })(jQuery);
 
 (function($) {
-  var namespace = 'dropdown';
+  var namespace = 'dropdown' || 'dropup';
   var methods = {
-  
+
     init: function(options){
       options = $.extend({
-        dropdown:   'dropdown',
         toggle:     'dropdown-toggle',
-        toggleAll:  'dropdown-toggle-all',
-        open:       'dropdown-open',
-        close:      'dropdown-close'
+        body:       'dropdown-menu',
+        open:       'open',
+        close:      'close'
       }, options);
       return this.each(function(){
         var _this = this;
@@ -529,18 +528,26 @@
               options: options
           });
         }
-        var $iToggle = $this.find('.'+options.toggle);
-        $iToggle.off('click.'+namespace).on('click.'+namespace, function(){
-            methods.toggle.apply(_this);
-        });                
+        
+        var $toggle = $this.find('.'+options.toggle);
+        var $other = $("body").not(this);
+
+        $other.click(function(){
+          methods.close.apply(_this);
+        });
+
+        $toggle.off('click.'+namespace).on('click.'+namespace, function(e){
+          e.stopPropagation();
+          methods.toggle.apply(_this);
+        });
+
       }); // end each
     },
         
     toggle: function(){
       var $this = $(this);
       options = $this.data(namespace).options;
-      var $i = $(event.target).parents('.'+options.dropdown);
-      var statusOpen = $i.hasClass(options.open);
+      var statusOpen = $this.hasClass(options.open);
       if(statusOpen){
         methods.close.call(this);
       }else{
@@ -551,39 +558,17 @@
     open: function(){
       var $this = $(this);
       options = $this.data(namespace).options;
-      var open =  options.open;  
-      var close = options.close;    
-      var mode = $this.data('mode');
-      var $i = $(event.target).parents('.'+options.dropdown);
-      var $iPrev = $i.prev('.'+options.dropdown);
-      var $iNext = $i.next('.'+options.dropdown);
-      var $o = $i.siblings();          
-      if(mode === 'accordion'){
-        $o.removeClass(open).addClass(close);
-        $i.removeClass(close).addClass(open);    
-        $o.removeClass("dropdown-open-prev dropdown-open-next");
-        $iPrev.addClass("dropdown-open-prev");
-        $iNext.addClass("dropdown-open-next");
-      }else{
-        $i.removeClass(close).addClass(open);
-      }
+      $this
+      .removeClass(options.close)
+      .addClass(options.open);
     },
 
     close: function(){
       var $this = $(this);
       options = $this.data(namespace).options;
-      var open =  options.open;  
-      var close = options.close;    
-      var mode = $this.data('mode');
-      var $i = $(event.target).parents('.'+options.dropdown);
-      var $o = $i.siblings();          
-      if(mode === 'accordion'){
-        $o,
-        $i.removeClass(open).addClass(close);
-        $o.removeClass("dropdown-open-prev dropdown-open-next");
-      }else{
-        $i.removeClass(open).addClass(close);
-      }
+      $this
+      .removeClass(options.open)
+      .addClass(options.close);
     },
     
     destroy: function(){
@@ -595,7 +580,7 @@
     },
     
   };
-  $.fn.dropdowns = function(method){
+  $.fn.dropdown = function(method){
     if ( methods[method] ) {
       return methods[method].apply( this, Array.prototype.slice.call( arguments, 1 ));
     } else if ( typeof method === 'object' || ! method ) {
