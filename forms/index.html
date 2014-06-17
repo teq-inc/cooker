@@ -63,10 +63,11 @@
         <ul class="nav">
           <li><a href="../type">Typography</a></li>
           <li><a href="../colors">colors</a></li>
+          <li><a href="../container">container</a></li>
           <li><a href="../grita">grita</a></li>
           <li><a href="../forms">Forms</a></li>
           <li><a href="../buttons">Buttons</a></li>
-          <li><a href="../container">container</a></li>
+          <li><a href="../button-split">Button split</a></li>
  <!--           <li><a href="#">Table</a></li>
           <li><a href="#">nav</a></li>
           <li><a href="#">row grid</a></li>
@@ -110,12 +111,12 @@
             <h3>Input <small>width:100%</small></h3>
           </div>
           <div class="block-body">
-            <p><input class="input form-sm" type="text" placeholder="Small" /></p>
+            <p><input class="input sm" type="text" placeholder="Small" /></p>
             <p><input class="input" type="text" placeholder="Default" /></p>
-            <p><input class="input form-lg" type="text" placeholder="Large" /></p>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">class=</span><span class="s">&quot;input form-sm&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Small&quot;</span> <span class="nt">/&gt;</span>
+            <p><input class="input lg" type="text" placeholder="Large" /></p>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">class=</span><span class="s">&quot;input sm&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Small&quot;</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">class=</span><span class="s">&quot;input&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Default&quot;</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">class=</span><span class="s">&quot;input form-lg&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Large&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">class=</span><span class="s">&quot;input lg&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Large&quot;</span> <span class="nt">/&gt;</span>
 </code></pre></div>
           </div>
         </div>
@@ -126,28 +127,28 @@
           </div>
           <div class="block-body">
             <p>
-            <select class="select form-sm">
-              <option value="form-sm">form-sm</option>
+            <select class="select sm">
+              <option value="sm">sm</option>
             </select>
             </p>
             <p>
             <select class="select">
-              <option value="form-col-3">normal</option>
+              <option value="normal">normal</option>
             </select>
             </p>
             <p>
-            <select class="select form-lg">
-              <option value="form-lg">form-lg</option>
+            <select class="select lg">
+              <option value="lg">form-lg</option>
             </select>
             </p>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">&quot;select form-sm&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;form-sm&quot;</span><span class="nt">&gt;</span>form-sm<span class="nt">&lt;/option&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">&quot;select sm&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;sm&quot;</span><span class="nt">&gt;</span>sm<span class="nt">&lt;/option&gt;</span>
 <span class="nt">&lt;/select&gt;</span>
 <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">&quot;select&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;form-col-3&quot;</span><span class="nt">&gt;</span>normal<span class="nt">&lt;/option&gt;</span>
+  <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;normal&quot;</span><span class="nt">&gt;</span>normal<span class="nt">&lt;/option&gt;</span>
 <span class="nt">&lt;/select&gt;</span>
-<span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">&quot;select form-lg&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;form-lg&quot;</span><span class="nt">&gt;</span>form-lg<span class="nt">&lt;/option&gt;</span>
+<span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">&quot;select lg&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;lg&quot;</span><span class="nt">&gt;</span>lg<span class="nt">&lt;/option&gt;</span>
 <span class="nt">&lt;/select&gt;</span>
 </code></pre></div>
           </div>
@@ -241,89 +242,89 @@
             <p>grita同様にカラム数はlessの引数を変えることで自由に変更可能。</p>
           </div>
           <div class="block-body">
-            <p class="form-col">
-            <input class="input form-col-4" type="text" placeholder="form-col-4" />
-            <input class="input form-col-4" type="text" placeholder="form-col-4" />
-            <input class="input form-col-4" type="text" placeholder="form-col-4" />
+            <p class="row-form">
+            <input class="input col-4" type="text" placeholder="col-4" />
+            <input class="input col-4" type="text" placeholder="col-4" />
+            <input class="input col-4" type="text" placeholder="col-4" />
             </p>
-            <p class="form-col">
-            <input class="input form-col-3" type="text" placeholder="form-col-3" />
-            <input class="input form-col-3" type="text" placeholder="form-col-3" />
-            <input class="input form-col-3" type="text" placeholder="form-col-3" />
-            <input class="input form-col-3" type="text" placeholder="form-col-3" />
+            <p class="row-form">
+            <input class="input col-3" type="text" placeholder="col-3" />
+            <input class="input col-3" type="text" placeholder="col-3" />
+            <input class="input col-3" type="text" placeholder="col-3" />
+            <input class="input col-3" type="text" placeholder="col-3" />
             </p>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;form-col&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input form-col-4&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;form-col-4&quot;</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input form-col-4&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;form-col-4&quot;</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input form-col-4&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;form-col-4&quot;</span> <span class="nt">/&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row-form&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input col-4&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;col-4&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input col-4&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;col-4&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input col-4&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;col-4&quot;</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 </code></pre></div>
-            <p class="form-col">
-              <input class="input form-col-3" type="text" placeholder="form-col-3" />
-              <span class="checkbox form-col-4">
+            <p class="row-form">
+              <input class="input col-3" type="text" placeholder="col-3" />
+              <span class="checkbox col-4">
                 <input type="checkbox" id="checkbox10">
-                <label for="checkbox10">checkbox form-col-4</label>
+                <label for="checkbox10">checkbox col-4</label>
               </span>
-              <span class="radio form-col-3">
+              <span class="radio col-3">
                 <input type="radio" id="radio10">
-                <label for="radio10">radio form-col-3</label>
+                <label for="radio10">radio col-3</label>
               </span>
-              <select class="input form-col-2">
-                <option value="form-col-2">form-col-2</option>
+              <select class="select col-2">
+                <option value="col-2">col-2</option>
               </select>
             </p>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;form-col&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input form-col-3&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;form-col-3&quot;</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;checkbox form-col-4&quot;</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row-form&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input col-3&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;col-3&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;checkbox col-4&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;checkbox&quot;</span> <span class="na">id=</span><span class="s">&quot;checkbox10&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;checkbox10&quot;</span><span class="nt">&gt;</span>checkbox form-col-4<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;checkbox10&quot;</span><span class="nt">&gt;</span>checkbox col-4<span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;/span&gt;</span>
-  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;radio form-col-3&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;radio col-3&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;radio&quot;</span> <span class="na">id=</span><span class="s">&quot;radio10&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;radio10&quot;</span><span class="nt">&gt;</span>radio form-col-3<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;radio10&quot;</span><span class="nt">&gt;</span>radio col-3<span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;/span&gt;</span>
-  <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">&quot;input form-col-2&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;form-col-2&quot;</span><span class="nt">&gt;</span>form-col-2<span class="nt">&lt;/option&gt;</span>
+  <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">&quot;select col-2&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;col-2&quot;</span><span class="nt">&gt;</span>col-2<span class="nt">&lt;/option&gt;</span>
   <span class="nt">&lt;/select&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 </code></pre></div>
-            <p class="form-col">
-              <input class="input form-col-3" type="text" placeholder="form-col-3" />
-              <span class="form-col-text form-col-3">
-                .form-col-text
+            <p class="row-form">
+              <input class="input col-3" type="text" placeholder="col-3" />
+              <span class="row-form-text col-3">
+                .col-text
               </span>
-              <span class="form-col-text form-col-3">
-                .form-col-text
+              <span class="row-form-text col-3">
+                .col-text
               </span>
-              <select class="input form-col-3">
-                <option value="form-col-2">form-col-2</option>
+              <select class="select col-3">
+                <option value="col-2">col-2</option>
               </select>
             </p>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;form-col&quot;</span><span class="nt">&gt;</span>
-<span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input form-col-3&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;form-col-3&quot;</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;form-col-text form-col-3&quot;</span><span class="nt">&gt;</span>
-  .form-col-text
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row-form&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input col-3&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;col-3&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;row-form-text col-3&quot;</span><span class="nt">&gt;</span>
+  .col-text
 <span class="nt">&lt;/span&gt;</span>
-<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;form-col-text form-col-3&quot;</span><span class="nt">&gt;</span>
-  .form-col-text
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;row-form-text col-3&quot;</span><span class="nt">&gt;</span>
+  .col-text
 <span class="nt">&lt;/span&gt;</span>
-<span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">&quot;input form-col-3&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;form-col-2&quot;</span><span class="nt">&gt;</span>form-col-2<span class="nt">&lt;/option&gt;</span>
+<span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">&quot;select col-3&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;col-2&quot;</span><span class="nt">&gt;</span>col-2<span class="nt">&lt;/option&gt;</span>
 <span class="nt">&lt;/select&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 </code></pre></div>
 
 
             <h4>input + button</h4>
-            <p class="form-col">
-              <input class="input form-col-3" type="text" placeholder="form-col-3" />
-              <button class="button button-primary">
+            <p class="row-form">
+              <input class="input col-3" type="text" placeholder="col-3" />
+              <button class="button primary">
                 button
               </button>
             </p>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;form-col&quot;</span><span class="nt">&gt;</span>
-<span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input form-col-3&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;form-col-3&quot;</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;button button-primary&quot;</span><span class="nt">&gt;</span>button<span class="nt">&lt;/button&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row-form&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input col-3&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;col-3&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;button primary&quot;</span><span class="nt">&gt;</span>button<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 </code></pre></div>
 
@@ -339,13 +340,13 @@
             <h4>Minimal <small>input-minimal</small></h4>
           </div>
           <div class="block-body">
-            <p><input class="input-minimal form-sm" type="text" placeholder="input-minimal form-sm" /></p>
+            <p><input class="input-minimal sm" type="text" placeholder="input-minimal sm" /></p>
             <p><input class="input-minimal" type="text" placeholder="Base" /></p>
-            <p><input class="input-minimal form-lg" type="text" placeholder="input-minimal form-lg" /></p>
+            <p><input class="input-minimal lg" type="text" placeholder="input-minimal lg" /></p>
 
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input-minimal form-sm&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Small&quot;</span> <span class="nt">/&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input-minimal sm&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Small&quot;</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input-minimal&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Base&quot;</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input-minimal form-lg&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Large&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input-minimal lg&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Large&quot;</span> <span class="nt">/&gt;</span>
 </code></pre></div>
           </div>
         </div>
@@ -354,17 +355,17 @@
 
         <div class="block">
           <div class="block-header">
-            <h4>underline <small>form-underline</small></h4>
+            <h4>underline <small>underline</small></h4>
           </div>
           <div class="block-body">
             <p>
-              <input class="input-underline form-sm" type="text" placeholder="input-underline   form-sm" />
+              <input class="input-underline sm" type="text" placeholder="input-underline   sm" />
               <input class="input-underline" type="text" placeholder="input-underline" />
-              <input class="input-underline form-lg" type="text" placeholder="input-underline   form-lg" />
+              <input class="input-underline lg" type="text" placeholder="input-underline   lg" />
             </p>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input-underline form-sm&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;input-underline&quot;</span> <span class="nt">/&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input-underline sm&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;input-underline&quot;</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input-underline&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;input-underline&quot;</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input-underline form-lg&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;input-underline&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input-underline lg&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;input-underline&quot;</span> <span class="nt">/&gt;</span>
 </code></pre></div>
           </div>
           </div><!-- /.block -->
@@ -376,13 +377,13 @@
             </div>
             <div class="block-body">
               <p>
-              <input class="input-left-bar form-sm" type="text" placeholder="input-left-bar form-sm" />
+              <input class="input-left-bar sm" type="text" placeholder="input-left-bar sm" />
               <input class="input-left-bar" type="text" placeholder="input-left-bar" />
-              <input class="input-left-bar form-lf" type="text" placeholder="input-left-bar form-sm" />
+              <input class="input-left-bar lg" type="text" placeholder="input-left-bar lg" />
               </p>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input-left-bar form-sm&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;input-left-bar form-sm&quot;</span> <span class="nt">/&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input-left-bar sm&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;input-left-bar sm&quot;</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input-left-bar&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;input-left-bar&quot;</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input-left-bar form-lf&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;input-left-bar form-sm&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input-left-bar lg&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;input-left-bar form-lg&quot;</span> <span class="nt">/&gt;</span>
 </code></pre></div>
             </div>
             </div><!-- /.block -->
@@ -397,40 +398,30 @@
                 <h5>icon both</h5>
                 <p>サンプルの右側のアイコンは"button"要素内に配置。</p>
                 <p>
-                <div class="input-inset-icons input-inset-icons-sm">
-                  <span class="input-inset-left"><i class="qcon qcon-hypo-square"></i></span>
-                  <button class="input-inset-right"><i class="qcon qcon-quota"></i></button>
-                  <input class="input input-inset form-sm" type="text" placeholder="input-inset-icons-sm" />
+                <div class="input-inset-icons sm">
+                  <span class="prepend"><i class="qcon qcon-hypo-square"></i></span>
+                  <button class="append"><i class="qcon qcon-quota"></i></button>
+                  <input class="input input-inset sm" type="text" placeholder="input-inset-icons-sm" />
                 </div>
                 </p>
                 <p>
                 <div class="input-inset-icons">
-                  <span class="input-inset-left form-sm"><i class="qcon qcon-hypo-square"></i></span>
-                  <button class="input-inset-right"><i class="qcon qcon-quota"></i></button>
+                  <span class="prepend"><i class="qcon qcon-hypo-square"></i></span>
+                  <button class="append"><i class="qcon qcon-quota"></i></button>
                   <input class="input input-inset" type="text" placeholder="Default" />
                 </div>
                 <p>
                 <p>
-                <div class="input-inset-icons input-inset-icons-lg">
+                <div class="input-inset-icons lg">
                   <span class="input-inset-left"><i class="qcon qcon-hypo-square"></i></span>
                   <button class="input-inset-right"><i class="qcon qcon-quota"></i></button>
-                  <input class="input input-inset form-lg" type="text" placeholder="input-inset-icons-lg" />
+                  <input class="input input-inset lg" type="text" placeholder="lg" />
                 </div>
                 </p>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-inset-icons input-inset-icons-sm&quot;</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-inset-icons lg&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;input-inset-left&quot;</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">&quot;qcon qcon-hypo-square&quot;</span><span class="nt">&gt;&lt;/i&gt;&lt;/span&gt;</span>
   <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;input-inset-right&quot;</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">&quot;qcon qcon-quota&quot;</span><span class="nt">&gt;&lt;/i&gt;&lt;/button&gt;</span>
-  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input input-inset form-sm&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;input-inset-icons-sm&quot;</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-inset-icons&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;input-inset-left&quot;</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">&quot;qcon qcon-hypo-square&quot;</span><span class="nt">&gt;&lt;/i&gt;&lt;/span&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;input-inset-right&quot;</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">&quot;qcon qcon-quota&quot;</span><span class="nt">&gt;&lt;/i&gt;&lt;/button&gt;</span>
-  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input input-inset&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Default&quot;</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-inset-icons input-inset-icons-lg&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;input-inset-left&quot;</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">&quot;qcon qcon-hypo-square&quot;</span><span class="nt">&gt;&lt;/i&gt;&lt;/span&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;input-inset-right&quot;</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">&quot;qcon qcon-quota&quot;</span><span class="nt">&gt;&lt;/i&gt;&lt;/button&gt;</span>
-  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input input-inset form-lg&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;input-inset-icons-lg&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input input-inset lg&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;lg&quot;</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 </code></pre></div>
 
@@ -438,12 +429,12 @@
                 <h5>icon left</h5>
                 <p>
                 <div class="input-inset-icons">
-                  <span class="input-inset-left"><i class="qcon qcon-blivesta"></i></span>
+                  <span class="prepend"><i class="qcon qcon-blivesta"></i></span>
                   <input class="input input-inset" type="text" placeholder="Search" />
                 </div>
                 </p>
 <div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-inset-icons&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;input-inset-left&quot;</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">&quot;qcon qcon-blivesta&quot;</span><span class="nt">&gt;&lt;/i&gt;&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;prepend&quot;</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">&quot;qcon qcon-blivesta&quot;</span><span class="nt">&gt;&lt;/i&gt;&lt;/span&gt;</span>
   <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input input-inset&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Search&quot;</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 </code></pre></div>
@@ -452,12 +443,12 @@
                 <h5>icon right</h5>
                 <p>
                 <div class="input-inset-icons">
-                  <span class="input-inset-right "><i class="qcon qcon-quota"></i></span>
+                  <span class="append"><i class="qcon qcon-quota"></i></span>
                   <input class="input input-inset" type="text" placeholder="Search" />
                 </div>
                 </p>
 <div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-inset-icons&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;input-inset-right &quot;</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">&quot;qcon qcon-quota&quot;</span><span class="nt">&gt;&lt;/i&gt;&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;append&quot;</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">&quot;qcon qcon-quota&quot;</span><span class="nt">&gt;&lt;/i&gt;&lt;/span&gt;</span>
   <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input input-inset&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Search&quot;</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 </code></pre></div>
@@ -465,15 +456,15 @@
 
                 <h5>input-minimal</h5>
                 <p>
-                <div class="input-inset-icons">
-                  <span class="input-inset-left form-sm"><i class="qcon qcon-hypo-square"></i></span>
-                  <span class="input-inset-right"><i class="qcon qcon-quota"></i></span>
+                <div class="input-inset-icons sm">
+                  <span class="prepend "><i class="qcon qcon-hypo-square"></i></span>
+                  <span class="append"><i class="qcon qcon-quota"></i></span>
                   <input class="input-minimal input-inset" type="text" placeholder="Default" />
                 </div>
                 <p>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-inset-icons&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;input-inset-left form-sm&quot;</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">&quot;qcon qcon-hypo-square&quot;</span><span class="nt">&gt;&lt;/i&gt;&lt;/span&gt;</span>
-  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;input-inset-right&quot;</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">&quot;qcon qcon-quota&quot;</span><span class="nt">&gt;&lt;/i&gt;&lt;/span&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-inset-icons sm&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;prepend &quot;</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">&quot;qcon qcon-hypo-square&quot;</span><span class="nt">&gt;&lt;/i&gt;&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;append&quot;</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">&quot;qcon qcon-quota&quot;</span><span class="nt">&gt;&lt;/i&gt;&lt;/span&gt;</span>
   <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input-minimal input-inset&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Default&quot;</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 </code></pre></div>
@@ -483,14 +474,14 @@
                 <h5>input-underline</h5>
                 <p>
                 <div class="input-inset-icons">
-                  <span class="input-inset-left form-sm"><i class="qcon qcon-hypo-square"></i></span>
-                  <span class="input-inset-right"><i class="qcon qcon-quota"></i></span>
+                  <span class="prepend"><i class="qcon qcon-hypo-square"></i></span>
+                  <span class="append"><i class="qcon qcon-quota"></i></span>
                   <input class="input-underline input-inset" type="text" placeholder="Default" />
                 </div>
                 <p>
 <div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-inset-icons&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;input-inset-left form-sm&quot;</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">&quot;qcon qcon-hypo-square&quot;</span><span class="nt">&gt;&lt;/i&gt;&lt;/span&gt;</span>
-  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;input-inset-right&quot;</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">&quot;qcon qcon-quota&quot;</span><span class="nt">&gt;&lt;/i&gt;&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;prepend&quot;</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">&quot;qcon qcon-hypo-square&quot;</span><span class="nt">&gt;&lt;/i&gt;&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;append&quot;</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">&quot;qcon qcon-quota&quot;</span><span class="nt">&gt;&lt;/i&gt;&lt;/span&gt;</span>
   <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input-underline input-inset&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Default&quot;</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 </code></pre></div>
@@ -500,15 +491,15 @@
                 <h5>input-left-bar</h5>
                 <p>
                 <div class="input-inset-icons">
-                  <span class="input-inset-left form-sm"><i class="qcon qcon-hypo-square"></i></span>
-                  <span class="input-inset-right"><i class="qcon qcon-quota"></i></span>
+                  <span class="prepend sm"><i class="qcon qcon-hypo-square"></i></span>
+                  <span class="append"><i class="qcon qcon-quota"></i></span>
                   <input class="input-left-bar input-inset" type="text" placeholder="Default" />
                 </div>
                 <p>
                 <h5>Code</h5>
 <div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-inset-icons&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;input-inset-left form-sm&quot;</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">&quot;qcon qcon-hypo-square&quot;</span><span class="nt">&gt;&lt;/i&gt;&lt;/span&gt;</span>
-  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;input-inset-right&quot;</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">&quot;qcon qcon-quota&quot;</span><span class="nt">&gt;&lt;/i&gt;&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;prepend sm&quot;</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">&quot;qcon qcon-hypo-square&quot;</span><span class="nt">&gt;&lt;/i&gt;&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;append&quot;</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">&quot;qcon qcon-quota&quot;</span><span class="nt">&gt;&lt;/i&gt;&lt;/span&gt;</span>
   <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input-left-bar input-inset&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Default&quot;</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 </code></pre></div>
@@ -519,95 +510,62 @@
 
             <div class="block">
               <div class="block-header">
-                <h4>outsets label <small>form-insets-button</small></h4>
+                <h4>outsets label <small>form-outsets</small></h4>
               </div>
               <div class="block-body">
                 <h5>Basic</h5>
 
                 <p>
-                <div class="input-outset-label input-outset-label-sm">
-                  <div class="input-outset-left">outset</div>
-                  <span class="input-outset-right">
+                <div class="input-outset-label sm">
+                  <div class="prepend">outset</div>
+                  <span class="append">
                     <i class="qcon qcon-quota"></i>
                     Quota
                   </span>
                   <input class="input input-outset" type="text" placeholder="input-outset-label-sm" />
                 </div>
                 <div class="input-outset-label">
-                  <div class="input-outset-left">outset</div>
-                  <span class="input-outset-right">
+                  <div class="prepend">outset</div>
+                  <span class="append">
                     <i class="qcon qcon-quota"></i>
                     Quota
                   </span>
                   <input class="input input-outset" type="text" placeholder="Default" />
                 </div>
-                <div class="input-outset-label input-outset-label-lg">
-                  <div class="input-outset-left">outset</div>
-                  <span class="input-outset-right">
+                <div class="input-outset-label lg">
+                  <div class="prepend">outset</div>
+                  <span class="append">
                     <i class="qcon qcon-quota"></i>
                     Quota
                   </span>
-                  <input class="input input-outset" type="text" placeholder="input-outset-label-lg" />
+                  <input class="input input-outset" type="text" placeholder="lg" />
                 </div>
                 <p>
 
                 <p>
                 <div class="input-outset-label">
-                  <span class="input-outset-right">
+                  <span class="append">
                     <i class="qcon qcon-quota"></i>
                     Quota
                   </span>
-                  <input class="input input-outset" type="text" placeholder="input-outset-right" />
+                  <input class="input input-outset" type="text" placeholder="append" />
                 </div>
 
-                <div class="input-outset-label">
-                  <div class="input-outset-left">outset</div>
-                  <input class="input input-outset" type="text" placeholder="input-outset-left" />
+                <div class="input-outset-label lg">
+                  <div class="prepend">outset</div>
+                  <input class="input input-outset" type="text" placeholder="prepend" />
                 </div>
                 <p>
 
                 <h5>Code</h5>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;p&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-outset-label input-outset-label-sm&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-outset-left&quot;</span><span class="nt">&gt;</span>outset<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;input-outset-right&quot;</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-outset-label&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;prepend&quot;</span><span class="nt">&gt;</span>outset<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;append&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;qcon qcon-quota&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>
     Quota
   <span class="nt">&lt;/span&gt;</span>
   <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input input-outset&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Default&quot;</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-outset-label&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-outset-left&quot;</span><span class="nt">&gt;</span>outset<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;input-outset-right&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;qcon qcon-quota&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>
-    Quota
-  <span class="nt">&lt;/span&gt;</span>
-  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input input-outset&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Default&quot;</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-outset-label input-outset-label-lg&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-outset-left&quot;</span><span class="nt">&gt;</span>outset<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;input-outset-right&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;qcon qcon-quota&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>
-    Quota
-  <span class="nt">&lt;/span&gt;</span>
-  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input input-outset&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Default&quot;</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;p&gt;</span>
-
-<span class="nt">&lt;p&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-outset-label&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;input-outset-right&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;qcon qcon-quota&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>
-    Quota
-  <span class="nt">&lt;/span&gt;</span>
-  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input input-outset&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Default&quot;</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-outset-label&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-outset-left&quot;</span><span class="nt">&gt;</span>outset<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input input-outset&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Default&quot;</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;p&gt;</span>
 </code></pre></div>
               </div>
             </div><!-- /.block -->
