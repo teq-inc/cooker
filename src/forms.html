@@ -18,13 +18,13 @@ base_url: "../"
             <h3>Input <small>width:100%</small></h3>
           </div>
           <div class="block-body">
-            <p><input class="input form-sm" type="text" placeholder="Small" /></p>
+            <p><input class="input sm" type="text" placeholder="Small" /></p>
             <p><input class="input" type="text" placeholder="Default" /></p>
-            <p><input class="input form-lg" type="text" placeholder="Large" /></p>
+            <p><input class="input lg" type="text" placeholder="Large" /></p>
 {% highlight html %}
-<input type="text" class="input form-sm" placeholder="Small" />
+<input type="text" class="input sm" placeholder="Small" />
 <input type="text" class="input" placeholder="Default" />
-<input type="text" class="input form-lg" placeholder="Large" />
+<input type="text" class="input lg" placeholder="Large" />
 {% endhighlight %}
           </div>
         </div>
@@ -35,29 +35,29 @@ base_url: "../"
           </div>
           <div class="block-body">
             <p>
-            <select class="select form-sm">
-              <option value="form-sm">form-sm</option>
+            <select class="select sm">
+              <option value="sm">sm</option>
             </select>
             </p>
             <p>
             <select class="select">
-              <option value="form-col-3">normal</option>
+              <option value="normal">normal</option>
             </select>
             </p>
             <p>
-            <select class="select form-lg">
-              <option value="form-lg">form-lg</option>
+            <select class="select lg">
+              <option value="lg">form-lg</option>
             </select>
             </p>
 {% highlight html %}
-<select class="select form-sm">
-  <option value="form-sm">form-sm</option>
+<select class="select sm">
+  <option value="sm">sm</option>
 </select>
 <select class="select">
-  <option value="form-col-3">normal</option>
+  <option value="normal">normal</option>
 </select>
-<select class="select form-lg">
-  <option value="form-lg">form-lg</option>
+<select class="select lg">
+  <option value="lg">lg</option>
 </select>
 {% endhighlight %}
           </div>
@@ -153,93 +153,93 @@ base_url: "../"
             <p>grita同様にカラム数はlessの引数を変えることで自由に変更可能。</p>
           </div>
           <div class="block-body">
-            <p class="form-col">
-            <input class="input form-col-4" type="text" placeholder="form-col-4" />
-            <input class="input form-col-4" type="text" placeholder="form-col-4" />
-            <input class="input form-col-4" type="text" placeholder="form-col-4" />
+            <p class="row-form">
+            <input class="input col-4" type="text" placeholder="col-4" />
+            <input class="input col-4" type="text" placeholder="col-4" />
+            <input class="input col-4" type="text" placeholder="col-4" />
             </p>
-            <p class="form-col">
-            <input class="input form-col-3" type="text" placeholder="form-col-3" />
-            <input class="input form-col-3" type="text" placeholder="form-col-3" />
-            <input class="input form-col-3" type="text" placeholder="form-col-3" />
-            <input class="input form-col-3" type="text" placeholder="form-col-3" />
+            <p class="row-form">
+            <input class="input col-3" type="text" placeholder="col-3" />
+            <input class="input col-3" type="text" placeholder="col-3" />
+            <input class="input col-3" type="text" placeholder="col-3" />
+            <input class="input col-3" type="text" placeholder="col-3" />
             </p>
 {% highlight html %}
-<div class="form-col">
-  <input class="input form-col-4" type="text" placeholder="form-col-4" />
-  <input class="input form-col-4" type="text" placeholder="form-col-4" />
-  <input class="input form-col-4" type="text" placeholder="form-col-4" />
+<div class="row-form">
+  <input class="input col-4" type="text" placeholder="col-4" />
+  <input class="input col-4" type="text" placeholder="col-4" />
+  <input class="input col-4" type="text" placeholder="col-4" />
 </div>
 {% endhighlight %}
-            <p class="form-col">
-              <input class="input form-col-3" type="text" placeholder="form-col-3" />
-              <span class="checkbox form-col-4">
+            <p class="row-form">
+              <input class="input col-3" type="text" placeholder="col-3" />
+              <span class="checkbox col-4">
                 <input type="checkbox" id="checkbox10">
-                <label for="checkbox10">checkbox form-col-4</label>
+                <label for="checkbox10">checkbox col-4</label>
               </span>
-              <span class="radio form-col-3">
+              <span class="radio col-3">
                 <input type="radio" id="radio10">
-                <label for="radio10">radio form-col-3</label>
+                <label for="radio10">radio col-3</label>
               </span>
-              <select class="input form-col-2">
-                <option value="form-col-2">form-col-2</option>
+              <select class="select col-2">
+                <option value="col-2">col-2</option>
               </select>
             </p>
 {% highlight html %}
-<div class="form-col">
-  <input class="input form-col-3" type="text" placeholder="form-col-3" />
-  <span class="checkbox form-col-4">
+<div class="row-form">
+  <input class="input col-3" type="text" placeholder="col-3" />
+  <span class="checkbox col-4">
     <input type="checkbox" id="checkbox10">
-    <label for="checkbox10">checkbox form-col-4</label>
+    <label for="checkbox10">checkbox col-4</label>
   </span>
-  <span class="radio form-col-3">
+  <span class="radio col-3">
     <input type="radio" id="radio10">
-    <label for="radio10">radio form-col-3</label>
+    <label for="radio10">radio col-3</label>
   </span>
-  <select class="input form-col-2">
-    <option value="form-col-2">form-col-2</option>
+  <select class="select col-2">
+    <option value="col-2">col-2</option>
   </select>
 </div>
 {% endhighlight %}
-            <p class="form-col">
-              <input class="input form-col-3" type="text" placeholder="form-col-3" />
-              <span class="form-col-text form-col-3">
-                .form-col-text
+            <p class="row-form">
+              <input class="input col-3" type="text" placeholder="col-3" />
+              <span class="row-form-text col-3">
+                .col-text
               </span>
-              <span class="form-col-text form-col-3">
-                .form-col-text
+              <span class="row-form-text col-3">
+                .col-text
               </span>
-              <select class="input form-col-3">
-                <option value="form-col-2">form-col-2</option>
+              <select class="select col-3">
+                <option value="col-2">col-2</option>
               </select>
             </p>
 {% highlight html %}
-<div class="form-col">
-<input class="input form-col-3" type="text" placeholder="form-col-3" />
-<span class="form-col-text form-col-3">
-  .form-col-text
+<div class="row-form">
+<input class="input col-3" type="text" placeholder="col-3" />
+<span class="row-form-text col-3">
+  .col-text
 </span>
-<span class="form-col-text form-col-3">
-  .form-col-text
+<span class="row-form-text col-3">
+  .col-text
 </span>
-<select class="input form-col-3">
-  <option value="form-col-2">form-col-2</option>
+<select class="select col-3">
+  <option value="col-2">col-2</option>
 </select>
 </div>
 {% endhighlight %}
 
 
             <h4>input + button</h4>
-            <p class="form-col">
-              <input class="input form-col-3" type="text" placeholder="form-col-3" />
-              <button class="button button-primary">
+            <p class="row-form">
+              <input class="input col-3" type="text" placeholder="col-3" />
+              <button class="button primary">
                 button
               </button>
             </p>
 {% highlight html %}
-<div class="form-col">
-<input class="input form-col-3" type="text" placeholder="form-col-3" />
-<button class="button button-primary">button</button>
+<div class="row-form">
+<input class="input col-3" type="text" placeholder="col-3" />
+<button class="button primary">button</button>
 </div>
 {% endhighlight %}
 
@@ -255,14 +255,14 @@ base_url: "../"
             <h4>Minimal <small>input-minimal</small></h4>
           </div>
           <div class="block-body">
-            <p><input class="input-minimal form-sm" type="text" placeholder="input-minimal form-sm" /></p>
+            <p><input class="input-minimal sm" type="text" placeholder="input-minimal sm" /></p>
             <p><input class="input-minimal" type="text" placeholder="Base" /></p>
-            <p><input class="input-minimal form-lg" type="text" placeholder="input-minimal form-lg" /></p>
+            <p><input class="input-minimal lg" type="text" placeholder="input-minimal lg" /></p>
 
 {% highlight html %}
-<input class="input-minimal form-sm" type="text" placeholder="Small" />
+<input class="input-minimal sm" type="text" placeholder="Small" />
 <input class="input-minimal" type="text" placeholder="Base" />
-<input class="input-minimal form-lg" type="text" placeholder="Large" />
+<input class="input-minimal lg" type="text" placeholder="Large" />
 {% endhighlight %}
           </div>
         </div>
@@ -271,18 +271,18 @@ base_url: "../"
 
         <div class="block">
           <div class="block-header">
-            <h4>underline <small>form-underline</small></h4>
+            <h4>underline <small>underline</small></h4>
           </div>
           <div class="block-body">
             <p>
-              <input class="input-underline form-sm" type="text" placeholder="input-underline   form-sm" />
+              <input class="input-underline sm" type="text" placeholder="input-underline   sm" />
               <input class="input-underline" type="text" placeholder="input-underline" />
-              <input class="input-underline form-lg" type="text" placeholder="input-underline   form-lg" />
+              <input class="input-underline lg" type="text" placeholder="input-underline   lg" />
             </p>
 {% highlight html %}
-<input class="input-underline form-sm" type="text" placeholder="input-underline" />
+<input class="input-underline sm" type="text" placeholder="input-underline" />
 <input class="input-underline" type="text" placeholder="input-underline" />
-<input class="input-underline form-lg" type="text" placeholder="input-underline" />
+<input class="input-underline lg" type="text" placeholder="input-underline" />
 {% endhighlight %}
           </div>
           </div><!-- /.block -->
@@ -294,14 +294,14 @@ base_url: "../"
             </div>
             <div class="block-body">
               <p>
-              <input class="input-left-bar form-sm" type="text" placeholder="input-left-bar form-sm" />
+              <input class="input-left-bar sm" type="text" placeholder="input-left-bar sm" />
               <input class="input-left-bar" type="text" placeholder="input-left-bar" />
-              <input class="input-left-bar form-lf" type="text" placeholder="input-left-bar form-sm" />
+              <input class="input-left-bar lg" type="text" placeholder="input-left-bar lg" />
               </p>
 {% highlight html %}
-<input class="input-left-bar form-sm" type="text" placeholder="input-left-bar form-sm" />
+<input class="input-left-bar sm" type="text" placeholder="input-left-bar sm" />
 <input class="input-left-bar" type="text" placeholder="input-left-bar" />
-<input class="input-left-bar form-lf" type="text" placeholder="input-left-bar form-sm" />
+<input class="input-left-bar lg" type="text" placeholder="input-left-bar form-lg" />
 {% endhighlight %}
             </div>
             </div><!-- /.block -->
@@ -316,41 +316,31 @@ base_url: "../"
                 <h5>icon both</h5>
                 <p>サンプルの右側のアイコンは"button"要素内に配置。</p>
                 <p>
-                <div class="input-inset-icons input-inset-icons-sm">
-                  <span class="input-inset-left"><i class="qcon qcon-hypo-square"></i></span>
-                  <button class="input-inset-right"><i class="qcon qcon-quota"></i></button>
-                  <input class="input input-inset form-sm" type="text" placeholder="input-inset-icons-sm" />
+                <div class="input-inset-icons sm">
+                  <span class="prepend"><i class="qcon qcon-hypo-square"></i></span>
+                  <button class="append"><i class="qcon qcon-quota"></i></button>
+                  <input class="input input-inset sm" type="text" placeholder="input-inset-icons-sm" />
                 </div>
                 </p>
                 <p>
                 <div class="input-inset-icons">
-                  <span class="input-inset-left form-sm"><i class="qcon qcon-hypo-square"></i></span>
-                  <button class="input-inset-right"><i class="qcon qcon-quota"></i></button>
+                  <span class="prepend"><i class="qcon qcon-hypo-square"></i></span>
+                  <button class="append"><i class="qcon qcon-quota"></i></button>
                   <input class="input input-inset" type="text" placeholder="Default" />
                 </div>
                 <p>
                 <p>
-                <div class="input-inset-icons input-inset-icons-lg">
+                <div class="input-inset-icons lg">
                   <span class="input-inset-left"><i class="qcon qcon-hypo-square"></i></span>
                   <button class="input-inset-right"><i class="qcon qcon-quota"></i></button>
-                  <input class="input input-inset form-lg" type="text" placeholder="input-inset-icons-lg" />
+                  <input class="input input-inset lg" type="text" placeholder="lg" />
                 </div>
                 </p>
 {% highlight html %}
-<div class="input-inset-icons input-inset-icons-sm">
+<div class="input-inset-icons lg">
   <span class="input-inset-left"><i class="qcon qcon-hypo-square"></i></span>
   <button class="input-inset-right"><i class="qcon qcon-quota"></i></button>
-  <input class="input input-inset form-sm" type="text" placeholder="input-inset-icons-sm" />
-</div>
-<div class="input-inset-icons">
-  <span class="input-inset-left"><i class="qcon qcon-hypo-square"></i></span>
-  <button class="input-inset-right"><i class="qcon qcon-quota"></i></button>
-  <input class="input input-inset" type="text" placeholder="Default" />
-</div>
-<div class="input-inset-icons input-inset-icons-lg">
-  <span class="input-inset-left"><i class="qcon qcon-hypo-square"></i></span>
-  <button class="input-inset-right"><i class="qcon qcon-quota"></i></button>
-  <input class="input input-inset form-lg" type="text" placeholder="input-inset-icons-lg" />
+  <input class="input input-inset lg" type="text" placeholder="lg" />
 </div>
 {% endhighlight %}
 
@@ -358,13 +348,13 @@ base_url: "../"
                 <h5>icon left</h5>
                 <p>
                 <div class="input-inset-icons">
-                  <span class="input-inset-left"><i class="qcon qcon-blivesta"></i></span>
+                  <span class="prepend"><i class="qcon qcon-blivesta"></i></span>
                   <input class="input input-inset" type="text" placeholder="Search" />
                 </div>
                 </p>
 {% highlight html %}
 <div class="input-inset-icons">
-  <span class="input-inset-left"><i class="qcon qcon-blivesta"></i></span>
+  <span class="prepend"><i class="qcon qcon-blivesta"></i></span>
   <input class="input input-inset" type="text" placeholder="Search" />
 </div>
 {% endhighlight %}
@@ -373,13 +363,13 @@ base_url: "../"
                 <h5>icon right</h5>
                 <p>
                 <div class="input-inset-icons">
-                  <span class="input-inset-right "><i class="qcon qcon-quota"></i></span>
+                  <span class="append"><i class="qcon qcon-quota"></i></span>
                   <input class="input input-inset" type="text" placeholder="Search" />
                 </div>
                 </p>
 {% highlight html %}
 <div class="input-inset-icons">
-  <span class="input-inset-right "><i class="qcon qcon-quota"></i></span>
+  <span class="append"><i class="qcon qcon-quota"></i></span>
   <input class="input input-inset" type="text" placeholder="Search" />
 </div>
 {% endhighlight %}
@@ -387,16 +377,16 @@ base_url: "../"
 
                 <h5>input-minimal</h5>
                 <p>
-                <div class="input-inset-icons">
-                  <span class="input-inset-left form-sm"><i class="qcon qcon-hypo-square"></i></span>
-                  <span class="input-inset-right"><i class="qcon qcon-quota"></i></span>
+                <div class="input-inset-icons sm">
+                  <span class="prepend "><i class="qcon qcon-hypo-square"></i></span>
+                  <span class="append"><i class="qcon qcon-quota"></i></span>
                   <input class="input-minimal input-inset" type="text" placeholder="Default" />
                 </div>
                 <p>
 {% highlight html %}
-<div class="input-inset-icons">
-  <span class="input-inset-left form-sm"><i class="qcon qcon-hypo-square"></i></span>
-  <span class="input-inset-right"><i class="qcon qcon-quota"></i></span>
+<div class="input-inset-icons sm">
+  <span class="prepend "><i class="qcon qcon-hypo-square"></i></span>
+  <span class="append"><i class="qcon qcon-quota"></i></span>
   <input class="input-minimal input-inset" type="text" placeholder="Default" />
 </div>
 {% endhighlight %}
@@ -406,15 +396,15 @@ base_url: "../"
                 <h5>input-underline</h5>
                 <p>
                 <div class="input-inset-icons">
-                  <span class="input-inset-left form-sm"><i class="qcon qcon-hypo-square"></i></span>
-                  <span class="input-inset-right"><i class="qcon qcon-quota"></i></span>
+                  <span class="prepend"><i class="qcon qcon-hypo-square"></i></span>
+                  <span class="append"><i class="qcon qcon-quota"></i></span>
                   <input class="input-underline input-inset" type="text" placeholder="Default" />
                 </div>
                 <p>
 {% highlight html %}
 <div class="input-inset-icons">
-  <span class="input-inset-left form-sm"><i class="qcon qcon-hypo-square"></i></span>
-  <span class="input-inset-right"><i class="qcon qcon-quota"></i></span>
+  <span class="prepend"><i class="qcon qcon-hypo-square"></i></span>
+  <span class="append"><i class="qcon qcon-quota"></i></span>
   <input class="input-underline input-inset" type="text" placeholder="Default" />
 </div>
 {% endhighlight %}
@@ -424,16 +414,16 @@ base_url: "../"
                 <h5>input-left-bar</h5>
                 <p>
                 <div class="input-inset-icons">
-                  <span class="input-inset-left form-sm"><i class="qcon qcon-hypo-square"></i></span>
-                  <span class="input-inset-right"><i class="qcon qcon-quota"></i></span>
+                  <span class="prepend sm"><i class="qcon qcon-hypo-square"></i></span>
+                  <span class="append"><i class="qcon qcon-quota"></i></span>
                   <input class="input-left-bar input-inset" type="text" placeholder="Default" />
                 </div>
                 <p>
                 <h5>Code</h5>
 {% highlight html %}
 <div class="input-inset-icons">
-  <span class="input-inset-left form-sm"><i class="qcon qcon-hypo-square"></i></span>
-  <span class="input-inset-right"><i class="qcon qcon-quota"></i></span>
+  <span class="prepend sm"><i class="qcon qcon-hypo-square"></i></span>
+  <span class="append"><i class="qcon qcon-quota"></i></span>
   <input class="input-left-bar input-inset" type="text" placeholder="Default" />
 </div>
 {% endhighlight %}
@@ -444,96 +434,63 @@ base_url: "../"
 
             <div class="block">
               <div class="block-header">
-                <h4>outsets label <small>form-insets-button</small></h4>
+                <h4>outsets label <small>form-outsets</small></h4>
               </div>
               <div class="block-body">
                 <h5>Basic</h5>
 
                 <p>
-                <div class="input-outset-label input-outset-label-sm">
-                  <div class="input-outset-left">outset</div>
-                  <span class="input-outset-right">
+                <div class="input-outset-label sm">
+                  <div class="prepend">outset</div>
+                  <span class="append">
                     <i class="qcon qcon-quota"></i>
                     Quota
                   </span>
                   <input class="input input-outset" type="text" placeholder="input-outset-label-sm" />
                 </div>
                 <div class="input-outset-label">
-                  <div class="input-outset-left">outset</div>
-                  <span class="input-outset-right">
+                  <div class="prepend">outset</div>
+                  <span class="append">
                     <i class="qcon qcon-quota"></i>
                     Quota
                   </span>
                   <input class="input input-outset" type="text" placeholder="Default" />
                 </div>
-                <div class="input-outset-label input-outset-label-lg">
-                  <div class="input-outset-left">outset</div>
-                  <span class="input-outset-right">
+                <div class="input-outset-label lg">
+                  <div class="prepend">outset</div>
+                  <span class="append">
                     <i class="qcon qcon-quota"></i>
                     Quota
                   </span>
-                  <input class="input input-outset" type="text" placeholder="input-outset-label-lg" />
+                  <input class="input input-outset" type="text" placeholder="lg" />
                 </div>
                 <p>
 
                 <p>
                 <div class="input-outset-label">
-                  <span class="input-outset-right">
+                  <span class="append">
                     <i class="qcon qcon-quota"></i>
                     Quota
                   </span>
-                  <input class="input input-outset" type="text" placeholder="input-outset-right" />
+                  <input class="input input-outset" type="text" placeholder="append" />
                 </div>
 
-                <div class="input-outset-label">
-                  <div class="input-outset-left">outset</div>
-                  <input class="input input-outset" type="text" placeholder="input-outset-left" />
+                <div class="input-outset-label lg">
+                  <div class="prepend">outset</div>
+                  <input class="input input-outset" type="text" placeholder="prepend" />
                 </div>
                 <p>
 
                 <h5>Code</h5>
 {% highlight html %}
-<p>
-<div class="input-outset-label input-outset-label-sm">
-  <div class="input-outset-left">outset</div>
-  <span class="input-outset-right">
-    <i class="qcon qcon-quota"></i>
-    Quota
-  </span>
-  <input class="input input-outset" type="text" placeholder="Default" />
-</div>
 <div class="input-outset-label">
-  <div class="input-outset-left">outset</div>
-  <span class="input-outset-right">
+  <div class="prepend">outset</div>
+  <span class="append">
     <i class="qcon qcon-quota"></i>
     Quota
   </span>
   <input class="input input-outset" type="text" placeholder="Default" />
 </div>
-<div class="input-outset-label input-outset-label-lg">
-  <div class="input-outset-left">outset</div>
-  <span class="input-outset-right">
-    <i class="qcon qcon-quota"></i>
-    Quota
-  </span>
-  <input class="input input-outset" type="text" placeholder="Default" />
-</div>
-<p>
-
-<p>
-<div class="input-outset-label">
-  <span class="input-outset-right">
-    <i class="qcon qcon-quota"></i>
-    Quota
-  </span>
-  <input class="input input-outset" type="text" placeholder="Default" />
-</div>
-
-<div class="input-outset-label">
-  <div class="input-outset-left">outset</div>
-  <input class="input input-outset" type="text" placeholder="Default" />
-</div>
-<p>
 {% endhighlight %}
               </div>
             </div><!-- /.block -->
