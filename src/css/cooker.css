@@ -922,7 +922,6 @@ blockquote:after {
 button,
 .button {
   display: inline-block;
-  height: 34px;
   padding: 6px 24px;
   margin-bottom: 0;
   font-size: 14px;
