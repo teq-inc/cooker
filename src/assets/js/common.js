@@ -23,6 +23,8 @@ $('.slidebar-bottom').slidebar({
 
 $('.drilldown').drilldown();
 
+$('.dropdown').dropdown();
+
 
 // docs script
 // ==================================================
