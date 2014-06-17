@@ -134,7 +134,8 @@
             '<%= pkg.source %>/js/scrollmethod.js',
             '<%= pkg.source %>/js/inputcounter.js',
             '<%= pkg.source %>/js/slidebar.js',
-            '<%= pkg.source %>/js/drilldown.js'
+            '<%= pkg.source %>/js/drilldown.js',
+            '<%= pkg.source %>/js/dropdown.js'
          ],
          dest: '<%= pkg.source %>/js/<%= pkg.name %>.js'
        }

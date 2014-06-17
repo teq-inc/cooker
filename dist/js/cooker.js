@@ -505,3 +505,103 @@
     }    
   };
 })(jQuery);
+
+(function($) {
+  var namespace = 'dropdown';
+  var methods = {
+  
+    init: function(options){
+      options = $.extend({
+        dropdown:   'dropdown',
+        toggle:     'dropdown-toggle',
+        toggleAll:  'dropdown-toggle-all',
+        open:       'dropdown-open',
+        close:      'dropdown-close'
+      }, options);
+      return this.each(function(){
+        var _this = this;
+        var $this = $(this);
+        var data = $this.data(namespace);
+        if (!data) {
+          options = $.extend({
+          }, options);
+          $this.data(namespace, {
+              options: options
+          });
+        }
+        var $iToggle = $this.find('.'+options.toggle);
+        $iToggle.off('click.'+namespace).on('click.'+namespace, function(){
+            methods.toggle.apply(_this);
+        });                
+      }); // end each
+    },
+        
+    toggle: function(){
+      var $this = $(this);
+      options = $this.data(namespace).options;
+      var $i = $(event.target).parents('.'+options.dropdown);
+      var statusOpen = $i.hasClass(options.open);
+      if(statusOpen){
+        methods.close.call(this);
+      }else{
+        methods.open.call(this);      
+      }
+    },
+    
+    open: function(){
+      var $this = $(this);
+      options = $this.data(namespace).options;
+      var open =  options.open;  
+      var close = options.close;    
+      var mode = $this.data('mode');
+      var $i = $(event.target).parents('.'+options.dropdown);
+      var $iPrev = $i.prev('.'+options.dropdown);
+      var $iNext = $i.next('.'+options.dropdown);
+      var $o = $i.siblings();          
+      if(mode === 'accordion'){
+        $o.removeClass(open).addClass(close);
+        $i.removeClass(close).addClass(open);    
+        $o.removeClass("dropdown-open-prev dropdown-open-next");
+        $iPrev.addClass("dropdown-open-prev");
+        $iNext.addClass("dropdown-open-next");
+      }else{
+        $i.removeClass(close).addClass(open);
+      }
+    },
+
+    close: function(){
+      var $this = $(this);
+      options = $this.data(namespace).options;
+      var open =  options.open;  
+      var close = options.close;    
+      var mode = $this.data('mode');
+      var $i = $(event.target).parents('.'+options.dropdown);
+      var $o = $i.siblings();          
+      if(mode === 'accordion'){
+        $o,
+        $i.removeClass(open).addClass(close);
+        $o.removeClass("dropdown-open-prev dropdown-open-next");
+      }else{
+        $i.removeClass(open).addClass(close);
+      }
+    },
+    
+    destroy: function(){
+      return this.each(function(){
+        var $this = $(this);
+        $(window).unbind('.'+namespace);
+        $this.removeData(namespace);
+      });
+    },
+    
+  };
+  $.fn.dropdowns = function(method){
+    if ( methods[method] ) {
+      return methods[method].apply( this, Array.prototype.slice.call( arguments, 1 ));
+    } else if ( typeof method === 'object' || ! method ) {
+      return methods.init.apply( this, arguments );
+    } else {
+      $.error( 'Method ' +  method + ' does not exist on jQuery.'+namespace);
+    }    
+  };
+})(jQuery);

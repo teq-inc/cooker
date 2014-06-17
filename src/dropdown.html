@@ -1,0 +1,189 @@
+---
+layout: base
+slug: dropdown
+title: dropdown
+lead: 
+class: site-dropdown
+base_url: "../"
+---  
+<h2 id="" class="page-header ">{{ page.title }} <small></small></h2>
+<p class="lead"></p>  
+
+<div class="ck-section">
+  <h3>dropdown button</h3>    
+  <div class="ck-example">
+
+    <div class="dropdown ck-dropdown-button">
+      <a class="button link success dropdown-toggle">Dropdown <span class="drop"></span></a>
+      <ul class=" dropdown-menu" role="menu">
+        <li class="dropdown-header">Dropdown header</li>
+        <li><a href="#">nav</a></li>
+        <li class="divider"></li>
+        <li class="disabled"><a href="#">disabled</a></li>
+        <li class="active"><a href="#">active</a></li>
+      </ul>
+    </div>
+        
+    <div class="dropdown ck-dropdown-button">
+      <a class="button sm dropdown-toggle">Dropdown <span class="drop"></span></a>
+      <ul class=" dropdown-menu" role="menu">
+        <li class="dropdown-header">Dropdown header</li>
+        <li><a href="#">nav</a></li>
+        <li class="divider"></li>
+        <li class="disabled"><a href="#">disabled</a></li>
+        <li class="active"><a href="#">active</a></li>
+      </ul>
+    </div>
+        
+    <div class="dropdown ck-dropdown-button">
+      <a class="button primary dropdown-toggle">Dropdown <span class="drop"></span></a>
+      <ul class=" dropdown-menu" role="menu">
+        <li class="dropdown-header">Dropdown header</li>
+        <li><a href="#">nav</a></li>
+        <li class="divider"></li>
+        <li class="disabled"><a href="#">disabled</a></li>
+        <li class="active"><a href="#">active</a></li>
+      </ul>
+    </div>
+
+    <div class="dropdown ck-dropdown-button">
+      <a class="button info dropdown-toggle lg">Dropdown <span class="drop"></span></a>
+      <ul class="dropdown-menu" role="menu">
+        <li class="dropdown-header">Dropdown header</li>
+        <li><a href="#">nav</a></li>
+        <li class="divider"></li>
+        <li class="disabled"><a href="#">disabled</a></li>
+        <li class="active"><a href="#">active</a></li>
+      </ul>
+    </div>
+
+    <div class="clearfix"></div>
+  </div>
+{% highlight html %}
+<div class="dropdown">
+  <a class="button link dropdown-toggle">Dropdown <span class="drop"></span></a>
+  <ul class=" dropdown-menu" role="menu">
+    <li><a href="#">nav</a></li>
+  </ul>
+</div>
+
+<div class="dropdown">
+  <a class="button dropdown-toggle">Dropdown trigger <span class="drop"></span></a>
+  <ul class=" dropdown-menu" role="menu">
+    <li><a href="#">nav</a></li>
+  </ul>
+</div>
+{% endhighlight %}
+</div>
+
+
+
+<div class="ck-section">
+  <h3>dropdown split button</h3>    
+  <div class="ck-example">
+
+    <div class="button-split dropdown ck-dropdown-button">
+      <button class="button danger sm">split button</button>
+      <button class="button danger sm split-toggle dropdown-toggle"><span class="drop"></span></button>
+      <ul class=" dropdown-menu" role="menu">
+        <li class="dropdown-header">Dropdown header</li>
+        <li><a href="#">nav</a></li>
+        <li class="divider"></li>
+        <li class="disabled"><a href="#">disabled</a></li>
+        <li class="active"><a href="#">active</a></li>
+      </ul>
+    </div>
+
+    <div class="button-split dropdown ck-dropdown-button">
+      <button class="button success">split button</button>
+      <button class="button success split-toggle dropdown-toggle"><span class="drop"></span></button>
+      <ul class=" dropdown-menu" role="menu">
+        <li class="dropdown-header">Dropdown header</li>
+        <li><a href="#">nav</a></li>
+        <li class="divider"></li>
+        <li class="disabled"><a href="#">disabled</a></li>
+        <li class="active"><a href="#">active</a></li>
+      </ul>
+    </div>
+
+    <div class="button-split dropdown ck-dropdown-button">
+      <button class="button primary lg">split button</button>
+      <button class="button primary lg split-toggle dropdown-toggle"><span class="drop"></span></button>
+      <ul class=" dropdown-menu" role="menu">
+        <li class="dropdown-header">Dropdown header</li>
+        <li><a href="#">nav</a></li>
+        <li class="divider"></li>
+        <li class="disabled"><a href="#">disabled</a></li>
+        <li class="active"><a href="#">active</a></li>
+      </ul>
+    </div>
+
+    <div class="clearfix"></div>
+  </div>
+{% highlight html %}
+<div class="dropdown">
+  <a class="button dropdown-toggle">Dropdown trigger <span class="drop"></span></a>
+  <ul class=" dropdown-menu" role="menu">
+    <li><a href="#">nav</a></li>
+  </ul>
+</div>
+{% endhighlight %}
+</div>
+
+
+<div class="ck-section">
+  <h3>dropup</h3>    
+  <div class="ck-example">
+
+    <div class="dropup dropdown ck-dropdown-button">
+      <button class="button primary lg dropdown-toggle">Dropdown trigger <span class="drop"></span></button>
+      <ul class="dropdown-menu" role="menu">
+        <li class="dropdown-header">Dropdown header</li>
+        <li><a href="#">nav</a></li>
+        <li class="divider"></li>
+        <li class="disabled"><a href="#">disabled</a></li>
+        <li class="active"><a href="#">active</a></li>
+      </ul>
+    </div>
+
+    <div class="dropup button-split dropdown ck-dropdown-button">
+      <button class="button warning lg">split button</button>
+      <button class="button warning lg split-toggle dropdown-toggle"><span class="drop"></span></button>
+      <ul class=" dropdown-menu" role="menu">
+        <li class="dropdown-header">Dropdown header</li>
+        <li><a href="#">nav</a></li>
+        <li class="divider"></li>
+        <li class="disabled"><a href="#">disabled</a></li>
+        <li class="active"><a href="#">active</a></li>
+      </ul>
+    </div>
+
+    <div class="dropup dropdown ck-dropdown-button">
+      <button class="button link primary lg dropdown-toggle">Dropdown trigger <span class="drop"></span></button>
+      <ul class="dropdown-menu" role="menu">
+        <li class="dropdown-header">Dropdown header</li>
+        <li><a href="#">nav</a></li>
+        <li class="divider"></li>
+        <li class="disabled"><a href="#">disabled</a></li>
+        <li class="active"><a href="#">active</a></li>
+      </ul>
+    </div>
+
+    <div class="clearfix"></div>
+  </div>
+{% highlight html %}
+<div class="dropup dropdown">
+  <button class="button dropdown-toggle">
+    Dropdown trigger <span class="drop"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li class="dropdown-header">Dropdown header</li>
+    <li><a href="#">nav</a></li>
+    <li class="divider"></li>
+    <li class="disabled"><a href="#">disabled</a></li>
+    <li class="active"><a href="#">active</a></li>
+  </ul>
+</div>
+{% endhighlight %}
+</div>
+
