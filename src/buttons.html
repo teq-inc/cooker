@@ -9,7 +9,7 @@ base_url: "../"
 <div class="site-body">
   <div class="site-body-inner container">
     <div id="contents-forms">
-      <h2>Buttons</h2>
+      <h2>Split button</h2>
       <div class="blocks">
         
         <div class="block">
@@ -19,54 +19,52 @@ base_url: "../"
           <div class="block-body">
             <h4>"button.button-*" element</h4>
             <p>
-              <button class="button button-default">default</button>
-              <button class="button button-primary">primary</button>
-              <button class="button button-info">info</button>
-              <button class="button button-success">success</button>
-              <button class="button button-warning">warning</button>
-              <button class="button button-danger">danger</button>
+              <button class="button">default</button>
+              <button class="button primary">primary</button>
+              <button class="button info">info</button>
+              <button class="button success">success</button>
+              <button class="button warning">warning</button>
+              <button class="button danger">danger</button>
             </p>
 
             <h4>"a.button-*" element</h4>
             <p>
-              <a class="button button-default" href="#">default</a>
-              <a class="button button-primary" href="#">primary</a>
-              <a class="button button-info" href="#">info</a>
-              <a class="button button-success" href="#">success</a>
-              <a class="button button-warning" href="#">warning</a>
-              <a class="button button-danger" href="#">danger</a>
+              <a class="button" href="#">default</a>
+              <a class="button primary" href="#">primary</a>
+              <a class="button info" href="#">info</a>
+              <a class="button success" href="#">success</a>
+              <a class="button warning" href="#">warning</a>
+              <a class="button danger" href="#">danger</a>
             </p>
 
             <h4>disabled</h4>
             <p>
-              <button class="button button-default" disabled>default</button>
-              <button class="button button-primary" disabled>primary</button>
-              <button class="button button-info" disabled>info</button>
-              <button class="button button-success" disabled>success</button>
-              <button class="button button-warning" disabled>warning</button>
-              <button class="button button-danger" disabled>danger</button>
+              <button class="button" disabled>default</button>
+              <button class="button primary" disabled>primary</button>
+              <button class="button info" disabled>info</button>
+              <button class="button success" disabled>success</button>
+              <button class="button warning" disabled>warning</button>
+              <button class="button danger" disabled>danger</button>
             </p>
 
             <h4>active</h4>
             <p>
-              <button class="button button-default active">default</button>
-              <button class="button button-primary active">primary</button>
-              <button class="button button-info active">info</button>
-              <button class="button button-success active">success</button>
-              <button class="button button-warning active">warning</button>
-              <button class="button button-danger active">danger</button>
+              <button class="button active">default</button>
+              <button class="button primary active">primary</button>
+              <button class="button info active">info</button>
+              <button class="button success active">success</button>
+              <button class="button warning active">warning</button>
+              <button class="button danger active">danger</button>
             </p>
 
 
 {% highlight html %}
-<button class="button button-default">default</button>
-<button class="button button-primary">primary</button>
-<button class="button button-info">info</button>
-<button class="button button-success">success</button>
-<button class="button button-warning">warning</button>
-<button class="button button-danger">danger</button>
-
-<a class="button button-default" href="#">Default</a>
+<button class="button">default</button>
+<button class="button primary">primary</button>
+<a class="button info" href="#">info</a>
+<a class="button success" href="#">success</a>
+<a class="button warning" href="#">warning</a>
+<a class="button danger" href="#">danger</a>
 {% endhighlight %}
           </div>
         </div>
@@ -78,24 +76,19 @@ base_url: "../"
             <h3>Sizing</h3>
           </div>
           <div class="block-body">
-            <h4>"button.button-*" element</h4>
+            <h4>".button-*" element</h4>
 
             <p>
-              <button class="button button-default button-xs">.button-xs</button>
-              <button class="button button-default button-sm">.button-sm</button>
-              <button class="button button-default">Default</button>
-              <button class="button button-default button-lg">.button-lg</button>
+              <button class="button primary xs">.button-xs</button>
+              <button class="button warning sm">.button-sm</button>
+              <button class="button success">Default</button>
+              <button class="button danger lg">.button-lg</button>
             </p>
 
 {% highlight html %}
-<button class="button button-default button-xs">.button-xs</button>
-<button class="button button-default button-sm">.button-sm</button>
-<button class="button button-default">Default</button>
-<button class="button button-default button-lg">.button-lg</button>
-<!-- block -->
-<button class="button button-default button-block button-sm">Default</button>
-<button class="button button-default button-block">Default</button>
-<button class="button button-default button-block button-lg">Default</button>
+<button class="button xs">X-small, .xs</button>
+<button class="button sm">Small, .sm</button>
+<button class="button lg">Large, .lg</button>
 {% endhighlight %}
           </div>
         </div>
@@ -107,24 +100,21 @@ base_url: "../"
             <h3>block</h3>
           </div>
           <div class="block-body">
-            <h4>".button-block"</h4>
+            <h4>".button.block"</h4>
             <p>
-              <button class="button button-default button-block button-xs">button-block button-xs</button>
+              <button class="button block xs">button-block button-xs</button>
             </p>
             <p>
-              <button class="button button-default button-block button-sm">button-block button-sm</button>
+              <button class="button info block sm">button-block button-sm</button>
             </p>
             <p>
-              <button class="button button-default button-block">button-block</button>
+              <button class="button primary block">button-block</button>
             </p>
             <p>
-              <button class="button button-default button-block button-lg">button-block button-lg</button>
+              <button class="button success block lg">button-block button-lg</button>
             </p>
 {% highlight html %}
-<button class="button button-default button-block button-xs">button-block button-xs</button>
-<button class="button button-default button-block button-sm">button-block button-sm</button>
-<button class="button button-default button-block">button-block</button>
-<button class="button button-default button-block button-lg">button-block button-lg</button>
+<button class="button block">block</button>
 {% endhighlight %}
           </div>
         </div>
@@ -138,33 +128,33 @@ base_url: "../"
           <div class="block-body">
             <h4>".button-link"</h4>
             <p>
-              <button class="button button-link">button-link</button>
-              <button class="button button-link-info">button-link-info</button>
-              <button class="button button-link-success">button-link-success</button>
-              <button class="button button-link button-link-warning">button-link-warning</button>
-              <button class="button button-link button-link-danger">button-link-danger</button>
+              <button class="button link">button.link</button>
+              <button class="button link info">button.link.info</button>
+              <button class="button link success">button.link.success</button>
+              <button class="button link warning">button.link.warning</button>
+              <button class="button link danger">button.link.danger</button>
             </p>
 {% highlight html %}
-<button class="button button-link">button-link</button>
-<button class="button button-link-info">button-link-info</button>
-<button class="button button-link button-link-success">button-link-success</button>
-<button class="button button-link button-link-warning">button-link-warning</button>
-<button class="button button-link button-link-danger">button-link-danger</button>
+<button class="button link">button.link</button>
+<button class="button link info">button.link.info</button>
+<button class="button link success">button.link.success</button>
+<button class="button link warning">button.link.warning</button>
+<button class="button link danger">button.link.danger</button>
 {% endhighlight %}
 
 
             <h4>sizes</h4>
             <p>
-              <button class="button button-link button-xs">button-xs</button>
-              <button class="button button-link button-sm">button-sm</button>
-              <button class="button button-link">button-link</button>
-              <button class="button button-link button-lg">button-lg</button>
+              <button class="button link xs">button.link.xs</button>
+              <button class="button link sm">button.link.sm</button>
+              <button class="button link">button.link.link</button>
+              <button class="button link lg">button.link.lg</button>
             </p>
 {% highlight html %}
-<button class="button button-link button-xs">button-xs</button>
-<button class="button button-link button-sm">button-sm</button>
-<button class="button button-link">button-link</button>
-<button class="button button-link button-lg">button-lg</button>
+<button class="button link xs">button.link.xs</button>
+<button class="button link sm">button.link.sm</button>
+<button class="button link">button.link.link</button>
+<button class="button link lg">button.link.lg</button>
 {% endhighlight %}
           </div>
         </div>
@@ -176,40 +166,40 @@ base_url: "../"
             <h3>outline button</h3>
           </div>
           <div class="block-body">
-            <h4>".button-outline"</h4>
+            <h4>".outline"</h4>
             <p>
-              <button class="button button-outline-default button-xs">default</button>
-              <button class="button button-outline-primary button-sm">primary</button>
-              <button class="button button-outline-info">info</button>
-              <button class="button button-outline-success">success</button>
-              <button class="button button-outline-warning">warning</button>
-              <button class="button button-outline-danger button-lg">danger</button>
+              <button class="button outline xs">default</button>
+              <button class="button outline primary sm">primary</button>
+              <button class="button outline info">info</button>
+              <button class="button outline success">success</button>
+              <button class="button outline warning">warning</button>
+              <button class="button outline danger lg">danger</button>
             </p>
             <h4>disabled</h4>
             <p>
-              <button class="button button-outline-default" disabled>default</button>
-              <button class="button button-outline-primary" disabled>primary</button>
-              <button class="button button-outline-info" disabled>info</button>
-              <button class="button button-outline-success" disabled>success</button>
-              <button class="button button-outline-warning" disabled>warning</button>
-              <button class="button button-outline-danger" disabled>danger</button>
+              <button class="button outline" disabled>default</button>
+              <button class="button outline primary" disabled>primary</button>
+              <button class="button outline info" disabled>info</button>
+              <button class="button outline success" disabled>success</button>
+              <button class="button outline warning" disabled>warning</button>
+              <button class="button outline danger" disabled>danger</button>
             </p>
             <h4>active</h4>
             <p>
-              <button class="button button-outline-default active" active>default</button>
-              <button class="button button-outline-primary active" active>primary</button>
-              <button class="button button-outline-info active" active>info</button>
-              <button class="button button-outline-success active" active>success</button>
-              <button class="button button-outline-warning active" active>warning</button>
-              <button class="button button-outline-danger active" active>danger</button>
+              <button class="button outline active" active>default</button>
+              <button class="button outline primary active" active>primary</button>
+              <button class="button outline info active" active>info</button>
+              <button class="button outline success active" active>success</button>
+              <button class="button outline warning active" active>warning</button>
+              <button class="button outline danger active" active>danger</button>
             </p>
 {% highlight html %}
-<button class="button button-outline-default">default</button>
-<button class="button button-outline-primary">primary</button>
-<button class="button button-outline-info">info</button>
-<button class="button button-outline-success">success</button>
-<button class="button button-outline-warning">warning</button>
-<button class="button button-outline-danger">danger</button>
+<button class="button outline xs">default</button>
+<button class="button outline primary sm">primary</button>
+<button class="button outline info">info</button>
+<button class="button outline success">success</button>
+<button class="button outline warning">warning</button>
+<button class="button outline danger lg">danger</button>
 {% endhighlight %}
           </div>
         </div>
@@ -221,81 +211,81 @@ base_url: "../"
             <h3>curcle button</h3>
           </div>
           <div class="block-body">
-            <h4>".button-circle"</h4>
+            <h4>".circle"</h4>
             <p>
-              <button class="button button-icon-circle-default">
+              <button class="button circle">
                 <i class="qcon qcon-quota"></i>
               </button>
-              <button class="button button-icon-circle-primary">
+              <button class="button circle primary">
                 <i class="qcon qcon-x"></i>
               </button>
-              <button class="button button-icon-circle-info">
+              <button class="button circle info">
                 <i class="qcon qcon-x-circle"></i>
               </button>
-              <button class="button button-icon-circle-success button-sm">
+              <button class="button circle success sm">
                 <i class="qcon qcon-hypo-square"></i>
               </button>
-              <button class="button button-icon-circle-warning">
+              <button class="button circle warning">
                 <i class="qcon qcon-blivesta"></i>
               </button>
-              <button class="button button-icon-circle-danger button-lg">
+              <button class="button circle danger lg">
                 <i class="qcon qcon-quota"></i>
               </button>
             </p>
 
             <h4>disabled</h4>
             <p>
-              <button class="button button-icon-circle-default" disabled>
+              <button class="button circle" disabled>
                 <i class="qcon qcon-quota"></i>
               </button>
-              <button class="button button-icon-circle-primary" disabled>
+              <button class="button circle primary" disabled>
                 <i class="qcon qcon-quota"></i>
               </button>
-              <button class="button button-icon-circle-success button-sm" disabled>
+              <button class="button circle success sm" disabled>
                 <i class="qcon qcon-quota"></i>
               </button>
-              <button class="button button-icon-circle-warning" disabled>
+              <button class="button circle warning" disabled>
                 <i class="qcon qcon-quota"></i>
               </button>
-              <button class="button button-icon-circle-danger button-lg" disabled>
+              <button class="button circle danger lg" disabled>
                 <i class="qcon qcon-quota"></i>
               </button>
             </p>
             <h4>active</h4>
             <p>
-              <button class="button button-icon-circle-default active">
+              <button class="button circle active">
                 <i class="qcon qcon-quota"></i>
               </button>
-              <button class="button button-icon-circle-primary active">
+              <button class="button circle primary active">
                 <i class="qcon qcon-quota"></i>
               </button>
-              <button class="button button-icon-circle-success button-sm active">
+              <button class="button circle success sm active">
                 <i class="qcon qcon-quota"></i>
               </button>
-              <button class="button button-icon-circle-warning active">
+              <button class="button circle warning active">
                 <i class="qcon qcon-quota"></i>
               </button>
-              <button class="button button-icon-circle-danger button-lg active">
+              <button class="button circle danger lg active">
                 <i class="qcon qcon-quota"></i>
               </button>
             </p>
 {% highlight html %}
-<button class="button button-icon-circle-default">
+<button class="button circle">
   <i class="qcon qcon-quota"></i>
 </button>
-<button class="button button-icon-circle-primary">
+<button class="button circle primary">
   <i class="qcon qcon-quota"></i>
 </button>
-<button class="button button-icon-circle-info">
+<button class="button circle info">
   <i class="qcon qcon-quota"></i>
 </button>
-<button class="button button-icon-circle-success">
+<button class="button circle success">
   <i class="qcon qcon-quota"></i>
 </button>
-<button class="button button-icon-circle-warning">
+<button class="button circle warning">
   <i class="qcon qcon-quota"></i>
 </button>
-<button class="button button-icon-circle-danger">
+<button class="button circle danger">
   <i class="qcon qcon-quota"></i>
 </button>
 {% endhighlight %}
@@ -311,84 +301,84 @@ base_url: "../"
           <div class="block-body">
             <h4>".button-circle-outline-*"</h4>
             <p>
-              <button class="button button-icon-circle-outline-default">
+              <button class="button circle outline">
                 <i class="qcon qcon-quota"></i>
               </button>
-              <button class="button button-icon-circle-outline-primary">
+              <button class="button circle outline primary">
                 <i class="qcon qcon-quota"></i>
               </button>
-              <button class="button button-icon-circle-outline-info">
+              <button class="button circle outline info">
                 <i class="qcon qcon-quota"></i>
               </button>
-              <button class="button button-icon-circle-outline-success">
+              <button class="button circle outline success">
                 <i class="qcon qcon-quota"></i>
               </button>
-              <button class="button button-icon-circle-outline-warning button-sm">
+              <button class="button circle outline warning sm">
                 <i class="qcon qcon-quota"></i>
               </button>
-              <button class="button button-icon-circle-outline-danger button-lg">
+              <button class="button circle outline danger lg">
                 <i class="qcon qcon-quota"></i>
               </button>
             </p>
             <h4>disabled</h4>
             <p>
-              <button class="button button-icon-circle-outline-default" disabled>
+              <button class="button circle outline" disabled>
                 <i class="qcon qcon-quota"></i>
               </button>
-              <button class="button button-icon-circle-outline-primary" disabled>
+              <button class="button circle outline primary" disabled>
                 <i class="qcon qcon-quota"></i>
               </button>
-              <button class="button button-icon-circle-outline-info" disabled>
+              <button class="button circle outline info" disabled>
                 <i class="qcon qcon-quota"></i>
               </button>
-              <button class="button button-icon-circle-outline-success" disabled>
+              <button class="button circle outline success" disabled>
                 <i class="qcon qcon-quota"></i>
               </button>
-              <button class="button button-icon-circle-outline-warning button-sm" disabled>
+              <button class="button circle outline warning sm" disabled>
                 <i class="qcon qcon-quota"></i>
               </button>
-              <button class="button button-icon-circle-outline-danger button-lg" disabled>
+              <button class="button circle outline danger lg" disabled>
                 <i class="qcon qcon-quota"></i>
               </button>
             </p>
             <h4>active</h4>
             <p>
-              <button class="button button-icon-circle-outline-default active">
+              <button class="button circle outline active">
                 <i class="qcon qcon-quota"></i>
               </button>
-              <button class="button button-icon-circle-outline-primary active">
+              <button class="button circle outline primary active">
                 <i class="qcon qcon-quota"></i>
               </button>
-              <button class="button button-icon-circle-outline-info active">
+              <button class="button circle outline info active">
                 <i class="qcon qcon-quota"></i>
               </button>
-              <button class="button button-icon-circle-outline-success active">
+              <button class="button circle outline success active">
                 <i class="qcon qcon-quota"></i>
               </button>
-              <button class="button button-icon-circle-outline-warning button-sm active">
+              <button class="button circle outline warning sm active">
                 <i class="qcon qcon-quota"></i>
               </button>
-              <button class="button button-icon-circle-outline-danger button-lg active">
+              <button class="button circle outline danger lg active">
                 <i class="qcon qcon-quota"></i>
               </button>
             </p>
 {% highlight html %}
-<button class="button button-icon-circle-outline-default">
+<button class="button circle outline">
   <i class="qcon qcon-quota"></i>
 </button>
-<button class="button button-icon-circle-outline-primary">
+<button class="button circle outline primary">
   <i class="qcon qcon-quota"></i>
 </button>
-<button class="button button-icon-circle-outline-info">
+<button class="button circle outline info">
   <i class="qcon qcon-quota"></i>
 </button>
-<button class="button button-icon-circle-outline-success">
+<button class="button circle outline success">
   <i class="qcon qcon-quota"></i>
 </button>
-<button class="button button-icon-circle-outline-warning button-sm">
+<button class="button circle outline warning sm">
   <i class="qcon qcon-quota"></i>
 </button>
-<button class="button button-icon-circle-outline-danger button-lg">
+<button class="button circle outline danger lg">
   <i class="qcon qcon-quota"></i>
 </button>
 {% endhighlight %}
@@ -404,85 +394,85 @@ base_url: "../"
           <div class="block-body">
             <h4>".button-circle-outline-*"</h4>
             <p>
-              <button class="button button-icon-default">
+              <button class="button icon">
                 <i class="qcon qcon-blivesta"></i>
               </button>
-              <button class="button button-icon-primary">
+              <button class="button icon primary">
                 <i class="qcon qcon-quota"></i>
               </button>
-              <button class="button button-icon-info">
+              <button class="button icon info">
                 <i class="qcon qcon-x"></i>
               </button>
-              <button class="button button-icon-success">
+              <button class="button icon success">
                 <i class="qcon qcon-hypo-square"></i>
               </button>
-              <button class="button button-icon-warning button-sm">
+              <button class="button icon warning button-sm">
                 <i class="qcon qcon-x-circle-o"></i>
               </button>
-              <button class="button button-icon-danger button-lg">
+              <button class="button icon danger button-lg">
                 <i class="qcon qcon-x-circle"></i>
               </button>
             </p>
             <h4>disabled</h4>
             <p>
-              <button class="button button-icon-default" disabled>
+              <button class="button icon" disabled>
                 <i class="qcon qcon-blivesta"></i>
               </button>
-              <button class="button button-icon-primary" disabled>
+              <button class="button icon primary" disabled>
                 <i class="qcon qcon-quota"></i>
               </button>
-              <button class="button button-icon-info" disabled>
+              <button class="button icon info" disabled>
                 <i class="qcon qcon-x"></i>
               </button>
-              <button class="button button-icon-success" disabled>
+              <button class="button icon success" disabled>
                 <i class="qcon qcon-hypo-square"></i>
               </button>
-              <button class="button button-icon-warning button-sm" disabled>
+              <button class="button icon warning sm" disabled>
                 <i class="qcon qcon-x-circle-o"></i>
               </button>
-              <button class="button button-icon-danger button-lg" disabled>
+              <button class="button icon danger lg" disabled>
                 <i class="qcon qcon-x-circle"></i>
               </button>
             </p>
             <h4>active</h4>
             <p>
-              <button class="button button-icon-default active">
+              <button class="button icon active">
                 <i class="qcon qcon-blivesta"></i>
               </button>
-              <button class="button button-icon-primary active">
+              <button class="button icon primary active">
                 <i class="qcon qcon-quota"></i>
               </button>
-              <button class="button button-icon-info active">
+              <button class="button icon info active">
                 <i class="qcon qcon-x"></i>
               </button>
-              <button class="button button-icon-success active">
+              <button class="button icon success active">
                 <i class="qcon qcon-hypo-square"></i>
               </button>
-              <button class="button button-icon-warning button-sm active">
+              <button class="button icon warning sm active">
                 <i class="qcon qcon-x-circle-o"></i>
               </button>
-              <button class="button button-icon-danger button-lg active">
+              <button class="button icon danger lg active">
                 <i class="qcon qcon-x-circle"></i>
               </button>
             </p>
 {% highlight html %}
-<button class="button button-icon-default">
+<button class="button icon">
+  <i class="qcon qcon-blivesta"></i>
+</button>
+<button class="button icon primary">
   <i class="qcon qcon-quota"></i>
 </button>
-<button class="button button-icon-primary">
-  <i class="qcon qcon-quota"></i>
+<button class="button icon info">
+  <i class="qcon qcon-x"></i>
 </button>
-<button class="button button-icon-info">
-  <i class="qcon qcon-quota"></i>
+<button class="button icon success">
+  <i class="qcon qcon-hypo-square"></i>
 </button>
-<button class="button button-icon-success">
-  <i class="qcon qcon-quota"></i>
+<button class="button icon warning button-sm">
+  <i class="qcon qcon-x-circle-o"></i>
 </button>
-<button class="button button-icon-warning button-sm">
-  <i class="qcon qcon-quota"></i>
-</button>
-<button class="button button-icon-danger button-lg">
-  <i class="qcon qcon-quota"></i>
+<button class="button icon danger button-lg">
+  <i class="qcon qcon-x-circle"></i>
 </button>
 {% endhighlight %}
           </div>
@@ -497,84 +487,84 @@ base_url: "../"
           <div class="block-body">
             <h4>".button-circle-outline-*"</h4>
             <p>
-              <button class="button button-gradient-default">
+              <button class="button gradient">
                 <i class="qcon qcon-blivesta"></i> blivesta
               </button>
-              <button class="button button-gradient-primary">
+              <button class="button gradient primary">
                 <i class="qcon qcon-quota"></i> Quota
               </button>
-              <button class="button button-gradient-info">
+              <button class="button gradient info">
                 <i class="qcon qcon-hypo-square"></i> Hypo
               </button>
-              <button class="button button-gradient-success">
+              <button class="button gradient success">
                 <i class="qcon qcon-quota"></i> Quota
               </button>
-              <button class="button button-gradient-warning button-sm">
+              <button class="button gradient warning sm">
                 <i class="qcon qcon-quota"></i> Quota
               </button>
-              <button class="button button-gradient-danger button-lg">
+              <button class="button gradient danger lg">
                 <i class="qcon qcon-quota"></i> Quota
               </button>
             </p>
             <h4>disabled</h4>
             <p>
-              <button class="button button-gradient-default" disabled>
+              <button class="button gradient" disabled>
                 <i class="qcon qcon-blivesta"></i> blivesta
               </button>
-              <button class="button button-gradient-primary" disabled>
+              <button class="button gradient primary" disabled>
                 <i class="qcon qcon-quota"></i> Quota
               </button>
-              <button class="button button-gradient-info" disabled>
+              <button class="button gradient info" disabled>
                 <i class="qcon qcon-hypo-square"></i> Hypo
               </button>
-              <button class="button button-gradient-success" disabled>
+              <button class="button gradient success" disabled>
                 <i class="qcon qcon-quota"></i> Quota
               </button>
-              <button class="button button-gradient-warning button-sm" disabled>
+              <button class="button gradient warning sm" disabled>
                 <i class="qcon qcon-quota"></i> Quota
               </button>
-              <button class="button button-gradient-danger button-lg" disabled>
+              <button class="button gradient danger lg" disabled>
                 <i class="qcon qcon-quota"></i> Quota
               </button>
             </p>
             <h4>active</h4>
             <p>
-              <button class="button button-gradient-default active">
+              <button class="button gradient active">
                 <i class="qcon qcon-blivesta"></i> blivesta
               </button>
-              <button class="button button-gradient-primary active">
+              <button class="button gradient primary active">
                 <i class="qcon qcon-quota"></i> Quota
               </button>
-              <button class="button button-gradient-info active">
+              <button class="button gradient info active">
                 <i class="qcon qcon-hypo-square"></i> Hypo
               </button>
-              <button class="button button-gradient-success active">
+              <button class="button gradient success active">
                 <i class="qcon qcon-quota"></i> Quota
               </button>
-              <button class="button button-gradient-warning button-sm active">
+              <button class="button gradient warning sm active">
                 <i class="qcon qcon-quota"></i> Quota
               </button>
-              <button class="button button-gradient-danger button-lg active">
+              <button class="button gradient danger lg active">
                 <i class="qcon qcon-quota"></i> Quota
               </button>
             </p>
 {% highlight html %}
-<button class="button button-gradient-default">
+<button class="button gradient">
   <i class="qcon qcon-blivesta"></i> blivesta
 </button>
-<button class="button button-gradient-primary">
+<button class="button gradient primary">
   <i class="qcon qcon-quota"></i> Quota
 </button>
-<button class="button button-gradient-info">
+<button class="button gradient info">
   <i class="qcon qcon-hypo-square"></i> Hypo
 </button>
-<button class="button button-gradient-success">
+<button class="button gradient success">
   <i class="qcon qcon-quota"></i> Quota
 </button>
-<button class="button button-gradient-warning button-sm">
+<button class="button gradient warning sm">
   <i class="qcon qcon-quota"></i> Quota
 </button>
-<button class="button button-gradient-danger button-lg">
+<button class="button gradient danger lg">
   <i class="qcon qcon-quota"></i> Quota
 </button>
 {% endhighlight %}

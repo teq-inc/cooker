@@ -89,6 +89,7 @@
 // checkbox
 // =====================
 .checkbox{
+  background-color: transparent !important;
   .form();
   .checkbox-radio-style("checkbox");
 }
@@ -101,6 +102,7 @@
 // radio button
 // =====================
 .radio{
+  background-color: transparent !important;
   .form();
   .checkbox-radio-style("radio");
 }
@@ -113,10 +115,10 @@
 //
 // form grid
 // =====================
-.form-col,
+.form-col, // 廃止予定
 .row-form {
   //フォームの間に入るテキスト用
-  .form-col-text,
+  .form-col-text,// 廃止予定
   .row-form-text {
     .form();
     background-color: transparent;
@@ -244,11 +246,11 @@
 // =====================
 .input-inset-icons{
   position: relative;
-  .input-inset-left,
-  .left,
+  .input-inset-left, // 廃止予定
+  .left, // 廃止予定
   .prepend,
-  .input-inset-right,
-  .right,
+  .input-inset-right, // 廃止予定
+  .right, // 廃止予定
   .append {
     position : absolute;
     top: 0;
@@ -264,8 +266,8 @@
       }
     }
   }
-  .input-inset-left,
-  .left,
+  .input-inset-left, // 廃止予定
+  .left, // 廃止予定
   .prepend{
     left: 0;
     ~ .input-inset{
@@ -273,8 +275,8 @@
     }
   }
   .input-inset{}
-  .input-inset-right,
-  .right,
+  .input-inset-right, // 廃止予定
+  .right, // 廃止予定
   .append {
     right: 0;
     ~ .input-inset {
@@ -284,25 +286,25 @@
 
   &.input-inset-icons-sm,
   &.sm{
-    .input-inset-left,
-    .left,
+    .input-inset-left, // 廃止予定
+    .left, // 廃止予定
     .prepend,
-    .input-inset-right,
-    .right,
+    .input-inset-right, // 廃止予定
+    .right, // 廃止予定
     .append {
       padding: @padding-small;
       height:@input-height-small;
       font-size: @font-size-small;
     }
-    .input-inset-left,
-    .left,
+    .input-inset-left, // 廃止予定
+    .left, // 廃止予定
     .prepend{
       ~ .input-inset {
         padding-left: (@padding-small-horizontal * 3);
       }
     }
-    .input-inset-right,
-    .right,
+    .input-inset-right, // 廃止予定
+    .right, // 廃止予定
     .append {
       ~ .input-inset {
         padding-right: (@padding-small-horizontal * 3);
@@ -312,25 +314,25 @@
 
   &.input-inset-icons-lg,
   &.lg{
-    .input-inset-left,
-    .left,
+    .input-inset-left, // 廃止予定
+    .left, // 廃止予定
     .prepend,
-    .input-inset-right,
-    .right,
+    .input-inset-right, // 廃止予定
+    .right, // 廃止予定
     .append {
       padding: @padding-large;
       height:@input-height-large;
       font-size: @font-size-large;
     }
-    .input-inset-left,
-    .left,
+    .input-inset-left, // 廃止予定
+    .left, // 廃止予定
     .prepend{
       ~ .input-inset {
         padding-left: (@padding-large-horizontal * 3);
       }
     }
-    .input-inset-right,
-    .right,
+    .input-inset-right, // 廃止予定
+    .right, // 廃止予定
     .append {
       ~ .input-inset {
         padding-right: (@padding-large-horizontal * 3);
@@ -346,10 +348,10 @@
 .input-outset-label{
   display: inline-block;
   .clearfix();
-  .input-outset-left,
-  .input-outset-right,
-  .left,
-  .right,
+  .input-outset-left, // 廃止予定
+  .input-outset-right, // 廃止予定
+  .left, // 廃止予定
+  .right, // 廃止予定
   .prepend,
   .append {
     display: block;
@@ -357,8 +359,8 @@
     border: @border-base;
     height : @input-height-base;
   }
-  .input-outset-left,
-  .left,
+  .input-outset-left, // 廃止予定
+  .left, // 廃止予定
   .prepend{
     float: left;
     border-right: 0;
@@ -367,8 +369,8 @@
       border-bottom-left-radius: 0;
     }
   }
-  .input-outset-right,
-  .right,
+  .input-outset-right, // 廃止予定
+  .right, // 廃止予定
   .append {
     float: right;
     border-left: 0;
@@ -383,10 +385,10 @@
     width: 250px;
   }
   &.sm{
-    .input-outset-left,
-    .input-outset-right,
-    .left,
-    .right,
+    .input-outset-left, // 廃止予定
+    .input-outset-right, // 廃止予定
+    .left, // 廃止予定
+    .right, // 廃止予定
     .prepend,
     .append {
       padding: @padding-small;
@@ -405,10 +407,10 @@
     }
   }
   &.lg{
-    .input-outset-left,
-    .input-outset-right,
-    .left,
-    .right,
+    .input-outset-left, // 廃止予定
+    .input-outset-right, // 廃止予定
+    .left, // 廃止予定
+    .right, // 廃止予定
     .prepend,
     .append {
       padding: @padding-large;
