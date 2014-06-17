@@ -7,7 +7,7 @@
   
   <title>
     
-      row-table &middot; cooker
+      row &middot; cooker
     
   </title>
   
@@ -36,7 +36,7 @@
   <script src="../js/cooker.min.js"></script>
 
 </head>
-<body id="drawer" class="site-row-table drawer-left drawer-responsive">
+<body id="drawer" class="site-row drawer-left drawer-responsive">
 
     <button class="drawer-toggle btn"><i class="qcon qcon-quota"></i></button>
 <div class="drawer-masta drawer-default">
@@ -86,7 +86,7 @@
         <div class="container">
           <div class="grita">
             <div class="col col-6">
-              <h1 class="lead">row-table</h1>
+              <h1 class="lead">row</h1>
             </div>
             <div class="col col-6">
               <p class="text-right"><a href="https://github.com/teq-inc/cooker">Download on GitHub</a></p>
@@ -99,14 +99,14 @@
 			  <div class="site-body-inner container">
 
 			    <div class="ck-section">
-  <h2 id="row-table" class="page-header ">row-table <small>row-table.less</small></h2>
-  <p class="lead"><code>.row-table</code>はCSSの<code>float</code>プロパティは使用せずに、<code>.row-table</code>クラスを<code>display: table</code>に設定。その子要素<code>.col-*</code>クラスには<code>display: table-cell</code>を設定することでコラムレイアウトを実装。</p>
+  <h2 id="row" class="page-header ">row <small>row.less</small></h2>
+  <p class="lead"></p>
     
-  <h3>Basic 12 row-table</h3>
-  <p>lessを利用の場合は<code>cooker/variables.less</code>に書かれている<code>@row-table-number</code>の数値をを作りたいコラムの最大数に変更することで横列を好きな数でコンパイル可能。</p>
+  <h3>Basic 12 row</h3>
+  <p>lessを利用の場合は<code>cooker/variables.less</code>に書かれている<code>@row-number</code>の数値をを作りたいコラムの最大数に変更することで横列を好きな数でコンパイル可能。</p>
   <div class="ck-example">
 
-    <div class="row-table row-table-docs">
+    <div class="row row-docs">
       <div class="col-1">col-1</div>
       <div class="col-1">col-1</div>
       <div class="col-1">col-1</div>
@@ -120,7 +120,7 @@
       <div class="col-1">col-1</div>
       <div class="col-1">col-1</div>
     </div>
-    <div class="row-table row-table-docs">
+    <div class="row row-docs">
       <div class="col-2">col-2</div>
       <div class="col-2">col-2</div>
       <div class="col-2">col-2</div>
@@ -128,175 +128,71 @@
       <div class="col-2">col-2</div>
       <div class="col-2">col-2</div>
     </div>
-    <div class="row-table row-table-docs">
+    <div class="row row-docs">
       <div class="col-3">col-3</div>
       <div class="col-3">col-3</div>
       <div class="col-3">col-3</div>
       <div class="col-3">col-3</div>
     </div>
-    <div class="row-table row-table-docs">
+    <div class="row row-docs">
       <div class="col-4">col-4</div>
       <div class="col-4">col-4</div>
       <div class="col-4">col-4</div>
     </div>
-    <div class="row-table row-table-docs">
+    <div class="row row-docs">
       <div class="col-5">col-5</div>
       <div class="col-7">col-7</div>
     </div>
-    <div class="row-table row-table-docs">
+    <div class="row row-docs">
       <div class="col-6">col-6</div>
       <div class="col-6">col-6</div>
     </div>
-    <div class="row-table row-table-docs">
+    <div class="row row-docs">
       <div class="col-8">col-8</div>
       <div class="col-4">col-4</div>
     </div>
-    <div class="row-table row-table-docs">
+    <div class="row row-docs">
       <div class="col-12">col-12</div>
     </div>
 
   </div> <!-- /example -->
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row-table&quot;</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-6&quot;</span><span class="nt">&gt;</span>col-6<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-6&quot;</span><span class="nt">&gt;</span>col-6<span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row-table&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-8&quot;</span><span class="nt">&gt;</span>col-8<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-4&quot;</span><span class="nt">&gt;</span>col-4<span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row-table&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-12&quot;</span><span class="nt">&gt;</span>col-12<span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 </code></pre></div>
   
-  
-  <h2>Nest and Vertical-align</h2>
-  <p><code>.row-table</code>クラスの入れ子（サンプルでは3階層）と、<code>.row-table</code>クラスに<code>.row-table-valign-middle</code>クラスを追加することでCSSの<code>vertical-align</code>プロパティを有効にすることが可能。</p>
-  <div class="ck-example row-table-valign-middle-docs">
-    
-    <div class="row-table valign-middle row-table-docs">
-      <div class="col-3">col-3</div>
-      <div class="col-9">
-        col-9
-        <div class="row-table row-table-docs">
-          <div class="col-6">
-            col-6
-            <div class="row-table row-table-docs">
-              <div class="col-6">col-6</div>
-              <div class="col-6">col-6</div>
-            </div>
-          </div>
-          <div class="col-6">col-6</div>
-        </div>
-      </div>
-    </div>
-        
-  </div> <!-- /example -->
-
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row-table valign-middle&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-3&quot;</span><span class="nt">&gt;</span>col-3<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-9&quot;</span><span class="nt">&gt;</span>
-    col-9
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row-table&quot;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-6&quot;</span><span class="nt">&gt;</span>
-        col-6
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row-table&quot;</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-6&quot;</span><span class="nt">&gt;</span>col-6<span class="nt">&lt;/div&gt;</span>
-          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-6&quot;</span><span class="nt">&gt;</span>col-6<span class="nt">&lt;/div&gt;</span>
-        <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-6&quot;</span><span class="nt">&gt;</span>col-6<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</code></pre></div>
-
-  
-  <h2>Gutters</h2>
-  <p><code>.row-table</code>クラスにラッパー要素<code>.row-table-gutter</code>を追加することで、コラム間にマージンを付ける事が可能。</p>
-  
-  <div class="ck-example">
-  
-    <div class="row-table-gutter">
-      <div class="row-table row-table-docs">
-        <div class="col-1">col-1</div>
-        <div class="col-2">col-2</div>
-        <div class="col-4">col-4</div>
-        <div class="col-5">col-5</div>
-      </div>
-    </div>
-    <div class="row-table-gutter">
-      <div class="row-table row-table-docs">
-        <div class="col-3">col-3</div>
-        <div class="col-3">col-3</div>
-        <div class="col-6">col-6</div>
-      </div>
-    </div>
-    <div class="row-table-gutter">
-      <div class="row-table row-table-docs">
-        <div class="col-9">col-9</div>
-        <div class="col-3">col-3</div>
-      </div>
-    </div>
-    <div class="row-table-gutter">
-      <div class="row-table row-table-docs">
-        <div class="col-4">col-4</div>
-        <div class="col-4">col-4</div>
-        <div class="col-4">col-4</div>
-      </div>
-    </div>
-    <div class="row-table-gutter">
-      <div class="row-table row-table-docs">
-        <div class="col-3">col-3</div>
-        <div class="col-3">col-3</div>
-        <div class="col-3">col-3</div>
-        <div class="col-3">col-3</div>
-      </div>
-    </div>
-      
-  </div> <!-- /example -->
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row-table-gutter&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row-table&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-4&quot;</span><span class="nt">&gt;</span>col-4<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-4&quot;</span><span class="nt">&gt;</span>col-4<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-4&quot;</span><span class="nt">&gt;</span>col-4<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row-table-gutter&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row-table&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-3&quot;</span><span class="nt">&gt;</span>col-3<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-3&quot;</span><span class="nt">&gt;</span>col-3<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-3&quot;</span><span class="nt">&gt;</span>col-3<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-3&quot;</span><span class="nt">&gt;</span>col-3<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</code></pre></div>
-
-
 
   <h2>Padiing</h2>
   <p></p>
   <h3>Base</h3>
   <div class="ck-example">
   
-    <div class="row-table padding row-table-docs">
+    <div class="row padding row-docs">
       <div class="col-1">col-1</div>
       <div class="col-2">col-2</div>
       <div class="col-4">col-4</div>
       <div class="col-5">col-5</div>
     </div>
-    <div class="row-table padding row-table-docs">
+    <div class="row padding row-docs">
       <div class="col-3">col-3</div>
       <div class="col-3">col-3</div>
       <div class="col-6">col-6</div>
     </div>
       
   </div> <!-- /example -->
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row-table padding&quot;</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row padding&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-6&quot;</span><span class="nt">&gt;</span>col-6<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-6&quot;</span><span class="nt">&gt;</span>col-6<span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row-table padding&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row padding&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-6&quot;</span><span class="nt">&gt;</span>col-6<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-6&quot;</span><span class="nt">&gt;</span>col-6<span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
@@ -305,24 +201,24 @@
 <h3>Small</h3>
   <div class="ck-example">
   
-    <div class="row-table padding-sm row-table-docs">
+    <div class="row padding-sm row-docs">
       <div class="col-1">col-1</div>
       <div class="col-2">col-2</div>
       <div class="col-4">col-4</div>
       <div class="col-5">col-5</div>
     </div>
-    <div class="row-table padding-sm row-table-docs">
+    <div class="row padding-sm row-docs">
       <div class="col-3">col-3</div>
       <div class="col-3">col-3</div>
       <div class="col-6">col-6</div>
     </div>
       
   </div> <!-- /example -->
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row-table padding-sm&quot;</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row padding-sm&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-6&quot;</span><span class="nt">&gt;</span>col-6<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-6&quot;</span><span class="nt">&gt;</span>col-6<span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row-table padding-sm&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row padding-sm&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-6&quot;</span><span class="nt">&gt;</span>col-6<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-6&quot;</span><span class="nt">&gt;</span>col-6<span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
@@ -332,24 +228,24 @@
 <h3>X-Small</h3>
   <div class="ck-example">
   
-    <div class="row-table padding-xs row-table-docs">
+    <div class="row padding-xs row-docs">
       <div class="col-1">col-1</div>
       <div class="col-2">col-2</div>
       <div class="col-4">col-4</div>
       <div class="col-5">col-5</div>
     </div>
-    <div class="row-table padding-xs row-table-docs">
+    <div class="row padding-xs row-docs">
       <div class="col-3">col-3</div>
       <div class="col-3">col-3</div>
       <div class="col-6">col-6</div>
     </div>
       
   </div> <!-- /example -->
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row-table padding-xs&quot;</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row padding-xs&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-6&quot;</span><span class="nt">&gt;</span>col-6<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-6&quot;</span><span class="nt">&gt;</span>col-6<span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row-table padding-xs&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row padding-xs&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-6&quot;</span><span class="nt">&gt;</span>col-6<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-6&quot;</span><span class="nt">&gt;</span>col-6<span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
@@ -360,24 +256,24 @@
 <h3>forms</h3>
   <div class="ck-example">
   
-    <div class="row-table padding-form row-table-docs">
+    <div class="row padding-form row-docs">
       <div class="col-1">col-1</div>
       <div class="col-2">col-2</div>
       <div class="col-4">col-4</div>
       <div class="col-5">col-5</div>
     </div>
-    <div class="row-table padding-form row-table-docs">
+    <div class="row padding-form row-docs">
       <div class="col-3">col-3</div>
       <div class="col-3">col-3</div>
       <div class="col-6">col-6</div>
     </div>
       
   </div> <!-- /example -->
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row-table padding-form&quot;</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row padding-form&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-6&quot;</span><span class="nt">&gt;</span>col-6<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-6&quot;</span><span class="nt">&gt;</span>col-6<span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row-table padding-form&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row padding-form&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-6&quot;</span><span class="nt">&gt;</span>col-6<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-6&quot;</span><span class="nt">&gt;</span>col-6<span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
