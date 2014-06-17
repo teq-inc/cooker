@@ -1,9 +1,10 @@
 // Dropdown arrow/caret
-.caret {
+.caret,
+.drop {
   display: inline-block;
   width: 0;
   height: 0;
-  margin-left: 2px;
+  margin-left: 8px;
   vertical-align: middle;
   border-top:   @caret-width-base solid;
   border-right: @caret-width-base solid transparent;
@@ -162,7 +163,7 @@
 .dropup,
 .navbar-fixed-bottom .dropdown {
   // Reverse the caret
-  .caret {
+  .drop {
     border-top: 0;
     border-bottom: @caret-width-base solid;
     content: "";

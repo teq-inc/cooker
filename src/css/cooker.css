@@ -919,16 +919,16 @@ blockquote:after {
     display: none !important;
   }
 }
-button,
 .button {
   display: inline-block;
   padding: 6px 24px;
   margin-bottom: 0;
   font-size: 14px;
-  font-weight: normal;
+  font-weight: 200;
   line-height: 1.42857143;
   color: #333;
   text-align: center;
+  letter-spacing: .05em;
   white-space: nowrap;
   vertical-align: middle;
   cursor: pointer;
@@ -946,97 +946,63 @@ button,
        -o-transition: all 300ms ease-out;
           transition: all 300ms ease-out;
 }
-button:hover,
 .button:hover,
-button:focus,
 .button:focus,
-button:active,
 .button:active,
-button.active,
 .button.active,
-.open > .dropdown-togglebutton,
 .open > .dropdown-toggle.button {
   color: #333;
   background-color: #bbb;
   border-color: #adadad;
 }
-button:active,
 .button:active,
-button.active,
 .button.active,
-.open > .dropdown-togglebutton,
 .open > .dropdown-toggle.button {
   background-image: none;
 }
-button.disabled,
 .button.disabled,
-button[disabled],
 .button[disabled],
-fieldset[disabled] button,
 fieldset[disabled] .button,
-button.disabled:hover,
 .button.disabled:hover,
-button[disabled]:hover,
 .button[disabled]:hover,
-fieldset[disabled] button:hover,
 fieldset[disabled] .button:hover,
-button.disabled:focus,
 .button.disabled:focus,
-button[disabled]:focus,
 .button[disabled]:focus,
-fieldset[disabled] button:focus,
 fieldset[disabled] .button:focus,
-button.disabled:active,
 .button.disabled:active,
-button[disabled]:active,
 .button[disabled]:active,
-fieldset[disabled] button:active,
 fieldset[disabled] .button:active,
-button.disabled.active,
 .button.disabled.active,
-button[disabled].active,
 .button[disabled].active,
-fieldset[disabled] button.active,
 fieldset[disabled] .button.active {
   background-color: #d5d5d5;
   border-color: #ccc;
 }
-button .badge,
 .button .badge {
   color: #d5d5d5;
   background-color: #333;
 }
-button:focus,
 .button:focus,
-button:active:focus,
 .button:active:focus,
-button.active:focus,
 .button.active:focus {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
-button:hover,
 .button:hover,
-button:focus,
 .button:focus {
   color: #333;
   text-decoration: none;
 }
-button:active,
 .button:active,
-button.active,
 .button.active {
   background-image: none;
   outline: 0;
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
 }
-button.disabled,
 .button.disabled,
-button[disabled],
 .button[disabled],
-fieldset[disabled] button,
 fieldset[disabled] .button {
   pointer-events: none;
   cursor: not-allowed;
@@ -1283,10 +1249,7 @@ input[type="button"].block {
   width: 100%;
 }
 .button.link {
-  padding: 6px 12px;
-  font-weight: normal;
   color: #4d6172;
-  cursor: pointer;
   border-radius: 0;
 }
 .button.link:hover {
@@ -1320,11 +1283,7 @@ fieldset[disabled] .button.link:focus {
   text-decoration: none;
 }
 .button.link.info {
-  padding: 6px 12px;
-  font-weight: normal;
   color: #4d6172;
-  cursor: pointer;
-  border-radius: 0;
 }
 .button.link.info:hover {
   color: #242d35 !important;
@@ -1357,11 +1316,7 @@ fieldset[disabled] .button.link.info:focus {
   text-decoration: none;
 }
 .button.link.success {
-  padding: 6px 12px;
-  font-weight: normal;
   color: #028760;
-  cursor: pointer;
-  border-radius: 0;
 }
 .button.link.success:hover {
   color: #012219 !important;
@@ -1394,11 +1349,7 @@ fieldset[disabled] .button.link.success:focus {
   text-decoration: none;
 }
 .button.link.warning {
-  padding: 6px 12px;
-  font-weight: normal;
   color: #e6b422;
-  cursor: pointer;
-  border-radius: 0;
 }
 .button.link.warning:hover {
   color: #927110 !important;
@@ -1431,11 +1382,7 @@ fieldset[disabled] .button.link.warning:focus {
   text-decoration: none;
 }
 .button.link.danger {
-  padding: 6px 12px;
-  font-weight: normal;
   color: #d3381c;
-  cursor: pointer;
-  border-radius: 0;
 }
 .button.link.danger:hover {
   color: #792010 !important;
@@ -2586,6 +2533,34 @@ fieldset[disabled] .button.circle.outline.danger.active {
 .button.gradient.danger.active {
   background-color: #9d2a15;
   border-color: #942714;
+}
+.button-split {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+.button-split .button {
+  float: left;
+}
+.button-split .button:first-child {
+  padding-right: 16.8px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.button-split .button.split-toggle {
+  padding: 6px 12px;
+  border-left: 1px solid #fff;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.button-split .button.split-toggle.sm {
+  padding: 5px 10px;
+}
+.button-split .button.split-toggle.lg {
+  padding: 10px 16px;
+}
+.button-split .button.split-toggle .drop {
+  margin: 0;
 }
 @media (min-width: 768px) {
   .grita,
@@ -4154,11 +4129,12 @@ select[multiple].input-outset-label.lg .append ~ .input {
   -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(169, 68, 66, .6);
           box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(169, 68, 66, .6);
 }
-.caret {
+.caret,
+.drop {
   display: inline-block;
   width: 0;
   height: 0;
-  margin-left: 2px;
+  margin-left: 8px;
   vertical-align: middle;
   border-top: 4px solid;
   border-right: 4px solid transparent;
@@ -4270,8 +4246,8 @@ select[multiple].input-outset-label.lg .append ~ .input {
   right: 0;
   left: auto;
 }
-.dropup .caret,
-.navbar-fixed-bottom .dropdown .caret {
+.dropup .drop,
+.navbar-fixed-bottom .dropdown .drop {
   content: "";
   border-top: 0;
   border-bottom: 4px solid;

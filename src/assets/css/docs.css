@@ -65,6 +65,7 @@ h1[id] {
   content: "Example";
 }
 .ck-example + .highlight {
+  display: block;
   margin: -15px -15px 15px;
   border-width: 0 0 1px;
   border-radius: 0;
@@ -124,6 +125,10 @@ h1[id] {
 }
 .row-table-valign-middle-docs .row-table-docs {
   margin-bottom: 0;
+}
+.ck-dropdown-button {
+  float: left;
+  margin: 5px;
 }
 .highlight {
   padding: 9px 14px;
