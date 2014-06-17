@@ -104,17 +104,20 @@ h1[id] {
   color: #fff;
   letter-spacing: .5em;
 }
-.row-table-docs {
+.row-table-docs,
+.row-docs {
   margin-bottom: 1rem;
 }
-.row-table-docs [class^="col-"] {
+.row-table-docs [class^="col-"],
+.row-docs [class^="col-"] {
   line-height: 3;
   color: #444;
   text-align: center;
   background: #242d35;
   background: rgba(22, 34, 49, .15);
 }
-.row-table-docs [class^="col-"]:nth-child(odd) {
+.row-table-docs [class^="col-"]:nth-child(odd),
+.row-docs [class^="col-"]:nth-child(odd) {
   background: #242d35;
   background: rgba(22, 34, 49, .3);
 }
