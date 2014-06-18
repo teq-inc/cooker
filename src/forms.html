@@ -236,6 +236,33 @@ base_url: "../"
                 button
               </button>
             </p>
+
+<div class="input-button-set">
+  <input class="input" type="text" placeholder="col-3" />
+  <div class="dropdown">
+    <a class="button primary dropdown-toggle">Dropdown <span class="drop"></span></a>
+    <ul class=" dropdown-menu" role="menu">
+      <li><a href="#">nav</a></li>
+    </ul>
+  </div>
+</div>
+
+           <!--    <input class="input col-3" type="text" placeholder="col-3" />
+              <button class="button primary">
+                button
+              </button>
+ -->
+
+            <p class="row-form">
+              <input class="input col-3" type="text" placeholder="col-3" />
+              <div class="dropdown">
+                <a class="button dropdown-toggle">Dropdown trigger <span class="drop"></span></a>
+                <ul class=" dropdown-menu" role="menu">
+                  <li><a href="#">nav</a></li>
+                </ul>
+              </div>
+            </p>
+
 {% highlight html %}
 <div class="row-form">
 <input class="input col-3" type="text" placeholder="col-3" />
@@ -319,7 +346,7 @@ base_url: "../"
                 <div class="input-inset-icons sm">
                   <span class="prepend"><i class="qcon qcon-hypo-square"></i></span>
                   <button class="append"><i class="qcon qcon-quota"></i></button>
-                  <input class="input input-inset sm" type="text" placeholder="input-inset-icons-sm" />
+                  <input class="input" type="text" placeholder="input-inset-icons-sm" />
                 </div>
                 </p>
                 <p>
@@ -446,7 +473,7 @@ base_url: "../"
                     <i class="qcon qcon-quota"></i>
                     Quota
                   </span>
-                  <input class="input input-outset" type="text" placeholder="input-outset-label-sm" />
+                  <input class="input-outset" type="text" placeholder="input-outset-label-sm" />
                 </div>
                 <div class="input-outset-label">
                   <div class="prepend">outset</div>
@@ -454,7 +481,7 @@ base_url: "../"
                     <i class="qcon qcon-quota"></i>
                     Quota
                   </span>
-                  <input class="input input-outset" type="text" placeholder="Default" />
+                  <input class="input-outset" type="text" placeholder="Default" />
                 </div>
                 <div class="input-outset-label lg">
                   <div class="prepend">outset</div>
@@ -462,7 +489,7 @@ base_url: "../"
                     <i class="qcon qcon-quota"></i>
                     Quota
                   </span>
-                  <input class="input input-outset" type="text" placeholder="lg" />
+                  <input class=" input-outset" type="text" placeholder="lg" />
                 </div>
                 <p>
 
@@ -472,24 +499,24 @@ base_url: "../"
                     <i class="qcon qcon-quota"></i>
                     Quota
                   </span>
-                  <input class="input input-outset" type="text" placeholder="append" />
+                  <input class=" input-outset" type="text" placeholder="append" />
                 </div>
 
                 <div class="input-outset-label lg">
                   <div class="prepend">outset</div>
-                  <input class="input input-outset" type="text" placeholder="prepend" />
+                  <input class=" input-outset" type="text" placeholder="prepend" />
                 </div>
                 <p>
 
                 <h5>Code</h5>
 {% highlight html %}
-<div class="input-outset-label">
+<div class="input-outset-label lg">
   <div class="prepend">outset</div>
   <span class="append">
     <i class="qcon qcon-quota"></i>
     Quota
   </span>
-  <input class="input input-outset" type="text" placeholder="Default" />
+  <input class="input-outset" type="text" placeholder="Default" />
 </div>
 {% endhighlight %}
               </div>
