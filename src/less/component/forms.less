@@ -174,19 +174,18 @@
 // input-button-set
 // =====================
 .input-button-set{
-  
   .clearfix();
   .input {
     float:left;
     width:250px;
   }
-  .input + .dropdown {
+  .input + .button,
+  .input + .button-split {
     float:left;
   }
-  .dropdown{
+  .button-split{
     .button{
       .border-left-radius(0);
-
     }
   }
 }
@@ -200,7 +199,7 @@
   position: relative;
   // .input-inset-left, // 廃止予定
   // .left, // 廃止予定
-  // .prepend,
+  .prepend,
   // .input-inset-right, // 廃止予定
   // .right, // 廃止予定
   .append {
@@ -273,7 +272,7 @@
   &.lg{
     // .input-inset-left, // 廃止予定
     // .left, // 廃止予定
-    // .prepend,
+    .prepend,
     // .input-inset-right, // 廃止予定
     // .right, // 廃止予定
     .append {

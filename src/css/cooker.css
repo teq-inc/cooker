@@ -921,7 +921,7 @@ blockquote:after {
 }
 .button {
   display: inline-block;
-  padding: 6px 24px;
+  padding: 6px 18px;
   margin-bottom: 0;
   font-size: 14px;
   font-weight: 200;
@@ -3461,16 +3461,18 @@ select[multiple].form.lg {
   float: left;
   width: 250px;
 }
-.input-button-set .input + .dropdown {
+.input-button-set .input + .button,
+.input-button-set .input + .button-split {
   float: left;
 }
-.input-button-set .dropdown .button {
+.input-button-set .button-split .button {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
 .input-inset-icons {
   position: relative;
 }
+.input-inset-icons .prepend,
 .input-inset-icons .append {
   position: absolute;
   top: 0;
@@ -3480,11 +3482,15 @@ select[multiple].form.lg {
   background-color: transparent;
   border: 0;
 }
+.input-inset-icons .prepend + .input,
 .input-inset-icons .append + .input,
+.input-inset-icons .prepend + .input-inset,
 .input-inset-icons .append + .input-inset {
   color: #4d6172;
 }
+.input-inset-icons .prepend + .input:hover,
 .input-inset-icons .append + .input:hover,
+.input-inset-icons .prepend + .input-inset:hover,
 .input-inset-icons .append + .input-inset:hover {
   color: #7e94a7;
 }
@@ -3522,6 +3528,8 @@ select[multiple].form.lg {
 .input-inset-icons.sm .append ~ .input-inset {
   padding-right: 30px;
 }
+.input-inset-icons.input-inset-icons-lg .prepend,
+.input-inset-icons.lg .prepend,
 .input-inset-icons.input-inset-icons-lg .append,
 .input-inset-icons.lg .append {
   height: 46px;
@@ -3982,7 +3990,7 @@ select[multiple].input-outset-label.lg .append ~ .input-outset {
   display: inline-block;
   width: 0;
   height: 0;
-  margin-left: 8px;
+  margin-left: 4px;
   vertical-align: middle;
   border-top: 4px solid;
   border-right: 4px solid transparent;
