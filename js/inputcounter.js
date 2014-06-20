@@ -4,7 +4,7 @@
     init: function(options){
       options = $.extend({
         warningClass:     'warning',
-        errorClass:       'error',
+        errorClass:       'danger',
         warningCounter:   60,
         errorCounter:     65,
         maxCounter:       ''

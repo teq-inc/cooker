@@ -67,8 +67,8 @@
           <li><a href="../row-table">row table</a></li>
           <li><a href="../forms">Forms</a></li>
           <li><a href="../buttons">Buttons</a></li>
- <!--           <li><a href="#">Table</a></li>
-          <li><a href="#">nav</a></li>
+          <li><a href="../tables">Tables</a></li>
+ <!--         <li><a href="#">nav</a></li>
           <li><a href="#">row grid</a></li>
           <li><a href="#">container</a></li>
           <li><a href="#">responsive</a></li>
@@ -104,42 +104,99 @@
       <h2>Forms</h2>
       <div class="blocks">
         
-        
         <div class="block">
           <div class="block-header">
             <h3>Input <small>width:100%</small></h3>
           </div>
           <div class="block-body">
-            <p><input class="input sm" type="text" placeholder="Small" /></p>
-            <p><input class="input" type="text" placeholder="Default" /></p>
-            <p><input class="input lg" type="text" placeholder="Large" /></p>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">class=</span><span class="s">&quot;input sm&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Small&quot;</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">class=</span><span class="s">&quot;input&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Default&quot;</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">class=</span><span class="s">&quot;input lg&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Large&quot;</span> <span class="nt">/&gt;</span>
+            <div class="ck-example">
+              
+              <p><input class="input sm" type="text" placeholder="Small" /></p>
+              <p><input class="input" type="text" placeholder="Default" /></p>
+              <p><input class="input lg" type="text" placeholder="Large" /></p>
+              
+            </div>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;p&gt;&lt;input</span> <span class="na">class=</span><span class="s">&quot;input sm&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Small&quot;</span> <span class="nt">/&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;&lt;input</span> <span class="na">class=</span><span class="s">&quot;input&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Default&quot;</span> <span class="nt">/&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;&lt;input</span> <span class="na">class=</span><span class="s">&quot;input lg&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Large&quot;</span> <span class="nt">/&gt;&lt;/p&gt;</span>
 </code></pre></div>
           </div>
         </div>
-        <!-- /.blocks -->
+        <!-- /.block -->
+
+        <div class="block">
+          <div class="block-header">
+            <h3>Disabled <small></small></h3>
+          </div>
+          <div class="block-body">
+            <div class="ck-example">
+              <p>
+                <input class="input" type="text" placeholder="Disabled" disabled />
+              </p>
+              <p>
+                <select class="select" disabled><option value="normal">normal</option></select>
+              </p>
+              <p>
+                <div class="checkbox">
+                  <input type="checkbox" id="" disabled>
+                  <label for="">checkbox</label>
+                </div>
+              </p>
+            </div>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Disabled&quot;</span> <span class="na">disabled</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">&quot;select&quot;</span> <span class="na">disabled</span><span class="nt">&gt;&lt;option</span> <span class="na">value=</span><span class="s">&quot;normal&quot;</span><span class="nt">&gt;</span>normal<span class="nt">&lt;/option&gt;&lt;/select&gt;</span>
+</code></pre></div>
+          </div>
+        </div>
+        <!-- /.block -->
+
+       <div class="block">
+          <div class="block-header">
+            <h3>form inline <small></small></h3>
+          </div>
+          <div class="block-body">
+            <div class="ck-example">
+
+              <div class="form inline">
+                <input class="input" type="text" placeholder="Default" />
+              </div>
+              <div class="form inline">
+                <select class="select"><option value="normal">form inline select</option></select>
+              </div>
+              <div class="checkbox inline">
+                <input type="checkbox" id="checkbox1">
+                <label for="checkbox1">checkbox</label>
+              </div>
+              <button class="button">search</button>
+
+            </div>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;form inline&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Default&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;form inline&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">&quot;select&quot;</span><span class="nt">&gt;&lt;option</span> <span class="na">value=</span><span class="s">&quot;normal&quot;</span><span class="nt">&gt;</span>form inline select<span class="nt">&lt;/option&gt;&lt;/select&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;checkbox inline&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;checkbox&quot;</span> <span class="na">id=</span><span class="s">&quot;checkbox1&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;checkbox1&quot;</span><span class="nt">&gt;</span>checkbox<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;button&quot;</span><span class="nt">&gt;</span>search<span class="nt">&lt;/button&gt;</span>
+</code></pre></div>
+          </div>
+        </div>
+        <!-- /.block -->
+
+
         <div class="block">
           <div class="block-header">
             <h3>Select <small>width:100%</small></h3>
           </div>
           <div class="block-body">
-            <p>
-            <select class="select sm">
-              <option value="sm">sm</option>
-            </select>
-            </p>
-            <p>
-            <select class="select">
-              <option value="normal">normal</option>
-            </select>
-            </p>
-            <p>
-            <select class="select lg">
-              <option value="lg">form-lg</option>
-            </select>
-            </p>
+            <div class="ck-example">
+              <p><select class="select sm"><option value="sm">sm</option></select></p>
+              <p><select class="select"><option value="normal">normal</option></select></p>
+              <p><select class="select lg"><option value="lg">form-lg</option></select></p>
+            </div>
 <div class="highlight"><pre><code class="html"><span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">&quot;select sm&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;sm&quot;</span><span class="nt">&gt;</span>sm<span class="nt">&lt;/option&gt;</span>
 <span class="nt">&lt;/select&gt;</span>
@@ -152,23 +209,24 @@
 </code></pre></div>
           </div>
         </div>
-        <!-- /.blocks -->
+        <!-- /.block -->
 
 
         <div class="block">
           <div class="block-header">
-            <h3>checkbox & radio</h3>
+            <h3>checkbox & radio <small>with Qcon</small></h3>
           </div>
           <div class="block-body">
-
-            <h4>Block</h4>
-            <div class="checkbox">
-              <input type="checkbox" id="checkbox1">
-              <label for="checkbox1">checkbox</label>
-            </div>
-            <div class="radio">
-              <input type="radio" id="radio1">
-              <label for="radio1">radio</label>
+            <h4>Default</h4>
+            <div class="ck-example">
+              <div class="checkbox">
+                <input type="checkbox" id="checkbox1">
+                <label for="checkbox1">checkbox</label>
+              </div>
+              <div class="radio">
+                <input type="radio" id="radio1">
+                <label for="radio1">radio</label>
+              </div>
             </div>
 <div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;checkbox&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;checkbox&quot;</span> <span class="na">id=</span><span class="s">&quot;checkbox1&quot;</span><span class="nt">&gt;</span>
@@ -182,99 +240,152 @@
 
 
             <h4>inline</h4>
-            <p>
-              <span class="checkbox-inline">
-                <input type="checkbox" id="checkbox2">
-                <label for="checkbox2">checkbox inline</label>
-              </span>
-              <span class="checkbox-inline">
-                <input type="checkbox" id="checkbox3">
-                <label for="checkbox3">checkbox inline</label>
-              </span>
-              <span class="checkbox-inline">
-                <input type="checkbox" id="checkbox4">
-                <label for="checkbox4">checkbox inline</label>
-              </span>
-              <span class="checkbox-inline">
-                <input type="checkbox" id="checkbox5">
-                <label for="checkbox5">checkbox inline</label>
-              </span>
-            </p>
+            <div class="ck-example">
 
-            <p>
-              <span class="radio-inline">
-                <input type="radio" id="radio2">
-                <label for="radio2">radio inline</label>
-              </span>
-              <span class="radio-inline">
-                <input type="radio" id="radio3">
-                <label for="radio3">radio inline</label>
-              </span>
-              <span class="radio-inline">
-                <input type="radio" id="radio4">
-                <label for="radio4">radio inline</label>
-              </span>
-              <span class="radio-inline">
-                <input type="radio" id="radio5">
-                <label for="radio5">radio inline</label>
-              </span>
-            </p>
+              <p>
+                <div class="checkbox inline">
+                  <input type="checkbox" id="checkbox2">
+                  <label for="checkbox2">checkbox inline</label>
+                </div>
+                <div class="checkbox inline">
+                  <input type="checkbox" id="checkbox3">
+                  <label for="checkbox3">checkbox inline</label>
+                </div>
+                <div class="checkbox inline">
+                  <input type="checkbox" id="checkbox4">
+                  <label for="checkbox4">checkbox inline</label>
+                </div>
+                <div class="checkbox inline">
+                  <input type="checkbox" id="checkbox5">
+                  <label for="checkbox5">checkbox inline</label>
+                </div>
+              </p>
 
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;checkbox-inline&quot;</span><span class="nt">&gt;</span>
+              <p>
+                <div class="radio inline">
+                  <input type="radio" id="radio2">
+                  <label for="radio2">radio inline</label>
+                </div>
+                <div class="radio inline">
+                  <input type="radio" id="radio3">
+                  <label for="radio3">radio inline</label>
+                </div>
+                <div class="radio inline">
+                  <input type="radio" id="radio4">
+                  <label for="radio4">radio inline</label>
+                </div>
+                <div class="radio inline">
+                  <input type="radio" id="radio5">
+                  <label for="radio5">radio inline</label>
+                </div>
+              </p>
+            </div>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;checkbox inline&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;checkbox&quot;</span> <span class="na">id=</span><span class="s">&quot;checkbox5&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;checkbox5&quot;</span><span class="nt">&gt;</span>checkbox inline<span class="nt">&lt;/label&gt;</span>
-<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
 
-<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;radio-inline&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;radio inline&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;radio&quot;</span> <span class="na">id=</span><span class="s">&quot;radio2&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;radio2&quot;</span><span class="nt">&gt;</span>radio inline<span class="nt">&lt;/label&gt;</span>
-<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
 </code></pre></div>
           </div>
         </div>
-        <!-- /.blocks -->
+        <!-- /.block -->
 
 
         <div class="block">
           <div class="block-header">
-            <h3>form grid <small>input</small></h3>
-            <p>grita同様にカラム数はlessの引数を変えることで自由に変更可能。</p>
+            <h3>form item <small></small></h3>
           </div>
           <div class="block-body">
-            <p class="row-form">
-            <input class="input col-4" type="text" placeholder="col-4" />
-            <input class="input col-4" type="text" placeholder="col-4" />
-            <input class="input col-4" type="text" placeholder="col-4" />
-            </p>
-            <p class="row-form">
-            <input class="input col-3" type="text" placeholder="col-3" />
-            <input class="input col-3" type="text" placeholder="col-3" />
-            <input class="input col-3" type="text" placeholder="col-3" />
-            <input class="input col-3" type="text" placeholder="col-3" />
-            </p>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row-form&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input col-4&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;col-4&quot;</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input col-4&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;col-4&quot;</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input col-4&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;col-4&quot;</span> <span class="nt">/&gt;</span>
+            <div class="ck-example">
+
+              <p class="form">
+                <label class="" for="">Default</label>
+                <input class="input" type="text" placeholder="Default" />
+              </p>
+
+            </div>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;form-item&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">&quot;&quot;</span> <span class="na">for=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>Default<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Default&quot;</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 </code></pre></div>
-            <p class="row-form">
+          </div>
+        </div>
+        <!-- /.block -->
+
+
+        <div class="block">
+          <div class="block-header">
+            <h3>status color <small></small></h3>
+          </div>
+          <div class="block-body">
+            <div class="ck-example">
+              <p><input class="input info" type="text" placeholder="info" /></p>
+              <p><input class="input success" type="text" placeholder="success" /></p>
+              <p><input class="input warning" type="text" placeholder="warning" /></p>
+              <p><input class="input danger" type="text" placeholder="danger" /></p>
+            </div>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">class=</span><span class="s">&quot;input sm&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Small&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">class=</span><span class="s">&quot;input&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Default&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">class=</span><span class="s">&quot;input lg&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Large&quot;</span> <span class="nt">/&gt;</span>
+</code></pre></div>
+          </div>
+        </div>
+        <!-- /.block -->
+
+
+        <div class="block">
+          <div class="block-header">
+            <h3>form grid <small>row-form</small></h3>
+            <p>row同様にカラム数はlessの引数を変えることで自由に変更可能。デフォルトは12カラム</p>
+          </div>
+          <div class="block-body">
+            <div class="ck-example">
+              <p class="row-form">
+                <input class="input col-4" type="text" placeholder="col-4" />
+                <input class="input col-4" type="text" placeholder="col-4" />
+                <input class="input col-4" type="text" placeholder="col-4" />
+              </p>
+              <p class="row-form">
+                <input class="input col-3" type="text" placeholder="col-3" />
+                <span class="checkbox col-4">
+                  <input type="checkbox" id="checkbox10">
+                  <label for="checkbox10">checkbox col-4</label>
+                </span>
+                <span class="radio col-3">
+                  <input type="radio" id="radio10">
+                  <label for="radio10">radio col-3</label>
+                </span>
+                <select class="select col-2">
+                  <option value="col-2">col-2</option>
+                </select>
+              </p>
+              <p class="row-form">
+                <input class="input col-3" type="text" placeholder="col-3" />
+                <span class="row-form-text col-3">
+                  .row-form-text
+                </span>
+                <span class="row-form-text col-3">
+                  .row-form-text
+                </span>
+                <select class="select col-3">
+                  <option value="col-2">col-2</option>
+                </select>
+              </p>
+              <p class="row-form">
               <input class="input col-3" type="text" placeholder="col-3" />
-              <span class="checkbox col-4">
-                <input type="checkbox" id="checkbox10">
-                <label for="checkbox10">checkbox col-4</label>
-              </span>
-              <span class="radio col-3">
-                <input type="radio" id="radio10">
-                <label for="radio10">radio col-3</label>
-              </span>
-              <select class="select col-2">
-                <option value="col-2">col-2</option>
-              </select>
-            </p>
+              <input class="input col-3" type="text" placeholder="col-3" />
+              <input class="input col-3" type="text" placeholder="col-3" />
+              <input class="input col-3" type="text" placeholder="col-3" />
+              </p>
+            </div>
 <div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row-form&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input col-3&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;col-3&quot;</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;checkbox col-4&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input col-2&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;col-3&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;checkbox col-3&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;checkbox&quot;</span> <span class="na">id=</span><span class="s">&quot;checkbox10&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;checkbox10&quot;</span><span class="nt">&gt;</span>checkbox col-4<span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;/span&gt;</span>
@@ -285,67 +396,84 @@
   <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">&quot;select col-2&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;col-2&quot;</span><span class="nt">&gt;</span>col-2<span class="nt">&lt;/option&gt;</span>
   <span class="nt">&lt;/select&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;row-form-text col-2&quot;</span><span class="nt">&gt;</span>
+    .row-form-text
+  <span class="nt">&lt;/span&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 </code></pre></div>
-            <p class="row-form">
-              <input class="input col-3" type="text" placeholder="col-3" />
-              <span class="row-form-text col-3">
-                .col-text
-              </span>
-              <span class="row-form-text col-3">
-                .col-text
-              </span>
-              <select class="select col-3">
-                <option value="col-2">col-2</option>
-              </select>
-            </p>
+          </div>
+        </div>
+        <!-- /.block -->
+
+        <div class="block">
+          <div class="block-header">
+            <h3>input + button <small></small></h3>
+            <p></p>
+          </div>
+          <div class="block-body">
+            <div class="ck-example">
+
+              <p class="row-form">
+                <input class="input col-3" type="text" placeholder="col-3" />
+                <button class="button primary">
+                  button
+                </button>
+              </p>
+              <div class="input-button-set">
+                <input class="input lg" type="text" placeholder="col-3" />
+                <div class="button-split dropdown">
+                  <button class="button lg danger">split button</button>
+                  <button class="button lg danger split-toggle dropdown-toggle"><span class="drop"></span></button>
+                  <ul class=" dropdown-menu" role="menu">
+                    <li class="dropdown-header">Dropdown header</li>
+                    <li><a href="#">nav</a></li>
+                    <li class="divider"></li>
+                    <li class="disabled"><a href="#">disabled</a></li>
+                    <li class="active"><a href="#">active</a></li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
 <div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row-form&quot;</span><span class="nt">&gt;</span>
-<span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input col-3&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;col-3&quot;</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;row-form-text col-3&quot;</span><span class="nt">&gt;</span>
-  .col-text
-<span class="nt">&lt;/span&gt;</span>
-<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;row-form-text col-3&quot;</span><span class="nt">&gt;</span>
-  .col-text
-<span class="nt">&lt;/span&gt;</span>
-<span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">&quot;select col-3&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;col-2&quot;</span><span class="nt">&gt;</span>col-2<span class="nt">&lt;/option&gt;</span>
-<span class="nt">&lt;/select&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input col-3&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;col-3&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;button primary&quot;</span><span class="nt">&gt;</span>
+    button
+  <span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-button-set&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input lg&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;col-3&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;button-split dropdown&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;button lg danger&quot;</span><span class="nt">&gt;</span>split button<span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;button lg danger split-toggle dropdown-toggle&quot;</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">&quot;drop&quot;</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot; dropdown-menu&quot;</span> <span class="na">role=</span><span class="s">&quot;menu&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;dropdown-header&quot;</span><span class="nt">&gt;</span>Dropdown header<span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>nav<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;divider&quot;</span><span class="nt">&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;disabled&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>disabled<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;active&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>active<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 </code></pre></div>
-
-
-            <h4>input + button</h4>
-            <p class="row-form">
-              <input class="input col-3" type="text" placeholder="col-3" />
-              <button class="button primary">
-                button
-              </button>
-            </p>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row-form&quot;</span><span class="nt">&gt;</span>
-<span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input col-3&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;col-3&quot;</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;button primary&quot;</span><span class="nt">&gt;</span>button<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</code></pre></div>
-
-
-
-
           </div>
         </div>
         <!-- /.blocks -->
         
         <div class="block">
           <div class="block-header">
-            <h4>Minimal <small>input-minimal</small></h4>
+            <h3>Minimal <small>input-minimal</small></h3>
           </div>
           <div class="block-body">
-            <p><input class="input-minimal sm" type="text" placeholder="input-minimal sm" /></p>
-            <p><input class="input-minimal" type="text" placeholder="Base" /></p>
-            <p><input class="input-minimal lg" type="text" placeholder="input-minimal lg" /></p>
-
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input-minimal sm&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Small&quot;</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input-minimal&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Base&quot;</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input-minimal lg&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Large&quot;</span> <span class="nt">/&gt;</span>
+            <div class="ck-example">
+              <p><input class="input minimal sm" type="text" placeholder="input minimal sm" /></p>
+              <p><input class="input minimal" type="text" placeholder="Base" /></p>
+              <p><input class="input minimal lg" type="text" placeholder="input minimal lg" /></p>
+            </div>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input minimal sm&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Small&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input minimal&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Base&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input minimal lg&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Large&quot;</span> <span class="nt">/&gt;</span>
 </code></pre></div>
           </div>
         </div>
@@ -354,157 +482,136 @@
 
         <div class="block">
           <div class="block-header">
-            <h4>underline <small>underline</small></h4>
+            <h3>underline <small>underline</small></h3>
           </div>
           <div class="block-body">
-            <p>
-              <input class="input-underline sm" type="text" placeholder="input-underline   sm" />
-              <input class="input-underline" type="text" placeholder="input-underline" />
-              <input class="input-underline lg" type="text" placeholder="input-underline   lg" />
-            </p>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input-underline sm&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;input-underline&quot;</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input-underline&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;input-underline&quot;</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input-underline lg&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;input-underline&quot;</span> <span class="nt">/&gt;</span>
+            <div class="ck-example">
+              <p>
+                <input class="input underline sm" type="text" placeholder="input underline   sm" />
+                <input class="input underline" type="text" placeholder="input underline" />
+                <input class="input underline lg" type="text" placeholder="input underline   lg" />
+              </p>
+            </div>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input underline sm&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;input underline&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input underline&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;input underline&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input underline lg&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;input underline&quot;</span> <span class="nt">/&gt;</span>
 </code></pre></div>
           </div>
-          </div><!-- /.block -->
+        </div>
+        <!-- /.block -->
+
+        <div class="block">
+          <div class="block-header">
+            <h3>left bar <small>input left-bar</small></h3>
+          </div>
+          <div class="block-body">
+            <div class="ck-example">
+              <p>
+              <input class="input left-bar sm" type="text" placeholder="input left-bar sm" />
+              <input class="input left-bar" type="text" placeholder="input left-bar" />
+              <input class="input left-bar lg" type="text" placeholder="input left-bar lg" />
+              </p>
+            </div>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input left-bar sm&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;input left-bar sm&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input left-bar&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;input left-bar&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input left-bar lg&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;input left-bar form-lg&quot;</span> <span class="nt">/&gt;</span>
+</code></pre></div>
+          </div>
+        </div><!-- /.block -->
 
 
           <div class="block">
             <div class="block-header">
-              <h4>left bar <small>input-left-bar</small></h4>
+              <h4>insets icon <small>form-insets</small></h4>
             </div>
             <div class="block-body">
-              <p>
-              <input class="input-left-bar sm" type="text" placeholder="input-left-bar sm" />
-              <input class="input-left-bar" type="text" placeholder="input-left-bar" />
-              <input class="input-left-bar lg" type="text" placeholder="input-left-bar lg" />
-              </p>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input-left-bar sm&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;input-left-bar sm&quot;</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input-left-bar&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;input-left-bar&quot;</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input-left-bar lg&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;input-left-bar form-lg&quot;</span> <span class="nt">/&gt;</span>
-</code></pre></div>
-            </div>
-            </div><!-- /.block -->
-
-
-            <div class="block">
-              <div class="block-header">
-                <h4>insets icon <small>form-insets</small></h4>
-              </div>
-              <div class="block-body">
-                
-                <h5>icon both</h5>
+              <h5>icon both</h5>
+              <div class="ck-example">
                 <p>サンプルの右側のアイコンは"button"要素内に配置。</p>
                 <p>
-                <div class="input-inset-icons sm">
-                  <span class="prepend"><i class="qcon qcon-hypo-square"></i></span>
-                  <button class="append"><i class="qcon qcon-quota"></i></button>
-                  <input class="input input-inset sm" type="text" placeholder="input-inset-icons-sm" />
-                </div>
+                  <div class="input-inset-icons sm">
+                    <span class="prepend"><i class="qcon qcon-hypo-square"></i></span>
+                    <button class="append"><i class="qcon qcon-quota"></i></button>
+                    <input class="input sm" type="text" placeholder="input-inset-icons-sm" />
+                  </div>
                 </p>
                 <p>
-                <div class="input-inset-icons">
-                  <span class="prepend"><i class="qcon qcon-hypo-square"></i></span>
-                  <button class="append"><i class="qcon qcon-quota"></i></button>
-                  <input class="input input-inset" type="text" placeholder="Default" />
-                </div>
+                  <div class="input-inset-icons">
+                    <span class="prepend"><i class="qcon qcon-hypo-square"></i></span>
+                    <button class="append"><i class="qcon qcon-quota"></i></button>
+                    <input class="input" type="text" placeholder="Default" />
+                  </div>
                 <p>
                 <p>
                 <div class="input-inset-icons lg">
-                  <span class="input-inset-left"><i class="qcon qcon-hypo-square"></i></span>
-                  <button class="input-inset-right"><i class="qcon qcon-quota"></i></button>
-                  <input class="input input-inset lg" type="text" placeholder="lg" />
+                  <span class="prepend"><i class="qcon qcon-hypo-square"></i></span>
+                  <button class="append"><i class="qcon qcon-quota"></i></button>
+                  <input class="input lg" type="text" placeholder="lg" />
                 </div>
                 </p>
+              </div>
 <div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-inset-icons lg&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;input-inset-left&quot;</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">&quot;qcon qcon-hypo-square&quot;</span><span class="nt">&gt;&lt;/i&gt;&lt;/span&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;input-inset-right&quot;</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">&quot;qcon qcon-quota&quot;</span><span class="nt">&gt;&lt;/i&gt;&lt;/button&gt;</span>
-  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input input-inset lg&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;lg&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;prepend&quot;</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">&quot;qcon qcon-hypo-square&quot;</span><span class="nt">&gt;&lt;/i&gt;&lt;/span&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;append&quot;</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">&quot;qcon qcon-quota&quot;</span><span class="nt">&gt;&lt;/i&gt;&lt;/button&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input lg&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;lg&quot;</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 </code></pre></div>
 
 
-                <h5>icon left</h5>
-                <p>
-                <div class="input-inset-icons">
-                  <span class="prepend"><i class="qcon qcon-blivesta"></i></span>
-                  <input class="input input-inset" type="text" placeholder="Search" />
-                </div>
-                </p>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-inset-icons&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;prepend&quot;</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">&quot;qcon qcon-blivesta&quot;</span><span class="nt">&gt;&lt;/i&gt;&lt;/span&gt;</span>
-  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input input-inset&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Search&quot;</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</code></pre></div>
 
-
-                <h5>icon right</h5>
-                <p>
-                <div class="input-inset-icons">
-                  <span class="append"><i class="qcon qcon-quota"></i></span>
-                  <input class="input input-inset" type="text" placeholder="Search" />
-                </div>
-                </p>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-inset-icons&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;append&quot;</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">&quot;qcon qcon-quota&quot;</span><span class="nt">&gt;&lt;/i&gt;&lt;/span&gt;</span>
-  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input input-inset&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Search&quot;</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</code></pre></div>
-
-
-                <h5>input-minimal</h5>
+              <h5>input-minimal</h5>
+              <div class="ck-example">
                 <p>
                 <div class="input-inset-icons sm">
                   <span class="prepend "><i class="qcon qcon-hypo-square"></i></span>
                   <span class="append"><i class="qcon qcon-quota"></i></span>
-                  <input class="input-minimal input-inset" type="text" placeholder="Default" />
+                  <input class="input minimal" type="text" placeholder="Default" />
                 </div>
                 <p>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-inset-icons sm&quot;</span><span class="nt">&gt;</span>
+              </div>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-inset-icons&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;prepend &quot;</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">&quot;qcon qcon-hypo-square&quot;</span><span class="nt">&gt;&lt;/i&gt;&lt;/span&gt;</span>
   <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;append&quot;</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">&quot;qcon qcon-quota&quot;</span><span class="nt">&gt;&lt;/i&gt;&lt;/span&gt;</span>
-  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input-minimal input-inset&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Default&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input minimal&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Default&quot;</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 </code></pre></div>
 
 
-
-                <h5>input-underline</h5>
+              <h5>input.underline</h5>
+              <div class="ck-example">
                 <p>
                 <div class="input-inset-icons">
                   <span class="prepend"><i class="qcon qcon-hypo-square"></i></span>
                   <span class="append"><i class="qcon qcon-quota"></i></span>
-                  <input class="input-underline input-inset" type="text" placeholder="Default" />
+                  <input class="input underline" type="text" placeholder="Default" />
                 </div>
                 <p>
+              </div>
 <div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-inset-icons&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;prepend&quot;</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">&quot;qcon qcon-hypo-square&quot;</span><span class="nt">&gt;&lt;/i&gt;&lt;/span&gt;</span>
   <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;append&quot;</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">&quot;qcon qcon-quota&quot;</span><span class="nt">&gt;&lt;/i&gt;&lt;/span&gt;</span>
-  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input-underline input-inset&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Default&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input underline&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Default&quot;</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 </code></pre></div>
 
-
-
-                <h5>input-left-bar</h5>
+              <h5>input-left-bar</h5>
+              <div class="ck-example">
                 <p>
                 <div class="input-inset-icons">
                   <span class="prepend sm"><i class="qcon qcon-hypo-square"></i></span>
                   <span class="append"><i class="qcon qcon-quota"></i></span>
-                  <input class="input-left-bar input-inset" type="text" placeholder="Default" />
+                  <input class="input left-bar" type="text" placeholder="Default" />
                 </div>
                 <p>
-                <h5>Code</h5>
+              </div>
 <div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-inset-icons&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;prepend sm&quot;</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">&quot;qcon qcon-hypo-square&quot;</span><span class="nt">&gt;&lt;/i&gt;&lt;/span&gt;</span>
   <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;append&quot;</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">&quot;qcon qcon-quota&quot;</span><span class="nt">&gt;&lt;/i&gt;&lt;/span&gt;</span>
-  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input-left-bar input-inset&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Default&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input left-bar&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Default&quot;</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 </code></pre></div>
-              </div>
-
-            </div><!-- /.block -->
+            </div>
+          </div><!-- /.block -->
 
 
             <div class="block">
@@ -513,57 +620,56 @@
               </div>
               <div class="block-body">
                 <h5>Basic</h5>
-
+                <div class="ck-example">
                 <p>
-                <div class="input-outset-label sm">
+                <div class="input-outset sm">
                   <div class="prepend">outset</div>
                   <span class="append">
                     <i class="qcon qcon-quota"></i>
                     Quota
                   </span>
-                  <input class="input input-outset" type="text" placeholder="input-outset-label-sm" />
+                  <input class="input sm" type="text" placeholder="input-outset-sm" />
                 </div>
-                <div class="input-outset-label">
+                <div class="input-outset">
                   <div class="prepend">outset</div>
                   <span class="append">
                     <i class="qcon qcon-quota"></i>
                     Quota
                   </span>
-                  <input class="input input-outset" type="text" placeholder="Default" />
+                  <input class="input" type="text" placeholder="Default" />
                 </div>
-                <div class="input-outset-label lg">
+                <div class="input-outset lg">
                   <div class="prepend">outset</div>
                   <span class="append">
                     <i class="qcon qcon-quota"></i>
                     Quota
                   </span>
-                  <input class="input input-outset" type="text" placeholder="lg" />
+                  <input class="input lg" type="text" placeholder="lg" />
                 </div>
                 <p>
 
                 <p>
-                <div class="input-outset-label">
+                <div class="input-outset">
                   <span class="append">
                     <i class="qcon qcon-quota"></i>
                     Quota
                   </span>
-                  <input class="input input-outset" type="text" placeholder="append" />
+                  <input class="input" type="text" placeholder="append" />
                 </div>
 
-                <div class="input-outset-label lg">
+                <div class="input-outset lg">
                   <div class="prepend">outset</div>
-                  <input class="input input-outset" type="text" placeholder="prepend" />
+                  <input class="input lg" type="text" placeholder="prepend" />
                 </div>
                 <p>
 
-                <h5>Code</h5>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-outset-label&quot;</span><span class="nt">&gt;</span>
+                </div>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;input-outset lg&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;prepend&quot;</span><span class="nt">&gt;</span>outset<span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;append&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;qcon qcon-quota&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>
-    Quota
+    <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;qcon qcon-quota&quot;</span><span class="nt">&gt;&lt;/i&gt;</span> Quota
   <span class="nt">&lt;/span&gt;</span>
-  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input input-outset&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Default&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;input lg&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Default&quot;</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 </code></pre></div>
               </div>
