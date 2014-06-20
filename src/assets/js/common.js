@@ -6,7 +6,8 @@ $(function (){
 
 $('.inputcounter').inputcounter({
   warningCounter: 12,
-  errorCounter:   24
+  errorCounter:   24,
+  errorClass:     'danger'
 });
 
 $('a[href^=#]').scrollmethod();

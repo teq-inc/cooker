@@ -167,7 +167,7 @@
     init: function(options){
       options = $.extend({
         warningClass:     'warning',
-        errorClass:       'error',
+        errorClass:       'danger',
         warningCounter:   60,
         errorCounter:     65,
         maxCounter:       ''
@@ -530,7 +530,7 @@
         }
         
         var $toggle = $this.find('.'+options.toggle);
-        var $other = $("body").not(this);
+        var $other = $("body").not($this);
 
         $other.click(function(){
           methods.close.apply(_this);
@@ -567,8 +567,10 @@
       var $this = $(this);
       options = $this.data(namespace).options;
       $this
+      //$(".dropdown")
       .removeClass(options.open)
       .addClass(options.close);
+
     },
     
     destroy: function(){
