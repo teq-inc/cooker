@@ -1,45 +1,36 @@
 
 @media (min-width: @row-table-breakpoint) {
 
-  .grita,
   .row-table {
     display: table;
     width: 100%;
     table-layout: fixed;
     line-height:@line-height-base;
-
-    .col, //廃止予定
-    [class^="col-"] {
+    .col{
       display: table-cell;
     }
       
   }
   
-  .grita-padding .col,//廃止予定
-  .row-table.padding [class^="col-"] {
+  .row-table.padding .col {
     padding: @row-table-gutter-padding-base;
   }
-  .grita-padding-sm .col,//廃止予定
-  .row-table.padding-sm [class^="col-"] {
+  .row-table.padding-sm .col {
     padding: @row-table-gutter-padding-sm;
   }
-  .grita-padding-xs .col,//廃止予定
-  .row-table.padding-xs [class^="col-"] {
+  .row-table.padding-xs .col {
     padding: @row-table-gutter-padding-xs;
   }
-  .grita-padding-form .col,//廃止予定
-  .row-table.padding-form [class^="col-"] {
+  .row-table.padding-form .col {
     padding-right: @row-table-gutter-padding-form;
     &:last-child{
       padding-right: 0;
     }
   }
   
-  .grita-gutter,//廃止予定
   .row-table-gutter {
     margin-left:  -@row-table-gutter-width;
     margin-right: -@row-table-gutter-width;
-    .grita,//廃止予定
     .row-table {
       border-spacing: @row-table-gutter-width 0;
     }
@@ -49,8 +40,6 @@
 
 }
 
-.grita-valign-middle .col,//廃止予定
-.grita-valign-middle [class^="col-"],//廃止予定
-.row-table.valign-middle [class^="col-"]  {
+.grita-valign-middle .col {
   vertical-align: middle;
 }

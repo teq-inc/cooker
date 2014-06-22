@@ -1,5 +1,4 @@
 // Dropdown arrow/caret
-.caret,
 .drop {
   display: inline-block;
   width: 0;
@@ -70,7 +69,7 @@
 }
 
 // Active state
-.dropdown-menu > .active > a {
+.dropdown-menu .active > a {
   &,
   &:hover,
   &:focus {
@@ -101,6 +100,7 @@
   }
 }
 
+
 // Open state for the dropdown
 .open {
   > .dropdown-menu {
@@ -119,12 +119,6 @@
   left: auto; // Reset the default from `.dropdown-menu`
   right: 0;
 }
-// With v3, we enabled auto-flipping if you have a dropdown within a right
-// aligned nav component. To enable the undoing of that, we provide an override
-// to restore the default dropdown menu alignment.
-//
-// This is only for left-aligning a dropdown menu within a `.navbar-right` or
-// `.pull-right` nav component.
 .dropdown-menu-left {
   left: 0;
   right: auto;
@@ -196,20 +190,10 @@
 
 
 
-
-
-// @import "../../lib/bootstrap3/less/variables.less";
-// @import "../../lib/bootstrap3/less/mixins.less";
-
-.dropdown-lg {
-	//position: static !important;
-	//position: absolute !important;
-}
-
+// large
+// ====================
 .dropdown-menu-lg {
-	//margin-left: @padding-large-horizontal;
-	//margin-right: @padding-large-horizontal;
-	width:600px;
+	min-width:100%;
 	padding: 20px 0px;
 	> li > ul {
 		padding:0;
@@ -226,51 +210,49 @@
     line-height: @line-height-base;
     color: @dropdown-link-color;
     white-space: normal;
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      color: @dropdown-link-hover-color;
+      background-color: @dropdown-link-hover-bg;
+    }
 	}
 }
 
-.dropdown-menu-lg > li ul > li > a {
-  &:hover,
-  &:focus {
-    text-decoration: none;
-    color: @dropdown-link-hover-color;
-    background-color: @dropdown-link-hover-bg;
-  }
-}
+// .dropdown-menu-lg > .active > a {
+//   &,
+//   &:hover,
+//   &:focus {
+//     background-color: @dropdown-link-active-bg;
 
-.dropdown-menu-lg > .active > a {
-  &,
-  &:hover,
-  &:focus {
+//   }
+// }
 
-  }
-}
+// .dropdown-menu-lg .disabled > a {
+//   &,
+//   &:hover,
+//   &:focus {
+//     color: @dropdown-link-disabled-color;
+//   }
+// }
 
-.dropdown-menu-lg .disabled > a {
-  &,
-  &:hover,
-  &:focus {
-    color: @dropdown-link-disabled-color;
-  }
-}
+// .dropdown-menu-lg .disabled > a {
+//   &:hover,
+//   &:focus {
+//     text-decoration: none;
+//     background-color: transparent;
+//     background-image: none;
+//     .reset-filter();
+//     cursor: not-allowed;
+//   }
+// }
 
-.dropdown-menu-lg .disabled > a {
-  &:hover,
-  &:focus {
-    text-decoration: none;
-    background-color: transparent;
-    background-image: none;
-    .reset-filter();
-    cursor: not-allowed;
-  }
-}
-
-.open {
-  > .dropdown-menu-lg {
-  }
-  > a {
-  }
-}
+// .open {
+//   > .dropdown-menu-lg {
+//   }
+//   > a {
+//   }
+// }
 
 .dropdown-menu-lg .dropdown-header {
   color: @primary-color;

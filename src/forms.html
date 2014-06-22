@@ -15,24 +15,126 @@ base_url: "../"
         
         <div class="block">
           <div class="block-header">
-            <h3>Input <small>width:100%</small></h3>
+            <h3>form elemtnts <small></small></h3>
           </div>
           <div class="block-body">
             <div class="ck-example">
               
-              <p><input class="input sm" type="text" placeholder="Small" /></p>
-              <p><input class="input" type="text" placeholder="Default" /></p>
-              <p><input class="input lg" type="text" placeholder="Large" /></p>
-              
+              <p>
+                <input class="input" type="text" placeholder="Input" />
+              </p>
+              <p>
+                <select class="select"><option value="Select">Select</option></select>
+              </p>
+              <p>
+                <div class="checkbox">
+                  <input type="checkbox" id="checkbox-example">
+                  <label for="checkbox-example">checkbox</label>
+                </div>
+              </p>
+              <p>
+                <div class="radio">
+                  <input type="radio" id="radio-example">
+                  <label for="radio-example">radio</label>
+                </div>
+              </p>
+
             </div>
 {% highlight html %}
-<p><input class="input sm" type="text" placeholder="Small" /></p>
-<p><input class="input" type="text" placeholder="Default" /></p>
-<p><input class="input lg" type="text" placeholder="Large" /></p>
+<input class="input" type="text" placeholder="Input" />
+<select class="select"><option value="Select">Select</option></select>
+<div class="checkbox">
+  <input type="checkbox" id="checkbox-example">
+  <label for="checkbox-example">checkbox</label>
+</div>
+<div class="radio">
+  <input type="radio" id="radio-example">
+  <label for="radio-example">radio</label>
+</div>
 {% endhighlight %}
           </div>
         </div>
         <!-- /.block -->
+
+        <div class="block">
+          <div class="block-header">
+            <h3>Sized <small></small></h3>
+          </div>
+          <div class="block-body">
+            <div class="ck-example">
+              <h4>Small</h4>
+              <p>
+              <div class="form-inline">
+                <input class="form-inline input form-sm" type="text" placeholder="form-sm" />
+              </div>
+              <div class="form-inline">
+                <select class="select form-sm"><option value="Select">Select</option></select>
+              </div>
+              <div class="checkbox checkbox-inline form-sm">
+                <input type="checkbox" id="checkbox-example2">
+                <label for="checkbox-example2">checkbox</label>
+              </div>
+              <div class="radio radio-inline form-sm">
+                <input type="radio" id="checkbox-example2">
+                <label for="radio-example2">checkbox</label>
+              </div>
+              </p>
+                
+
+              <h4>Base</h4>
+              <p>
+              <div class="form-inline">
+                <input class="form-inline input " type="text" placeholder="" />
+              </div>
+              <div class="form-inline">
+                <select class="select "><option value="Select">Select</option></select>
+              </div>
+              <div class="checkbox checkbox-inline ">
+                <input type="checkbox" id="checkbox-example2">
+                <label for="checkbox-example2">checkbox</label>
+              </div>
+              <div class="radio radio-inline ">
+                <input type="radio" id="checkbox-example2">
+                <label for="radio-example2">checkbox</label>
+              </div>
+              </p>
+
+              <h4>Large</h4>
+              <p>
+              <div class="form-inline">
+                <input class="form-inline input form-lg" type="text" placeholder="form-lg" />
+              </div>
+              <div class="form-inline">
+                <select class="select form-lg"><option value="form-lg">form-lg</option></select>
+              </div>
+              <div class="checkbox checkbox-inline form-lg">
+                <input type="checkbox" id="checkbox-example2">
+                <label for="checkbox-example2">checkbox</label>
+              </div>
+              <div class="radio radio-inline form-lg">
+                <input type="radio" id="checkbox-example2">
+                <label for="radio-example2">checkbox</label>
+              </div>
+              </p>
+
+            </div>
+{% highlight html %}
+<input class="form-inline input form-lg" type="text" placeholder="form-lg" />
+<select class="select form-lg"><option value="form-lg">form-lg</option></select>
+<div class="checkbox form-lg">
+  <input type="checkbox" id="checkbox-example2">
+  <label for="checkbox-example2">checkbox</label>
+</div>
+<div class="radio form-lg">
+  <input type="radio" id="checkbox-example2">
+  <label for="radio-example2">checkbox</label>
+</div>
+{% endhighlight %}
+          </div>
+        </div>
+        <!-- /.block -->
+
+
 
         <div class="block">
           <div class="block-header">
@@ -44,18 +146,12 @@ base_url: "../"
                 <input class="input" type="text" placeholder="Disabled" disabled />
               </p>
               <p>
-                <select class="select" disabled><option value="normal">normal</option></select>
-              </p>
-              <p>
-                <div class="checkbox">
-                  <input type="checkbox" id="" disabled>
-                  <label for="">checkbox</label>
-                </div>
+                <select class="select" disabled><option value="Disabled">Disabled</option></select>
               </p>
             </div>
 {% highlight html %}
 <input class="input" type="text" placeholder="Disabled" disabled />
-<select class="select" disabled><option value="normal">normal</option></select>
+<select class="select" disabled><option value="Disabled">Disabled</option></select>
 {% endhighlight %}
           </div>
         </div>
@@ -68,151 +164,41 @@ base_url: "../"
           <div class="block-body">
             <div class="ck-example">
 
-              <div class="form inline">
+              <div class="form-inline">
                 <input class="input" type="text" placeholder="Default" />
               </div>
-              <div class="form inline">
+              <div class="form-inline">
                 <select class="select"><option value="normal">form inline select</option></select>
               </div>
-              <div class="checkbox inline">
+              <div class="checkbox-inline">
                 <input type="checkbox" id="checkbox1">
                 <label for="checkbox1">checkbox</label>
               </div>
-              <button class="button">search</button>
+              <button class="button button-flat-primary">search</button>
 
             </div>
 {% highlight html %}
-<div class="form inline">
+<div class="form-inline">
   <input class="input" type="text" placeholder="Default" />
 </div>
-<div class="form inline">
+<div class="form-inline">
   <select class="select"><option value="normal">form inline select</option></select>
 </div>
-<div class="checkbox inline">
+<div class="checkbox-inline">
   <input type="checkbox" id="checkbox1">
   <label for="checkbox1">checkbox</label>
 </div>
-<button class="button">search</button>
+<button class="button button-flat-primary">search</button>
 {% endhighlight %}
           </div>
         </div>
         <!-- /.block -->
 
 
-        <div class="block">
-          <div class="block-header">
-            <h3>Select <small>width:100%</small></h3>
-          </div>
-          <div class="block-body">
-            <div class="ck-example">
-              <p><select class="select sm"><option value="sm">sm</option></select></p>
-              <p><select class="select"><option value="normal">normal</option></select></p>
-              <p><select class="select lg"><option value="lg">form-lg</option></select></p>
-            </div>
-{% highlight html %}
-<select class="select sm">
-  <option value="sm">sm</option>
-</select>
-<select class="select">
-  <option value="normal">normal</option>
-</select>
-<select class="select lg">
-  <option value="lg">lg</option>
-</select>
-{% endhighlight %}
-          </div>
-        </div>
-        <!-- /.block -->
-
 
         <div class="block">
           <div class="block-header">
-            <h3>checkbox & radio <small>with Qcon</small></h3>
-          </div>
-          <div class="block-body">
-            <h4>Default</h4>
-            <div class="ck-example">
-              <div class="checkbox">
-                <input type="checkbox" id="checkbox1">
-                <label for="checkbox1">checkbox</label>
-              </div>
-              <div class="radio">
-                <input type="radio" id="radio1">
-                <label for="radio1">radio</label>
-              </div>
-            </div>
-{% highlight html %}
-<div class="checkbox">
-  <input type="checkbox" id="checkbox1">
-  <label for="checkbox1">checkbox</label>
-</div>
-<div class="radio">
-  <input type="radio" id="radio1">
-  <label for="radio1">radio</label>
-</div>
-{% endhighlight %}
-
-
-            <h4>inline</h4>
-            <div class="ck-example">
-
-              <p>
-                <div class="checkbox inline">
-                  <input type="checkbox" id="checkbox2">
-                  <label for="checkbox2">checkbox inline</label>
-                </div>
-                <div class="checkbox inline">
-                  <input type="checkbox" id="checkbox3">
-                  <label for="checkbox3">checkbox inline</label>
-                </div>
-                <div class="checkbox inline">
-                  <input type="checkbox" id="checkbox4">
-                  <label for="checkbox4">checkbox inline</label>
-                </div>
-                <div class="checkbox inline">
-                  <input type="checkbox" id="checkbox5">
-                  <label for="checkbox5">checkbox inline</label>
-                </div>
-              </p>
-
-              <p>
-                <div class="radio inline">
-                  <input type="radio" id="radio2">
-                  <label for="radio2">radio inline</label>
-                </div>
-                <div class="radio inline">
-                  <input type="radio" id="radio3">
-                  <label for="radio3">radio inline</label>
-                </div>
-                <div class="radio inline">
-                  <input type="radio" id="radio4">
-                  <label for="radio4">radio inline</label>
-                </div>
-                <div class="radio inline">
-                  <input type="radio" id="radio5">
-                  <label for="radio5">radio inline</label>
-                </div>
-              </p>
-            </div>
-{% highlight html %}
-<div class="checkbox inline">
-  <input type="checkbox" id="checkbox5">
-  <label for="checkbox5">checkbox inline</label>
-</div>
-
-<div class="radio inline">
-  <input type="radio" id="radio2">
-  <label for="radio2">radio inline</label>
-</div>
-{% endhighlight %}
-          </div>
-        </div>
-        <!-- /.block -->
-
-
-        <div class="block">
-          <div class="block-header">
-            <h3>form item <small></small></h3>
+            <h3>form <small></small></h3>
           </div>
           <div class="block-body">
             <div class="ck-example">
@@ -224,7 +210,7 @@ base_url: "../"
 
             </div>
 {% highlight html %}
-<div class="form-item">
+<div class="form">
   <label class="" for="">Default</label>
   <input class="input" type="text" placeholder="Default" />
 </div>
@@ -240,15 +226,16 @@ base_url: "../"
           </div>
           <div class="block-body">
             <div class="ck-example">
-              <p><input class="input info" type="text" placeholder="info" /></p>
-              <p><input class="input success" type="text" placeholder="success" /></p>
-              <p><input class="input warning" type="text" placeholder="warning" /></p>
-              <p><input class="input danger" type="text" placeholder="danger" /></p>
+              <p><input class="input form-info" type="text" placeholder="info" /></p>
+              <p><input class="input form-success" type="text" placeholder="success" /></p>
+              <p><input class="input form-warning" type="text" placeholder="warning" /></p>
+              <p><input class="input form-danger" type="text" placeholder="danger" /></p>
             </div>
 {% highlight html %}
-<input type="text" class="input sm" placeholder="Small" />
-<input type="text" class="input" placeholder="Default" />
-<input type="text" class="input lg" placeholder="Large" />
+<p><input class="input form-info" type="text" placeholder="info" /></p>
+<p><input class="input form-success" type="text" placeholder="success" /></p>
+<p><input class="input form-warning" type="text" placeholder="warning" /></p>
+<p><input class="input form-danger" type="text" placeholder="danger" /></p>
 {% endhighlight %}
           </div>
         </div>
@@ -331,49 +318,16 @@ base_url: "../"
           <div class="block-body">
             <div class="ck-example">
 
-              <p class="row-form">
-                <input class="input col-3" type="text" placeholder="col-3" />
-                <button class="button primary">
-                  button
-                </button>
-              </p>
               <div class="input-button-set">
-                <input class="input lg" type="text" placeholder="col-3" />
-                <div class="button-split dropdown">
-                  <button class="button lg danger">split button</button>
-                  <button class="button lg danger split-toggle dropdown-toggle"><span class="drop"></span></button>
-                  <ul class=" dropdown-menu" role="menu">
-                    <li class="dropdown-header">Dropdown header</li>
-                    <li><a href="#">nav</a></li>
-                    <li class="divider"></li>
-                    <li class="disabled"><a href="#">disabled</a></li>
-                    <li class="active"><a href="#">active</a></li>
-                  </ul>
-                </div>
+                <input class="input" type="text" placeholder="placeholder" />
+                <button class="button button-flat-primary">button</button>
               </div>
 
             </div>
 {% highlight html %}
-<div class="row-form">
-  <input class="input col-3" type="text" placeholder="col-3" />
-  <button class="button primary">
-    button
-  </button>
-</div>
-
 <div class="input-button-set">
-  <input class="input lg" type="text" placeholder="col-3" />
-  <div class="button-split dropdown">
-    <button class="button lg danger">split button</button>
-    <button class="button lg danger split-toggle dropdown-toggle"><span class="drop"></span></button>
-    <ul class=" dropdown-menu" role="menu">
-      <li class="dropdown-header">Dropdown header</li>
-      <li><a href="#">nav</a></li>
-      <li class="divider"></li>
-      <li class="disabled"><a href="#">disabled</a></li>
-      <li class="active"><a href="#">active</a></li>
-    </ul>
-  </div>
+  <input class="input" type="text" placeholder="placeholder" />
+  <button class="button primary">button</button>
 </div>
 {% endhighlight %}
           </div>
@@ -386,14 +340,12 @@ base_url: "../"
           </div>
           <div class="block-body">
             <div class="ck-example">
-              <p><input class="input minimal sm" type="text" placeholder="input minimal sm" /></p>
-              <p><input class="input minimal" type="text" placeholder="Base" /></p>
-              <p><input class="input minimal lg" type="text" placeholder="input minimal lg" /></p>
+              <p><input class="input input-minimal form-sm" type="text" placeholder="input minimal sm" /></p>
+              <p><input class="input input-minimal" type="text" placeholder="Base" /></p>
+              <p><input class="input input-minimal form-lg" type="text" placeholder="input minimal lg" /></p>
             </div>
 {% highlight html %}
-<input class="input minimal sm" type="text" placeholder="Small" />
-<input class="input minimal" type="text" placeholder="Base" />
-<input class="input minimal lg" type="text" placeholder="Large" />
+<input class="input input-minimal form-lg" type="text" placeholder="Large" />
 {% endhighlight %}
           </div>
         </div>
@@ -407,15 +359,13 @@ base_url: "../"
           <div class="block-body">
             <div class="ck-example">
               <p>
-                <input class="input underline sm" type="text" placeholder="input underline   sm" />
-                <input class="input underline" type="text" placeholder="input underline" />
-                <input class="input underline lg" type="text" placeholder="input underline   lg" />
+                <input class="input input-underline form-sm" type="text" placeholder="input underline   sm" />
+                <input class="input input-underline" type="text" placeholder="input underline" />
+                <input class="input input-underline form-lg" type="text" placeholder="input underline   lg" />
               </p>
             </div>
 {% highlight html %}
-<input class="input underline sm" type="text" placeholder="input underline" />
-<input class="input underline" type="text" placeholder="input underline" />
-<input class="input underline lg" type="text" placeholder="input underline" />
+<input class="input input-underline form-sm" type="text" placeholder="input underline" />
 {% endhighlight %}
           </div>
         </div>
@@ -428,15 +378,15 @@ base_url: "../"
           <div class="block-body">
             <div class="ck-example">
               <p>
-              <input class="input left-bar sm" type="text" placeholder="input left-bar sm" />
-              <input class="input left-bar" type="text" placeholder="input left-bar" />
-              <input class="input left-bar lg" type="text" placeholder="input left-bar lg" />
+              <input class="input input-left-bar form-sm" type="text" placeholder="input left-bar sm" />
+              <input class="input input-left-bar" type="text" placeholder="input left-bar" />
+              <input class="input input-left-bar form-lg" type="text" placeholder="input left-bar lg" />
               </p>
             </div>
 {% highlight html %}
-<input class="input left-bar sm" type="text" placeholder="input left-bar sm" />
-<input class="input left-bar" type="text" placeholder="input left-bar" />
-<input class="input left-bar lg" type="text" placeholder="input left-bar form-lg" />
+<input class="input input-left-bar form-sm" type="text" placeholder="input left-bar sm" />
+<input class="input input-left-bar" type="text" placeholder="input left-bar" />
+<input class="input input-left-bar form-lg" type="text" placeholder="input left-bar form-lg" />
 {% endhighlight %}
           </div>
         </div><!-- /.block -->
@@ -451,10 +401,10 @@ base_url: "../"
               <div class="ck-example">
                 <p>サンプルの右側のアイコンは"button"要素内に配置。</p>
                 <p>
-                  <div class="input-inset-icons sm">
+                  <div class="input-inset-icons form-sm">
                     <span class="prepend"><i class="qcon qcon-hypo-square"></i></span>
                     <button class="append"><i class="qcon qcon-quota"></i></button>
-                    <input class="input sm" type="text" placeholder="input-inset-icons-sm" />
+                    <input class="input form-sm" type="text" placeholder="input-inset-icons-sm" />
                   </div>
                 </p>
                 <p>
@@ -465,18 +415,18 @@ base_url: "../"
                   </div>
                 <p>
                 <p>
-                <div class="input-inset-icons lg">
+                <div class="input-inset-icons form-lg">
                   <span class="prepend"><i class="qcon qcon-hypo-square"></i></span>
                   <button class="append"><i class="qcon qcon-quota"></i></button>
-                  <input class="input lg" type="text" placeholder="lg" />
+                  <input class="input form-lg" type="text" placeholder="lg" />
                 </div>
                 </p>
               </div>
 {% highlight html %}
-<div class="input-inset-icons lg">
+<div class="input-inset-icons form-lg">
   <span class="prepend"><i class="qcon qcon-hypo-square"></i></span>
   <button class="append"><i class="qcon qcon-quota"></i></button>
-  <input class="input lg" type="text" placeholder="lg" />
+  <input class="input form-lg" type="text" placeholder="lg" />
 </div>
 {% endhighlight %}
 
@@ -485,10 +435,10 @@ base_url: "../"
               <h5>input-minimal</h5>
               <div class="ck-example">
                 <p>
-                <div class="input-inset-icons sm">
+                <div class="input-inset-icons">
                   <span class="prepend "><i class="qcon qcon-hypo-square"></i></span>
                   <span class="append"><i class="qcon qcon-quota"></i></span>
-                  <input class="input minimal" type="text" placeholder="Default" />
+                  <input class="input input-minimal" type="text" placeholder="Default" />
                 </div>
                 <p>
               </div>
@@ -496,7 +446,7 @@ base_url: "../"
 <div class="input-inset-icons">
   <span class="prepend "><i class="qcon qcon-hypo-square"></i></span>
   <span class="append"><i class="qcon qcon-quota"></i></span>
-  <input class="input minimal" type="text" placeholder="Default" />
+  <input class="input input-minimal" type="text" placeholder="Default" />
 </div>
 {% endhighlight %}
 
@@ -507,7 +457,7 @@ base_url: "../"
                 <div class="input-inset-icons">
                   <span class="prepend"><i class="qcon qcon-hypo-square"></i></span>
                   <span class="append"><i class="qcon qcon-quota"></i></span>
-                  <input class="input underline" type="text" placeholder="Default" />
+                  <input class="input input-underline" type="text" placeholder="Default" />
                 </div>
                 <p>
               </div>
@@ -515,7 +465,7 @@ base_url: "../"
 <div class="input-inset-icons">
   <span class="prepend"><i class="qcon qcon-hypo-square"></i></span>
   <span class="append"><i class="qcon qcon-quota"></i></span>
-  <input class="input underline" type="text" placeholder="Default" />
+  <input class="input input-underline" type="text" placeholder="Default" />
 </div>
 {% endhighlight %}
 
@@ -523,17 +473,17 @@ base_url: "../"
               <div class="ck-example">
                 <p>
                 <div class="input-inset-icons">
-                  <span class="prepend sm"><i class="qcon qcon-hypo-square"></i></span>
+                  <span class="prepend"><i class="qcon qcon-hypo-square"></i></span>
                   <span class="append"><i class="qcon qcon-quota"></i></span>
-                  <input class="input left-bar" type="text" placeholder="Default" />
+                  <input class="input input-left-bar" type="text" placeholder="Default" />
                 </div>
                 <p>
               </div>
 {% highlight html %}
 <div class="input-inset-icons">
-  <span class="prepend sm"><i class="qcon qcon-hypo-square"></i></span>
+  <span class="prepend"><i class="qcon qcon-hypo-square"></i></span>
   <span class="append"><i class="qcon qcon-quota"></i></span>
-  <input class="input left-bar" type="text" placeholder="Default" />
+  <input class="input input-left-bar" type="text" placeholder="Default" />
 </div>
 {% endhighlight %}
             </div>
@@ -542,61 +492,41 @@ base_url: "../"
 
             <div class="block">
               <div class="block-header">
-                <h4>outsets label <small>form-outsets</small></h4>
+                <h4>outsets label <small></small></h4>
               </div>
               <div class="block-body">
                 <h5>Basic</h5>
                 <div class="ck-example">
                 <p>
-                <div class="input-outset sm">
-                  <div class="prepend">outset</div>
-                  <span class="append">
-                    <i class="qcon qcon-quota"></i>
-                    Quota
-                  </span>
-                  <input class="input sm" type="text" placeholder="input-outset-sm" />
+                <div class="input-button-set">
+                  <div class="input-prepend-text form-sm">$</div>
+                  <input class="input form-sm" type="text" placeholder="input-outset-sm" />
+                  <div class="input-append-text form-sm">.00</div>
                 </div>
-                <div class="input-outset">
-                  <div class="prepend">outset</div>
-                  <span class="append">
-                    <i class="qcon qcon-quota"></i>
-                    Quota
-                  </span>
-                  <input class="input" type="text" placeholder="Default" />
+              </p>
+              <p>
+                <div class="input-button-set">
+                  <div class="input-prepend-text">$</div>
+                  <input class="input" type="text" placeholder="input-outset-sm" />
+                  <div class="input-append-text">.00</div>
                 </div>
-                <div class="input-outset lg">
-                  <div class="prepend">outset</div>
-                  <span class="append">
-                    <i class="qcon qcon-quota"></i>
-                    Quota
-                  </span>
-                  <input class="input lg" type="text" placeholder="lg" />
+              </p>
+              <p>
+                <div class="input-button-set">
+                  <div class="input-prepend-text form-lg">$</div>
+                  <input class="input form-lg" type="text" placeholder="input-outset-sm" />
+                  <div class="input-append-text form-lg">.00</div>
                 </div>
                 <p>
 
-                <p>
-                <div class="input-outset">
-                  <span class="append">
-                    <i class="qcon qcon-quota"></i>
-                    Quota
-                  </span>
-                  <input class="input" type="text" placeholder="append" />
-                </div>
-
-                <div class="input-outset lg">
-                  <div class="prepend">outset</div>
-                  <input class="input lg" type="text" placeholder="prepend" />
-                </div>
-                <p>
+              
 
                 </div>
 {% highlight html %}
-<div class="input-outset lg">
-  <div class="prepend">outset</div>
-  <span class="append">
-    <i class="qcon qcon-quota"></i> Quota
-  </span>
-  <input class="input lg" type="text" placeholder="Default" />
+<div class="input-button-set">
+  <div class="input-prepend-text form-lg">$</div>
+  <input class="input form-lg" type="text" placeholder="input-outset-sm" />
+  <div class="input-append-text form-lg">.00</div>
 </div>
 {% endhighlight %}
               </div>

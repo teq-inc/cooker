@@ -36,7 +36,7 @@
   line-height: @line-height-base;
   border:@input-border;
   border-radius: @input-border-radius;
-  &.sm {
+  &.form-sm {
     .input-size(
       @input-height-small; 
       @padding-small-vertical; 
@@ -46,7 +46,7 @@
       @input-border-radius-sm
     );
   }
-  &.lg {
+  &.form-lg {
     .input-size(
       @input-height-large; 
       @padding-large-vertical; 
@@ -67,16 +67,19 @@
 //
 // input
 // =====================
+.input-fixed{
+  width:@input-width-fixed;
+}
 // input-*
-.input.underline,
-.input.minimal,
-.input.left-bar {
+.input-underline,
+.input-minimal,
+.input-left-bar {
   outline:none;
   border: none;
 }
 
 // input-underline
-.input.underline{
+.input-underline{
   border-bottom: @input-border;
   background-color: transparent;
   &:hover,
@@ -86,14 +89,14 @@
 }
 
 // input-minimal
-.input.minimal{
+.input-minimal{
   &:focus {
     box-shadow: none;
   }
 }
 
 // input-left-bar
-.input.left-bar{
+.input-left-bar{
   border-left: 3px solid @border-base-color;
   &:hover,
   &:focus {
@@ -109,10 +112,10 @@
   background-position: 97% center;
   background-repeat: no-repeat;
   -webkit-appearance: none;
-  &.sm {
+  &.form-sm {
     padding: 0 @padding-small-horizontal;
   }
-  &.lg {
+  &.form-lg {
     padding: 0 @padding-large-horizontal;
   }
 }
@@ -129,15 +132,15 @@
   }
 }
 .checkbox,
-.checkbox.inline {
+.checkbox-inline {
   .checkbox-radio-style("checkbox");
 }
 .radio,
-.radio.inline {
+.radio-inline {
   .checkbox-radio-style("radio");
 }
-.checkbox.inline,
-.radio.inline {
+.checkbox-inline,
+.radio-inline {
   margin-right: 1em;
   display:inline;
 }
@@ -145,25 +148,25 @@
 //
 // state color
 // =====================
-input.info{
+.form-info{
   border-color:@state-info-border;
   background-color: @state-info-bg;
   color: @state-info-text;
   .form-focus(@info-color);
 }
-input.success{
+.form-success{
   border-color:@state-success-border;
   background-color: @state-success-bg;
   color: @state-success-text;
   .form-focus(@success-color);
 }
-input.warning{
+.form-warning{
   border-color:@state-warning-border;
   background-color: @state-warning-bg;
   color: @state-warning-text;
   .form-focus(@warning-color);
 }
-input.danger{
+.form-danger{
   border-color:@state-danger-border;
   background-color: @state-danger-bg;
   color: @state-danger-text;
@@ -186,7 +189,7 @@ input.danger{
 //
 // form.inline
 // =====================
-.form.inline{
+.form-inline{
   display: inline-block;
   margin-bottom: 0;
   vertical-align: middle;
@@ -196,7 +199,6 @@ input.danger{
 //
 // row-form
 // =====================
-.form-col, // 廃止予定
 .row-form {
   .row-form-generate(12);
   .clearfix();
@@ -216,15 +218,39 @@ input.danger{
 //
 // input-button-set
 // =====================
-.input-button-set{
+.input-button-set {
   .clearfix();
-  > .input {
+  > .input,
+  > .input-inset-icons {
     float:left;
     width:@input-width-fixed;
   }
-  > .input + .button,
-  > .input + .button-split {
+
+  //　前後に付くテキストラベル
+  > .input-prepend-text,
+  > .input-append-text {
+    width:auto;
     float:left;
+    padding : @padding-base;
+    height : @input-height-base;
+    border: @border-base;
+    &.form-sm{
+      padding: @padding-small;
+      height:@input-height-small;
+      font-size: @font-size-small;
+    }
+    &.form-lg {
+      padding: @padding-large;
+      height:@input-height-large;
+      font-size: @font-size-large;
+    }
+  }
+
+  > .input + .button,
+  > .input + .button-split,
+  > .input-inset-icons  + .button {
+    float:left;
+    .border-left-radius(0);
   }
   > .button-split{
     > .button{
@@ -238,43 +264,66 @@ input.danger{
 //
 // input-inset-icons
 // =====================
-.input-inset-icons{
+.input-inset-icons {
   position: relative;
   > .prepend,
   > .append {
     position : absolute;
     top: 0;
     display : block;
-    padding : @padding-base;
+    vertical-align: middle;
     height : @input-height-base;
     border : 0;
     background-color: transparent;
-    + .input {
-      color: @link-color;
+    
+    // dropdown
+    .button{
+      padding: @padding-base;
+      background-color: transparent;
+      color:@gray-light;
       &:hover{
-        color: @link-hover-color;
+        color:@link-hover-color;
+      }
+      > .drop{
+        margin-left: 0;
       }
     }
+
+    // アイコンのみの場合
+    > .qcon{
+      padding: (@padding-base-vertical * 1.5) @padding-base-horizontal;
+      vertical-align: middle;
+      color:@gray-light;
+    }
   }
+
   > .prepend{
     left: 0;
     ~ .input {
       padding-left: ( @padding-base-horizontal * 3 );
     }
   }
+
   > .append {
     right: 0;
     ~ .input {
       padding-right: ( @padding-base-horizontal * 3 );
     }
   }
-  &.inset-icons-sm,
-  &.sm{
+
+  &.form-sm{
     > .prepend,
     > .append {
-      padding: @padding-small;
-      height:@input-height-small;
-      font-size: @font-size-small;
+      .button,
+      > .qcon {
+        height:@input-height-small;
+        font-size: @font-size-small;
+        vertical-align: middle;
+      }
+      > .qcon,
+      > .qcon{
+        padding: (@padding-small-vertical * 1.7) @padding-small-horizontal;
+      }
     }
     > .prepend{
       ~ .input {
@@ -288,13 +337,19 @@ input.danger{
     }
   }
 
-  &.inset-icons-lg,
-  &.lg{
+  &.form-lg{
     > .prepend,
     > .append {
-      padding: @padding-large;
-      height:@input-height-large;
-      font-size: @font-size-large;
+      .button,
+      > .qcon {
+        height:@input-height-large;
+        font-size: @font-size-large;
+        vertical-align: middle;
+      }
+      > .qcon,
+      > .qcon{
+        padding: (@padding-large-vertical * 1.3) @padding-large-horizontal;
+      }
     }
     > .prepend{
       ~ .input {
@@ -308,57 +363,5 @@ input.danger{
     }
   }
 
-}
-
-//
-// input-outset 
-// =====================
-.input-outset {
-  .clearfix();
-  display: inline-block;
-  vertical-align: middle;
-  > .prepend,
-  > .append {
-    display: block;
-    padding : @padding-base;
-    height : @input-height-base;
-    border: @border-base;
-  }
-  > .prepend{
-    float: left;
-    border-right: 0;
-    ~ .input{
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
-    }
-  }
-  > .append {
-    float: right;
-    border-left: 0;
-    ~ .input{
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
-    }
-  }
-  > .input{
-    float: left;
-    width: @input-width-fixed;
-  }
-  &.sm{
-    > .prepend,
-    > .append {
-      padding: @padding-small;
-      height:@input-height-small;
-      font-size: @font-size-small;
-    }
-  }
-  &.lg{
-    > .prepend,
-    > .append {
-      padding: @padding-large;
-      height:@input-height-large;
-      font-size: @font-size-large;
-    }
-  }
 }
 
