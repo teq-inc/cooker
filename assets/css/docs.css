@@ -70,6 +70,9 @@ h1[id] {
   border-width: 0 0 1px;
   border-radius: 0;
 }
+.ck-example-item {
+  margin-bottom: 20px;
+}
 @media (min-width: 768px) {
   .ck-example {
     margin-right: 0;
@@ -109,6 +112,8 @@ h1[id] {
 .row-docs {
   margin-bottom: 1rem;
 }
+.row-table-docs .col,
+.row-docs .col,
 .row-table-docs [class^="col-"],
 .row-docs [class^="col-"] {
   line-height: 3;
@@ -117,6 +122,8 @@ h1[id] {
   background: #242d35;
   background: rgba(22, 34, 49, .15);
 }
+.row-table-docs .col:nth-child(odd),
+.row-docs .col:nth-child(odd),
 .row-table-docs [class^="col-"]:nth-child(odd),
 .row-docs [class^="col-"]:nth-child(odd) {
   background: #242d35;
