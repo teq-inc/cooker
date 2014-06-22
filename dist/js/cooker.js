@@ -167,7 +167,7 @@
     init: function(options){
       options = $.extend({
         warningClass:     'warning',
-        errorClass:       'error',
+        errorClass:       'danger',
         warningCounter:   60,
         errorCounter:     65,
         maxCounter:       ''
@@ -507,7 +507,7 @@
 })(jQuery);
 
 (function($) {
-  var namespace = 'dropdown' || 'dropup';
+  var namespace = 'dropdown';
   var methods = {
 
     init: function(options){
@@ -530,15 +530,15 @@
         }
         
         var $toggle = $this.find('.'+options.toggle);
-        var $other = $("body").not(this);
+        var $other = $("body").not($this);
 
-        $other.click(function(){
+        $other.on('click.'+namespace, function(){
           methods.close.apply(_this);
         });
 
-        $toggle.off('click.'+namespace).on('click.'+namespace, function(e){
-          e.stopPropagation();
-          methods.toggle.apply(_this);
+        $toggle.on('click.'+namespace, function(){
+          event.stopPropagation();
+          methods.toggle.call(_this);
         });
 
       }); // end each
@@ -558,6 +558,7 @@
     open: function(){
       var $this = $(this);
       options = $this.data(namespace).options;
+      methods.allClose.call(this); 
       $this
       .removeClass(options.close)
       .addClass(options.open);
@@ -567,6 +568,14 @@
       var $this = $(this);
       options = $this.data(namespace).options;
       $this
+      .removeClass(options.open)
+      .addClass(options.close);
+    },
+
+    allClose: function(){
+      var $this = $(this);
+      options = $this.data(namespace).options;
+      $("."+ namespace)
       .removeClass(options.open)
       .addClass(options.close);
     },
