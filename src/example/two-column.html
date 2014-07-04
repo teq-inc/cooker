@@ -1,0 +1,79 @@
+---
+slug: two-column
+title: two-column
+lead:
+class: site-two-column
+base_url: "../../"
+---
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+
+  <link rel="stylesheet" href="{{ page.base_url }}css/cooker.css">
+  <style type="text/css" media="screen">
+  	.container-fluid,
+  	.container{
+  		background-color: rgba(0,0,0,.1);
+  	}
+    .site-header,
+    .site-main,
+    .site-body,
+    .site-sidebar,
+    .site-footer{
+      background-color: rgba(0,0,0,.1);
+      font-family: Arial;   
+    }
+    .site-sidebar{
+      background-color: rgba(0,0,0,.2);
+    }
+    .site-header,
+    .site-body{
+      margin-bottom: 3px; 
+    }
+    .site-main,
+    .site-footer .container,
+    .site-sidebar {
+      height: 400px;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <small>.site-header</small>
+      <h1 class="site-name">two column</h1>
+      <nav class="site-nav"></nav>
+    </div>
+  </header>
+
+  <div class="site-body">
+    <div class="container">
+      <div class="row">
+        <article class="site-main col col-8">
+          <small>.site-main</small>
+          <div class="page-content-group content-group">
+            site-*はサイト全体の共通クラス
+            page-*はページ全体の共通クラス
+            pageclass-*はページ固有のクラス
+            プレフィックス無しのクラスはライブラリのクラス。
+
+
+          </div>
+        </article>
+        <div class="site-sidebar col col-4">
+          sitebar
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>.site-footer</p>
+    </div>
+  </footer>
+
+</body>
+</html>
