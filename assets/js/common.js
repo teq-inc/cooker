@@ -10,7 +10,8 @@ $('.inputcounter').inputcounter({
   errorClass:     'danger'
 });
 
-$('a[href^=#]').scrollmethod();
+// $('a:not(".dropdown-toggle")[href^=#]').scrollmethod();
+$('.scrollmethod').scrollmethod();
 
 $('.switchers').switchers();
 
@@ -25,6 +26,8 @@ $('.slidebar-bottom').slidebar({
 $('.drilldown').drilldown();
 
 $('.dropdown').dropdown();
+
+$('.navs-tabs').tabs();
 
 
 // docs script
