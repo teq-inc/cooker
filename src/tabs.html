@@ -1,0 +1,162 @@
+---
+layout: base
+slug: tabs
+title: tabs
+lead:
+class: site-tabs
+base_url: "../"
+---
+<div class="site-body">
+  <div class="site-body-inner container">
+    <div id="contents-forms">
+      <h2>tab</h2>
+      <div class="blocks">
+
+        <div class="block">
+          <div class="block-header">
+            <h3>Basic <small></small></h3>
+          </div>
+          <div class="block-body">
+            <div class="ck-example">
+
+              <!-- Nav tabs -->
+              <ul class="navs navs-tabs">
+                <li class="active"><a class="navs-tabs-toggle" href="#home">Home</a></li>
+                <li><a class="navs-tabs-toggle" href="#profile">Profile</a></li>
+                <li><a class="navs-tabs-toggle" href="#messages">Messages</a></li>
+                <li><a class="navs-tabs-toggle" href="#settings">Settings</a></li>
+                <li class="dropdown">
+                  <a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="drop"></span></a>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
+                    <li><a href="#dropdown1" tabindex="-1" role="tab" data-toggle="tab">@fat</a></li>
+                    <li><a href="#dropdown2" tabindex="-1" role="tab" data-toggle="tab">@mdo</a></li>
+                  </ul>
+                </li>
+              </ul>
+
+              <!-- Tab panes -->
+              <div class="tabs-content">
+                <div class="tabs-pane active" id="home">
+                  <h3>home</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu urna dolor. Donec sed congue magna. Etiam malesuada congue nibh, vitae eleifend tellus gravida at. Donec vitae urna ac tortor cursus pulvinar a sit amet nibh. Mauris ullamcorper risus nulla, a malesuada nisi pharetra vel. Mauris auctor nibh purus, non ultrices ante mollis sed. Integer non dolor elementum, scelerisque sem ut, lobortis tortor.</p> 
+                </div>
+                <div class="tabs-pane" id="profile">
+                  <h3>profile</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu urna dolor. Donec sed congue magna. Etiam malesuada congue nibh, vitae eleifend tellus gravida at. Donec vitae urna ac tortor cursus pulvinar a sit amet nibh. Mauris ullamcorper risus nulla, a malesuada nisi pharetra vel. Mauris auctor nibh purus, non ultrices ante mollis sed. Integer non dolor elementum, scelerisque sem ut, lobortis tortor.</p> 
+                </div>
+                <div class="tabs-pane" id="messages">
+                  <h3>messages</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu urna dolor. Donec sed congue magna. Etiam malesuada congue nibh, vitae eleifend tellus gravida at. Donec vitae urna ac tortor cursus pulvinar a sit amet nibh. Mauris ullamcorper risus nulla, a malesuada nisi pharetra vel. Mauris auctor nibh purus, non ultrices ante mollis sed. Integer non dolor elementum, scelerisque sem ut, lobortis tortor.</p> 
+                </div>
+                <div class="tabs-pane" id="settings">
+                  <h3>settings</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu urna dolor. Donec sed congue magna. Etiam malesuada congue nibh, vitae eleifend tellus gravida at. Donec vitae urna ac tortor cursus pulvinar a sit amet nibh. Mauris ullamcorper risus nulla, a malesuada nisi pharetra vel. Mauris auctor nibh purus, non ultrices ante mollis sed. Integer non dolor elementum, scelerisque sem ut, lobortis tortor.</p> 
+                </div>
+              </div>
+
+            </div>
+{% highlight html %}
+<ul class="navs navs-tabs">
+  <li class="active"><a class="navs-tabs-toggle" href="#home">Home</a></li>
+  <li><a class="navs-tabs-toggle" href="#profile">Profile</a></li>
+  <li><a class="navs-tabs-toggle" href="#messages">Messages</a></li>
+  <li><a class="navs-tabs-toggle" href="#settings">Settings</a></li>
+  <li class="dropdown">
+    <a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="drop"></span></a>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
+      <li><a href="#dropdown1" tabindex="-1" role="tab" data-toggle="tab">cooker</a></li>
+      <li><a href="#dropdown2" tabindex="-1" role="tab" data-toggle="tab">tabs</a></li>
+    </ul>
+  </li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tabs-content">
+  <div class="tabs-pane active" id="home">home</div>
+  <div class="tabs-pane" id="profile">profile</div>
+  <div class="tabs-pane" id="messages">messages</div>
+  <div class="tabs-pane" id="settings">settings</div>
+</div>
+{% endhighlight %}
+          </div>
+        </div>
+        <!-- /.block -->
+
+
+
+        <div class="block">
+          <div class="block-header">
+            <h3>fade <small></small></h3>
+          </div>
+          <div class="block-body">
+            <div class="ck-example">
+
+              <!-- Nav tabs -->
+              <ul class="navs navs-tabs" role="tablist">
+                <li class="active"><a class="navs-tabs-toggle" href="#home">Home</a></li>
+                <li><a class="navs-tabs-toggle" href="#profile">Profile</a></li>
+                <li><a class="navs-tabs-toggle" href="#messages">Messages</a></li>
+                <li><a class="navs-tabs-toggle" href="#settings">Settings</a></li>
+                <li class="dropdown">
+                  <a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="drop"></span></a>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
+                    <li><a href="#dropdown1" tabindex="-1" role="tab" data-toggle="tab">@fat</a></li>
+                    <li><a href="#dropdown2" tabindex="-1" role="tab" data-toggle="tab">@mdo</a></li>
+                  </ul>
+                </li>
+              </ul>
+
+              <!-- Tab panes -->
+              <div class="tabs-content">
+                <div class="tabs-pane fade active in" id="home">
+                  <h3>home</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu urna dolor. Donec sed congue magna. Etiam malesuada congue nibh, vitae eleifend tellus gravida at. Donec vitae urna ac tortor cursus pulvinar a sit amet nibh. Mauris ullamcorper risus nulla, a malesuada nisi pharetra vel. Mauris auctor nibh purus, non ultrices ante mollis sed. Integer non dolor elementum, scelerisque sem ut, lobortis tortor.</p> 
+                </div>
+                <div class="tabs-pane fade" id="profile">
+                  <h3>profile</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu urna dolor. Donec sed congue magna. Etiam malesuada congue nibh, vitae eleifend tellus gravida at. Donec vitae urna ac tortor cursus pulvinar a sit amet nibh. Mauris ullamcorper risus nulla, a malesuada nisi pharetra vel. Mauris auctor nibh purus, non ultrices ante mollis sed. Integer non dolor elementum, scelerisque sem ut, lobortis tortor.</p> 
+                </div>
+                <div class="tabs-pane fade" id="messages">
+                  <h3>messages</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu urna dolor. Donec sed congue magna. Etiam malesuada congue nibh, vitae eleifend tellus gravida at. Donec vitae urna ac tortor cursus pulvinar a sit amet nibh. Mauris ullamcorper risus nulla, a malesuada nisi pharetra vel. Mauris auctor nibh purus, non ultrices ante mollis sed. Integer non dolor elementum, scelerisque sem ut, lobortis tortor.</p> 
+                </div>
+                <div class="tabs-pane fade" id="settings">
+                  <h3>settings</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu urna dolor. Donec sed congue magna. Etiam malesuada congue nibh, vitae eleifend tellus gravida at. Donec vitae urna ac tortor cursus pulvinar a sit amet nibh. Mauris ullamcorper risus nulla, a malesuada nisi pharetra vel. Mauris auctor nibh purus, non ultrices ante mollis sed. Integer non dolor elementum, scelerisque sem ut, lobortis tortor.</p> 
+                </div>
+              </div>
+
+            </div>
+{% highlight html %}
+<ul class="navs navs-tabs">
+  <li class="active"><a class="navs-tabs-toggle" href="#home">Home</a></li>
+  <li><a class="navs-tabs-toggle" href="#profile">Profile</a></li>
+  <li><a class="navs-tabs-toggle" href="#messages">Messages</a></li>
+  <li><a class="navs-tabs-toggle" href="#settings">Settings</a></li>
+  <li class="dropdown">
+    <a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="drop"></span></a>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
+      <li><a href="#dropdown1" tabindex="-1" role="tab" data-toggle="tab">cooker</a></li>
+      <li><a href="#dropdown2" tabindex="-1" role="tab" data-toggle="tab">tabs</a></li>
+    </ul>
+  </li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tabs-content">
+  <div class="tabs-pane fade active in" id="home">home</div>
+  <div class="tabs-pane fade" id="profile">profile</div>
+  <div class="tabs-pane fade" id="messages">messages</div>
+  <div class="tabs-pane fade" id="settings">settings</div>
+</div>
+{% endhighlight %}
+          </div>
+        </div>
+        <!-- /.block -->
+
+        
+      </div>
+      <!-- /.blocks -->
+    </div><!-- /#contents-forms -->
+  </div><!-- /.container -->
+</div><!-- /.site-body -->

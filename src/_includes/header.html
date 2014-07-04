@@ -2,24 +2,25 @@
 <div class="drawer-masta drawer-default">
   <nav class="drawer-nav" role="navigation">
     <div class="drawer-brand"><a href="{{ page.base_url }}">Cooker</a></div>
-    <ul class="nav drawer-nav-list">
+    <ul class="navs drawer-nav-list">
       <li{% if page.slug == "getting-started" %} class="active"{% endif %}>
         <a href="{{ page.base_url }}usage">Usage</a>
       </li>
       <li{% if page.slug == "js" %} class="active"{% endif %}>
         <a href="#">JavaScript</a>
-        <ul class="nav">
+        <ul class="navs">
           <li><a href="{{ page.base_url }}slidebar">Slidebar</a></li>
           <li><a href="{{ page.base_url }}drilldown">Drilldown</a></li>
           <li><a href="{{ page.base_url }}switchers">Switchers</a></li>
           <li><a href="{{ page.base_url }}inputcounter">Inputcounter</a></li>
           <li><a href="{{ page.base_url }}scrollmethod">Scrollmethod</a></li>
           <li><a href="{{ page.base_url }}dropdown">Dropdown</a></li>
+          <li><a href="{{ page.base_url }}tabs">Tabs</a></li>
         </ul>
       </li>
       <li{% if page.slug == "css" %} class="active"{% endif %}>
         <a href="#">Styles</a>
-        <ul class="nav">
+        <ul class="navs ">
           <li><a href="{{ page.base_url }}type">Typography</a></li>
           <li><a href="{{ page.base_url }}colors">colors</a></li>
           <li><a href="{{ page.base_url }}container">container</a></li>
