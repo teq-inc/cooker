@@ -1,0 +1,242 @@
+---
+layout: base
+slug: navs
+title: navs
+lead:
+class: site-navs
+base_url: "../"
+---
+<div class="site-body">
+  <div class="site-body-inner container">
+    <div id="contents-forms">
+      <h2>navs</h2>
+      <div class="blocks">
+
+        <div class="block">
+          <div class="block-header">
+            <h3>pills <small></small></h3>
+          </div>
+          <div class="block-body">
+            <div class="ck-example">
+
+              <ul class="navs navs-pills">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Messages</a></li>
+              </ul>
+
+            </div>
+{% highlight html %}
+<ul class="navs navs-pills">
+  <li class="active"><a href="#">Home</a></li>
+  <li><a href="#">Profile</a></li>
+  <li><a href="#">Messages</a></li>
+</ul>
+{% endhighlight %}
+          </div>
+        </div>
+        <!-- /.block -->
+
+
+
+        <div class="block">
+          <div class="block-header">
+            <h3>stacked <small></small></h3>
+          </div>
+          <div class="block-body">
+            <div class="ck-example">
+
+              <ul class="navs navs-pills navs-stacked">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Messages</a></li>
+              </ul>
+
+            </div>
+{% highlight html %}
+<ul class="navs navs-pills navs-stacked">
+  <li class="active"><a href="#">Home</a></li>
+  <li><a href="#">Profile</a></li>
+  <li><a href="#">Messages</a></li>
+</ul>
+{% endhighlight %}
+          </div>
+        </div>
+        <!-- /.block -->
+
+
+        <div class="block">
+          <div class="block-header">
+            <h3>Tabs <small></small></h3>
+          </div>
+          <div class="block-body">
+            <div class="ck-example">
+
+              <ul class="navs navs-tabs" role="tablist">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Messages</a></li>
+              </ul>
+
+            </div>
+{% highlight html %}
+<ul class="navs navs-tabs" role="tablist">
+  <li class="active"><a href="#">Home</a></li>
+  <li><a href="#">Profile</a></li>
+  <li><a href="#">Messages</a></li>
+</ul>
+{% endhighlight %}
+          </div>
+        </div>
+        <!-- /.block -->
+
+        <div class="block">
+          <div class="block-header">
+            <h3>Justified <small></small></h3>
+          </div>
+          <div class="block-body">
+            <div class="ck-example">
+
+              <ul class="navs navs-tabs navs-justified" role="tablist">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Messages</a></li>
+              </ul>
+              <p></p>
+              <ul class="navs navs-pills navs-justified" role="tablist">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Messages</a></li>
+              </ul>
+
+
+            </div>
+{% highlight html %}
+<ul class="navs navs-tabs navs-justified" role="tablist">
+  ...
+</ul>
+<p></p>
+<ul class="navs navs-pills navs-justified" role="tablist">
+  ...
+</ul>
+{% endhighlight %}
+          </div>
+        </div>
+        <!-- /.block -->
+
+        <div class="block">
+          <div class="block-header">
+            <h3>Disabled links <small></small></h3>
+          </div>
+          <div class="block-body">
+            <div class="ck-example">
+
+              <ul class="navs navs-tabs navs-justified" role="tablist">
+                <li class="disabled"><a href="#">Home</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Messages</a></li>
+              </ul>
+              <p></p>
+              <ul class="navs navs-pills navs-justified" role="tablist">
+                <li class="disabled"><a href="#">Home</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Messages</a></li>
+              </ul>
+
+
+            </div>
+{% highlight html %}
+<li class="disabled"><a href="#">Disabled link</a></li>
+{% endhighlight %}
+          </div>
+        </div>
+        <!-- /.block -->
+
+        <div class="block">
+          <div class="block-header">
+            <h3>Tabs with dropdowns<small></small></h3>
+          </div>
+          <div class="block-body">
+            <div class="ck-example">
+
+              <ul class="navs navs-tabs">
+                <li class="active"><a class="navs-tabs-toggle" href="#home">Home</a></li>
+                <li><a class="navs-tabs-toggle" href="#profile">Profile</a></li>
+                <li><a class="navs-tabs-toggle" href="#messages">Messages</a></li>
+                <li><a class="navs-tabs-toggle" href="#settings">Settings</a></li>
+                <li class="dropdown">
+                  <a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="drop"></span></a>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
+                    <li><a href="#dropdown1" tabindex="-1" role="tab" data-toggle="tab">cooker</a></li>
+                    <li><a href="#dropdown2" tabindex="-1" role="tab" data-toggle="tab">tabs</a></li>
+                  </ul>
+                </li>
+              </ul>
+
+            </div>
+{% highlight html %}
+<ul class="navs navs-tabs">
+  <li class="active"><a class="navs-tabs-toggle" href="#home">Home</a></li>
+  <li><a class="navs-tabs-toggle" href="#profile">Profile</a></li>
+  <li><a class="navs-tabs-toggle" href="#messages">Messages</a></li>
+  <li><a class="navs-tabs-toggle" href="#settings">Settings</a></li>
+  <li class="dropdown">
+    <a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="drop"></span></a>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
+      <li><a href="#dropdown1" tabindex="-1" role="tab" data-toggle="tab">cooker</a></li>
+      <li><a href="#dropdown2" tabindex="-1" role="tab" data-toggle="tab">tabs</a></li>
+    </ul>
+  </li>
+</ul>
+{% endhighlight %}
+          </div>
+        </div>
+        <!-- /.block -->
+
+
+        <div class="block">
+          <div class="block-header">
+            <h3>Pills with dropdowns<small></small></h3>
+          </div>
+          <div class="block-body">
+            <div class="ck-example">
+
+              <ul class="navs navs-pills">
+                <li class="active"><a class="navs-tabs-toggle" href="#home">Home</a></li>
+                <li><a class="navs-tabs-toggle" href="#profile">Profile</a></li>
+                <li><a class="navs-tabs-toggle" href="#messages">Messages</a></li>
+                <li><a class="navs-tabs-toggle" href="#settings">Settings</a></li>
+                <li class="dropdown">
+                  <a href="#" id="myTabDrop2" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="drop"></span></a>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop2">
+                    <li><a href="#dropdown1" tabindex="-1" role="tab" data-toggle="tab">cooker</a></li>
+                    <li><a href="#dropdown2" tabindex="-1" role="tab" data-toggle="tab">tabs</a></li>
+                  </ul>
+                </li>
+              </ul>
+
+            </div>
+{% highlight html %}
+<ul class="navs navs-pills">
+  <li class="active"><a class="navs-tabs-toggle" href="#home">Home</a></li>
+  <li><a class="navs-tabs-toggle" href="#profile">Profile</a></li>
+  <li><a class="navs-tabs-toggle" href="#messages">Messages</a></li>
+  <li><a class="navs-tabs-toggle" href="#settings">Settings</a></li>
+  <li class="dropdown">
+    <a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="drop"></span></a>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
+      <li><a href="#dropdown1" tabindex="-1" role="tab" data-toggle="tab">cooker</a></li>
+      <li><a href="#dropdown2" tabindex="-1" role="tab" data-toggle="tab">tabs</a></li>
+    </ul>
+  </li>
+</ul>
+{% endhighlight %}
+          </div>
+        </div>
+        <!-- /.block -->
+
+      </div>
+      <!-- /.blocks -->
+    </div><!-- /#contents-forms -->
+  </div><!-- /.container -->
+</div><!-- /.site-body -->

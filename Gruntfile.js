@@ -248,7 +248,8 @@
           'js/<%= pkg.name %>.js',
           'js/<%= pkg.name %>.min.js',
           'css/*.css',
-          'css/*.map'
+          'css/*.map',
+          'less/**'
         ],
         dest: './<%= pkg.dist %>'
       }
