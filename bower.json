@@ -11,7 +11,10 @@
   "ignore": [
     ".*",
     "*.md",
-    "_config.yml"
+    "_config.yml",
+    "src",
+    "*.json",
+    "Gruntfile.js"
   ],
   "dependencies": {
     "bootstrap": "~3.1.1",
