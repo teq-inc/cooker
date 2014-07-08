@@ -36,6 +36,13 @@
           <li><a href="#">utilities</a></li> -->
         </ul>
       </li>
+      <li{% if page.slug == "example" %} class="active"{% endif %}>
+        <a href="#">Styles</a>
+        <ul class="nav">
+          <li><a href="{{ page.base_url }}example/one-column">One column</a></li>
+          <li><a href="{{ page.base_url }}example/two-column">Two column</a></li>
+        </ul>
+      </li>
     </ul>
   </nav>
 </div>

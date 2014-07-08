@@ -327,6 +327,7 @@
       html: {
         files: [
           '<%= pkg.source %>/*.html',
+          '<%= pkg.source %>/example/**',
           '<%= pkg.source %>/_includes/**',
           '<%= pkg.source %>/style/*',
           '<%= pkg.source %>/_layouts/*'
