@@ -7,7 +7,7 @@
   
   <title>
     
-      tabs &middot; cooker
+      navs &middot; cooker
     
   </title>
   
@@ -36,7 +36,7 @@
   <script src="../js/cooker.min.js"></script>
 
 </head>
-<body id="drawer" class="site-tabs drawer-left drawer-responsive">
+<body id="drawer" class="site-navs drawer-left drawer-responsive">
 
     <button class="drawer-toggle btn"><i class="qcon qcon-quota"></i></button>
 <div class="drawer-masta drawer-default">
@@ -88,7 +88,7 @@
         <div class="container">
           <div class="row-table">
             <div class="col col-6">
-              <h1 class="lead">tabs</h1>
+              <h1 class="lead">navs</h1>
             </div>
             <div class="col col-6">
               <p class="text-right"><a href="https://github.com/teq-inc/cooker">Download on GitHub</a></p>
@@ -103,17 +103,151 @@
 			    <div class="site-body">
   <div class="site-body-inner container">
     <div id="contents-forms">
-      <h2>tab</h2>
+      <h2>navs</h2>
       <div class="blocks">
 
         <div class="block">
           <div class="block-header">
-            <h3>Basic <small></small></h3>
+            <h3>pills <small></small></h3>
           </div>
           <div class="block-body">
             <div class="ck-example">
 
-              <!-- Nav tabs -->
+              <ul class="navs navs-pills">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Messages</a></li>
+              </ul>
+
+            </div>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;navs navs-pills&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;active&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Profile<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Messages<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+</code></pre></div>
+          </div>
+        </div>
+        <!-- /.block -->
+
+
+
+        <div class="block">
+          <div class="block-header">
+            <h3>stacked <small></small></h3>
+          </div>
+          <div class="block-body">
+            <div class="ck-example">
+
+              <ul class="navs navs-pills navs-stacked">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Messages</a></li>
+              </ul>
+
+            </div>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;navs navs-pills navs-stacked&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;active&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Profile<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Messages<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+</code></pre></div>
+          </div>
+        </div>
+        <!-- /.block -->
+
+
+        <div class="block">
+          <div class="block-header">
+            <h3>Tabs <small></small></h3>
+          </div>
+          <div class="block-body">
+            <div class="ck-example">
+
+              <ul class="navs navs-tabs" role="tablist">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Messages</a></li>
+              </ul>
+
+            </div>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;navs navs-tabs&quot;</span> <span class="na">role=</span><span class="s">&quot;tablist&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;active&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Profile<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Messages<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+</code></pre></div>
+          </div>
+        </div>
+        <!-- /.block -->
+
+        <div class="block">
+          <div class="block-header">
+            <h3>Justified <small></small></h3>
+          </div>
+          <div class="block-body">
+            <div class="ck-example">
+
+              <ul class="navs navs-tabs navs-justified" role="tablist">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Messages</a></li>
+              </ul>
+              <p></p>
+              <ul class="navs navs-pills navs-justified" role="tablist">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Messages</a></li>
+              </ul>
+
+
+            </div>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;navs navs-tabs navs-justified&quot;</span> <span class="na">role=</span><span class="s">&quot;tablist&quot;</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;p&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;navs navs-pills navs-justified&quot;</span> <span class="na">role=</span><span class="s">&quot;tablist&quot;</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/ul&gt;</span>
+</code></pre></div>
+          </div>
+        </div>
+        <!-- /.block -->
+
+        <div class="block">
+          <div class="block-header">
+            <h3>Disabled links <small></small></h3>
+          </div>
+          <div class="block-body">
+            <div class="ck-example">
+
+              <ul class="navs navs-tabs navs-justified" role="tablist">
+                <li class="disabled"><a href="#">Home</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Messages</a></li>
+              </ul>
+              <p></p>
+              <ul class="navs navs-pills navs-justified" role="tablist">
+                <li class="disabled"><a href="#">Home</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Messages</a></li>
+              </ul>
+
+
+            </div>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;disabled&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Disabled link<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+</code></pre></div>
+          </div>
+        </div>
+        <!-- /.block -->
+
+        <div class="block">
+          <div class="block-header">
+            <h3>Tabs with dropdowns<small></small></h3>
+          </div>
+          <div class="block-body">
+            <div class="ck-example">
+
               <ul class="navs navs-tabs">
                 <li class="active"><a class="navs-tabs-toggle" href="#home">Home</a></li>
                 <li><a class="navs-tabs-toggle" href="#profile">Profile</a></li>
@@ -122,31 +256,11 @@
                 <li class="dropdown">
                   <a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="drop"></span></a>
                   <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
-                    <li><a href="#dropdown1" tabindex="-1" role="tab" data-toggle="tab">@fat</a></li>
-                    <li><a href="#dropdown2" tabindex="-1" role="tab" data-toggle="tab">@mdo</a></li>
+                    <li><a href="#dropdown1" tabindex="-1" role="tab" data-toggle="tab">cooker</a></li>
+                    <li><a href="#dropdown2" tabindex="-1" role="tab" data-toggle="tab">tabs</a></li>
                   </ul>
                 </li>
               </ul>
-
-              <!-- Tab panes -->
-              <div class="tabs-content">
-                <div class="tabs-pane active" id="home">
-                  <h3>home</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu urna dolor. Donec sed congue magna. Etiam malesuada congue nibh, vitae eleifend tellus gravida at. Donec vitae urna ac tortor cursus pulvinar a sit amet nibh. Mauris ullamcorper risus nulla, a malesuada nisi pharetra vel. Mauris auctor nibh purus, non ultrices ante mollis sed. Integer non dolor elementum, scelerisque sem ut, lobortis tortor.</p> 
-                </div>
-                <div class="tabs-pane" id="profile">
-                  <h3>profile</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu urna dolor. Donec sed congue magna. Etiam malesuada congue nibh, vitae eleifend tellus gravida at. Donec vitae urna ac tortor cursus pulvinar a sit amet nibh. Mauris ullamcorper risus nulla, a malesuada nisi pharetra vel. Mauris auctor nibh purus, non ultrices ante mollis sed. Integer non dolor elementum, scelerisque sem ut, lobortis tortor.</p> 
-                </div>
-                <div class="tabs-pane" id="messages">
-                  <h3>messages</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu urna dolor. Donec sed congue magna. Etiam malesuada congue nibh, vitae eleifend tellus gravida at. Donec vitae urna ac tortor cursus pulvinar a sit amet nibh. Mauris ullamcorper risus nulla, a malesuada nisi pharetra vel. Mauris auctor nibh purus, non ultrices ante mollis sed. Integer non dolor elementum, scelerisque sem ut, lobortis tortor.</p> 
-                </div>
-                <div class="tabs-pane" id="settings">
-                  <h3>settings</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu urna dolor. Donec sed congue magna. Etiam malesuada congue nibh, vitae eleifend tellus gravida at. Donec vitae urna ac tortor cursus pulvinar a sit amet nibh. Mauris ullamcorper risus nulla, a malesuada nisi pharetra vel. Mauris auctor nibh purus, non ultrices ante mollis sed. Integer non dolor elementum, scelerisque sem ut, lobortis tortor.</p> 
-                </div>
-              </div>
 
             </div>
 <div class="highlight"><pre><code class="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;navs navs-tabs&quot;</span><span class="nt">&gt;</span>
@@ -162,65 +276,35 @@
     <span class="nt">&lt;/ul&gt;</span>
   <span class="nt">&lt;/li&gt;</span>
 <span class="nt">&lt;/ul&gt;</span>
-
-<span class="c">&lt;!-- Tab panes --&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;tabs-content&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;tabs-pane active&quot;</span> <span class="na">id=</span><span class="s">&quot;home&quot;</span><span class="nt">&gt;</span>home<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;tabs-pane&quot;</span> <span class="na">id=</span><span class="s">&quot;profile&quot;</span><span class="nt">&gt;</span>profile<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;tabs-pane&quot;</span> <span class="na">id=</span><span class="s">&quot;messages&quot;</span><span class="nt">&gt;</span>messages<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;tabs-pane&quot;</span> <span class="na">id=</span><span class="s">&quot;settings&quot;</span><span class="nt">&gt;</span>settings<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
 </code></pre></div>
           </div>
         </div>
         <!-- /.block -->
 
 
-
         <div class="block">
           <div class="block-header">
-            <h3>fade <small></small></h3>
+            <h3>Pills with dropdowns<small></small></h3>
           </div>
           <div class="block-body">
             <div class="ck-example">
 
-              <!-- Nav tabs -->
-              <ul class="navs navs-tabs" role="tablist">
+              <ul class="navs navs-pills">
                 <li class="active"><a class="navs-tabs-toggle" href="#home">Home</a></li>
                 <li><a class="navs-tabs-toggle" href="#profile">Profile</a></li>
                 <li><a class="navs-tabs-toggle" href="#messages">Messages</a></li>
                 <li><a class="navs-tabs-toggle" href="#settings">Settings</a></li>
                 <li class="dropdown">
-                  <a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="drop"></span></a>
-                  <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
-                    <li><a href="#dropdown1" tabindex="-1" role="tab" data-toggle="tab">@fat</a></li>
-                    <li><a href="#dropdown2" tabindex="-1" role="tab" data-toggle="tab">@mdo</a></li>
+                  <a href="#" id="myTabDrop2" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="drop"></span></a>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop2">
+                    <li><a href="#dropdown1" tabindex="-1" role="tab" data-toggle="tab">cooker</a></li>
+                    <li><a href="#dropdown2" tabindex="-1" role="tab" data-toggle="tab">tabs</a></li>
                   </ul>
                 </li>
               </ul>
 
-              <!-- Tab panes -->
-              <div class="tabs-content">
-                <div class="tabs-pane fade active in" id="home">
-                  <h3>home</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu urna dolor. Donec sed congue magna. Etiam malesuada congue nibh, vitae eleifend tellus gravida at. Donec vitae urna ac tortor cursus pulvinar a sit amet nibh. Mauris ullamcorper risus nulla, a malesuada nisi pharetra vel. Mauris auctor nibh purus, non ultrices ante mollis sed. Integer non dolor elementum, scelerisque sem ut, lobortis tortor.</p> 
-                </div>
-                <div class="tabs-pane fade" id="profile">
-                  <h3>profile</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu urna dolor. Donec sed congue magna. Etiam malesuada congue nibh, vitae eleifend tellus gravida at. Donec vitae urna ac tortor cursus pulvinar a sit amet nibh. Mauris ullamcorper risus nulla, a malesuada nisi pharetra vel. Mauris auctor nibh purus, non ultrices ante mollis sed. Integer non dolor elementum, scelerisque sem ut, lobortis tortor.</p> 
-                </div>
-                <div class="tabs-pane fade" id="messages">
-                  <h3>messages</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu urna dolor. Donec sed congue magna. Etiam malesuada congue nibh, vitae eleifend tellus gravida at. Donec vitae urna ac tortor cursus pulvinar a sit amet nibh. Mauris ullamcorper risus nulla, a malesuada nisi pharetra vel. Mauris auctor nibh purus, non ultrices ante mollis sed. Integer non dolor elementum, scelerisque sem ut, lobortis tortor.</p> 
-                </div>
-                <div class="tabs-pane fade" id="settings">
-                  <h3>settings</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu urna dolor. Donec sed congue magna. Etiam malesuada congue nibh, vitae eleifend tellus gravida at. Donec vitae urna ac tortor cursus pulvinar a sit amet nibh. Mauris ullamcorper risus nulla, a malesuada nisi pharetra vel. Mauris auctor nibh purus, non ultrices ante mollis sed. Integer non dolor elementum, scelerisque sem ut, lobortis tortor.</p> 
-                </div>
-              </div>
-
             </div>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;navs navs-tabs&quot;</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;navs navs-pills&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;active&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">&quot;navs-tabs-toggle&quot;</span> <span class="na">href=</span><span class="s">&quot;#home&quot;</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
   <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">&quot;navs-tabs-toggle&quot;</span> <span class="na">href=</span><span class="s">&quot;#profile&quot;</span><span class="nt">&gt;</span>Profile<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
   <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">&quot;navs-tabs-toggle&quot;</span> <span class="na">href=</span><span class="s">&quot;#messages&quot;</span><span class="nt">&gt;</span>Messages<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
@@ -233,20 +317,11 @@
     <span class="nt">&lt;/ul&gt;</span>
   <span class="nt">&lt;/li&gt;</span>
 <span class="nt">&lt;/ul&gt;</span>
-
-<span class="c">&lt;!-- Tab panes --&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;tabs-content&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;tabs-pane fade active in&quot;</span> <span class="na">id=</span><span class="s">&quot;home&quot;</span><span class="nt">&gt;</span>home<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;tabs-pane fade&quot;</span> <span class="na">id=</span><span class="s">&quot;profile&quot;</span><span class="nt">&gt;</span>profile<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;tabs-pane fade&quot;</span> <span class="na">id=</span><span class="s">&quot;messages&quot;</span><span class="nt">&gt;</span>messages<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;tabs-pane fade&quot;</span> <span class="na">id=</span><span class="s">&quot;settings&quot;</span><span class="nt">&gt;</span>settings<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
 </code></pre></div>
           </div>
         </div>
         <!-- /.block -->
 
-        
       </div>
       <!-- /.blocks -->
     </div><!-- /#contents-forms -->
