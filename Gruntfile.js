@@ -245,8 +245,7 @@
         expand: true,
         cwd: './<%= pkg.source %>',
         src: [
-          'js/<%= pkg.name %>.js',
-          'js/<%= pkg.name %>.min.js',
+          'js/*.js',
           'css/*.css',
           'css/*.map',
           'less/**'
