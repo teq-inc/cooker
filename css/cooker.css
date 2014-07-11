@@ -3107,8 +3107,8 @@ th {
 .table-border > thead > tr > td {
   border-bottom-width: 2px;
 }
-.table-striped > tbody > tr:nth-child(odd) > td,
-.table-striped > tbody > tr:nth-child(odd) > th {
+.table-stripe > tbody > tr:nth-child(odd) > td,
+.table-stripe > tbody > tr:nth-child(odd) > th {
   background-color: #f9f9f9;
 }
 .table-hover > tbody > tr:hover > td,
