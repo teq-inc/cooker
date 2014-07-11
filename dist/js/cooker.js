@@ -1,5 +1,5 @@
 /*!
- * cooker v0.4.3
+ * cooker v0.4.4
  * 
  * Licensed under MIT
  * Copyright 2013-2014 
@@ -28,78 +28,74 @@
               options: options
           });
         }
+
+        var mode = $this.data('mode');
         var $aToggle = $this.find('.'+options.toggleAll);
         var $iToggle = $this.find('.'+options.toggle);
+
         $aToggle.off('click.'+namespace).on('click.'+namespace, function(){
-            methods.toggleAll.apply(_this);
+          methods.toggleAll.apply(_this);
         });
+
         $iToggle.off('click.'+namespace).on('click.'+namespace, function(){
-            methods.toggle.apply(_this);
-        });                
+          $self = $(this);
+          var $i = $self.parents('.'+options.switcher);
+          methods.toggle.call(_this, mode, $i);
+        });    
+
       }); // end each
     },
     
     toggleAll: function(){
-      var $this = $(this)
-      options = $this.data(namespace).options
-      var open =  options.open;  
-      var close = options.close;    
+      var $this = $(this);
+      options = $this.data(namespace).options;
       var $a = $this.children('.'+options.switcher);
-      var statusOpen = $a.hasClass(options.open)
+      var statusOpen = $a.hasClass(options.open);
       if(statusOpen){
-        $a.removeClass(open).addClass(close);
+        $a.removeClass(options.open).addClass(options.close);
       }else{
-        $a.removeClass(close).addClass(open);
+        $a.removeClass(options.close).addClass(options.open);
       }
     },
     
-    toggle: function(){
+    toggle: function(mode, $i){
       var $this = $(this);
       options = $this.data(namespace).options;
-      var $i = $(event.target).parents('.'+options.switcher);
       var statusOpen = $i.hasClass(options.open);
       if(statusOpen){
-        methods.close.call(this);
+        methods.close.call(this,mode, $i);
       }else{
-        methods.open.call(this);      
+        methods.open.call(this,mode, $i);      
       }
     },
     
-    open: function(){
+    open: function(mode, $i){
       var $this = $(this);
-      options = $this.data(namespace).options;
-      var open =  options.open;  
-      var close = options.close;    
-      var mode = $this.data('mode');
-      var $i = $(event.target).parents('.'+options.switcher);
+      options = $.extend($this.data(namespace).options, options);
       var $iPrev = $i.prev('.'+options.switcher);
       var $iNext = $i.next('.'+options.switcher);
       var $o = $i.siblings();          
       if(mode === 'accordion'){
-        $o.removeClass(open).addClass(close);
-        $i.removeClass(close).addClass(open);    
+        $o.removeClass(options.open).addClass(options.close);
+        $i.removeClass(options.close).addClass(options.open);    
         $o.removeClass("switcher-open-prev switcher-open-next");
         $iPrev.addClass("switcher-open-prev");
         $iNext.addClass("switcher-open-next");
       }else{
-        $i.removeClass(close).addClass(open);
+        $i.removeClass(options.close).addClass(options.open);
       }
     },
 
-    close: function(){
+    close: function(mode, $i){
       var $this = $(this);
       options = $this.data(namespace).options;
-      var open =  options.open;  
-      var close = options.close;    
-      var mode = $this.data('mode');
-      var $i = $(event.target).parents('.'+options.switcher);
       var $o = $i.siblings();          
       if(mode === 'accordion'){
         $o,
-        $i.removeClass(open).addClass(close);
+        $i.removeClass(options.open).addClass(options.close);
         $o.removeClass("switcher-open-prev switcher-open-next");
       }else{
-        $i.removeClass(open).addClass(close);
+        $i.removeClass(options.open).addClass(options.close);
       }
     },
     

@@ -1,5 +1,5 @@
 /*!
- * cooker v0.4.3
+ * cooker v0.4.4
  * 
  * Licensed under MIT
  * Copyright 2013-2014 
@@ -802,6 +802,11 @@ blockquote:after {
 }
 .text-justify {
   text-align: justify;
+}
+.text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .radius-base {
   border-radius: 3px;

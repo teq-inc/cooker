@@ -14,6 +14,7 @@ $('.inputcounter').inputcounter({
 $('.scrollmethod').scrollmethod();
 
 $('.switchers').switchers();
+// $('.switchers').switchers('open');
 
 $('.slidebar-right').slidebar({
     position: 'right',
