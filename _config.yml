@@ -12,7 +12,7 @@ repo:             cooker
 repo_url:         https://github.com/teq-inc/cooker
 author:           teq-inc
 author_url:       
-current_version:  0.4.5
+current_version:  0.4.6
 twitter:          
 tag:              
 git_fork_btn:     http://ghbtns.com/github-btn.html?user=teq-inc&amp;repo=cooker&amp;type=fork&amp;count=true

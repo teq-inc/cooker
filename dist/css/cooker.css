@@ -1,5 +1,5 @@
 /*!
- * cooker v0.4.5
+ * cooker v0.4.6
  * 
  * Licensed under MIT
  * Copyright 2013-2014 
@@ -1707,7 +1707,6 @@ input[type="button"].block {
 .button-circle,
 .button-medal {
   text-align: center !important;
-  text-align: center;
   border-radius: 50%;
 }
 .button-circle {
@@ -3084,12 +3083,12 @@ th {
 .table .table {
   background-color: #fff;
 }
-.table-condensed > thead > tr > th,
-.table-condensed > tbody > tr > th,
-.table-condensed > tfoot > tr > th,
-.table-condensed > thead > tr > td,
-.table-condensed > tbody > tr > td,
-.table-condensed > tfoot > tr > td {
+.table-condense > thead > tr > th,
+.table-condense > tbody > tr > th,
+.table-condense > tfoot > tr > th,
+.table-condense > thead > tr > td,
+.table-condense > tbody > tr > td,
+.table-condense > tfoot > tr > td {
   padding: 5px;
 }
 .table-border {
