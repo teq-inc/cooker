@@ -1,8 +1,8 @@
 /*!
- * cooker v0.4.6
+ * cooker v0.4.7
  * 
  * Licensed under MIT
- * Copyright 2013-2014 
+ * 2013-2014 
  * 
  */
 (function($) {
