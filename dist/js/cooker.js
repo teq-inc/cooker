@@ -532,7 +532,7 @@
           methods.close.apply(_this);
         });
 
-        $toggle.on('click.'+namespace, function(){
+        $toggle.on('click.'+namespace, function(event){
           event.stopPropagation();
           methods.toggle.call(_this);
         });
