@@ -124,10 +124,9 @@
     init: function(options){
       options = $.extend({
         speed:   800,
-        easing:  'easeOutExpo',
+        easing:  'easeOutExpo'
       }, options);
       return this.each(function(){
-        //var _this = this;
         var $this = $(this);
         var data = $this.data(namespace);
         if (!data) {        
@@ -145,7 +144,7 @@
           });
         }
       }); // end each
-    },
+    }
   };
   $.fn.scrollmethod = function(method){
     if ( methods[method] ) {
